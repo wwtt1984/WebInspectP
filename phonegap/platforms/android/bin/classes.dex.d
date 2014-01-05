@@ -15,6 +15,8 @@ D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\bin\classes\com\myc
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\bin\classes\com\mycompany\webInspect\webInspect.class \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\bin\classes\com\toast\toast\ToastPlugin$1.class \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\bin\classes\com\toast\toast\ToastPlugin.class \
+D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\bin\classes\com\vpn\vpn\VpnPlugin$RemindTask.class \
+D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\bin\classes\com\vpn\vpn\VpnPlugin.class \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\DirectoryManager.class \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\EncodingException.class \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileExistsException.class \
@@ -62,4 +64,5 @@ D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\bin\classes\org\apa
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\filetransfer\FileTransfer.class \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\filetransfer\FileUploadResult.class \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\bin\dexedLibs\classes-a9056aaeaad178073674f3804e9bd657.jar \
+D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\bin\dexedLibs\SangforSDK-31ec14698a8e36705f4348f7b4e1b75a.jar \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\bin\dexedLibs\jpush-sdk-release1.5.2-b132786aa27bc04fc008259c7ae98c9e.jar \

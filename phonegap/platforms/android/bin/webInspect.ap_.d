@@ -34,6 +34,7 @@ D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\js\index
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\plugins\com.install.install.Install \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\plugins\com.jpush.jpush.JPush \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\plugins\com.toast.toast.Toast \
+D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\plugins\com.vpn.vpn.Vpn \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file-transfer \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\plugins\com.install.install.Install\www \
@@ -42,6 +43,8 @@ D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\plugins\
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\plugins\com.jpush.jpush.JPush\www\jPush.js \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\plugins\com.toast.toast.Toast\www \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\plugins\com.toast.toast.Toast\www\toast.js \
+D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\plugins\com.vpn.vpn.Vpn\www \
+D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\plugins\com.vpn.vpn.Vpn\www\vpn.js \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file\www \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file\www\DirectoryEntry.js \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file\www\DirectoryReader.js \

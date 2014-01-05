@@ -19,6 +19,9 @@
     <feature name="ToastPlugin">
         <param name="android-package" value="com.toast.toast.ToastPlugin" />
     </feature>
+    <feature name="VpnPlugin">
+        <param name="android-package" value="com.vpn.vpn.VpnPlugin" />
+    </feature>
     <feature name="File">
         <param name="android-package" value="org.apache.cordova.file.FileUtils" />
     </feature>

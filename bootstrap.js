@@ -6,6 +6,8 @@
  */
 Ext.Loader.addClassPathMappings({
   "Ext": "touch/src",
+  "Ext.data.proxy.SkJsonp": "app/lib/SkJsonp.js",
+  "Ext.data.proxy.SkProxy": "app/lib/SkProxy.js",
   "Ext.device.Purchases.Product": "touch/src/device/purchases/Sencha.js",
   "Ext.device.filesystem.DirectoryEntry": "touch/src/device/filesystem/HTML5.js",
   "Ext.device.filesystem.Entry": "touch/src/device/filesystem/HTML5.js",
@@ -237,6 +239,8 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.data.proxy.SessionStorage": [
     "Ext.data.SessionStorageProxy"
   ],
+  "Ext.data.proxy.SkJsonp": [],
+  "Ext.data.proxy.SkProxy": [],
   "Ext.data.proxy.Sql": [
     "Ext.data.proxy.SQL"
   ],
@@ -743,6 +747,8 @@ Ext.ClassManager.addNameAlternateMappings({
     "Ext.viewport.WP"
   ],
   "WebInspect.controller.MainControl": [],
+  "WebInspect.model.VersionModel": [],
+  "WebInspect.store.VersionStore": [],
   "WebInspect.view.Main": []
 });
 Ext.ClassManager.addNameAliasMappings({
@@ -1082,6 +1088,10 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "Ext.data.proxy.SessionStorage": [
     "proxy.sessionstorage"
+  ],
+  "Ext.data.proxy.SkJsonp": [],
+  "Ext.data.proxy.SkProxy": [
+    "proxy.sk"
   ],
   "Ext.data.proxy.Sql": [
     "proxy.sql"
@@ -1681,6 +1691,8 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.Viewport": [],
   "Ext.viewport.WindowsPhone": [],
   "WebInspect.controller.MainControl": [],
+  "WebInspect.model.VersionModel": [],
+  "WebInspect.store.VersionStore": [],
   "WebInspect.view.Main": [
     "widget.main"
   ]

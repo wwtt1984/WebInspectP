@@ -10,11 +10,23 @@
     will need to resolve manually.
 */
 
+
+Ext.Loader.setPath({
+    'Ext': 'touch/src',
+    'WebInspect': 'app',
+    'Ext.data.proxy.SkProxy': 'app/lib/SkProxy.js',
+    'Ext.data.proxy.SkJsonp': 'app/lib/SkJsonp.js'
+});
+
+Ext.ClassManager.setAlias('Ext.data.proxy.SkProxy', 'proxy.sk');
+
 Ext.application({
     name: 'WebInspect',
+    user: {version:'1.0.0.61'},
 
     requires: [
-        'Ext.MessageBox'
+        'Ext.MessageBox',
+        'Ext.data.proxy.SkProxy'
     ],
 
     views: [
@@ -23,6 +35,14 @@ Ext.application({
 
     controllers: [
         'MainControl'
+    ],
+
+    models: [
+        'VersionModel'
+    ],
+
+    stores: [
+        'VersionStore'
     ],
 
     icon: {

@@ -36,6 +36,13 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/com.vpn.vpn.Vpn/www/vpn.js",
+        "id": "com.vpn.vpn.Vpn.vpn",
+        "clobbers": [
+            "window.plugins.Vpn"
+        ]
+    },
+    {
         "file": "plugins/org.apache.cordova.file/www/DirectoryEntry.js",
         "id": "org.apache.cordova.file.DirectoryEntry",
         "clobbers": [
@@ -165,6 +172,7 @@ module.exports.metadata =
     "com.toast.toast.Toast": "1.5.2",
     "com.install.install.Install": "1.5.2",
     "org.apache.cordova.file-transfer": "0.4.0",
+    "com.vpn.vpn.Vpn": "1.5.2",
     "org.apache.cordova.file": "0.2.5"
 }
 // BOTTOM OF METADATA
