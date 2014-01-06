@@ -1,6 +1,6 @@
 Ext.define('WebInspect.view.news.NewsPdf',{
 
-//	extend: 'Ext.ux.panel.PDF',
+	extend: 'Ext.ux.panel.PDF',
 	xtype: 'newspdf',
 	
 	requires: [

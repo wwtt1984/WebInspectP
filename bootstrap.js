@@ -730,6 +730,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.ux.device.analytics.Cordova": [],
   "Ext.ux.device.twitter.Abstract": [],
   "Ext.ux.device.twitter.Cordova": [],
+  "Ext.ux.panel.PDF": [],
   "Ext.ux.parse.Helper": [
     "ParseHelper"
   ],
@@ -1708,6 +1709,9 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.ux.device.analytics.Cordova": [],
   "Ext.ux.device.twitter.Abstract": [],
   "Ext.ux.device.twitter.Cordova": [],
+  "Ext.ux.panel.PDF": [
+    "widget.pdfpanel"
+  ],
   "Ext.ux.parse.Helper": [],
   "Ext.ux.parse.Model": [],
   "Ext.ux.parse.Proxy": [

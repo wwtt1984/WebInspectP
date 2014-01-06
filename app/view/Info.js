@@ -15,6 +15,8 @@ Ext.define('WebInspect.view.Info', {
             	ui: 'back',
             	text: '主页面'
             }]
-        }
+        },
+
+        defaultBackButtonText: '返回'
     }
 });

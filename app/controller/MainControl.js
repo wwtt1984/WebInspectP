@@ -114,6 +114,7 @@ Ext.define('WebInspect.controller.MainControl',{
     onDoChickTitle:function(data){       ////////执行点击标题栏事件
         alert(data.id);
         alert(data.type);
+        alert(data.simgtype);
 
         this.info = this.getInfo();
         if(!this.info){
@@ -135,12 +136,25 @@ Ext.define('WebInspect.controller.MainControl',{
             this.onNoticeNewsStypeSet('NoticeStore', 'GetInfoList', 'notice$jsonp',data,  '通知公告');
 
         }
+        else{
+
+        }
     },
 
     //根据推送信息，加载页面
     onNoticeNewsStypeSet: function(storename, t, results, data, title){
 
         var me = this;
+
+        me.news = me.getNews();
+        if(!me.news){
+            me.news = Ext.create('WebInspect.view.news.News');
+        }
+        me.news.setStore(store);
+
+        me.news.setTitle(title);
+
+        me.getInfo().push(me.news);
 
         var store = Ext.getStore(storename);
 
@@ -156,7 +170,9 @@ Ext.define('WebInspect.controller.MainControl',{
 
         store.loadPage(1,function(records, operation, success) {
 
-            if(me.bpush == true){
+//            if(me.bpush == true){
+
+                alert('推送');
                 var detailstore = Ext.getStore('NewsDetailStore');
 
                 detailstore.getProxy().setExtraParams({
@@ -170,13 +186,15 @@ Ext.define('WebInspect.controller.MainControl',{
                     if(!me.newspdf){
                         me.newspdf = Ext.create('WebInspect.view.news.NewsPdf');
                     }
-
                     detailstore.load(function(records, operation, success){
                         Ext.Viewport.setMasked(false);
+                        alert('pdf"' + detailstore.getCount());
                         me.newspdf.setPdfUrl(detailstore.getAt(0).data.simg);
+                        me.getInfofunction().hide();
+                        me.getInfo().push(me.newspdf);
+                        me.getMain().setActiveItem(me.getInfo());
                     }, this);
-                    me.getInfofunction().hide();
-                    me.getInfo().push(me.newspdf);
+
                 }
                 else{
                     me.newsdetail = me.getNewsdetail();
@@ -185,29 +203,20 @@ Ext.define('WebInspect.controller.MainControl',{
                     }
 
                     detailstore.load(function(records, operation, success){
+                        alert('jpg' + detailstore.getCount());
                         Ext.Viewport.setMasked(false);
                         me.newsdetail.onDataSet(detailstore.getAt(0));
+                        me.getInfofunction().hide();
+                        me.getInfo().push(me.newsdetail);
+                        me.getMain().setActiveItem(me.getInfo());
                     }, this);
-                    me.getInfofunction().hide();
-                    me.getInfo().push(me.newsdetail);
                 }
-            }
-            else{
-                Ext.Viewport.setMasked(false);
-            }
+//            }
+//            else{
+//                Ext.Viewport.setMasked(false);
+//            }
         });
 
-        me.news = me.getNews();
-        if(!me.news){
-            me.news = Ext.create('WebInspect.view.news.News');
-        }
-        me.news.setStore(store);
-
-        me.news.setTitle(title);
-
-        me.getInfo().push(me.news);
-
-        me.getMain().setActiveItem(me.getInfo());
     },
 
     onDoChickAppIco:function(){   /////////执行点击应用程序图标事件
@@ -237,11 +246,13 @@ Ext.define('WebInspect.controller.MainControl',{
             }
             else if(success == "false")
             {
-                plugins.Toast.ShowToast("VPN连接失败!",3000);
+                plugins.Toast.ShowToast("VPN连接失败,请重新启动程序!",3000);
+                navigator.app.exitApp(); //////////////////退出系统
             }
             else if(success == "initfalse")
             {
                 plugins.Toast.ShowToast("VPN初始化失败,请重新启动程序!",3000);
+                navigator.app.exitApp(); //////////////////退出系统
             }
         });
 
@@ -343,6 +354,7 @@ Ext.define('WebInspect.controller.MainControl',{
     {
         //plugins.Toast.ShowToast(error,3000);
         if(error.code == 1) //////////表示文件不存在
+
         {
             //////////////////不管它///////////////////////////
         }
@@ -448,6 +460,10 @@ Ext.define('WebInspect.controller.MainControl',{
                     me.getInfofunction().show();
                 }
                 break;
+            case 'newspdf':
+                me.getInfo().pop();
+                me.getInfofunction().show();
+                break;
             case 'secondlevel':
                 me.getInfo().pop();
                 me.getInfofunction().show();
@@ -464,7 +480,6 @@ Ext.define('WebInspect.controller.MainControl',{
     },
 
     onQuitSystemTap: function(){
-        this.closeApp = true;
         navigator.app.exitApp(); //////////////////退出系统
     },
 
@@ -480,21 +495,38 @@ Ext.define('WebInspect.controller.MainControl',{
     onLoginTap: function(){
         var me = this;
 
-        Ext.Viewport.setMasked({
-            xtype: 'loadmask',
-            message: '登录中,请稍后...'
-        });
+
 
         WebInspect.app.user.sid = Ext.getCmp('name').getValue();
         WebInspect.app.user.password = Ext.getCmp('password').getValue();
 
-        me.onVpnLogin();
+        me.onUserWriteJson();
+//        me.onUserCheck();
+    },
+
+    onUserWriteJson: function(){
+        var me = this;
+        var json = [];
+        json.push({sid: WebInspect.app.user.sid, pwd: WebInspect.app.user.password});
+
+        //将验证成功的用户信息，存在本地
+        ////////////////////////////////写入文件////////////////////////////////
+        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0,
+            function(fileSystem){me.onwtgotFS(fileSystem,me,json[0]);},
+            function(error){me.onwtfail(error,me);}
+        ); ////写文件
     },
 
     //用户验证
     onUserCheck: function(){
 
         var me = this;
+
+        Ext.Viewport.setMasked({
+            xtype: 'loadmask',
+            message: '登录中,请稍后...'
+        });
+
         if(WebInspect.app.user.sid && WebInspect.app.user.password){
             //用户名、密码输入完整
             var store = Ext.getStore('UserStore');
@@ -513,15 +545,13 @@ Ext.define('WebInspect.controller.MainControl',{
                         message: '验证成功,页面加载中...'
                     });
 
-                    var json = [];
-                    json.push({sid: WebInspect.app.user.sid, password: WebInspect.app.user.password});
+                    me.onInsertUserInfo(me);
+
+                    WebInspect.app.user.name = store.getAt(0).data.name;
+                    WebInspect.app.user.mobile = store.getAt(0).data.mobile;
 
                     //将验证成功的用户信息，存在本地
-                    ////////////////////////////////写入文件////////////////////////////////
-                    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0,
-                        function(fileSystem){me.onwtgotFS(fileSystem,me,json);},
-                        function(error){me.onwtfail(error,me);}
-                    ); ////写文件
+                    me.onUserWriteJson();
 
                     //加载用户“待办事项”信息
                     me.onTaskStoreLoad(1);
@@ -537,6 +567,20 @@ Ext.define('WebInspect.controller.MainControl',{
             Ext.Viewport.setMasked(false);
             Ext.Msg.alert('用户名和密码不能为空！');
         }
+    },
+
+    //记录用户版本信息
+    onInsertUserInfo:function(me)
+    {
+        var results = WebInspect.app.user.sid  + "$" + WebInspect.app.user.name + "$" + WebInspect.app.user.version;
+        Ext.data.proxy.SkJsonp.validate('InsertTodayUser',results,{
+            success: function(response) {
+
+            },
+            failure: function() {
+
+            }
+        });
     },
 
     //加载用户“待办事项”信息

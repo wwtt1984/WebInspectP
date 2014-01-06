@@ -37,7 +37,7 @@ Ext.application({
         'Task',
         'Info',
 
-//        'Ext.ux.panel.PDF',
+        'Ext.ux.panel.PDF',
 
         'news.News',
         'news.NewsDetail',
