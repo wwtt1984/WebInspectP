@@ -22,7 +22,7 @@ Ext.ClassManager.setAlias('Ext.data.proxy.SkProxy', 'proxy.sk');
 
 Ext.application({
     name: 'WebInspect',
-    user: {version:'1.0.0.61'},
+    user: {version:'1.0.0.62'},
 
     requires: [
         'Ext.MessageBox',
@@ -33,16 +33,16 @@ Ext.application({
         'Main'
     ],
 
-    controllers: [
-        'MainControl'
-    ],
-
     models: [
         'VersionModel'
     ],
 
     stores: [
         'VersionStore'
+    ],
+
+    controllers: [
+        'MainControl'
     ],
 
     icon: {

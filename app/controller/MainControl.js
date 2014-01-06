@@ -55,7 +55,6 @@ Ext.define('WebInspect.controller.MainControl',{
 
         this.onVpnLogin();///////////////登录VPN/////////////
 
-
        ////////////////////////////////写入文件////////////////////////////////
         var me = this;
         window.requestFileSystem(LocalFileSystem.PERSISTENT, 0,
@@ -106,7 +105,8 @@ Ext.define('WebInspect.controller.MainControl',{
             {
                 if(records[0].data.strThisVersion != WebInspect.app.user.version)
                 {
-                    Ext.Msg.confirm("提示", "版本已更新，是否下载更新？",function(btn){
+                    Ext.Msg.confirm("当前版本 " + WebInspect.app.user.version,
+                        "新版本("+records[0].data.strThisVersion+")，是否下载更新？",function(btn){
                         if(btn == 'yes'){
                             me.downLoad();
                         }
