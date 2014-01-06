@@ -53,15 +53,7 @@ Ext.define('WebInspect.controller.MainControl',{
 
     onDoChickAppIco:function(){   /////////执行点击应用程序图标事件
 
-        this.onVpnLogin();///////////////登录VPN/////////////
-
-       ////////////////////////////////写入文件////////////////////////////////
         var me = this;
-        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0,
-            function(fileSystem){me.onwtgotFS(fileSystem,me);},
-            function(error){me.onwtfail(error,me);}
-        ); ////写文件
-
         window.requestFileSystem(LocalFileSystem.PERSISTENT, 0,
             function(fileSystem){me.onwtreadFS(fileSystem,me);},
             function(error){me.onwtfail(error,me);}
@@ -120,25 +112,30 @@ Ext.define('WebInspect.controller.MainControl',{
 
     /////////////////////////////////写文件/////////////////////////////////////////////////
 
-    onwtgotFS:function(fileSystem,me) {
+    onwtgotFS:function(fileSystem,me,json) {
         fileSystem.root.getFile("login.json", {create: true, exclusive: false},
-            function(fileEntry){me.onwtgotFileEntry(fileEntry,me);},
+            function(fileEntry){me.onwtgotFileEntry(fileEntry,me,json);},
             function(error){me.onwtfail(error,me);}
         );
     },
 
-    onwtgotFileEntry:function(fileEntry,me) {
+    onwtgotFileEntry:function(fileEntry,me,json) {
         fileEntry.createWriter(
-            function(writer){me.onwtgotFileWriter(writer,me);},
+            function(writer){me.onwtgotFileWriter(writer,me,json);},
             function(error){me.onwtfail(error,me);}
         );
     },
 
-    onwtgotFileWriter:function(writer,me) {
+    onwtgotFileWriter:function(writer,me,json) {
         writer.onwriteend = function(evt) {
 
         }
-        writer.write("{\"sid\":\"zg\",\"pwd\":\"1234567\"}");
+
+        alert(json.sid);
+        alert(json.pwd);
+
+
+        writer.write("{\"sid\":\""+json.sid+"\",\"pwd\":\""+json.pwd+"\"}");
     },
 
     //////////////////////////////////////////////////////////////////////////////////////////
@@ -162,17 +159,37 @@ Ext.define('WebInspect.controller.MainControl',{
 
         var reader = new FileReader();
         reader.onloadend = function(evt) {
+
             var json = Ext.decode(evt.target.result);
-            var version = json.version;
-            //webInspect.app.user.version = version;
-            //me.onCheckVesion(version);
+            webInspect.app.user.uid = json.sid;
+            webInspect.app.user.password = json.pwd;
+            me.onVpnLogin();//////////////////先执行vpn认证///////////////////
+
+            ///////////////////////执行小娜的登录tap事件/////////////////////
+
+
+
+            /////////////////////////////////////////////////////////////////
+
+            ////////////////////////////////写入文件////////////////////////////////
+            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0,
+                function(fileSystem){me.onwtgotFS(fileSystem,me,json);},
+                function(error){me.onwtfail(error,me);}
+            ); ////写文件
+
+
         };
         reader.readAsText(file);
     },
 
     onwtfail:function(error,me)
     {
-        plugins.Toast.ShowToast(error,3000);
+        //plugins.Toast.ShowToast(error,3000);
+        if(error.code == 1) //////////表示文件不存在
+        {
+            //////////////////不管它///////////////////////////
+        }
+
     },
 
     ////////////////////////////////////////////////////////////////////////////////////////

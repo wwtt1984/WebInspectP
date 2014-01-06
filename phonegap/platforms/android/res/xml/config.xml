@@ -28,7 +28,7 @@
     <feature name="FileTransfer">
         <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
     </feature>
-    <name>webInspect</name>
+    <name>钱管局APP</name>
     <description>
         Hello World sample application that responds to the deviceready event.
     </description>
