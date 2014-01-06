@@ -116,6 +116,11 @@ Ext.define('WebInspect.controller.MainControl',{
         alert(data.type);
         alert(data.simgtype);
 
+        Ext.Viewport.setMasked({
+            xtype: 'loadmask',
+            message: '努力加载中...'
+        });
+
         this.info = this.getInfo();
         if(!this.info){
             this.info = Ext.create('WebInspect.view.Info');
@@ -150,7 +155,6 @@ Ext.define('WebInspect.controller.MainControl',{
         if(!me.news){
             me.news = Ext.create('WebInspect.view.news.News');
         }
-        me.news.setStore(store);
 
         me.news.setTitle(title);
 
@@ -163,10 +167,9 @@ Ext.define('WebInspect.controller.MainControl',{
             results: results
         });
 
-        Ext.Viewport.setMasked({
-            xtype: 'loadmask',
-            message: '努力加载中...'
-        });
+        me.news.setStore(store);
+
+
 
         store.loadPage(1,function(records, operation, success) {
 
@@ -203,7 +206,7 @@ Ext.define('WebInspect.controller.MainControl',{
                     }
 
                     detailstore.load(function(records, operation, success){
-                        alert('jpg' + detailstore.getCount());
+                        alert('jpg:' + detailstore.getCount());
                         Ext.Viewport.setMasked(false);
                         me.newsdetail.onDataSet(detailstore.getAt(0));
                         me.getInfofunction().hide();
