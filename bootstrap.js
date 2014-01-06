@@ -747,9 +747,49 @@ Ext.ClassManager.addNameAlternateMappings({
     "Ext.viewport.WP"
   ],
   "WebInspect.controller.MainControl": [],
+  "WebInspect.model.ContactModel": [],
+  "WebInspect.model.FunctionModel": [],
+  "WebInspect.model.LevelModel": [],
+  "WebInspect.model.NewsDetailModel": [],
+  "WebInspect.model.NewsModel": [],
+  "WebInspect.model.PushModel": [],
+  "WebInspect.model.TaskModel": [],
+  "WebInspect.model.TestModel": [],
+  "WebInspect.model.TideModel": [],
+  "WebInspect.model.UserModel": [],
   "WebInspect.model.VersionModel": [],
+  "WebInspect.model.WeatherModel": [],
+  "WebInspect.store.ContactStore": [],
+  "WebInspect.store.FirstLevelStore": [],
+  "WebInspect.store.FunctionStore": [],
+  "WebInspect.store.InfoStore": [],
+  "WebInspect.store.NewsDetailStore": [],
+  "WebInspect.store.NewsStore": [],
+  "WebInspect.store.NoticeStore": [],
+  "WebInspect.store.PushStore": [],
+  "WebInspect.store.SecondLevelStore": [],
+  "WebInspect.store.TaskStore": [],
+  "WebInspect.store.TestStore": [],
+  "WebInspect.store.TideStore": [],
+  "WebInspect.store.UserStore": [],
   "WebInspect.store.VersionStore": [],
-  "WebInspect.view.Main": []
+  "WebInspect.store.WeatherStore": [],
+  "WebInspect.view.Function": [],
+  "WebInspect.view.Info": [],
+  "WebInspect.view.Login": [],
+  "WebInspect.view.Main": [],
+  "WebInspect.view.Task": [],
+  "WebInspect.view.Title": [],
+  "WebInspect.view.contact.Contact": [],
+  "WebInspect.view.contact.FirstLevel": [],
+  "WebInspect.view.contact.PopUp": [],
+  "WebInspect.view.contact.SecondLevel": [],
+  "WebInspect.view.news.News": [],
+  "WebInspect.view.news.NewsDetail": [],
+  "WebInspect.view.news.NewsImg": [],
+  "WebInspect.view.news.NewsPdf": [],
+  "WebInspect.view.tide.Tide": [],
+  "WebInspect.view.tide.TidePop": []
 });
 Ext.ClassManager.addNameAliasMappings({
   "Ext.AbstractComponent": [],
@@ -1691,9 +1731,79 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.Viewport": [],
   "Ext.viewport.WindowsPhone": [],
   "WebInspect.controller.MainControl": [],
+  "WebInspect.model.ContactModel": [],
+  "WebInspect.model.FunctionModel": [],
+  "WebInspect.model.LevelModel": [],
+  "WebInspect.model.NewsDetailModel": [],
+  "WebInspect.model.NewsModel": [],
+  "WebInspect.model.PushModel": [],
+  "WebInspect.model.TaskModel": [],
+  "WebInspect.model.TestModel": [],
+  "WebInspect.model.TideModel": [],
+  "WebInspect.model.UserModel": [],
   "WebInspect.model.VersionModel": [],
+  "WebInspect.model.WeatherModel": [],
+  "WebInspect.store.ContactStore": [],
+  "WebInspect.store.FirstLevelStore": [],
+  "WebInspect.store.FunctionStore": [],
+  "WebInspect.store.InfoStore": [],
+  "WebInspect.store.NewsDetailStore": [],
+  "WebInspect.store.NewsStore": [],
+  "WebInspect.store.NoticeStore": [],
+  "WebInspect.store.PushStore": [],
+  "WebInspect.store.SecondLevelStore": [],
+  "WebInspect.store.TaskStore": [],
+  "WebInspect.store.TestStore": [],
+  "WebInspect.store.TideStore": [],
+  "WebInspect.store.UserStore": [],
   "WebInspect.store.VersionStore": [],
+  "WebInspect.store.WeatherStore": [],
+  "WebInspect.view.Function": [
+    "widget.functionmain"
+  ],
+  "WebInspect.view.Info": [
+    "widget.info"
+  ],
+  "WebInspect.view.Login": [
+    "widget.login"
+  ],
   "WebInspect.view.Main": [
     "widget.main"
+  ],
+  "WebInspect.view.Task": [
+    "widget.task"
+  ],
+  "WebInspect.view.Title": [
+    "widget.maintitle"
+  ],
+  "WebInspect.view.contact.Contact": [
+    "widget.contact"
+  ],
+  "WebInspect.view.contact.FirstLevel": [
+    "widget.firstlevel"
+  ],
+  "WebInspect.view.contact.PopUp": [
+    "widget.popup"
+  ],
+  "WebInspect.view.contact.SecondLevel": [
+    "widget.secondlevel"
+  ],
+  "WebInspect.view.news.News": [
+    "widget.news"
+  ],
+  "WebInspect.view.news.NewsDetail": [
+    "widget.newsdetail"
+  ],
+  "WebInspect.view.news.NewsImg": [
+    "widget.newsimg"
+  ],
+  "WebInspect.view.news.NewsPdf": [
+    "widget.newspdf"
+  ],
+  "WebInspect.view.tide.Tide": [
+    "widget.tide"
+  ],
+  "WebInspect.view.tide.TidePop": [
+    "widget.tidepop"
   ]
 });

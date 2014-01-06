@@ -75,9 +75,12 @@
      *      }
      */
     "css": [
+
         {
-            "path": "resources/css/app.css",
-            "update": "delta"
+            "path": "resources/css/app1.css"
+        },
+        {
+            "path": "resources/css/my.css"
         }
     ],
 

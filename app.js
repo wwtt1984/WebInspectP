@@ -22,7 +22,9 @@ Ext.ClassManager.setAlias('Ext.data.proxy.SkProxy', 'proxy.sk');
 
 Ext.application({
     name: 'WebInspect',
-    user: {version:'1.0.0.62'},
+    mainthis: '',
+    user: {sid:'', name: '', password: '', mobile: '15999999999', tel:'', sms:'', mail:'11111',
+        sexy:'', ITEM_Id: '', DeptId: '', rtxsession: '',version:'1.0.0.62'},
 
     requires: [
         'Ext.MessageBox',
@@ -30,14 +32,63 @@ Ext.application({
     ],
 
     views: [
-        'Main'
+        'Main',
+        'Function',
+        'Task',
+        'Info',
+
+//        'Ext.ux.panel.PDF',
+
+        'news.News',
+        'news.NewsDetail',
+        'news.NewsImg',
+        'news.NewsPdf',
+
+        'contact.FirstLevel',
+        'contact.SecondLevel',
+        'contact.Contact',
+        'contact.PopUp',
+
+        'tide.Tide',
+        'tide.TidePop'
     ],
 
     models: [
+        'UserModel',
+
+        'WeatherModel',
+        'PushModel',
+        'FunctionModel',
+
+        'TaskModel',
+        'NewsModel',
+        'NewsDetailModel',
+
+        'LevelModel',
+        'ContactModel',
+
+        'TideModel',
         'VersionModel'
     ],
 
     stores: [
+        'UserStore',
+
+        'WeatherStore',
+        'PushStore',
+        'FunctionStore',
+
+        'TaskStore',
+        'NewsStore',
+        'NewsDetailStore',
+        'InfoStore',
+        'NoticeStore',
+
+        'FirstLevelStore',
+        'SecondLevelStore',
+        'ContactStore',
+
+        'TideStore',
         'VersionStore'
     ],
 
