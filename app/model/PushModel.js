@@ -9,5 +9,4 @@ Ext.define('WebInspect.model.PushModel',{
             'num'
         ]
     }
-        
 });

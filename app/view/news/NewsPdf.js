@@ -19,7 +19,7 @@ Ext.define('WebInspect.view.news.NewsPdf',{
                 itemId: 'newspdfpanel',
 //                title: '详细新闻',
 //                fullscreen: true,
-//                layout    : 'fit',
+                layout    : 'fit',
                 src       : 'http://cdn.mozilla.net/pdfjs/tracemonkey.pdf', // URL to the PDF - Same Domain or Server with CORS Support
                 style     : {
                     backgroundColor: '#333'
@@ -32,7 +32,9 @@ Ext.define('WebInspect.view.news.NewsPdf',{
 	{
 //		this.setSrc(url);
         alert(url);
-        Ext.ComponentQuery.query('#newspdfpanel')[0].setSrc(url);
+//        Ext.ComponentQuery.query('#newspdfpanel')[0].setSrc(url);
+//        Ext.ComponentQuery.query('#newspdfpanel')[0].setSrc('http://cdn.mozilla.net/pdfjs/tracemonkey.pdf');
 	}
+
 
 });

@@ -13,7 +13,7 @@ Ext.define('WebInspect.view.Task', {
         style: 'background: #fff;',
     	store: 'TaskStore',
 
-        emptyText: '<p class="no-searches">没有符合要求的记录</p>',
+        emptyText: '<p class="no-searches">没有待办事项</p>',
 
             	    
         itemTpl: Ext.create('Ext.XTemplate',

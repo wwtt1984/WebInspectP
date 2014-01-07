@@ -751,6 +751,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.model.ContactModel": [],
   "WebInspect.model.FunctionModel": [],
   "WebInspect.model.LevelModel": [],
+  "WebInspect.model.MessageModel": [],
   "WebInspect.model.NewsDetailModel": [],
   "WebInspect.model.NewsModel": [],
   "WebInspect.model.PushModel": [],
@@ -764,6 +765,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.store.FirstLevelStore": [],
   "WebInspect.store.FunctionStore": [],
   "WebInspect.store.InfoStore": [],
+  "WebInspect.store.MessageStore": [],
   "WebInspect.store.NewsDetailStore": [],
   "WebInspect.store.NewsStore": [],
   "WebInspect.store.NoticeStore": [],
@@ -785,6 +787,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.view.contact.FirstLevel": [],
   "WebInspect.view.contact.PopUp": [],
   "WebInspect.view.contact.SecondLevel": [],
+  "WebInspect.view.list.Message": [],
   "WebInspect.view.news.News": [],
   "WebInspect.view.news.NewsDetail": [],
   "WebInspect.view.news.NewsImg": [],
@@ -1738,6 +1741,7 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.model.ContactModel": [],
   "WebInspect.model.FunctionModel": [],
   "WebInspect.model.LevelModel": [],
+  "WebInspect.model.MessageModel": [],
   "WebInspect.model.NewsDetailModel": [],
   "WebInspect.model.NewsModel": [],
   "WebInspect.model.PushModel": [],
@@ -1751,6 +1755,7 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.store.FirstLevelStore": [],
   "WebInspect.store.FunctionStore": [],
   "WebInspect.store.InfoStore": [],
+  "WebInspect.store.MessageStore": [],
   "WebInspect.store.NewsDetailStore": [],
   "WebInspect.store.NewsStore": [],
   "WebInspect.store.NoticeStore": [],
@@ -1791,6 +1796,9 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "WebInspect.view.contact.SecondLevel": [
     "widget.secondlevel"
+  ],
+  "WebInspect.view.list.Message": [
+    "widget.message"
   ],
   "WebInspect.view.news.News": [
     "widget.news"

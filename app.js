@@ -38,6 +38,8 @@ Ext.application({
         'Task',
         'Info',
 
+        'list.Message',
+
         'Ext.ux.panel.PDF',
 
         'news.News',
@@ -62,6 +64,8 @@ Ext.application({
         'FunctionModel',
 
         'TaskModel',
+        'MessageModel',
+
         'NewsModel',
         'NewsDetailModel',
 
@@ -80,6 +84,8 @@ Ext.application({
         'FunctionStore',
 
         'TaskStore',
+        'MessageStore',
+
         'NewsStore',
         'NewsDetailStore',
         'InfoStore',
