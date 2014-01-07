@@ -121,7 +121,12 @@ Ext.define('WebInspect.controller.MainControl',{
             message: '努力加载中...'
         });
 
+        if(this.getInfo()){
+            this.getInfo().destroy();
+        }
+
         this.info = this.getInfo();
+
         if(!this.info){
             this.info = Ext.create('WebInspect.view.Info');
         }
@@ -502,8 +507,11 @@ Ext.define('WebInspect.controller.MainControl',{
 
         WebInspect.app.user.sid = Ext.getCmp('name').getValue();
         WebInspect.app.user.password = Ext.getCmp('password').getValue();
-
         me.onUserWriteJson();
+
+        plugins.Toast.ShowToast("VPN第一次需要初始化，需重新启动程序！",1000);
+        window.setTimeout(me.onQuitSystemTap,3000);
+
 //        me.onUserCheck();
     },
 
