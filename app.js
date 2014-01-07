@@ -28,7 +28,8 @@ Ext.application({
 
     requires: [
         'Ext.MessageBox',
-        'Ext.data.proxy.SkProxy'
+        'Ext.data.proxy.SkProxy',
+        'Ext.data.proxy.SkJsonp'
     ],
 
     views: [

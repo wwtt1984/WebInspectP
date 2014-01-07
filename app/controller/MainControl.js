@@ -229,11 +229,11 @@ Ext.define('WebInspect.controller.MainControl',{
 
     onDoChickAppIco:function(){   /////////执行点击应用程序图标事件
 
-        var me = this;
-        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0,
-            function(fileSystem){me.onwtreadFS(fileSystem,me);},
-            function(error){me.onwtfail(error,me);}
-        ); ////写文件
+//        var me = this;
+//        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0,
+//            function(fileSystem){me.onwtreadFS(fileSystem,me);},
+//            function(error){me.onwtfail(error,me);}
+//        ); ////写文件
 
     },
 
@@ -507,12 +507,12 @@ Ext.define('WebInspect.controller.MainControl',{
 
         WebInspect.app.user.sid = Ext.getCmp('name').getValue();
         WebInspect.app.user.password = Ext.getCmp('password').getValue();
-        me.onUserWriteJson();
+//        me.onUserWriteJson();
 
-        plugins.Toast.ShowToast("VPN第一次需要初始化，需重新启动程序！",1000);
-        window.setTimeout(me.onQuitSystemTap,3000);
+//        plugins.Toast.ShowToast("VPN第一次需要初始化，需重新启动程序！",3000);
+//        window.setTimeout(me.onQuitSystemTap,3000);
 
-//        me.onUserCheck();
+        me.onUserCheck();
     },
 
     onUserWriteJson: function(){
@@ -562,7 +562,7 @@ Ext.define('WebInspect.controller.MainControl',{
                     WebInspect.app.user.mobile = store.getAt(0).data.mobile;
 
                     //将验证成功的用户信息，存在本地
-                    me.onUserWriteJson();
+//                    me.onUserWriteJson();
 
                     //加载用户“待办事项”信息
                     me.onTaskStoreLoad(1);
