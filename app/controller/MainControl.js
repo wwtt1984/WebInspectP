@@ -115,7 +115,6 @@ Ext.define('WebInspect.controller.MainControl',{
     onDoChickTitle:function(data){       ////////执行点击标题栏事件
 
         var me = this;
-
         Ext.Viewport.setMasked({
             xtype: 'loadmask',
             message: '努力加载中...'
@@ -172,26 +171,19 @@ Ext.define('WebInspect.controller.MainControl',{
     onNoticeNewsStypeSet: function(storename, t, results, data, title){
 
         var me = this;
-
         me.news = me.getNews();
         if(!me.news){
             me.news = Ext.create('WebInspect.view.news.News');
         }
-
         me.news.setTitle(title);
-
         me.getInfo().push(me.news);
-
         var store = Ext.getStore(storename);
-
         store.getProxy().setExtraParams({
             t: t,
             results: results
         });
 
         me.news.setStore(store);
-
-
 
         store.loadPage(1,function(records, operation, success) {
 
@@ -256,28 +248,28 @@ Ext.define('WebInspect.controller.MainControl',{
 
     onVpnLogin:function()
     {
-
         Ext.Viewport.setMasked({xtype:'loadmask',message:'VPN连接中,请稍后...'});
         var me = this;
-        plugins.Vpn.VpnLogin(function(success) {
+        plugins.Vpn.VpnLogin(WebInspect.app.user.sid,WebInspect.app.user.password,function(success) {
             Ext.Viewport.setMasked(false);
             if(success == "true")
             {
                 plugins.Toast.ShowToast("VPN连接成功!",3000);
                 ////////////////////////////////////////////////
                 me.onCheckVesion(me); //////////////检查版本号////////////////////
-
                 me.onUserCheck();
             }
             else if(success == "false")
             {
-                plugins.Toast.ShowToast("VPN连接失败,请重新启动程序!",3000);
-                navigator.app.exitApp(); //////////////////退出系统
+                plugins.Toast.ShowToast("VPN连接超时,请重试!",3000);
             }
             else if(success == "initfalse")
             {
-                plugins.Toast.ShowToast("VPN初始化失败,请重新启动程序!",3000);
-                navigator.app.exitApp(); //////////////////退出系统
+                plugins.Toast.ShowToast("VPN初始化失败,请重试!",3000);
+            }
+            else if(success == "error")
+            {
+                plugins.Toast.ShowToast("用户名或者密码输入有误!",3000);
             }
         });
 
@@ -327,7 +319,6 @@ Ext.define('WebInspect.controller.MainControl',{
         writer.onwriteend = function(evt) {
 
         }
-
         writer.write("{\"sid\":\""+json.sid+"\",\"pwd\":\""+json.pwd+"\",\"name\":\""+json.name+"\",\"mobile\":\""+json.mobile+"\"}");
     },
 
@@ -363,20 +354,8 @@ Ext.define('WebInspect.controller.MainControl',{
                 me.onVpnLogin();//////////////////先执行vpn认证///////////////////
             }
             else{
-
                 me.onMessagePush(data);
             }
-
-
-            ///////////////////////执行小娜的登录tap事件/////////////////////
-
-
-
-            /////////////////////////////////////////////////////////////////
-
-
-
-
         };
         reader.readAsText(file);
     },
@@ -527,23 +506,20 @@ Ext.define('WebInspect.controller.MainControl',{
     //登录
     onLoginTap: function(){
         var me = this;
-
-
-
         WebInspect.app.user.sid = Ext.getCmp('name').getValue();
         WebInspect.app.user.password = Ext.getCmp('password').getValue();
-        me.onUserWriteJson();
-
-        plugins.Toast.ShowToast("VPN第一次需要初始化，需重新启动程序！",3000);
-        window.setTimeout(me.onQuitSystemTap,3000);
-
-//        me.onUserCheck();
+        me.onVpnLogin(); /////成功写入开始执行VPN认证
     },
 
     onUserWriteJson: function(){
         var me = this;
         var json = [];
-        json.push({sid: WebInspect.app.user.sid, pwd: WebInspect.app.user.password, name: WebInspect.app.user.name, mobile: WebInspect.app.user.mobile});
+        json.push({
+            sid: WebInspect.app.user.sid,
+            pwd: WebInspect.app.user.password,
+            name: WebInspect.app.user.name,
+            mobile: WebInspect.app.user.mobile
+        });
 
         //将验证成功的用户信息，存在本地
         ////////////////////////////////写入文件////////////////////////////////
@@ -557,7 +533,6 @@ Ext.define('WebInspect.controller.MainControl',{
     onUserCheck: function(){
 
         var me = this;
-
         Ext.Viewport.setMasked({
             xtype: 'loadmask',
             message: '登录中,请稍后...'
@@ -649,8 +624,6 @@ Ext.define('WebInspect.controller.MainControl',{
         });
 
         store.load(function(records, operation, success) {
-
-
 
             Ext.getCmp('maintitle').onDataSet(store.getAt(0), WebInspect.app.user.name, WebInspect.app.user.mobile);
             Ext.getCmp('noticelist').addCls('hidden-disclosure-list');
@@ -832,9 +805,7 @@ Ext.define('WebInspect.controller.MainControl',{
     //加载“内网新闻”，“通知公告”，“综合信息”模块页面
     onNewsStypeSet: function(storename, t, results, title){
 
-
         var store = Ext.getStore(storename);
-
         store.getProxy().setExtraParams({
             t: t,
             results: results
@@ -852,11 +823,8 @@ Ext.define('WebInspect.controller.MainControl',{
             this.news = Ext.create('WebInspect.view.news.News');
         }
         this.news.setStore(store);
-
         this.news.setTitle(title);
-
         this.getInfo().push(this.news);
-
         this.getMain().setActiveItem(this.getInfo());
     },
 

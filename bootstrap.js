@@ -1810,7 +1810,7 @@ Ext.ClassManager.addNameAliasMappings({
     "widget.newsimg"
   ],
   "WebInspect.view.news.NewsPdf": [
-    "widget.newspdf"
+    "widget.pdfpanel"
   ],
   "WebInspect.view.tide.Tide": [
     "widget.tide"

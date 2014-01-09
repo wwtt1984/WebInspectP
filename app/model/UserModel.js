@@ -16,12 +16,12 @@ Ext.define('WebInspect.model.UserModel',{
             'DeptId',
             
             'rtxsession'
-        ],
+        ]
         
-        proxy: {
-            type: 'localstorage',
-            id: 'user'
-        }
+//        proxy: {
+//            type: 'localstorage',
+//            id: 'user'
+//        }
     }
         
 });
