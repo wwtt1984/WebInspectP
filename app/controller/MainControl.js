@@ -351,6 +351,8 @@ Ext.define('WebInspect.controller.MainControl',{
             WebInspect.app.user.mobile = json.mobile;
 
             if(num == 1){
+                Ext.getCmp('name').setValue(WebInspect.app.user.sid);
+                Ext.getCmp('password').setValue(WebInspect.app.user.password);
                 me.onVpnLogin();//////////////////先执行vpn认证///////////////////
             }
             else{
