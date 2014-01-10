@@ -43,6 +43,13 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/com.phone.phone.Phone/www/phone.js",
+        "id": "com.phone.phone.Phone.phone",
+        "clobbers": [
+            "window.plugins.Phone"
+        ]
+    },
+    {
         "file": "plugins/org.apache.cordova.file/www/DirectoryEntry.js",
         "id": "org.apache.cordova.file.DirectoryEntry",
         "clobbers": [
@@ -173,6 +180,7 @@ module.exports.metadata =
     "com.install.install.Install": "1.5.2",
     "org.apache.cordova.file-transfer": "0.4.0",
     "com.vpn.vpn.Vpn": "1.5.2",
+    "com.phone.phone.Phone": "1.5.2",
     "org.apache.cordova.file": "0.2.5"
 }
 // BOTTOM OF METADATA

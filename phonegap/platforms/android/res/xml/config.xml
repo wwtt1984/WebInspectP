@@ -16,6 +16,9 @@
     <feature name="JPush">
         <param name="android-package" value="com.jpush.jpush.JPush" />
     </feature>
+    <feature name="PhonePlugin">
+        <param name="android-package" value="com.phone.phone.PhonePlugin" />
+    </feature>
     <feature name="ToastPlugin">
         <param name="android-package" value="com.toast.toast.ToastPlugin" />
     </feature>

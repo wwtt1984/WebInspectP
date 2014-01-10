@@ -18,28 +18,28 @@ Ext.define('WebInspect.view.contact.FirstLevel', {
 	    
 	    ui: 'round',
 	    
-        items: [
-        {
-            xtype: 'toolbar',
-            docked: 'top',
-            ui: 'light',
-
-            items: [
-            { 
-                xtype: 'spacer' 
-            },
-            {
-                xtype: 'searchfield',
-                placeHolder: 'Search...',
-                listeners: {
-                    scope: this
-//                    clearicontap: this.onSearchClearIconTap,
-//                    keyup: this.onSearchKeyUp
-                    }
-                },
-                { xtype: 'spacer' }
-            ]
-        }],
+//        items: [
+//        {
+//            xtype: 'toolbar',
+//            docked: 'top',
+//            ui: 'light',
+//
+//            items: [
+//            {
+//                xtype: 'spacer'
+//            },
+//            {
+//                xtype: 'searchfield',
+//                placeHolder: 'Search...',
+//                listeners: {
+//                    scope: this
+////                    clearicontap: this.onSearchClearIconTap,
+////                    keyup: this.onSearchKeyUp
+//                    }
+//                },
+//                { xtype: 'spacer' }
+//            ]
+//        }],
         
         emptyText: '<p class="no-searches">没有符合要求的记录</p>',
 	      

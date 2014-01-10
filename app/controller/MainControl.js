@@ -19,7 +19,10 @@ Ext.define('WebInspect.controller.MainControl',{
             secondlevel: 'main info secondlevel',
             contact: 'main info contact',
             popup: 'main info popup',
-            numcancel: '#numcancel',
+            fullnum: '[itemId=fullnum]',
+            shortnum: '[itemId=shortnum]',
+            officenum: '[itemId=officenum]',
+            numcancel: '[itemId=numcancel]',
             tide: 'info tide',
             tidepop: 'info tidepop'
         },
@@ -60,6 +63,15 @@ Ext.define('WebInspect.controller.MainControl',{
             },
             contact: {
                 itemtap: 'onContactItemTap'
+            },
+            fullnum: {
+                tap: 'onFullNumTap'
+            },
+            shortnum: {
+                tap: 'onShortNumTap'
+            },
+            officenum: {
+                tap: 'onOfficeNumTap'
             },
             numcancel: {
                 tap: 'onNumCancelTap'
@@ -511,6 +523,8 @@ Ext.define('WebInspect.controller.MainControl',{
         WebInspect.app.user.sid = Ext.getCmp('name').getValue();
         WebInspect.app.user.password = Ext.getCmp('password').getValue();
         me.onVpnLogin(); /////成功写入开始执行VPN认证
+
+//        me.onUserCheck();
     },
 
     onUserWriteJson: function(){
@@ -972,14 +986,37 @@ Ext.define('WebInspect.controller.MainControl',{
         this.popup.show();
     },
 
+    onFullNumTap: function(){
+        var num = Ext.ComponentQuery.query('#fullnum')[0].getText();
+
+        plugins.Phone.Call(num, function(obj) {
+//            alert(obj.number);
+        },function(error){
+//            alert(error);
+        });
+    },
+
+    onShortNumTap: function(){
+        var num = Ext.ComponentQuery.query('#shortnum')[0].getText();
+
+        plugins.Phone.Call(num, function(obj) {},function(error){});
+    },
+
+    onOfficeNumTap: function(){
+
+        var num = Ext.ComponentQuery.query('#officenum')[0].getText();
+
+        plugins.Phone.Call(num, function(obj) {},function(error){});
+    },
+
     onNumCancelTap: function(){
-        this.popup.hide();
+        this.popup.destroy();
     },
 
     //点击选择“潮位信息”中的一条信息后，显示具体信息
     onTideItemTap: function(list, index, target, record, e, eOpts){
         if (this.tidepop) {
-            this.tidepop.hide();
+            this.tidepop.destroy();
         }
         this.tidepop = Ext.create('WebInspect.view.tide.TidePop');
         if (Ext.os.deviceType.toLowerCase() == "phone") {

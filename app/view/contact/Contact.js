@@ -24,12 +24,12 @@ Ext.define('WebInspect.view.contact.Contact', {
             '<div class="contact-list-item">',
             '    <img class="photo" src="{[this.getImg(values)]}" />',
             '    <h1>{displayname}</h1>',
-            '    <span>{mobile}({pager})&nbsp;</span>',
-            '    <p>{telephonenumber}</p>',
+            '    <span>{[this.getNum(values.mobile)]}&nbsp;({[this.getNum(values.pager)]})&nbsp;</span>',
+            '    <p>{[this.getNum(values.telephonenumber)]}</p>',
             '</div>',
             {
 	        	getImg: function(values){
-//	        		debugger;
+
 	        		var string = '';
 
 	        		if(values.description == '女'){
@@ -39,7 +39,17 @@ Ext.define('WebInspect.view.contact.Contact', {
 	        			string += 'resources/images/man.png';
 	        		}
 	        		return string;
-	        	}
+	        	},
+                getNum: function(values){
+
+                    var string = '--';
+
+                    if(values != 'null'){
+                        string = values;
+                    }
+
+                    return string;
+                }
             }            
         )
     }

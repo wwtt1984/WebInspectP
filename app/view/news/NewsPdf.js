@@ -1,6 +1,6 @@
 Ext.define('WebInspect.view.news.NewsPdf',{
-    extend: 'Ext.Container',
-	xtype: 'pdfpanel',
+    extend: 'Ext.ux.panel.PDF',
+	xtype: 'newspdf',
 	config: {
 		title: '详细新闻',
         layout    : 'fit',
@@ -12,7 +12,7 @@ Ext.define('WebInspect.view.news.NewsPdf',{
 	
 	setPdfUrl:function(url)
 	{
-        alert(url);
+//        alert(url);
 		this.setSrc(url);
 	}
 });

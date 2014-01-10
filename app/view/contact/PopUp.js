@@ -20,7 +20,7 @@ Ext.define('WebInspect.view.contact.PopUp', {
 
         defaults: {
             xtype : 'button',
-            style: 'height: 20px;width:94%;margin:10px 3% 10px 3%;',
+            style: 'min-height:1.8em; max-height: 2.2em;width:94%;margin:10px 3% 10px 3%;',
             cls   : 'demobtn',
             flex  : 1
         },
@@ -31,20 +31,40 @@ Ext.define('WebInspect.view.contact.PopUp', {
         items: [
         {
             text: '长号',
-            id:  'fullnum'               
+            itemId:  'fullnum'
         },
         {
             text: '短号',
-            id:  'shortnum'            
+            itemId:  'shortnum'
+        },
+        {
+            text: '办公号码',
+            itemId:  'officenum'
         },
         {
             text: '取消',
-            id:  'numcancel'                
+            itemId:  'numcancel'
         }]
     },
 
     onDataSet: function(record) {
-        Ext.getCmp('fullnum').setText(record.data.mobile);
-        Ext.getCmp('shortnum').setText(record.data.pager);
+
+        this.onButtonSet(Ext.ComponentQuery.query('#fullnum')[0], record.data.mobile);
+        this.onButtonSet(Ext.ComponentQuery.query('#shortnum')[0], record.data.pager);
+        this.onButtonSet(Ext.ComponentQuery.query('#officenum')[0], record.data.telephonenumber);
+
+//        Ext.getCmp('fullnum').setText(record.data.mobile);
+//        Ext.getCmp('shortnum').setText(record.data.pager);
+    },
+
+    onButtonSet: function(button, text){
+//        debugger;
+        if(text != 'null'){
+            button.setText(text);
+            button.show();
+        }
+        else{
+            button.hide();
+        }
     }
 });
