@@ -39,6 +39,7 @@ Ext.application({
         'Info',
 
         'list.Message',
+        'list.MainInfo',
 
         'Ext.ux.panel.PDF',
 
@@ -84,7 +85,8 @@ Ext.application({
         'WaterModel',
         'WaterDetailModel',
 
-        'FlowModel'
+        'FlowModel',
+        'MainModel'
     ],
 
     stores: [
@@ -111,7 +113,8 @@ Ext.application({
         'WaterStore',
         'WaterDetailStore',
 
-        'FlowStore'
+        'FlowStore',
+        'MainStore'
     ],
 
     controllers: [

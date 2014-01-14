@@ -31,7 +31,8 @@ Ext.define('WebInspect.controller.MainControl',{
             setting: 'info setting',
             flow: 'info flow',
             flowSegmentedButton: '[itemId=flowSegmentedButton]',
-            sysquit: '[itemId=sysquit]'
+            sysquit: '[itemId=sysquit]',
+            maininfo: 'inf maininfo'
         },
         control: {
             main: {
@@ -465,6 +466,13 @@ Ext.define('WebInspect.controller.MainControl',{
         }
         else if(mainactive == "info")
         {
+            document.removeEventListener("backbutton", me.onBackKeyDown, false); // 注销返回键
+
+            var intervalID = window.setInterval(function() {
+                window.clearInterval(intervalID);
+                document.addEventListener("backbutton", me.onBackKeyDown, false); // 返回键
+
+            }, 2000);
             //当前页面是其他的页面时，返回上一级页面
             me.onBackKeyTap();
         }
@@ -483,14 +491,28 @@ Ext.define('WebInspect.controller.MainControl',{
 
         switch(active.xtype){
             case 'news':
+                me.onInfoFunctionBackTap();
+                break;
 
             case 'task':
+                me.onInfoFunctionBackTap();
+                break;
 
             case 'message':
+                me.onInfoFunctionBackTap();
+                break;
 
             case 'water':
+                me.onInfoFunctionBackTap();
+                break;
 
             case 'flow':
+                me.onInfoFunctionBackTap();
+                break;
+
+            case 'maininfo':
+                me.onInfoFunctionBackTap();
+                break;
 
             case 'firstlevel':
                 me.onInfoFunctionBackTap();
@@ -748,7 +770,16 @@ Ext.define('WebInspect.controller.MainControl',{
                             break;
                         case 2:
 
-                            Ext.Msg.alert('此模块正在完善中!');
+                            this.maininfo = this.getMaininfo();
+                            if(!this.maininfo){
+                                this.maininfo = Ext.create('WebInspect.view.list.MainInfo');
+                            }
+
+                            this.getInfo().push(this.maininfo);
+
+                            this.maininfo.onDataSet();
+
+                            this.getMain().setActiveItem(this.getInfo());
                             break;
                     }
                 }
