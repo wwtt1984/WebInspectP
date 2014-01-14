@@ -6,21 +6,17 @@ Ext.define('WebInspect.model.MessageModel',{
     extend: 'Ext.data.Model',
     config: {
         fields: [
-            'StepID',
-            'TaskID',
-            'ProcessName',
-            'NodeName',
-            'OwnerAccount',
+            'MsgCount',
+            'MsgID',
+            'DialogID',
+            'Reciver',
+            'Dialog',
 
-            'ReceiveAt',
-            'Comments',
-            'TimeoutDeadline',
-            'CreateAt',
-            'Description',
-
-            'State',
-            'SerialNum',
-            'AgentAccount'
+            'Sender',
+            'Client',
+            'CreateTime',
+            'MsgTitle',
+            'sqldata_Id'
         ]
     }
 

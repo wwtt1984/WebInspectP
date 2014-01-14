@@ -53,7 +53,14 @@ Ext.application({
         'contact.PopUp',
 
         'tide.Tide',
-        'tide.TidePop'
+        'tide.TidePop',
+
+        'water.Water',
+        'water.WaterDetail',
+
+        'flow.Flow',
+
+        'settings.Setting'
     ],
 
     models: [
@@ -73,7 +80,11 @@ Ext.application({
         'ContactModel',
 
         'TideModel',
-        'VersionModel'
+        'VersionModel',
+        'WaterModel',
+        'WaterDetailModel',
+
+        'FlowModel'
     ],
 
     stores: [
@@ -96,7 +107,11 @@ Ext.application({
         'ContactStore',
 
         'TideStore',
-        'VersionStore'
+        'VersionStore',
+        'WaterStore',
+        'WaterDetailStore',
+
+        'FlowStore'
     ],
 
     controllers: [

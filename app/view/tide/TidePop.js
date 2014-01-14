@@ -49,6 +49,7 @@ Ext.define('WebInspect.view.tide.TidePop', {
     },
 
     onDataSet: function(record) {
+
         this.setData(record.data);
     }
 });

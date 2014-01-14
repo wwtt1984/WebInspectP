@@ -24,7 +24,14 @@ Ext.define('WebInspect.controller.MainControl',{
             officenum: '[itemId=officenum]',
             numcancel: '[itemId=numcancel]',
             tide: 'info tide',
-            tidepop: 'info tidepop'
+            tidepop: 'info tidepop',
+            water: 'info water',
+            waterSegmentedButton: '[itemId=waterSegmentedButton]',
+            waterdetail: 'info waterdetail',
+            setting: 'info setting',
+            flow: 'info flow',
+            flowSegmentedButton: '[itemId=flowSegmentedButton]',
+            sysquit: '[itemId=sysquit]'
         },
         control: {
             main: {
@@ -81,6 +88,21 @@ Ext.define('WebInspect.controller.MainControl',{
             },
             '#tideSegmentedButton': {
                 toggle: 'onTideSegmentedTap'
+            },
+            water: {
+                itemtap: 'onWaterItemTap'
+            },
+            waterSegmentedButton: {
+                toggle: 'onWaterSegmentedTap'
+            },
+            flowSegmentedButton: {
+                toggle: 'onFlowSegmentedTap'
+            },
+            message: {
+                itemtap: 'onMessageItemTap'
+            },
+            sysquit: {
+                tap: 'onQuitSystemTap'
             }
         }
     },
@@ -249,12 +271,12 @@ Ext.define('WebInspect.controller.MainControl',{
 
     onDoChickAppIco:function(){   /////////执行点击应用程序图标事件
 
-        var me = this;
-        var data = '';
-        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0,
-            function(fileSystem){me.onwtreadFS(fileSystem,me,1,data);},
-            function(error){me.onwtfail(error,me);}
-        ); ////写文件
+//        var me = this;
+//        var data = '';
+//        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0,
+//            function(fileSystem){me.onwtreadFS(fileSystem,me,1,data);},
+//            function(error){me.onwtfail(error,me);}
+//        ); ////写文件
 
     },
 
@@ -466,6 +488,10 @@ Ext.define('WebInspect.controller.MainControl',{
 
             case 'message':
 
+            case 'water':
+
+            case 'flow':
+
             case 'firstlevel':
                 me.onInfoFunctionBackTap();
                 break;
@@ -491,6 +517,10 @@ Ext.define('WebInspect.controller.MainControl',{
                 me.getInfofunction().show();
                 break;
             case 'secondlevel':
+                me.getInfo().pop();
+                me.getInfofunction().show();
+                break;
+            case 'waterdetail':
                 me.getInfo().pop();
                 me.getInfofunction().show();
                 break;
@@ -522,9 +552,9 @@ Ext.define('WebInspect.controller.MainControl',{
         var me = this;
         WebInspect.app.user.sid = Ext.getCmp('name').getValue();
         WebInspect.app.user.password = Ext.getCmp('password').getValue();
-        me.onVpnLogin(); /////成功写入开始执行VPN认证
+//        me.onVpnLogin(); /////成功写入开始执行VPN认证
 
-//        me.onUserCheck();
+        me.onUserCheck();
     },
 
     onUserWriteJson: function(){
@@ -578,10 +608,11 @@ Ext.define('WebInspect.controller.MainControl',{
                     WebInspect.app.user.mobile = store.getAt(0).data.mobile;
 
                     //将验证成功的用户信息，存在本地
-                    me.onUserWriteJson();
+//                    me.onUserWriteJson();
 
                     //加载用户“待办事项”信息
                     me.onTaskStoreLoad(1);
+                    me.onMessageLoad();
                 }
                 else{
                     Ext.Viewport.setMasked(false);
@@ -608,6 +639,17 @@ Ext.define('WebInspect.controller.MainControl',{
 
             }
         });
+    },
+
+    onMessageLoad: function(){
+
+        var store = Ext.getStore('MessageStore');
+        store.getProxy().setExtraParams({
+            t: 'GetRtxList',
+            results: WebInspect.app.user.sid + '$jsonp'
+        });
+
+        store.load(function(records, operation, success){}, this);
     },
 
     //加载用户“待办事项”信息
@@ -711,6 +753,10 @@ Ext.define('WebInspect.controller.MainControl',{
         list.lastTapHold = null;
     },
 
+    onMessageItemTap: function(list, index, target, record, e, eOpts ){
+        Ext.Msg.alert('功能正在完善中！');
+    },
+
     //“主功能”页面的事件，判断进入选择的模块
     onFunctionLsitTap: function(list, index, target, record, e, eOpts ){
 
@@ -797,6 +843,37 @@ Ext.define('WebInspect.controller.MainControl',{
             }, this);
 
             this.getInfo().push(this.tide);
+            this.getMain().setActiveItem(this.getInfo());
+        }
+        else if(record.data.name == '水情信息'){
+
+            this.onWaterStoreLoad('main');
+
+            this.water = this.getWater();
+            if(!this.water){
+                this.water= Ext.create('WebInspect.view.water.Water');
+            }
+            this.getInfo().push(this.water);
+            this.getMain().setActiveItem(this.getInfo());
+        }
+        else if(record.data.name == '流量信息'){
+
+            this.onFlowStoreLoad(Ext.Date.format(new Date(), 'Y-m-d').toString());
+            this.flow = this.getFlow();
+            if(!this.flow){
+                this.flow = Ext.create('WebInspect.view.flow.Flow');
+            }
+            this.getInfo().push(this.flow);
+            this.getMain().setActiveItem(this.getInfo());
+        }
+        else if(record.data.name == '设置'){
+
+
+            this.setting = this.getSetting();
+            if(!this.setting){
+                this.setting = Ext.create('WebInspect.view.settings.Setting');
+            }
+            this.getInfo().push(this.setting);
             this.getMain().setActiveItem(this.getInfo());
         }
         else{
@@ -968,10 +1045,11 @@ Ext.define('WebInspect.controller.MainControl',{
 
     //点击通讯录中“人员”
     onContactItemTap: function(list, index, target, record, e, eOpts){
-//    	if (this.popup) {
-//            this.popup.hide();
-//        }
-        this.popup = Ext.create('WebInspect.view.contact.PopUp');
+    	if (!this.popup) {
+//            this.popup.destroy();
+            this.popup = Ext.create('WebInspect.view.contact.PopUp');
+        }
+
         if (Ext.os.deviceType.toLowerCase() == "phone") {
             this.popup.setWidth(null);
             this.popup.setHeight('40%');
@@ -1010,15 +1088,17 @@ Ext.define('WebInspect.controller.MainControl',{
     },
 
     onNumCancelTap: function(){
-        this.popup.destroy();
+        this.popup.hide();
     },
 
     //点击选择“潮位信息”中的一条信息后，显示具体信息
     onTideItemTap: function(list, index, target, record, e, eOpts){
-        if (this.tidepop) {
-            this.tidepop.destroy();
+
+        if (!this.tidepop) {
+//            this.tidepop.destroy();
+            this.tidepop = Ext.create('WebInspect.view.tide.TidePop');
         }
-        this.tidepop = Ext.create('WebInspect.view.tide.TidePop');
+//        this.tidepop = Ext.create('WebInspect.view.tide.TidePop');
         if (Ext.os.deviceType.toLowerCase() == "phone") {
             this.tidepop.setWidth(null);
             this.tidepop.setMinHeight('45%');
@@ -1035,9 +1115,109 @@ Ext.define('WebInspect.controller.MainControl',{
 
     //潮位信息中的“segmentedbutton”事件，选择后，显示该日期的“潮位信息”
     onTideSegmentedTap: function(me, button, isPressed, eOpts){
-        var store = Ext.getStore('TideStore');
-        store.clearFilter();
+        if(isPressed){
+            var store = Ext.getStore('TideStore');
+            store.clearFilter();
 
-        store.filter("sdate",me.getPressedButtons()[0].getText());
+            store.filter("sdate",button.getText());
+        }
+    },
+
+    //水情信息中的“主要、河、库、闸、潮”信息选择
+    onWaterSegmentedTap: function(me, button, isPressed, eOpts){
+//        var text = me.getPressedButtons()[0].getText();
+        if(isPressed){
+
+            var text = button._text;
+            switch(text){
+                case '主要':
+                    this.onWaterStoreLoad('main');
+                    break;
+                case '河':
+                    this.onWaterStoreLoad('river');
+                    break;
+                case '库':
+
+                    this.onWaterStoreLoad('reservoir');
+                    break;
+                case '闸':
+
+                    this.onWaterStoreLoad('strobe');
+                    break;
+                case '潮':
+
+                    this.onWaterStoreLoad('tidal');
+                    break;
+            }
+        }
+    },
+
+    onWaterStoreLoad: function(result){
+//        Ext.Viewport.setMasked({
+//            xtype: 'loadmask',
+//            message: '努力加载中...'
+//        });
+
+        var store = Ext.getStore('WaterStore');
+
+        store.removeAll();
+        store.getProxy().setExtraParams({
+            t: 'GetWaterMainInfo',
+            results: result + '$jsonp'
+        });
+
+        store.loadPage(1,function(records, operation, success) {});
+    },
+
+    onWaterItemTap: function(list, index, target, record, e, eOpts){
+        Ext.Viewport.setMasked({
+            xtype: 'loadmask',
+            message: '努力加载中...'
+        });
+
+        var store = Ext.getStore('WaterDetailStore');
+
+        store.removeAll();
+        store.getProxy().setExtraParams({
+            t: 'GetWaterSingleInfo',
+            results: record.data.stcdt + '$jsonp'
+        });
+
+        store.load(function(records, operation, success){
+            Ext.Viewport.setMasked(false);
+        }, this);
+
+        if(!this.waterdetail){
+            this.waterdetail = Ext.create('WebInspect.view.water.WaterDetail');
+        }
+
+        this.getInfofunction().hide();
+        this.getInfo().push(this.waterdetail);
+    },
+
+    onFlowStoreLoad: function(result){
+//        Ext.Viewport.setMasked({
+//            xtype: 'loadmask',
+//            message: '努力加载中...'
+//        });
+
+        var store = Ext.getStore('FlowStore');
+
+        store.removeAll();
+        store.getProxy().setExtraParams({
+            t: 'GetFlowMainInfo',
+            results: result + '$jsonp'
+        });
+
+        store.load(function(records, operation, success) {});
+    },
+
+    onFlowSegmentedTap: function(me, button, isPressed, eOpts){
+//        var text = me.getPressedButtons()[0].getText();
+        if(isPressed){
+
+            var text = button._text;
+            this.onFlowStoreLoad(text);
+        }
     }
 });
