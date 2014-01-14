@@ -746,6 +746,10 @@ Ext.define('WebInspect.controller.MainControl',{
 
                             this.getMain().setActiveItem(this.getInfo());
                             break;
+                        case 2:
+
+                            Ext.Msg.alert('此模块正在完善中!');
+                            break;
                     }
                 }
             }

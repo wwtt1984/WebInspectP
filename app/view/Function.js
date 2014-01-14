@@ -33,10 +33,10 @@ Ext.define('WebInspect.view.Function', {
                         direction: 'vertical',
                         directionLock: true
                     },
-            	    onItemDisclosure: function(record, btn, index) {
-
-               	        Ext.Msg.alert('Tap', 'Disclose more info for ' + record.get('firstName'), Ext.emptyFn);
-            	    },
+//            	    onItemDisclosure: function(record, btn, index) {
+//
+//               	        Ext.Msg.alert('Tap', 'Disclose more info for ' + record.get('firstName'), Ext.emptyFn);
+//            	    },
             	    
             	    itemTpl: Ext.create('Ext.XTemplate',
     	                '<div class="rylistcss">',
