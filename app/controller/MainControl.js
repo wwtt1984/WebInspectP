@@ -396,6 +396,7 @@ Ext.define('WebInspect.controller.MainControl',{
                 me.onVpnLogin();//////////////////先执行vpn认证///////////////////
             }
             else{
+//                me.onVpnLogin();//////////////////先执行vpn认证///////////////////
                 me.onMessagePush(data);
             }
         };

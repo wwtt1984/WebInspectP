@@ -61,6 +61,10 @@ Ext.application({
 
         'flow.Flow',
 
+        'project.ProjectFirst',
+        'project.ProjectSecond',
+
+
         'settings.Setting'
     ],
 
@@ -86,7 +90,9 @@ Ext.application({
         'WaterDetailModel',
 
         'FlowModel',
-        'MainModel'
+        'MainModel',
+
+        'ProjectModel'
     ],
 
     stores: [
@@ -114,7 +120,10 @@ Ext.application({
         'WaterDetailStore',
 
         'FlowStore',
-        'MainStore'
+        'MainStore',
+
+        'ProjectFirstStore',
+        'ProjectSecondStore'
     ],
 
     controllers: [
