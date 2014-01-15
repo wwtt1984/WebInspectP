@@ -213,6 +213,9 @@ Ext.define('WebInspect.controller.MainControl',{
         me.news.setTitle(title);
         me.getInfo().push(me.news);
         var store = Ext.getStore(storename);
+
+        store.removeAll();
+
         store.getProxy().setExtraParams({
             t: t,
             results: results
@@ -225,6 +228,8 @@ Ext.define('WebInspect.controller.MainControl',{
 //            if(me.bpush == true){
 
                 var detailstore = Ext.getStore('NewsDetailStore');
+
+                detailstore.removeAll();
 
                 detailstore.getProxy().setExtraParams({
                     t: 'GetInfo',
@@ -272,12 +277,12 @@ Ext.define('WebInspect.controller.MainControl',{
 
     onDoChickAppIco:function(){   /////////执行点击应用程序图标事件
 
-//        var me = this;
-//        var data = '';
-//        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0,
-//            function(fileSystem){me.onwtreadFS(fileSystem,me,1,data);},
-//            function(error){me.onwtfail(error,me);}
-//        ); ////写文件
+        var me = this;
+        var data = '';
+        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0,
+            function(fileSystem){me.onwtreadFS(fileSystem,me,1,data);},
+            function(error){me.onwtfail(error,me);}
+        ); ////写文件
 
     },
 
@@ -467,11 +472,11 @@ Ext.define('WebInspect.controller.MainControl',{
         else if(mainactive == "info")
         {
             document.removeEventListener("backbutton", me.onBackKeyDown, false); // 注销返回键
-
+            document.addEventListener("backbutton", me.onBackDo, false); // 返回键
             var intervalID = window.setInterval(function() {
                 window.clearInterval(intervalID);
+                document.removeEventListener("backbutton", me.onBackDo, false); // 返回键
                 document.addEventListener("backbutton", me.onBackKeyDown, false); // 返回键
-
             }, 2000);
             //当前页面是其他的页面时，返回上一级页面
             me.onBackKeyTap();
@@ -480,6 +485,10 @@ Ext.define('WebInspect.controller.MainControl',{
         {
             navigator.app.backHistory();
         }
+    },
+
+    onBackDo: function(){
+
     },
 
     //当前页面是其他的页面时，返回上一级页面
@@ -574,9 +583,9 @@ Ext.define('WebInspect.controller.MainControl',{
         var me = this;
         WebInspect.app.user.sid = Ext.getCmp('name').getValue();
         WebInspect.app.user.password = Ext.getCmp('password').getValue();
-//        me.onVpnLogin(); /////成功写入开始执行VPN认证
+        me.onVpnLogin(); /////成功写入开始执行VPN认证
 
-        me.onUserCheck();
+//        me.onUserCheck();
     },
 
     onUserWriteJson: function(){
@@ -630,7 +639,7 @@ Ext.define('WebInspect.controller.MainControl',{
                     WebInspect.app.user.mobile = store.getAt(0).data.mobile;
 
                     //将验证成功的用户信息，存在本地
-//                    me.onUserWriteJson();
+                    me.onUserWriteJson();
 
                     //加载用户“待办事项”信息
                     me.onTaskStoreLoad(1);
@@ -666,6 +675,7 @@ Ext.define('WebInspect.controller.MainControl',{
     onMessageLoad: function(){
 
         var store = Ext.getStore('MessageStore');
+        store.removeAll();
         store.getProxy().setExtraParams({
             t: 'GetRtxList',
             results: WebInspect.app.user.sid + '$jsonp'
@@ -678,6 +688,7 @@ Ext.define('WebInspect.controller.MainControl',{
     onTaskStoreLoad: function(num){
         var me = this;
         var store = Ext.getStore('TaskStore');
+        store.removeAll();
         store.getProxy().setExtraParams({
             t: 'GetTaskListUser',
             results: WebInspect.app.user.sid
@@ -697,6 +708,8 @@ Ext.define('WebInspect.controller.MainControl',{
     onWeatherStoreLoad: function(num){
         var me = this;
         var store = Ext.getStore('WeatherStore');
+
+        store.removeAll();
 
         store.getProxy().setExtraParams({
             t: 'GetWeather',
@@ -820,6 +833,8 @@ Ext.define('WebInspect.controller.MainControl',{
 
             var store = Ext.getStore('FirstLevelStore');
 
+            store.removeAll();
+
             store.getProxy().setExtraParams({
                 t: 'GetContactsList',
                 results: '00$jsonp'
@@ -847,6 +862,8 @@ Ext.define('WebInspect.controller.MainControl',{
         else if(record.data.name == '潮位信息'){
 
             var store = Ext.getStore('TideStore');
+
+            store.removeAll();
 
             store.getProxy().setExtraParams({
                 t: 'GetTidal',
@@ -934,6 +951,9 @@ Ext.define('WebInspect.controller.MainControl',{
     onNewsStypeSet: function(storename, t, results, title){
 
         var store = Ext.getStore(storename);
+
+        store.removeAll();
+
         store.getProxy().setExtraParams({
             t: t,
             results: results
@@ -966,6 +986,8 @@ Ext.define('WebInspect.controller.MainControl',{
     onNewsListTap: function(list, index, target, record, e, eOpts ){
 
         var store = Ext.getStore('NewsDetailStore');
+
+        store.removeAll();
 
         store.getProxy().setExtraParams({
             t: 'GetInfo',
@@ -1021,6 +1043,9 @@ Ext.define('WebInspect.controller.MainControl',{
     onContactLevelSet: function(storename, guid, view, viewname, title){
         var store = Ext.getStore(storename);
 
+        store.removeAll();
+
+
         store.getProxy().setExtraParams({
             t: 'GetContactsList',
             results: guid + '$jsonp'
@@ -1055,6 +1080,8 @@ Ext.define('WebInspect.controller.MainControl',{
     onSecondLevelTap: function(list, index, target, record, e, eOpts){
 
         var store = Ext.getStore('ContactStore');
+
+        store.removeAll();
 
         store.getProxy().setExtraParams({
             t: 'GetContactsList',
@@ -1154,7 +1181,7 @@ Ext.define('WebInspect.controller.MainControl',{
             var store = Ext.getStore('TideStore');
             store.clearFilter();
 
-            store.filter("sdate",button.getText());
+            store.filter("sdate",button._text);
         }
     },
 
@@ -1201,7 +1228,8 @@ Ext.define('WebInspect.controller.MainControl',{
             results: result + '$jsonp'
         });
 
-        store.loadPage(1,function(records, operation, success) {});
+//        store.loadPage(1,function(records, operation, success) {});
+        store.load(function(records, operation, success) {}, this);
     },
 
     onWaterItemTap: function(list, index, target, record, e, eOpts){

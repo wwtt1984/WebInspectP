@@ -23,7 +23,7 @@ Ext.define('WebInspect.view.list.MainInfo', {
         layout: 'fit',
 
         tpl: Ext.create('Ext.XTemplate',
-            '<div style="width:100%; height: 2.2em; font-size:18px; font-weight: bold; line-height: 2.2em;">富春江平均下泄流量</div>',
+            '<div style="width:100%; height: 2.2em; font-size:18px; font-weight: bold; line-height: 2.2em;"><img src="resources/images/001.png" style="width:20px;height:20px;float:left;margin-top:0.5em;"/>富春江平均下泄流量</div>',
             '<div style="width:100%; height: 2.2em; font-size:15px; line-height: 2.2em;">',
                 '<div style="width:30%;height:100%;float:left;">单位:m³/s</div>',
                 '<div style="width:70%;height:100%;float:right;text-align: center;">',
@@ -44,9 +44,9 @@ Ext.define('WebInspect.view.list.MainInfo', {
                     '<div style="height: 100%; width: 35%; float:right;{[this.getFlowColor(values.liul3)]}">{liul3}</div>',
                 '</div>',
             '</div>',
-            '<div style="width:100%; height: 2.2em; font-size:18px; font-weight: bold; line-height: 2.2em;">水位超警站点个数：{[this.getOverNum(values.cjjs)]}个</div>',
+            '<div style="width:100%; height: 2.2em; font-size:18px; font-weight: bold; line-height: 2.2em;margin:5px 0 5px 0;"><img src="resources/images/001.png" style="width:20px;height:20px;float:left;margin-top:0.5em;"/>水位超警站点个数：{[this.getOverNum(values.cjjs)]}个</div>',
             '{[this.getOverCode(values.cjjs)]}',
-            '<div style="width:100%; height: 2.2em; font-size:18px; font-weight: bold; line-height: 2.2em;">当前活动台风：{[this.getTyphoonNum(values.tfxx)]}个</div>',
+            '<div style="width:100%; height: 2.2em; font-size:18px; font-weight: bold; line-height: 2.2em;;margin:5px 0 5px 0;"><img src="resources/images/001.png" style="width:20px;height:20px;float:left;margin-top:0.5em;"/>当前活动台风：{[this.getTyphoonNum(values.tfxx)]}个</div>',
             '{[this.getTyphoonCode(values.tfxx)]}',
             {
                 getFlowColor: function(value){
@@ -73,7 +73,7 @@ Ext.define('WebInspect.view.list.MainInfo', {
                 getOverCode: function(value){
                     var string = '';
                     if(value){
-                        string += '<div style="min-height:2.2em: width: 100%;color: #9E7950; border: 1px #ccc solid; background: #fff;  font-size:16px; font-weight: bold; line-height: 2.2em;border-radius: .6em;text-align:center;">';
+                        string += '<div style="min-height:2.2em: width: 100%; border: 1px #ccc solid; background: #fff;  font-size:16px; font-weight: bold; line-height: 2.2em;border-radius: .6em;text-align:center;">';
                         var json = value.split('$');
                         for(var i=0; i < json.length; i++){
 
@@ -90,7 +90,7 @@ Ext.define('WebInspect.view.list.MainInfo', {
                         string += '</div>';
                     }
                     else{
-                        string += '<div style="height:2.2em: width: 100%;color: #9E7950; border: 1px #ccc solid; background: #fff;  font-size:16px; font-weight: bold; line-height: 2.2em;border-radius: .6em;padding-left:10px;">当前无超警站点</div>';
+                        string += '<div style="height:2.2em: width: 100%;; border: 1px #ccc solid; background: #fff;  font-size:16px; font-weight: bold; line-height: 2.2em;border-radius: .6em;padding-left:10px;">当前无超警站点</div>';
                     }
 
                     return string;
@@ -106,7 +106,7 @@ Ext.define('WebInspect.view.list.MainInfo', {
                 getTyphoonCode: function(value){
                     var string = '';
                     if(value){
-                        string += '<div style="min-height:2.2em: width: 100%;color: #9E7950; border: 1px #ccc solid; background: #fff;  font-size:16px; font-weight: bold; line-height: 2.2em;border-radius: .6em;text-align:center;">';
+                        string += '<div style="min-height:2.2em: width: 100%; border: 1px #ccc solid; background: #fff;  font-size:16px; font-weight: bold; line-height: 2.2em;border-radius: .6em;text-align:center;">';
                         var json = value.split('$');
                         for(var i=0; i < json.length; i++){
 
@@ -123,7 +123,7 @@ Ext.define('WebInspect.view.list.MainInfo', {
                         string += '</div>';
                     }
                     else{
-                        string += '<div style="height:2.2em: width: 100%;color: #9E7950; border: 1px #ccc solid; background: #fff;  font-size:16px; font-weight: bold; line-height: 2.2em;border-radius: .6em;padding-left:10px;">当前无活动台风</div>';
+                        string += '<div style="height:2.2em: width: 100%; border: 1px #ccc solid; background: #fff;  font-size:16px; font-weight: bold; line-height: 2.2em;border-radius: .6em;padding-left:10px;">当前无活动台风</div>';
                     }
 
                     return string;

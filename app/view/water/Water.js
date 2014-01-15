@@ -3,7 +3,7 @@ Ext.define('WebInspect.view.water.Water', {
     xtype: 'water',
 
     requires: [
-        'Ext.plugin.ListPaging'
+//        'Ext.plugin.ListPaging'
     ],
 
     config: {
@@ -13,14 +13,14 @@ Ext.define('WebInspect.view.water.Water', {
         loadingText: '努力加载中...',
         scrollToTopOnRefresh: false,
 
-        plugins: [
-            {
-                xclass: 'Ext.plugin.ListPaging',
-                loadMoreText: '加载更多...',
-                noMoreRecordsText: '没有更多记录了...',
-                autoPaging:true
-            }
-        ],
+//        plugins: [
+//            {
+//                xclass: 'Ext.plugin.ListPaging',
+//                loadMoreText: '加载更多...',
+//                noMoreRecordsText: '没有更多记录了...',
+//                autoPaging:true
+//            }
+//        ],
 
         cls: 'tidelist',
         store: 'WaterStore',

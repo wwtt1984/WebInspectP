@@ -749,8 +749,10 @@ Ext.ClassManager.addNameAlternateMappings({
   ],
   "WebInspect.controller.MainControl": [],
   "WebInspect.model.ContactModel": [],
+  "WebInspect.model.FlowModel": [],
   "WebInspect.model.FunctionModel": [],
   "WebInspect.model.LevelModel": [],
+  "WebInspect.model.MainModel": [],
   "WebInspect.model.MessageModel": [],
   "WebInspect.model.NewsDetailModel": [],
   "WebInspect.model.NewsModel": [],
@@ -760,11 +762,15 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.model.TideModel": [],
   "WebInspect.model.UserModel": [],
   "WebInspect.model.VersionModel": [],
+  "WebInspect.model.WaterDetailModel": [],
+  "WebInspect.model.WaterModel": [],
   "WebInspect.model.WeatherModel": [],
   "WebInspect.store.ContactStore": [],
   "WebInspect.store.FirstLevelStore": [],
+  "WebInspect.store.FlowStore": [],
   "WebInspect.store.FunctionStore": [],
   "WebInspect.store.InfoStore": [],
+  "WebInspect.store.MainStore": [],
   "WebInspect.store.MessageStore": [],
   "WebInspect.store.NewsDetailStore": [],
   "WebInspect.store.NewsStore": [],
@@ -776,6 +782,8 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.store.TideStore": [],
   "WebInspect.store.UserStore": [],
   "WebInspect.store.VersionStore": [],
+  "WebInspect.store.WaterDetailStore": [],
+  "WebInspect.store.WaterStore": [],
   "WebInspect.store.WeatherStore": [],
   "WebInspect.view.Function": [],
   "WebInspect.view.Info": [],
@@ -787,13 +795,18 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.view.contact.FirstLevel": [],
   "WebInspect.view.contact.PopUp": [],
   "WebInspect.view.contact.SecondLevel": [],
+  "WebInspect.view.flow.Flow": [],
+  "WebInspect.view.list.MainInfo": [],
   "WebInspect.view.list.Message": [],
   "WebInspect.view.news.News": [],
   "WebInspect.view.news.NewsDetail": [],
   "WebInspect.view.news.NewsImg": [],
   "WebInspect.view.news.NewsPdf": [],
+  "WebInspect.view.settings.Setting": [],
   "WebInspect.view.tide.Tide": [],
-  "WebInspect.view.tide.TidePop": []
+  "WebInspect.view.tide.TidePop": [],
+  "WebInspect.view.water.Water": [],
+  "WebInspect.view.water.WaterDetail": []
 });
 Ext.ClassManager.addNameAliasMappings({
   "Ext.AbstractComponent": [],
@@ -1739,8 +1752,10 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.WindowsPhone": [],
   "WebInspect.controller.MainControl": [],
   "WebInspect.model.ContactModel": [],
+  "WebInspect.model.FlowModel": [],
   "WebInspect.model.FunctionModel": [],
   "WebInspect.model.LevelModel": [],
+  "WebInspect.model.MainModel": [],
   "WebInspect.model.MessageModel": [],
   "WebInspect.model.NewsDetailModel": [],
   "WebInspect.model.NewsModel": [],
@@ -1750,11 +1765,15 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.model.TideModel": [],
   "WebInspect.model.UserModel": [],
   "WebInspect.model.VersionModel": [],
+  "WebInspect.model.WaterDetailModel": [],
+  "WebInspect.model.WaterModel": [],
   "WebInspect.model.WeatherModel": [],
   "WebInspect.store.ContactStore": [],
   "WebInspect.store.FirstLevelStore": [],
+  "WebInspect.store.FlowStore": [],
   "WebInspect.store.FunctionStore": [],
   "WebInspect.store.InfoStore": [],
+  "WebInspect.store.MainStore": [],
   "WebInspect.store.MessageStore": [],
   "WebInspect.store.NewsDetailStore": [],
   "WebInspect.store.NewsStore": [],
@@ -1766,6 +1785,8 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.store.TideStore": [],
   "WebInspect.store.UserStore": [],
   "WebInspect.store.VersionStore": [],
+  "WebInspect.store.WaterDetailStore": [],
+  "WebInspect.store.WaterStore": [],
   "WebInspect.store.WeatherStore": [],
   "WebInspect.view.Function": [
     "widget.functionmain"
@@ -1797,6 +1818,12 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.view.contact.SecondLevel": [
     "widget.secondlevel"
   ],
+  "WebInspect.view.flow.Flow": [
+    "widget.flow"
+  ],
+  "WebInspect.view.list.MainInfo": [
+    "widget.maininfo"
+  ],
   "WebInspect.view.list.Message": [
     "widget.message"
   ],
@@ -1812,10 +1839,19 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.view.news.NewsPdf": [
     "widget.newspdf"
   ],
+  "WebInspect.view.settings.Setting": [
+    "widget.setting"
+  ],
   "WebInspect.view.tide.Tide": [
     "widget.tide"
   ],
   "WebInspect.view.tide.TidePop": [
     "widget.tidepop"
+  ],
+  "WebInspect.view.water.Water": [
+    "widget.water"
+  ],
+  "WebInspect.view.water.WaterDetail": [
+    "widget.waterdetail"
   ]
 });
