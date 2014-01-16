@@ -36,17 +36,17 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/com.vpn.vpn.Vpn/www/vpn.js",
-        "id": "com.vpn.vpn.Vpn.vpn",
-        "clobbers": [
-            "window.plugins.Vpn"
-        ]
-    },
-    {
         "file": "plugins/com.phone.phone.Phone/www/phone.js",
         "id": "com.phone.phone.Phone.phone",
         "clobbers": [
             "window.plugins.Phone"
+        ]
+    },
+    {
+        "file": "plugins/com.vpn.vpn.Vpn/www/vpn.js",
+        "id": "com.vpn.vpn.Vpn.vpn",
+        "clobbers": [
+            "window.plugins.Vpn"
         ]
     },
     {
@@ -179,8 +179,8 @@ module.exports.metadata =
     "com.toast.toast.Toast": "1.5.2",
     "com.install.install.Install": "1.5.2",
     "org.apache.cordova.file-transfer": "0.4.0",
-    "com.vpn.vpn.Vpn": "1.5.2",
     "com.phone.phone.Phone": "1.5.2",
+    "com.vpn.vpn.Vpn": "1.5.2",
     "org.apache.cordova.file": "0.2.5"
 }
 // BOTTOM OF METADATA

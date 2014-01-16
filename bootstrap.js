@@ -756,6 +756,8 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.model.MessageModel": [],
   "WebInspect.model.NewsDetailModel": [],
   "WebInspect.model.NewsModel": [],
+  "WebInspect.model.ProjectFirstModel": [],
+  "WebInspect.model.ProjectSecondModel": [],
   "WebInspect.model.PushModel": [],
   "WebInspect.model.TaskModel": [],
   "WebInspect.model.TestModel": [],
@@ -775,6 +777,8 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.store.NewsDetailStore": [],
   "WebInspect.store.NewsStore": [],
   "WebInspect.store.NoticeStore": [],
+  "WebInspect.store.ProjectFirstStore": [],
+  "WebInspect.store.ProjectSecondStore": [],
   "WebInspect.store.PushStore": [],
   "WebInspect.store.SecondLevelStore": [],
   "WebInspect.store.TaskStore": [],
@@ -802,6 +806,8 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.view.news.NewsDetail": [],
   "WebInspect.view.news.NewsImg": [],
   "WebInspect.view.news.NewsPdf": [],
+  "WebInspect.view.project.ProjectFirst": [],
+  "WebInspect.view.project.ProjectSecond": [],
   "WebInspect.view.settings.Setting": [],
   "WebInspect.view.tide.Tide": [],
   "WebInspect.view.tide.TidePop": [],
@@ -1759,6 +1765,8 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.model.MessageModel": [],
   "WebInspect.model.NewsDetailModel": [],
   "WebInspect.model.NewsModel": [],
+  "WebInspect.model.ProjectFirstModel": [],
+  "WebInspect.model.ProjectSecondModel": [],
   "WebInspect.model.PushModel": [],
   "WebInspect.model.TaskModel": [],
   "WebInspect.model.TestModel": [],
@@ -1778,6 +1786,8 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.store.NewsDetailStore": [],
   "WebInspect.store.NewsStore": [],
   "WebInspect.store.NoticeStore": [],
+  "WebInspect.store.ProjectFirstStore": [],
+  "WebInspect.store.ProjectSecondStore": [],
   "WebInspect.store.PushStore": [],
   "WebInspect.store.SecondLevelStore": [],
   "WebInspect.store.TaskStore": [],
@@ -1838,6 +1848,12 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "WebInspect.view.news.NewsPdf": [
     "widget.newspdf"
+  ],
+  "WebInspect.view.project.ProjectFirst": [
+    "widget.projectfirst"
+  ],
+  "WebInspect.view.project.ProjectSecond": [
+    "widget.projectsecond"
   ],
   "WebInspect.view.settings.Setting": [
     "widget.setting"

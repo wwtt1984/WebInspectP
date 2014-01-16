@@ -92,7 +92,8 @@ Ext.application({
         'FlowModel',
         'MainModel',
 
-        'ProjectModel'
+        'ProjectFirstModel',
+        'ProjectSecondModel'
     ],
 
     stores: [

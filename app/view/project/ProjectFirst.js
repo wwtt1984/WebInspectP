@@ -20,10 +20,12 @@ Ext.define('WebInspect.view.project.ProjectFirst', {
 
         ui: 'round',
 
+        grouped: true,
+
         emptyText: '<p class="no-searches">没有符合要求的记录</p>',
 
         itemTpl: [
-            '<div>{OUName}</div>'
+            '<div>{location}<img src="resources/images/code3.png" style="height:18px;width:18px;margin:2px 0 0 0;float:right;"><div style="float:right;">{num}&nbsp;</div></div>'
         ]
     }
 });

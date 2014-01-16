@@ -7,6 +7,7 @@ Ext.define('WebInspect.view.settings.Setting', {
     xtype: 'setting',
 
     requires: [
+        'Ext.field.Toggle'
     ],
 
     config: {

@@ -32,7 +32,9 @@ Ext.define('WebInspect.controller.MainControl',{
             flow: 'info flow',
             flowSegmentedButton: '[itemId=flowSegmentedButton]',
             sysquit: '[itemId=sysquit]',
-            maininfo: 'inf maininfo'
+            maininfo: 'info maininfo',
+            projectfirst: 'info projectfirst',
+            projectsecond: 'info projectsecond'
         },
         control: {
             main: {
@@ -104,6 +106,9 @@ Ext.define('WebInspect.controller.MainControl',{
             },
             sysquit: {
                 tap: 'onQuitSystemTap'
+            },
+            projectfirst: {
+                itemtap: 'onProjectFirstTap'
             }
         }
     },
@@ -130,7 +135,7 @@ Ext.define('WebInspect.controller.MainControl',{
     {
         if(data.isFromAlert == "true"){
             me.bpush = true;
-            me.onDoChickTitle(data.extras);
+            me.onVpnCheckOnline(data.extras);
         }
     },
     checkJpush:function(me){
@@ -313,6 +318,17 @@ Ext.define('WebInspect.controller.MainControl',{
             }
         });
 
+    },
+
+    onVpnCheckOnline:function(data){
+
+        var me = this;
+        plugins.Vpn.VpnCheckOnLine(WebInspect.app.user.sid,WebInspect.app.user.password,function(success) {
+
+            alert(success);
+            me.onDoChickTitle(data);
+
+        });
     },
 
     onCheckVesion:function(me)
@@ -527,6 +543,15 @@ Ext.define('WebInspect.controller.MainControl',{
             case 'firstlevel':
                 me.onInfoFunctionBackTap();
                 break;
+
+            case 'setting':
+                me.onInfoFunctionBackTap();
+                break;
+
+            case 'projectfirst':
+                me.onInfoFunctionBackTap();
+                break;
+
             case 'tide':
                 if((me.tidepop) && (me.tidepop.getHidden() == false)){
                     me.tidepop.hide();
@@ -544,18 +569,27 @@ Ext.define('WebInspect.controller.MainControl',{
                     me.getInfofunction().show();
                 }
                 break;
+
             case 'newspdf':
                 me.getInfo().pop();
                 me.getInfofunction().show();
                 break;
+
             case 'secondlevel':
                 me.getInfo().pop();
                 me.getInfofunction().show();
                 break;
+
             case 'waterdetail':
                 me.getInfo().pop();
                 me.getInfofunction().show();
                 break;
+
+            case 'projectsecond':
+                me.getInfo().pop();
+                me.getInfofunction().show();
+                break;
+
             case 'contact':
                 if((me.popup) && (me.popup.getHidden() == false)){
                     me.popup.hide();
@@ -900,7 +934,7 @@ Ext.define('WebInspect.controller.MainControl',{
         }
         else if(record.data.name == '水情信息'){
 
-            this.onWaterStoreLoad('main');
+            this.onWaterStoreLoad('main', 0);
 
             this.water = this.getWater();
             if(!this.water){
@@ -911,12 +945,22 @@ Ext.define('WebInspect.controller.MainControl',{
         }
         else if(record.data.name == '流量信息'){
 
-            this.onFlowStoreLoad(Ext.Date.format(new Date(), 'Y-m-d').toString());
+            this.onFlowStoreLoad(Ext.Date.format(new Date(), 'Y-m-d').toString(), 0);
             this.flow = this.getFlow();
             if(!this.flow){
                 this.flow = Ext.create('WebInspect.view.flow.Flow');
             }
             this.getInfo().push(this.flow);
+            this.getMain().setActiveItem(this.getInfo());
+        }
+        else if(record.data.name == '工情信息'){
+
+            this.onProjectFirstStoreLoad();
+            this.projectfirst = this.getProjectfirst();
+            if(!this.projectfirst){
+                this.projectfirst = Ext.create('WebInspect.view.project.ProjectFirst');
+            }
+            this.getInfo().push(this.projectfirst);
             this.getMain().setActiveItem(this.getInfo());
         }
         else if(record.data.name == '设置'){
@@ -1194,32 +1238,34 @@ Ext.define('WebInspect.controller.MainControl',{
             var text = button._text;
             switch(text){
                 case '主要':
-                    this.onWaterStoreLoad('main');
+                    this.onWaterStoreLoad('main', 1);
                     break;
                 case '河':
-                    this.onWaterStoreLoad('river');
+                    this.onWaterStoreLoad('river', 1);
                     break;
                 case '库':
 
-                    this.onWaterStoreLoad('reservoir');
+                    this.onWaterStoreLoad('reservoir', 1);
                     break;
                 case '闸':
 
-                    this.onWaterStoreLoad('strobe');
+                    this.onWaterStoreLoad('strobe', 1);
                     break;
                 case '潮':
 
-                    this.onWaterStoreLoad('tidal');
+                    this.onWaterStoreLoad('tidal', 1);
                     break;
             }
         }
     },
 
-    onWaterStoreLoad: function(result){
-//        Ext.Viewport.setMasked({
-//            xtype: 'loadmask',
-//            message: '努力加载中...'
-//        });
+    onWaterStoreLoad: function(result, num){
+        if(num == 0){
+            Ext.Viewport.setMasked({
+                xtype: 'loadmask',
+                message: '努力加载中...'
+            });
+        }
 
         var store = Ext.getStore('WaterStore');
 
@@ -1230,7 +1276,11 @@ Ext.define('WebInspect.controller.MainControl',{
         });
 
 //        store.loadPage(1,function(records, operation, success) {});
-        store.load(function(records, operation, success) {}, this);
+        store.load(function(records, operation, success) {
+            if(num == 0){
+                Ext.Viewport.setMasked(false);
+            }
+        }, this);
     },
 
     onWaterItemTap: function(list, index, target, record, e, eOpts){
@@ -1251,6 +1301,8 @@ Ext.define('WebInspect.controller.MainControl',{
             Ext.Viewport.setMasked(false);
         }, this);
 
+        this.waterdetail = this.getWaterdetail();
+
         if(!this.waterdetail){
             this.waterdetail = Ext.create('WebInspect.view.water.WaterDetail');
         }
@@ -1259,11 +1311,14 @@ Ext.define('WebInspect.controller.MainControl',{
         this.getInfo().push(this.waterdetail);
     },
 
-    onFlowStoreLoad: function(result){
-//        Ext.Viewport.setMasked({
-//            xtype: 'loadmask',
-//            message: '努力加载中...'
-//        });
+    onFlowStoreLoad: function(result, num){
+
+        if(num == 0){
+            Ext.Viewport.setMasked({
+                xtype: 'loadmask',
+                message: '努力加载中...'
+            });
+        }
 
         var store = Ext.getStore('FlowStore');
 
@@ -1273,7 +1328,11 @@ Ext.define('WebInspect.controller.MainControl',{
             results: result + '$jsonp'
         });
 
-        store.load(function(records, operation, success) {});
+        store.load(function(records, operation, success) {
+            if(num == 0){
+                Ext.Viewport.setMasked(false);
+            }
+        });
     },
 
     onFlowSegmentedTap: function(me, button, isPressed, eOpts){
@@ -1281,7 +1340,56 @@ Ext.define('WebInspect.controller.MainControl',{
         if(isPressed){
 
             var text = button._text;
-            this.onFlowStoreLoad(text);
+            this.onFlowStoreLoad(text, 1);
         }
+    },
+
+    onProjectFirstStoreLoad: function(){
+
+        Ext.Viewport.setMasked({
+            xtype: 'loadmask',
+            message: '努力加载中...'
+        });
+
+        var store = Ext.getStore('ProjectFirstStore');
+
+        store.removeAll();
+        store.getProxy().setExtraParams({
+            t: 'GetGqList',
+            results: 'jsonp'
+        });
+
+        store.load(function(records, operation, success) {
+            Ext.Viewport.setMasked(false);
+        });
+    },
+
+    onProjectFirstTap: function(list, index, target, record, e, eOpts){
+
+        Ext.Viewport.setMasked({
+            xtype: 'loadmask',
+            message: '努力加载中...'
+        });
+
+        var store = Ext.getStore('ProjectSecondStore');
+
+        store.removeAll();
+        store.getProxy().setExtraParams({
+            t: 'GetGqInfo',
+            results: record.data.type + '$' + record.data.location + '$jsonp'
+        });
+
+        store.load(function(records, operation, success) {
+            Ext.Viewport.setMasked(false);
+        });
+
+        this.projectsecond = this.getProjectsecond();
+
+        if(!this.projectsecond){
+            this.projectsecond = Ext.create('WebInspect.view.project.ProjectSecond');
+        }
+
+        this.getInfofunction().hide();
+        this.getInfo().push(this.projectsecond);
     }
 });

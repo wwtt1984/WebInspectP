@@ -146,6 +146,7 @@ E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\a
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\001.png \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\background.jpg \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\bg1.jpg \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\code3.png \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\contact.png \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\function \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\man.png \
@@ -170,6 +171,9 @@ E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\a
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\function\water.png \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\notice\news.png \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\notice\notice.png \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\notice\rtx.png \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\notice\task.png \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\notice\today.png \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\status\blue.png \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\status\red.png \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\status\yellow.png \

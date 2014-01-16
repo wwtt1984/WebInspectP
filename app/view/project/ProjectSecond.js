@@ -16,7 +16,7 @@ Ext.define('WebInspect.view.project.ProjectSecond', {
         emptyText: '<p class="no-searches">没有符合要求的记录</p>',
 
         itemTpl: [
-            '<div>{OUName}</div>'
+            '<div>{name}</div>'
         ]
     }
 });
