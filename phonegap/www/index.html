@@ -229,10 +229,12 @@
 })(this);Ext.blink({"id":"8b199f92-16eb-4e70-bf10-7a3284e3e1e8","js":[{"path":"phonegap.js","remote":true},{"path":"app.js","update":"delta"}],"css":[{"path":"resources/css/app1.css"},{"path":"resources/css/my.css"}]});</script>
 </head>
 <body>
-    <div id="appLoadingIndicator">
-        <div></div>
-        <div></div>
-        <div></div>
+    <img id="appLoadingImg" src="resources/images/loading.jpg" style="width:100%;height:100%">
+    <div id="splashLoader">
+        <div id="loading">
+            <span class="loadTxt">加载中...</span>
+            <div class="x-loading-spinner"><span class="x-loading-top"></span><span class="x-loading-right"></span><span class="x-loading-bottom"></span><span class="x-loading-left"></span></div>
+        </div>
     </div>
 </body>
 </html>

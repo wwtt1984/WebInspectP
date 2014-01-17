@@ -29,7 +29,8 @@ Ext.application({
     requires: [
         'Ext.MessageBox',
         'Ext.data.proxy.SkProxy',
-        'Ext.data.proxy.SkJsonp'
+        'Ext.data.proxy.SkJsonp',
+        'Ext.data.proxy.LocalStorage'
     ],
 
     views: [
@@ -70,6 +71,7 @@ Ext.application({
 
     models: [
         'UserModel',
+        'UserLocalModel',
 
         'WeatherModel',
         'PushModel',

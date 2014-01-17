@@ -121,6 +121,17 @@ Ext.define('WebInspect.controller.MainControl',{
         window.setTimeout(function(){me.checkJpush(me);},100);
         document.addEventListener('deviceready',function(){me.onJpushReady(me);}, false);
 
+
+//        /*
+//        * ios中用户名、密码记住功能
+//        * */
+//
+//        var store = Ext.getStore('UserStore');
+//        if(store.getAllCount() > 0){
+//            Ext.getCmp('name').setValue(store.getAt(0).data.uid);
+//            Ext.getCmp('password').setValue(store.getAt(0).data.password);
+//        }
+
         me.onBtnConfirm();
         //android返回键事件监听
         document.addEventListener("backbutton", me.onBackKeyDown, false);
@@ -645,6 +656,9 @@ Ext.define('WebInspect.controller.MainControl',{
     onUserCheck: function(){
 
         var me = this;
+
+//        var local = Ext.getStore('UserStore');
+
         Ext.Viewport.setMasked({
             xtype: 'loadmask',
             message: '登录中,请稍后...'
@@ -653,12 +667,21 @@ Ext.define('WebInspect.controller.MainControl',{
         if(WebInspect.app.user.sid && WebInspect.app.user.password){
             //用户名、密码输入完整
             var store = Ext.getStore('UserStore');
+
+            var store = Ext.create('Ext.data.Store',{
+                model: 'WebInspect.model.UserModel',
+                proxy: {
+                    type: 'sk'
+                }
+            });
             var results = WebInspect.app.user.sid + '$' + WebInspect.app.user.password + '$1234567$123';
 
             store.getProxy().setExtraParams({
                 t: 'CheckUser',
                 results: results
             });
+
+
 
             store.load(function(records, operation, success) {
 
@@ -667,6 +690,13 @@ Ext.define('WebInspect.controller.MainControl',{
                         xtype: 'loadmask',
                         message: '验证成功,页面加载中...'
                     });
+
+                    /*
+                        ios用户名、密码放在local store中
+                     */
+//                    local.removeAll();
+//                    local.add({uid:store.getAt(0).data.uid, password: WebInspect.app.user.password, name:store.getAt(0).data.name, mobile:store.getAt(0).data.mobile});
+//                    local.sync();
 
                     me.onInsertUserInfo(me);
 

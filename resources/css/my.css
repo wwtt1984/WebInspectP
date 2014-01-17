@@ -377,7 +377,7 @@ text-shadow: rgba(255, 255, 255, 0.25) 0 0.08em 0;
 
 
 #splashLoader{position:absolute;top:0;right:0;left:0;bottom:0}
-#loading{color:#fff;font-size:120%;position:absolute;width:150px;left:50%;margin:90% 0 0 -30px}
+#loading{color:#fff;font-size:120%;position:absolute;width:150px;left:50%;margin:80% 0 0 -30px}
 #loading .x-loading-spinner{font-size:160%;margin:-27px 0 0 -45px}
 body{background:-webkit-gradient(radial, 50% 40%, 20, 50% 40%, 350, from(#6983b2), to(#30508b));background-repeat:no-repeat;background-attachment:fixed}
 
