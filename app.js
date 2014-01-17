@@ -151,8 +151,9 @@ Ext.application({
 
     launch: function() {
         // Destroy the #appLoadingIndicator element
-        Ext.fly('appLoadingIndicator').destroy();
+//        Ext.fly('appLoadingIndicator').destroy();
 
+        Ext.fly('appLoadingImg').destroy();
         // Initialize the main view
         Ext.Viewport.add(Ext.create('WebInspect.view.Main'));
     },
