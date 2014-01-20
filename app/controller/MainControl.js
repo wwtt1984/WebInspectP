@@ -302,7 +302,7 @@ Ext.define('WebInspect.controller.MainControl',{
 
     },
 
-    onVpnLogin:function()
+    onVpnLogin:function(num, data)
     {
         Ext.Viewport.setMasked({xtype:'loadmask',message:'VPN连接中,请稍后...'});
         var me = this;
@@ -312,6 +312,9 @@ Ext.define('WebInspect.controller.MainControl',{
             {
                 plugins.Toast.ShowToast("VPN连接成功!",3000);
                 ////////////////////////////////////////////////
+                if(num == 0){
+                    me.onMessagePush(data);
+                }
                 me.onCheckVesion(me); //////////////检查版本号////////////////////
                 me.onUserCheck();
             }
@@ -334,10 +337,23 @@ Ext.define('WebInspect.controller.MainControl',{
     onVpnCheckOnline:function(data){
 
         var me = this;
+        Ext.Viewport.setMasked({
+            xtype: 'loadmask',
+            message: '努力加载中...'
+        });
         plugins.Vpn.VpnCheckOnLine(WebInspect.app.user.sid,WebInspect.app.user.password,function(success) {
 
             alert(success);
-            me.onDoChickTitle(data);
+
+            if(success == 'true'){
+                me.onMessagePush(data);
+            }
+            else{
+                window.requestFileSystem(LocalFileSystem.PERSISTENT, 0,
+                    function(fileSystem){me.onwtreadFS(fileSystem,me,0,data);},
+                    function(error){me.onwtfail(error,me);}
+                ); ////读文件
+            }
 
         });
     },
@@ -420,11 +436,11 @@ Ext.define('WebInspect.controller.MainControl',{
             if(num == 1){
                 Ext.getCmp('name').setValue(WebInspect.app.user.sid);
                 Ext.getCmp('password').setValue(WebInspect.app.user.password);
-                me.onVpnLogin();//////////////////先执行vpn认证///////////////////
+                me.onVpnLogin(num, data);//////////////////先执行vpn认证///////////////////
             }
             else{
-//                me.onVpnLogin();//////////////////先执行vpn认证///////////////////
-                me.onMessagePush(data);
+                me.onVpnLogin(num, data);//////////////////先执行vpn认证///////////////////
+//                me.onMessagePush(data);
             }
         };
         reader.readAsText(file);
@@ -629,7 +645,7 @@ Ext.define('WebInspect.controller.MainControl',{
         var me = this;
         WebInspect.app.user.sid = Ext.getCmp('name').getValue();
         WebInspect.app.user.password = Ext.getCmp('password').getValue();
-        me.onVpnLogin(); /////成功写入开始执行VPN认证
+        me.onVpnLogin(1, ''); /////成功写入开始执行VPN认证
 
 //        me.onUserCheck();
     },
