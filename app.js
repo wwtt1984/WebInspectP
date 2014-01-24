@@ -24,7 +24,7 @@ Ext.application({
     name: 'WebInspect',
     mainthis: '',
     user: {sid:'', name: '', password: '', mobile: '15999999999', tel:'', sms:'', mail:'11111',
-        sexy:'', ITEM_Id: '', DeptId: '', rtxsession: '',version:'1.0.0.62'},
+        sexy:'', ITEM_Id: '', DeptId: '', rtxsession: '',version:'1.0.0.75'},
 
     requires: [
         'Ext.MessageBox',

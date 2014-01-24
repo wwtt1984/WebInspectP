@@ -12,7 +12,7 @@ Ext.define('WebInspect.view.news.NewsPdf',{
 	
 	setPdfUrl:function(url)
 	{
-//        alert(url);
-		this.setSrc(url);
+        alert(url);
+		//this.setSrc(url);
 	}
 });

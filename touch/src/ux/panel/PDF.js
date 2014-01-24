@@ -70,7 +70,7 @@ Ext.define('Ext.ux.panel.PDF', {
          * @cfg {String} loadingMessage
          * The text displayed when loading the PDF.
          */
-        loadingMessage: 'PDF加载中...',
+        loadingMessage: 'Loading PDF, please wait...',
         
         /**
          * @cfg {String} pageText
@@ -78,7 +78,7 @@ Ext.define('Ext.ux.panel.PDF', {
          * {0} and {1} as a token that is replaced by the number of current and total pages. 
          * This token should be preserved when overriding this string if showing the total page count is desired.
          */
-        pageText: '第 {0} 页,总 {1} 页',
+        pageText: 'Page {0} of {1}',
         
         /**
          * @cfg{Boolean} hidePagingtoolbar

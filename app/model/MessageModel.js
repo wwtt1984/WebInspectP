@@ -16,7 +16,9 @@ Ext.define('WebInspect.model.MessageModel',{
             'Client',
             'CreateTime',
             'MsgTitle',
-            'sqldata_Id'
+            'sqldata_Id',
+            'Sname',
+            'Stime'
         ]
     }
 

@@ -27,7 +27,7 @@ Ext.define('WebInspect.view.Function', {
             		
             	    xtype: 'list',
             	    id: 'noticelist',
-//            	    store: 'PushStore',
+            	    store: 'PushStore',
             	    cls: 'noticelist',
                     scrollable: {
                         direction: 'vertical',

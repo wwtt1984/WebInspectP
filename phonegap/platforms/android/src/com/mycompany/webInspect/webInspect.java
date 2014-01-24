@@ -56,6 +56,10 @@ public class webInspect extends CordovaActivity implements IVpnDelegate
 		super.onDestroy();
 	}
 
+    public void vpnRndCodeCallback(byte[] data) {
+        Log.d(TAG, "RndCode callback, the data is bitmap of rndCode.");
+    }
+
 	public void vpnCallback(int vpnResult, int authType) {
 
 		SangforNbAuth sfAuth = SangforNbAuth.getInstance();
