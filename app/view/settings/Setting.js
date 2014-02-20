@@ -16,7 +16,7 @@ Ext.define('WebInspect.view.settings.Setting', {
        items:[
            {
                xtype: 'fieldset',
-               title: '消息推送',
+               title: '消息推送(暂时不能定制)',
 //               instructions: 'Please enter the information above.',
                defaults: {
 //                   required: true,
