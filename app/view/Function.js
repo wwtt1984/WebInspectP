@@ -9,7 +9,6 @@ Ext.define('WebInspect.view.Function', {
     ],
     config: {
 
-//    	style: 'background:url(resources/images/.jpg);',
     	layout: 'fit',
         items: [
             {
@@ -33,16 +32,9 @@ Ext.define('WebInspect.view.Function', {
                         direction: 'vertical',
                         directionLock: true
                     },
-
-
-//            	    onItemDisclosure: function(record, btn, index) {
-//
-//               	        Ext.Msg.alert('Tap', 'Disclose more info for ' + record.get('firstName'), Ext.emptyFn);
-//            	    },
             	    
             	    itemTpl: Ext.create('Ext.XTemplate',
     	                '<div class="rylistcss">',
-//	                        '<div class="avatar" style="background-image: url({img}); background-size: 45px;background-repeat: no-repeat;">{[this.getNum(values)]}</div>',
     	                    '<div class="avatar" style="background-image: url({img}); background-size: 45px;background-repeat: no-repeat;">{[this.getNum(values)]}</div>',
 			                '<div class="message"><h3>{text}</h3><h4>{content}</h4></div>',
 			            '</div>',

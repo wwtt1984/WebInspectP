@@ -33,15 +33,14 @@ Ext.define('WebInspect.view.Login', {
                     xtype: 'textfield',
                     id: 'name',
                     name: 'name',
-                    label: '用户名',
-                    value: 'zg'
-//                    autoCapitalize: false
+                    label: '用户名'
+//                    value: 'zg'
                 },
                 {
                     xtype: 'passwordfield',
                     id: 'password',
                     name: 'password',
-                    value: '1234567',
+//                    value: '1234567',
                     label: '密码'
                 }]
             },
@@ -64,10 +63,6 @@ Ext.define('WebInspect.view.Login', {
                     id:  'confirm'
                
                 }]
-//                {
-//                    text: '取消',
-//                    id: 'cancel'
-//                }]
             }]
         }]
     },

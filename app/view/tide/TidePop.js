@@ -12,10 +12,7 @@ Ext.define('WebInspect.view.tide.TidePop', {
         hideOnMaskTap: true,
 
         ui: 'detail',
-
-        // we always want the sheet to be 400px wide and to be as tall as the device allows
         width: '100%',
-//        top: '48%',
         
         bottom: 0,
         right: 0,

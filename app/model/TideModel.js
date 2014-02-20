@@ -1,7 +1,6 @@
 Ext.define('WebInspect.model.TideModel',{
 	extend: 'Ext.data.Model',
     config: {
-        idProperty: 'sname',
         fields: [
             'sname', 
             'stime',

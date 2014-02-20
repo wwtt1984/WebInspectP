@@ -2,7 +2,7 @@ Ext.define('WebInspect.view.news.NewsDetail',{
 
 	extend: 'Ext.Panel',
 	xtype: 'newsdetail',
-//	id: 'newsdetail',
+
 	requires: [
 	    'Ext.XTemplate'
 	],
@@ -13,7 +13,6 @@ Ext.define('WebInspect.view.news.NewsDetail',{
     		direction: 'vertical',
     		directionLock: true
 		},
-//		itemId: 'newsdetail',
 		
 		style: 'background:#f7f7f7; padding: 10px;',
 		
@@ -54,13 +53,11 @@ Ext.define('WebInspect.view.news.NewsDetail',{
 		    		return string;
 		    	},
 		    	getLinkId: function(values) {
-//		    		debugger;
 					var result = Ext.id();
 					Ext.Function.defer(this.addListener, 1, this, [result,values]);
 					return result;
 				},
-				addListener: function(id,values) {	
-//					debugger;
+				addListener: function(id,values) {
 				    var me = this;
 					Ext.get(id).on('tap', function(e){
 						me.addImg(values);
@@ -69,7 +66,6 @@ Ext.define('WebInspect.view.news.NewsDetail',{
 				addImg:function(values){
 
 					Ext.ComponentQuery.query('#info')[0].onImageShow(values);
-//					Ext.getCmp('newsdetail').onImageShow(values);
 	
 				}
 		    }

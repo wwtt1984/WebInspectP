@@ -3,8 +3,7 @@ Ext.define('WebInspect.view.tide.Tide', {
     xtype: 'tide',
     
     requires: [
-        'Ext.SegmentedButton',
-        'Ext.plugin.PullRefresh'
+        'Ext.SegmentedButton'
     ],
     
     config: {
@@ -16,21 +15,6 @@ Ext.define('WebInspect.view.tide.Tide', {
 	    
 	    cls: 'tidelist',
 	    store: 'TideStore',
-
-        plugins: [
-            {
-                xclass: 'Ext.plugin.PullRefresh',
-                pullText: '下拉刷新...',
-
-                releaseText: '松开进行刷新...',
-
-                loadingText: '正在刷新...',
-
-                loadedText: '刷新完成.',
-
-                lastUpdatedText: '刷新时间:&nbsp;'
-            }
-        ],
         
         emptyText: '<p class="no-searches">没有符合要求的记录</p>',
 	      
@@ -47,14 +31,6 @@ Ext.define('WebInspect.view.tide.Tide', {
                     '<div style="height:100%; width:50%;border-top:1px #ccc solid;float:left;">{stide3}</div>',
                   '</div>',
                 '</div>',
-//                '<div style="height:100%; width:30%; float: left;">',
-//                    '<div style="height:50%;border-bottom:1px #ccc solid;">{stime}</div>',
-//                    '<div style="height:50%;">{stime3}</div>',
-//                '</div>',
-//                '<div style="height:100%; width:30%; float: right;">',
-//                    '<div style="height:50%;border-bottom:1px #ccc solid;">{stide}</div>',
-//                    '<div style="height:50%;">{stide3}</div>',
-//                '</div>',
             '</div>'
         ],
         

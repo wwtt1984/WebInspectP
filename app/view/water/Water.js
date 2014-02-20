@@ -3,7 +3,6 @@ Ext.define('WebInspect.view.water.Water', {
     xtype: 'water',
 
     requires: [
-//        'Ext.plugin.ListPaging'
         'Ext.plugin.PullRefresh'
     ],
 

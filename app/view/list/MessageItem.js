@@ -11,7 +11,6 @@ Ext.define('WebInspect.view.list.MessageItem', {
     ],
 
     config: {
-//        baseCls: 'x-list-item',
 
         cls: 'list-demo',
 
@@ -51,8 +50,6 @@ Ext.define('WebInspect.view.list.MessageItem', {
 
     onContactDeleteButtonTap: function(button, e, eOpts) {
 
-        //stops propagation of event, without this sometimes both the itemtap
-        //and deletebuttontap would get fired after a previous record is deleted from dataview.
         e.stopEvent();
 
         var me = this;

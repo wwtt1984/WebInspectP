@@ -202,11 +202,8 @@ Ext.define('WebInspect.view.list.TaskDetail',{
                 items: [
                     {
                         text: '确定'
-                    }]
-//                {
-//                    text: '取消',
-//                    id: 'cancel'
-//                }]
+                    }
+                ]
             }
         ]
     },

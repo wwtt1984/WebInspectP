@@ -1,7 +1,6 @@
 Ext.define('WebInspect.view.Task', {
     extend: 'Ext.List',
     xtype: 'task',
-//    id: 'task',
     
     requires: [
         'Ext.plugin.PullRefresh'

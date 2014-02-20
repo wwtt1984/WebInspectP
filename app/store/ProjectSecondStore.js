@@ -4,9 +4,6 @@ Ext.define('WebInspect.store.ProjectSecondStore', {
     config: {
         model: 'WebInspect.model.ProjectSecondModel',
 
-//        pageSize: 10,
-//        clearOnPageLoad: false,
-
         proxy: {
             type: 'sk'
         }

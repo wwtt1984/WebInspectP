@@ -3,9 +3,6 @@ Ext.define('WebInspect.store.SecondLevelStore', {
 
     config: {
         model: 'WebInspect.model.LevelModel',
-
-        pageSize: 10,
-        clearOnPageLoad: false,
         
         proxy: {
             type: 'sk'

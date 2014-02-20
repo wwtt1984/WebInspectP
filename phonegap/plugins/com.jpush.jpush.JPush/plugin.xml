@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
         id="com.jpush.jpush.JPush"
-        version="1.5.2">
+        version="1.6.0">
 
 
     <name>JPush</name>
@@ -145,12 +145,12 @@
 
             <!-- Required  . Enable it you can get statistics data with channel -->
             <meta-data android:name="JPUSH_CHANNEL" android:value="developer-default"/>
-            <meta-data android:name="JPUSH_APPKEY" android:value="299d0fee887820e7d90a68b2"/>
+            <meta-data android:name="JPUSH_APPKEY" android:value="c56396570693be6f4a91941e"/>
 
         </config-file>
 
 
-        <source-file src="libs/android/jpush-sdk-release1.5.2.jar" target-dir="libs"/>
+        <source-file src="libs/android/jpush-sdk-release1.6.0.jar" target-dir="libs"/>
         <source-file src="libs/android/armeabi/libjpush.so" target-dir="libs/armeabi"/>
 
         <source-file src="src/android/JPush.java" target-dir="src/com/jpush/jpush"/>

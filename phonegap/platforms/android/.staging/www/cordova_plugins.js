@@ -1,13 +1,6 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
-        "file": "plugins/com.jpush.jpush.JPush/www/jPush.js",
-        "id": "com.jpush.jpush.JPush.jpush",
-        "clobbers": [
-            "window.plugins.jPush"
-        ]
-    },
-    {
         "file": "plugins/com.toast.toast.Toast/www/toast.js",
         "id": "com.toast.toast.Toast.toast",
         "clobbers": [
@@ -47,6 +40,13 @@ module.exports = [
         "id": "com.vpn.vpn.Vpn.vpn",
         "clobbers": [
             "window.plugins.Vpn"
+        ]
+    },
+    {
+        "file": "plugins/com.jpush.jpush.JPush/www/jPush.js",
+        "id": "com.jpush.jpush.JPush.jpush",
+        "clobbers": [
+            "window.plugins.jPush"
         ]
     },
     {
@@ -175,12 +175,12 @@ module.exports = [
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "com.jpush.jpush.JPush": "1.5.2",
     "com.toast.toast.Toast": "1.5.2",
     "com.install.install.Install": "1.5.2",
     "org.apache.cordova.file-transfer": "0.4.0",
     "com.phone.phone.Phone": "1.5.2",
     "com.vpn.vpn.Vpn": "1.5.2",
+    "com.jpush.jpush.JPush": "1.6.0",
     "org.apache.cordova.file": "0.2.5"
 }
 // BOTTOM OF METADATA

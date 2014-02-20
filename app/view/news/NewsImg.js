@@ -51,6 +51,5 @@ Ext.define('WebInspect.view.news.NewsImg',{
 			item.push({xtype: 'image',cls: 'my-carousel-item-img',src: img[i]});
 		}
         this.down('carousel').setItems(item);
-//		Ext.getCmp('newscarousel').setItems(item);
 	}
 })

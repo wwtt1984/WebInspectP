@@ -15,8 +15,6 @@ Ext.define('WebInspect.view.contact.Contact', {
 	    
 	    loadingText: '努力加载中...',
 	    scrollToTopOnRefresh: false,
-	    
-//	    ui: 'round',
         
         emptyText: '<p class="no-searches">没有符合要求的记录</p>',
 	      

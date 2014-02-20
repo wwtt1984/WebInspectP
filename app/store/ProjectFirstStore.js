@@ -4,9 +4,6 @@ Ext.define('WebInspect.store.ProjectFirstStore', {
     config: {
         model: 'WebInspect.model.ProjectFirstModel',
 
-//        pageSize: 10,
-//        clearOnPageLoad: false,
-
         proxy: {
             type: 'sk'
         },
@@ -15,7 +12,6 @@ Ext.define('WebInspect.store.ProjectFirstStore', {
             groupFn: function(record) {
                 return record.get('type') + '(' + record.get('typenum') + ')';
             }
-//            sortProperty: 'last_name'
         }
     }
 });

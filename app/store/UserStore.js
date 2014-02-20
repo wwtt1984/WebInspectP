@@ -3,9 +3,7 @@ Ext.define('WebInspect.store.UserStore', {
 
     config: {
         model: 'WebInspect.model.UserLocalModel',
-//        proxy: {
-//            type: 'sk'
-//        }
+
         autoLoad: true,
         proxy: {
             type: 'localstorage',

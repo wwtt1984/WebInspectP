@@ -47,7 +47,6 @@ Ext.define('WebInspect.controller.MainControl',{
                 tap: 'onLoginTap'
             },
             '#noticelist': {
-//    			itemtaphold: 'onNoticeListTapHold',
                 itemtap: 'onNoticeListTap'
             },
             '#functionlist': {
@@ -120,19 +119,9 @@ Ext.define('WebInspect.controller.MainControl',{
         this.bpindex = 0;///默认请求
         this.beindex = 2;///默认请求总数
 
-//        window.setTimeout(function(){me.checkJpush(me);},100);
-//        document.addEventListener('deviceready',function(){me.onJpushReady(me);}, false);
+        window.setTimeout(function(){me.checkJpush(me);},100);
+        document.addEventListener('deviceready',function(){me.onJpushReady(me);}, false);
 
-
-//        /*
-//        * ios中用户名、密码记住功能
-//        * */
-//
-//        var store = Ext.getStore('UserStore');
-//        if(store.getAllCount() > 0){
-//            Ext.getCmp('name').setValue(store.getAt(0).data.uid);
-//            Ext.getCmp('password').setValue(store.getAt(0).data.password);
-//        }
 
         me.onBtnConfirm();
         //android返回键事件监听
@@ -475,13 +464,6 @@ Ext.define('WebInspect.controller.MainControl',{
 
             me.onVpnLogin(num, data);
 
-//            if(num == 1){
-//                me.onVpnLogin(num, data);//////////////////先执行vpn认证///////////////////
-//            }
-//            else{
-//                me.onVpnLogin(num, data);//////////////////先执行vpn认证///////////////////
-////                me.onMessagePush(data);
-//            }
         };
         reader.readAsText(file);
     },
@@ -690,7 +672,7 @@ Ext.define('WebInspect.controller.MainControl',{
         var me = this;
         WebInspect.app.user.sid = Ext.getCmp('name').getValue();
         WebInspect.app.user.password = Ext.getCmp('password').getValue();
-//        me.onVpnLogin(1, ''); /////成功写入开始执行VPN认证
+        me.onVpnLogin(1, ''); /////成功写入开始执行VPN认证
 
         me.onUserCheck();
     },
@@ -717,8 +699,6 @@ Ext.define('WebInspect.controller.MainControl',{
     onUserCheck: function(){
 
         var me = this;
-
-//        var local = Ext.getStore('UserStore');
 
         Ext.Viewport.setMasked({
             xtype: 'loadmask',
@@ -752,12 +732,6 @@ Ext.define('WebInspect.controller.MainControl',{
                         message: '验证成功,页面加载中...'
                     });
 
-                    /*
-                        ios用户名、密码放在local store中
-                     */
-//                    local.removeAll();
-//                    local.add({uid:store.getAt(0).data.uid, password: WebInspect.app.user.password, name:store.getAt(0).data.name, mobile:store.getAt(0).data.mobile});
-//                    local.sync();
 
                     me.onInsertUserInfo(me);
 
@@ -765,7 +739,7 @@ Ext.define('WebInspect.controller.MainControl',{
                     WebInspect.app.user.mobile = store.getAt(0).data.mobile;
 
                     //将验证成功的用户信息，存在本地
-//                    me.onUserWriteJson();
+                    me.onUserWriteJson();
 
                     //加载用户“待办事项”信息
                     me.onTaskStoreLoad(1);
@@ -815,7 +789,6 @@ Ext.define('WebInspect.controller.MainControl',{
             var pushstore = Ext.getStore('PushStore');
             pushstore.getAt(1).data.num = store.getAllCount();
             Ext.getCmp('noticelist').refresh();
-//            Ext.getCmp('noticelist').setStore(pushstore);
         }, this);
     },
 
@@ -833,7 +806,6 @@ Ext.define('WebInspect.controller.MainControl',{
             var pushstore = Ext.getStore('PushStore');
             pushstore.getAt(0).data.num = store.getAllCount();
             Ext.getCmp('noticelist').refresh();
-//            Ext.getCmp('noticelist').setStore(pushstore);
 
             //加载“天气预报”信息
             me.onWeatherStoreLoad(num);
@@ -863,13 +835,6 @@ Ext.define('WebInspect.controller.MainControl',{
                 me.getMain().setActiveItem(me.getFunctionmain());
             }
         });
-    },
-
-    //“待办事项”等通知信息的长按事件，显示“删除”按钮。
-    onNoticeListTapHold: function(list, index, target, record, e, eOpts){
-
-//        list.lastTapHold = new Date();
-//        Ext.getCmp('noticelist').removeCls('hidden-disclosure-list');
     },
 
     //“待办事项”等通知信息列表“单击”事件
@@ -1019,6 +984,7 @@ Ext.define('WebInspect.controller.MainControl',{
             }
 
             store.load(function(records, operation, success){
+
                 store.clearFilter();
                 store.filter("sdate", Ext.Date.format(new Date(), 'Y-m-d').toString());
                 if(store.getAllCount() == store.getCount()){
@@ -1073,25 +1039,10 @@ Ext.define('WebInspect.controller.MainControl',{
             if(!this.setting){
                 this.setting = Ext.create('WebInspect.view.settings.Setting');
             }
-//            this.setting.onToggleValueSet();
             this.getInfo().push(this.setting);
             this.getMain().setActiveItem(this.getInfo());
         }
         else{
-
-//    		var store = Ext.create('Ext.data.Store', {
-//            	model: 'WebInspect.model.TestModel',
-//
-//            	data: [
-//                	{ name: 'Tommy',   id: '01', date: '2013-10-27'  }
-//            	]
-//        	});
-//
-//        	this.test = Ext.create('WebInspect.view.Test');
-//
-//        	Ext.getCmp('test').setStore(store);
-//
-//        	this.getInfo().push(this.test);
             Ext.Msg.alert('此模块正在完善中！');
         }
     },
@@ -1309,7 +1260,6 @@ Ext.define('WebInspect.controller.MainControl',{
 //            this.tidepop.destroy();
             this.tidepop = Ext.create('WebInspect.view.tide.TidePop');
         }
-//        this.tidepop = Ext.create('WebInspect.view.tide.TidePop');
         if (Ext.os.deviceType.toLowerCase() == "phone") {
             this.tidepop.setWidth(null);
             this.tidepop.setMinHeight('45%');
@@ -1379,7 +1329,6 @@ Ext.define('WebInspect.controller.MainControl',{
             results: result + '$jsonp'
         });
 
-//        store.loadPage(1,function(records, operation, success) {});
         store.load(function(records, operation, success) {
             if(num == 0){
                 Ext.Viewport.setMasked(false);
@@ -1440,7 +1389,6 @@ Ext.define('WebInspect.controller.MainControl',{
     },
 
     onFlowSegmentedTap: function(me, button, isPressed, eOpts){
-//        var text = me.getPressedButtons()[0].getText();
         if(isPressed){
 
             var text = button._text;

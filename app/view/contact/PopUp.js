@@ -53,12 +53,10 @@ Ext.define('WebInspect.view.contact.PopUp', {
         this.onButtonSet(Ext.ComponentQuery.query('#shortnum')[0], record.data.pager);
         this.onButtonSet(Ext.ComponentQuery.query('#officenum')[0], record.data.telephonenumber);
 
-//        Ext.getCmp('fullnum').setText(record.data.mobile);
-//        Ext.getCmp('shortnum').setText(record.data.pager);
     },
 
     onButtonSet: function(button, text){
-//        debugger;
+
         if(text != 'null'){
             button.setText(text);
             button.show();

@@ -13,16 +13,6 @@ Ext.define('WebInspect.view.list.Message', {
 
         title: '离线消息',
 
-//        style: 'background: #fff;',
-//        store: 'MessageStore',
-//
-//        emptyText: '<p class="no-searches">没有离线消息</p>',
-//
-//
-//        itemTpl: Ext.create('Ext.XTemplate',
-//            '<div style="font-size:18px; font-weight: bold; line-height: 1.6em;">{MsgTitle}</div>',
-//            '<div style="font-size:15px; line-height: 1.6em;">发送时间：{CreateTime}</div>'
-//        )
         itemId: 'message',
 
         layout: {
@@ -34,7 +24,6 @@ Ext.define('WebInspect.view.list.Message', {
                 baseCls: 'x-list',
                 cls: 'x-list-normal',
                 emptyText: '<p class="no-searches" style="margin-top:50%;">没有离线消息</p>',
-//                id: 'messageDataView',
                 itemId: 'messageDataView',
                 disableSelection: true,
                 defaultType: 'messageListItem',

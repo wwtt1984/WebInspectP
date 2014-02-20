@@ -16,10 +16,8 @@ Ext.define('WebInspect.view.settings.Setting', {
        items:[
            {
                xtype: 'fieldset',
-               title: '消息推送(暂时不能定制)',
-//               instructions: 'Please enter the information above.',
+               title: '消息推送设置',
                defaults: {
-//                   required: true,
                    labelWidth: '40%'
                },
 
@@ -30,7 +28,6 @@ Ext.define('WebInspect.view.settings.Setting', {
                        name: 'news',
                        itemId: 'newstoggle',
                        label: '内网新闻'
-//                       readOnly: true
                    },
                    {
                        xtype: 'togglefield',
@@ -38,7 +35,6 @@ Ext.define('WebInspect.view.settings.Setting', {
                        itemId: 'infotoggle',
                        cls: 'setting',
                        label: '综合信息'
-//                       readOnly: true
                    },
                    {
                        xtype: 'togglefield',
@@ -46,13 +42,11 @@ Ext.define('WebInspect.view.settings.Setting', {
                        itemId: 'noticetoggle',
                        cls: 'setting',
                        label: '通知公告'
-//                       readOnly: true
                    }
                ]
            },
            {
                xtype: 'panel',
-//               docked: 'bottom',
                defaults: {
                    xtype : 'button',
                    style: 'background:white;width:100%;min-height: 2.2em;',
@@ -70,12 +64,6 @@ Ext.define('WebInspect.view.settings.Setting', {
                        style: 'background:#d90303;color:white;min-height: 2.2em;',
                        itemId: 'sysquit'
                    }]
-
-//            {
-//                text: '退出系统',
-//                style: 'background:red;color:white;min-height: 2.2em;margin:10px 13px 0 13px;width:auto !important;',
-//                id: 'historycancel'
-//            }]
            }]
     },
 
@@ -113,10 +101,7 @@ Ext.define('WebInspect.view.settings.Setting', {
 
             me.setRecord(user);
 
-//            Ext.defer(function(){
-//                debugger;
             me.tag = 1;
-//            }, 1000);
         }, this);
     },
 
