@@ -1,7 +1,8 @@
 Ext.define('WebInspect.model.TaskModel',{
 	extend: 'Ext.data.Model',
     config: {
-       fields: [
+        idProperty: 'TaskID',
+        fields: [
             'StepID', 
             'TaskID',
             'ProcessName',

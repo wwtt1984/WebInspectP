@@ -5,6 +5,7 @@
 Ext.define('WebInspect.model.MessageModel',{
     extend: 'Ext.data.Model',
     config: {
+        idProperty: 'DialogID',
         fields: [
             'MsgCount',
             'MsgID',
@@ -16,7 +17,10 @@ Ext.define('WebInspect.model.MessageModel',{
             'Client',
             'CreateTime',
             'MsgTitle',
-            'sqldata_Id'
+            'sqldata_Id',
+
+            'Sname',
+            'Stime'
         ]
     }
 

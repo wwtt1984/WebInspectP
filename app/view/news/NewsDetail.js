@@ -13,7 +13,7 @@ Ext.define('WebInspect.view.news.NewsDetail',{
     		direction: 'vertical',
     		directionLock: true
 		},
-		itemId: 'newsdetail',
+//		itemId: 'newsdetail',
 		
 		style: 'background:#f7f7f7; padding: 10px;',
 		
@@ -68,7 +68,7 @@ Ext.define('WebInspect.view.news.NewsDetail',{
 				},
 				addImg:function(values){
 
-					Ext.ComponentQuery.query('#newsdetail')[0].onImageShow(values);
+					Ext.ComponentQuery.query('#info')[0].onImageShow(values);
 //					Ext.getCmp('newsdetail').onImageShow(values);
 	
 				}
@@ -78,25 +78,5 @@ Ext.define('WebInspect.view.news.NewsDetail',{
 	
 	onDataSet: function(record){
 		this.setData({stitle: record.data.stitle, scontent: record.data.scontent, simg: record.data.simg});
-	},
-	
-	onImageShow: function(values){
-
-		this.view = this.down('newsimg');
-		if(!this.view){
-    		this.view = Ext.create('WebInspect.view.news.NewsImg');
-		}	
-			
-	    this.view.onImgDataSet(values);
-		
-		if (!this.view.getParent()) {
-            Ext.Viewport.add(this.view);
-        } 				       
-        this.view.show();
-	},
-	
-	onViewHide: function(){
-
-		this.view.hide();
 	}
 });

@@ -381,5 +381,29 @@ text-shadow: rgba(255, 255, 255, 0.25) 0 0.08em 0;
 #loading .x-loading-spinner{font-size:160%;margin:-27px 0 0 -45px}
 body{background:-webkit-gradient(radial, 50% 40%, 20, 50% 40%, 350, from(#6983b2), to(#30508b));background-repeat:no-repeat;background-attachment:fixed}
 
-  
+/*****列表删除按钮样式*************/
+.list-demo{
+    position: relative;
+    min-height: 2.6em;
+    border-bottom: 1px #ccc solid;
+    line-height: 2.6em;
+    padding: 10px;
+}
+
+.my-buttons{
+    color: #d90303;
+    background: none;
+    border: none;
+}
+.my-buttons .x-button-icon:before{
+    font-size: 1.6em;
+    line-height: 1em;
+}
+.my-buttons .x-button-label{
+    font-size: 14px;
+    line-height: 1.4em;
+}
+.my-buttons.x-iconalign-left .x-button-label,.my-buttons.x-iconalign-left .x-badge {
+    margin-left: 0;
+}
 

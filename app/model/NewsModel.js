@@ -1,7 +1,8 @@
 Ext.define('WebInspect.model.NewsModel',{
 	extend: 'Ext.data.Model',
     config: {
-       fields: [
+        idProperty: 'sid',
+        fields: [
             'sid', 
             'stitle',
             'slink',

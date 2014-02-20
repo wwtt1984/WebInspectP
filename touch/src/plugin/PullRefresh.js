@@ -98,7 +98,7 @@ Ext.define('Ext.plugin.PullRefresh', {
         /**
          * @cfg {String} lastUpdatedDateFormat The format to be used on the last updated date.
          */
-        lastUpdatedDateFormat: 'm/d/Y h:iA',
+        lastUpdatedDateFormat: 'm/d/Y h:i:sA',
 
         /**
          * @cfg {Number} overpullSnapBackDuration The duration for snapping back when pulldown has been lowered further then its height.
@@ -383,6 +383,7 @@ Ext.define('Ext.plugin.PullRefresh', {
      * Updates the content based on the PullRefresh Template
      */
     updateView: function() {
+        this.lastUpdated = new Date();
         var state = this.getState(),
             lastUpdatedText = this.getLastUpdatedText() + Ext.util.Format.date(this.lastUpdated, this.getLastUpdatedDateFormat()),
             templateConfig = {state: state, updated: lastUpdatedText},

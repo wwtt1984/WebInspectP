@@ -40,7 +40,9 @@ Ext.application({
         'Info',
 
         'list.Message',
+        'list.MessageItem',
         'list.MainInfo',
+        'list.TaskDetail',
 
         'Ext.ux.panel.PDF',
 
@@ -95,7 +97,9 @@ Ext.application({
         'MainModel',
 
         'ProjectFirstModel',
-        'ProjectSecondModel'
+        'ProjectSecondModel',
+
+        'SettingsModel'
     ],
 
     stores: [
@@ -130,7 +134,9 @@ Ext.application({
     ],
 
     controllers: [
-        'MainControl'
+        'MainControl',
+        'NoticeControl',
+        'SettingsControl'
     ],
 
     icon: {

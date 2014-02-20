@@ -3,6 +3,7 @@ Ext.define('WebInspect.store.PushStore', {
 
     config: {
         model: 'WebInspect.model.PushModel',
+//        autoLoad: true,
         data:[
             {id: '01', text: '待办事项', content:'待办事项轻松管理', img: 'resources/images/notice/task.png', num: '0'},
     		{id: '02', text: '离线消息', content:'腾讯通离线消息管理', img: 'resources/images/notice/rtx.png', num: '0'},

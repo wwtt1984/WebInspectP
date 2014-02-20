@@ -4,6 +4,7 @@ Ext.define('WebInspect.view.Task', {
 //    id: 'task',
     
     requires: [
+        'Ext.plugin.PullRefresh'
     ],
     
     config: {
@@ -12,6 +13,21 @@ Ext.define('WebInspect.view.Task', {
 
         style: 'background: #fff;',
     	store: 'TaskStore',
+
+        plugins: [
+            {
+                xclass: 'Ext.plugin.PullRefresh',
+                pullText: '下拉刷新...',
+
+                releaseText: '松开进行刷新...',
+
+                loadingText: '正在刷新...',
+
+                loadedText: '刷新完成.',
+
+                lastUpdatedText: '刷新时间:&nbsp;'
+            }
+        ],
 
         emptyText: '<p class="no-searches">没有待办事项</p>',
 

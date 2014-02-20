@@ -27,26 +27,26 @@ Ext.define('WebInspect.view.settings.Setting', {
                    {
                        xtype: 'togglefield',
                        cls: 'setting',
-                       name: 'enable',
-                       label: '内网新闻',
-                       value: 1,
-                       readOnly: true
+                       name: 'news',
+                       itemId: 'newstoggle',
+                       label: '内网新闻'
+//                       readOnly: true
                    },
                    {
                        xtype: 'togglefield',
-                       name: 'enable',
+                       name: 'info',
+                       itemId: 'infotoggle',
                        cls: 'setting',
-                       label: '综合信息',
-                       value: 1,
-                       readOnly: true
+                       label: '综合信息'
+//                       readOnly: true
                    },
                    {
                        xtype: 'togglefield',
-                       name: 'enable',
+                       name: 'notice',
+                       itemId: 'noticetoggle',
                        cls: 'setting',
-                       label: '通知公告',
-                       value: 1,
-                       readOnly: true
+                       label: '通知公告'
+//                       readOnly: true
                    }
                ]
            },
@@ -77,5 +77,93 @@ Ext.define('WebInspect.view.settings.Setting', {
 //                id: 'historycancel'
 //            }]
            }]
+    },
+
+
+    initialize: function(){
+
+        this.tag = 0;
+        this.onToggleValueSet();
+    },
+
+    onToggleValueSet: function(){
+
+        var me = this;
+
+        var store = Ext.create('Ext.data.Store', {
+
+            model: 'WebInspect.model.SettingsModel',
+            proxy: {
+                type: 'sk'
+            }
+        });
+
+        store.getProxy().setExtraParams({
+            t:'GetPushPersonZt',
+            results: WebInspect.app.user.sid + '$jsonp'
+        });
+
+        store.load(function(records, operation, success){
+
+            var user = Ext.create('WebInspect.model.SettingsModel', {
+                news:         store.getAt(0).data.news,
+                info:          store.getAt(0).data.info,
+                notice:       store.getAt(0).data.notice
+            });
+
+            me.setRecord(user);
+
+//            Ext.defer(function(){
+//                debugger;
+            me.tag = 1;
+//            }, 1000);
+        }, this);
+    },
+
+    onToggleChange: function(type, value){
+
+
+        var me = this;
+
+        if(me.tag == 1){
+
+            var results = WebInspect.app.user.sid + '$' + type + ',' + value + '$jsonp';
+
+            Ext.data.proxy.SkJsonp.validate('UpdatePushPerson',results,{
+                success: function(response) {
+
+                    if(response.success == "true"){
+                        plugins.Toast.ShowToast("设置成功！",1000);
+//                        Ext.Msg.alert('设置成功！');
+                    }
+                    else{
+                        plugins.Toast.ShowToast("设置失败，请重试！",1000);
+//                        Ext.Msg.alert('设置失败，请重试！');
+
+                        var val = 0;
+                        if(value){
+                            val = 0;
+                        }
+                        else{
+                            val = 1;
+                        }
+                        me.setRecord({name: type, value: val});
+                    }
+                },
+                failure: function() {
+                    plugins.Toast.ShowToast("请求失败，请重试！",1000);
+//                    Ext.Msg.alert('请求失败，请重试！');
+
+                    var val = 0;
+                    if(value){
+                        val = 0;
+                    }
+                    else{
+                        val = 1;
+                    }
+                    me.setRecord({name: type, value: val});
+                }
+            });
+        }
     }
 });

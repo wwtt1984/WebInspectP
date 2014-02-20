@@ -24,19 +24,19 @@ Ext.define('WebInspect.view.news.News', {
             loadMoreText: '加载更多...',
             noMoreRecordsText: '没有更多记录了...',
             autoPaging:true
+        },
+        {
+            xclass: 'Ext.plugin.PullRefresh',
+            pullText: '下拉刷新...',
+
+            releaseText: '松开进行刷新...',
+
+            loadingText: '正在刷新...',
+
+            loadedText: '刷新完成.',
+
+            lastUpdatedText: '刷新时间:&nbsp;'
         }],
-//        {
-//            xclass: 'Ext.plugin.PullRefresh',
-//            pullText: '下拉刷新...',
-//
-//            releaseText: '松开进行刷新...',
-//
-//            loadingText: '正在刷新...',
-//
-//            loadedText: '刷新完成.',
-//
-//            lastUpdatedText: '刷新时间:&nbsp;'
-//        }],
         
         emptyText: '<p class="no-searches">没有符合要求的记录</p>',
 	    

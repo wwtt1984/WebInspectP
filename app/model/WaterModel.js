@@ -1,6 +1,7 @@
 Ext.define('WebInspect.model.WaterModel',{
     extend: 'Ext.data.Model',
     config: {
+        idProperty: 'stcdt',
         fields: [
             'sttp',
             'stnm',

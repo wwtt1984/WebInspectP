@@ -58,6 +58,7 @@ Ext.define('WebInspect.controller.MainControl',{
                 tap: 'onInfoFunctionBackTap'
             },
 
+
             news: {
                 itemtap: 'onNewsListTap'
             },
@@ -118,8 +119,9 @@ Ext.define('WebInspect.controller.MainControl',{
         this.bpush = false;///默认是直接点击软件进去的
         this.bpindex = 0;///默认请求
         this.beindex = 2;///默认请求总数
-        window.setTimeout(function(){me.checkJpush(me);},100);
-        document.addEventListener('deviceready',function(){me.onJpushReady(me);}, false);
+
+//        window.setTimeout(function(){me.checkJpush(me);},100);
+//        document.addEventListener('deviceready',function(){me.onJpushReady(me);}, false);
 
 
 //        /*
@@ -304,34 +306,71 @@ Ext.define('WebInspect.controller.MainControl',{
 
     onVpnLogin:function(num, data)
     {
-        Ext.Viewport.setMasked({xtype:'loadmask',message:'VPN连接中,请稍后...'});
+
+        var gate = ['10.33.21.254','10.33.22.254','10.33.23.254','10.33.24.254','10.33.25.254','10.33.26.254','10.33.27.254','10.33.28.254'
+            ,'10.33.12.254','10.33.13.254','10.33.14.254'
+            ,'10.33.90.254'
+            ,'10.33.31.254','10.33.32.254','10.33.33.254','10.33.34.254','10.33.35.254'];
+
         var me = this;
-        plugins.Vpn.VpnLogin(WebInspect.app.user.sid,WebInspect.app.user.password,function(success) {
-            Ext.Viewport.setMasked(false);
-            if(success == "true")
+        ////////////获取网关值///////////////////////////
+        plugins.Vpn.VpnOnWifi("",function(success) {   ///////////////得到网关值
+
+            var vpn = "true";
+            for(var i=0;i<gate.length;i++)
             {
-                plugins.Toast.ShowToast("VPN连接成功!",3000);
-                ////////////////////////////////////////////////
+                if(success == gate[i])
+                {
+                    vpn = "false";
+                    break;
+                }
+            }
+
+            if(vpn == "true")
+            {
+                Ext.Viewport.setMasked({xtype:'loadmask',message:'VPN连接中,请稍后...'});
+                plugins.Vpn.VpnLogin(WebInspect.app.user.sid,WebInspect.app.user.password,function(success) {
+                    Ext.Viewport.setMasked(false);
+                    if(success == "true")
+                    {
+                        plugins.Toast.ShowToast("VPN连接成功!",3000);
+                        ////////////////////////////////////////////////
+                        if(num == 0){
+                            me.onMessagePush(data);
+                        }
+                        else
+                        {
+                            me.onCheckVesion(me); //////////////检查版本号////////////////////
+                        }
+                        me.onUserCheck();
+                    }
+                    else if(success == "false")
+                    {
+                        plugins.Toast.ShowToast("VPN连接超时,请重试!",3000);
+                    }
+                    else if(success == "initfalse")
+                    {
+                        plugins.Toast.ShowToast("VPN初始化失败,请重试!",3000);
+                    }
+                    else if(success == "error")
+                    {
+                        plugins.Toast.ShowToast("用户名或者密码输入有误!",3000);
+                    }
+                });
+
+            }
+            else
+            {
                 if(num == 0){
                     me.onMessagePush(data);
                 }
-                me.onCheckVesion(me); //////////////检查版本号////////////////////
+                else
+                {
+                    me.onCheckVesion(me); //////////////检查版本号////////////////////
+                }
                 me.onUserCheck();
             }
-            else if(success == "false")
-            {
-                plugins.Toast.ShowToast("VPN连接超时,请重试!",3000);
-            }
-            else if(success == "initfalse")
-            {
-                plugins.Toast.ShowToast("VPN初始化失败,请重试!",3000);
-            }
-            else if(success == "error")
-            {
-                plugins.Toast.ShowToast("用户名或者密码输入有误!",3000);
-            }
         });
-
     },
 
     onVpnCheckOnline:function(data){
@@ -342,8 +381,6 @@ Ext.define('WebInspect.controller.MainControl',{
             message: '努力加载中...'
         });
         plugins.Vpn.VpnCheckOnLine(WebInspect.app.user.sid,WebInspect.app.user.password,function(success) {
-
-            alert(success);
 
             if(success == 'true'){
                 me.onMessagePush(data);
@@ -433,15 +470,18 @@ Ext.define('WebInspect.controller.MainControl',{
             WebInspect.app.user.name = json.name;
             WebInspect.app.user.mobile = json.mobile;
 
-            if(num == 1){
-                Ext.getCmp('name').setValue(WebInspect.app.user.sid);
-                Ext.getCmp('password').setValue(WebInspect.app.user.password);
-                me.onVpnLogin(num, data);//////////////////先执行vpn认证///////////////////
-            }
-            else{
-                me.onVpnLogin(num, data);//////////////////先执行vpn认证///////////////////
-//                me.onMessagePush(data);
-            }
+            Ext.getCmp('name').setValue(WebInspect.app.user.sid);
+            Ext.getCmp('password').setValue(WebInspect.app.user.password);
+
+            me.onVpnLogin(num, data);
+
+//            if(num == 1){
+//                me.onVpnLogin(num, data);//////////////////先执行vpn认证///////////////////
+//            }
+//            else{
+//                me.onVpnLogin(num, data);//////////////////先执行vpn认证///////////////////
+////                me.onMessagePush(data);
+//            }
         };
         reader.readAsText(file);
     },
@@ -551,6 +591,11 @@ Ext.define('WebInspect.controller.MainControl',{
                 me.onInfoFunctionBackTap();
                 break;
 
+            case 'taskdetail':
+                me.getInfo().pop();
+                me.getInfofunction().show();
+                break;
+
             case 'message':
                 me.onInfoFunctionBackTap();
                 break;
@@ -645,9 +690,9 @@ Ext.define('WebInspect.controller.MainControl',{
         var me = this;
         WebInspect.app.user.sid = Ext.getCmp('name').getValue();
         WebInspect.app.user.password = Ext.getCmp('password').getValue();
-        me.onVpnLogin(1, ''); /////成功写入开始执行VPN认证
+//        me.onVpnLogin(1, ''); /////成功写入开始执行VPN认证
 
-//        me.onUserCheck();
+        me.onUserCheck();
     },
 
     onUserWriteJson: function(){
@@ -720,7 +765,7 @@ Ext.define('WebInspect.controller.MainControl',{
                     WebInspect.app.user.mobile = store.getAt(0).data.mobile;
 
                     //将验证成功的用户信息，存在本地
-                    me.onUserWriteJson();
+//                    me.onUserWriteJson();
 
                     //加载用户“待办事项”信息
                     me.onTaskStoreLoad(1);
@@ -755,14 +800,23 @@ Ext.define('WebInspect.controller.MainControl',{
 
     onMessageLoad: function(){
 
+//        var sdt = Ext.Date.add(new Date(), Ext.Date.DAY,-7).format(new Date(), 'Y-m-d').toString();
+        var sdt =Ext.Date.format(Ext.Date.add(new Date(), Ext.Date.DAY,-7), 'Y-m-d').toString();
+        var edt = Ext.Date.format(new Date(), 'Y-m-d').toString();
+
         var store = Ext.getStore('MessageStore');
         store.removeAll();
         store.getProxy().setExtraParams({
             t: 'GetRtxList',
-            results: WebInspect.app.user.sid + '$jsonp'
+            results: WebInspect.app.user.sid + '$'+ sdt + '$' + edt + '$jsonp'
         });
 
-        store.load(function(records, operation, success){}, this);
+        store.load(function(records, operation, success){
+            var pushstore = Ext.getStore('PushStore');
+            pushstore.getAt(1).data.num = store.getAllCount();
+            Ext.getCmp('noticelist').refresh();
+//            Ext.getCmp('noticelist').setStore(pushstore);
+        }, this);
     },
 
     //加载用户“待办事项”信息
@@ -778,7 +832,8 @@ Ext.define('WebInspect.controller.MainControl',{
         store.load(function(records, operation, success){
             var pushstore = Ext.getStore('PushStore');
             pushstore.getAt(0).data.num = store.getAllCount();
-            Ext.getCmp('noticelist').setStore(pushstore);
+            Ext.getCmp('noticelist').refresh();
+//            Ext.getCmp('noticelist').setStore(pushstore);
 
             //加载“天气预报”信息
             me.onWeatherStoreLoad(num);
@@ -813,8 +868,8 @@ Ext.define('WebInspect.controller.MainControl',{
     //“待办事项”等通知信息的长按事件，显示“删除”按钮。
     onNoticeListTapHold: function(list, index, target, record, e, eOpts){
 
-        list.lastTapHold = new Date();
-        Ext.getCmp('noticelist').removeCls('hidden-disclosure-list');
+//        list.lastTapHold = new Date();
+//        Ext.getCmp('noticelist').removeCls('hidden-disclosure-list');
     },
 
     //“待办事项”等通知信息列表“单击”事件
@@ -881,6 +936,8 @@ Ext.define('WebInspect.controller.MainControl',{
         }
         list.lastTapHold = null;
     },
+
+
 
     onMessageItemTap: function(list, index, target, record, e, eOpts ){
         Ext.Msg.alert('功能正在完善中！');
@@ -1016,6 +1073,7 @@ Ext.define('WebInspect.controller.MainControl',{
             if(!this.setting){
                 this.setting = Ext.create('WebInspect.view.settings.Setting');
             }
+//            this.setting.onToggleValueSet();
             this.getInfo().push(this.setting);
             this.getMain().setActiveItem(this.getInfo());
         }
@@ -1127,7 +1185,7 @@ Ext.define('WebInspect.controller.MainControl',{
 
     //查看“详细信息”中的图片后，返回至“详细信息”页面
     onNewsBackTap: function(){
-        this.getNewsdetail().onViewHide();
+        this.getInfo().onViewHide();
     },
 
     //加载通讯录二级信息
