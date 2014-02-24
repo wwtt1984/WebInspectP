@@ -38,6 +38,7 @@ D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\plugins\
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\plugins\com.vpn.vpn.Vpn \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file-transfer \
+D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.network-information \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\plugins\com.install.install.Install\www \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\plugins\com.install.install.Install\www\install.js \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\plugins\com.jpush.jpush.JPush\www \
@@ -69,6 +70,9 @@ D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\plugins\
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file-transfer\www \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file-transfer\www\FileTransfer.js \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file-transfer\www\FileTransferError.js \
+D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.network-information\www \
+D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.network-information\www\Connection.js \
+D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.network-information\www\network.js \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\res\icon \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\res\screen \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\res\icon\android \

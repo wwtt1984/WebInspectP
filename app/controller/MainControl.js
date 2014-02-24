@@ -52,19 +52,15 @@ Ext.define('WebInspect.controller.MainControl',{
             '#functionlist': {
                 itemtap: 'onFunctionLsitTap'
             },
-
             'infofunction': {
                 tap: 'onInfoFunctionBackTap'
             },
-
-
             news: {
                 itemtap: 'onNewsListTap'
             },
             newsback: {
                 tap: 'onNewsBackTap'
             },
-
             firstlevel: {
                 itemtap: 'onFirstLevelTap'
             },
@@ -293,73 +289,100 @@ Ext.define('WebInspect.controller.MainControl',{
 
     },
 
+    onNetWorkIsON:function()  /////////////判断是否有网络
+    {
+        var res = false;
+        var networkState = navigator.connection.type;
+        var states = {};
+        states[Connection.UNKNOWN]  = 'Unknown';
+        states[Connection.ETHERNET] = 'Ethernet';
+        states[Connection.WIFI]     = 'WiFi';
+        states[Connection.CELL_2G]  = '2G';
+        states[Connection.CELL_3G]  = '3G';
+        states[Connection.CELL_4G]  = '4G';
+        states[Connection.CELL]     = 'Cell';
+        states[Connection.NONE]     = 'No';
+
+        if( states[networkState] != "No" && states[networkState] != "Unknown")
+        {
+            res = true;
+        }
+        return res;
+    },
+
     onVpnLogin:function(num, data)
     {
+        if(this.onNetWorkIsON())
+        {
+            var gate = ['10.33.21.254','10.33.22.254','10.33.23.254','10.33.24.254','10.33.25.254','10.33.26.254','10.33.27.254','10.33.28.254'
+                ,'10.33.12.254','10.33.13.254','10.33.14.254'
+                ,'10.33.90.254'
+                ,'10.33.31.254','10.33.32.254','10.33.33.254','10.33.34.254','10.33.35.254'];
 
-        var gate = ['10.33.21.254','10.33.22.254','10.33.23.254','10.33.24.254','10.33.25.254','10.33.26.254','10.33.27.254','10.33.28.254'
-            ,'10.33.12.254','10.33.13.254','10.33.14.254'
-            ,'10.33.90.254'
-            ,'10.33.31.254','10.33.32.254','10.33.33.254','10.33.34.254','10.33.35.254'];
+            var me = this;
+            ////////////获取网关值///////////////////////////
+            plugins.Vpn.VpnOnWifi("",function(success) {   ///////////////得到网关值
 
-        var me = this;
-        ////////////获取网关值///////////////////////////
-        plugins.Vpn.VpnOnWifi("",function(success) {   ///////////////得到网关值
-
-            var vpn = "true";
-            for(var i=0;i<gate.length;i++)
-            {
-                if(success == gate[i])
+                var vpn = "true";
+                for(var i=0;i<gate.length;i++)
                 {
-                    vpn = "false";
-                    break;
+                    if(success == gate[i])
+                    {
+                        vpn = "false";
+                        break;
+                    }
                 }
-            }
 
-            if(vpn == "true")
-            {
-                Ext.Viewport.setMasked({xtype:'loadmask',message:'VPN连接中,请稍后...'});
-                plugins.Vpn.VpnLogin(WebInspect.app.user.sid,WebInspect.app.user.password,function(success) {
-                    Ext.Viewport.setMasked(false);
-                    if(success == "true")
-                    {
-                        plugins.Toast.ShowToast("VPN连接成功!",3000);
-                        ////////////////////////////////////////////////
-                        if(num == 0){
-                            me.onMessagePush(data);
-                        }
-                        else
+                if(vpn == "true")
+                {
+                    Ext.Viewport.setMasked({xtype:'loadmask',message:'VPN连接中,请稍后...'});
+                    plugins.Vpn.VpnLogin(WebInspect.app.user.sid,WebInspect.app.user.password,function(success) {
+                        Ext.Viewport.setMasked(false);
+                        if(success == "true")
                         {
-                            me.onCheckVesion(me); //////////////检查版本号////////////////////
+                            plugins.Toast.ShowToast("VPN连接成功!",3000);
+                            ////////////////////////////////////////////////
+                            if(num == 0){
+                                me.onMessagePush(data);
+                            }
+                            else
+                            {
+                                me.onCheckVesion(me); //////////////检查版本号////////////////////
+                            }
+                            me.onUserCheck();
                         }
-                        me.onUserCheck();
-                    }
-                    else if(success == "false")
-                    {
-                        plugins.Toast.ShowToast("VPN连接超时,请重试!",3000);
-                    }
-                    else if(success == "initfalse")
-                    {
-                        plugins.Toast.ShowToast("VPN初始化失败,请重试!",3000);
-                    }
-                    else if(success == "error")
-                    {
-                        plugins.Toast.ShowToast("用户名或者密码输入有误!",3000);
-                    }
-                });
+                        else if(success == "false")
+                        {
+                            plugins.Toast.ShowToast("VPN连接超时,请重试!",3000);
+                        }
+                        else if(success == "initfalse")
+                        {
+                            plugins.Toast.ShowToast("VPN初始化失败,请重试!",3000);
+                        }
+                        else if(success == "error")
+                        {
+                            plugins.Toast.ShowToast("用户名或者密码输入有误!",3000);
+                        }
+                    });
 
-            }
-            else
-            {
-                if(num == 0){
-                    me.onMessagePush(data);
                 }
                 else
                 {
-                    me.onCheckVesion(me); //////////////检查版本号////////////////////
+                    if(num == 0){
+                        me.onMessagePush(data);
+                    }
+                    else
+                    {
+                        me.onCheckVesion(me); //////////////检查版本号////////////////////
+                    }
+                    me.onUserCheck();
                 }
-                me.onUserCheck();
-            }
-        });
+            });
+        }
+        else
+        {
+            plugins.Toast.ShowToast("先检查你的网络是否正常,再重新登录!",3000);
+        }
     },
 
     onVpnCheckOnline:function(data){
@@ -673,8 +696,8 @@ Ext.define('WebInspect.controller.MainControl',{
         WebInspect.app.user.sid = Ext.getCmp('name').getValue();
         WebInspect.app.user.password = Ext.getCmp('password').getValue();
         me.onVpnLogin(1, ''); /////成功写入开始执行VPN认证
-
-        me.onUserCheck();
+        plugins.jPush.setAlias(WebInspect.app.user.sid,function(success){});//////推送标识，以用户名区分
+        //me.onUserCheck(); ////////测试的时候有
     },
 
     onUserWriteJson: function(){
@@ -699,31 +722,21 @@ Ext.define('WebInspect.controller.MainControl',{
     onUserCheck: function(){
 
         var me = this;
-
-        Ext.Viewport.setMasked({
-            xtype: 'loadmask',
-            message: '登录中,请稍后...'
-        });
-
+        Ext.Viewport.setMasked({xtype: 'loadmask',message: '登录中,请稍后...'});
         if(WebInspect.app.user.sid && WebInspect.app.user.password){
             //用户名、密码输入完整
-            var store = Ext.getStore('UserStore');
-
             var store = Ext.create('Ext.data.Store',{
                 model: 'WebInspect.model.UserModel',
                 proxy: {
                     type: 'sk'
                 }
             });
-            var results = WebInspect.app.user.sid + '$' + WebInspect.app.user.password + '$1234567$123';
-
+            var results = WebInspect.app.user.sid + '$' + WebInspect.app.user.password
+                         + '$' + WebInspect.app.user.name + "$" + WebInspect.app.user.version;
             store.getProxy().setExtraParams({
                 t: 'CheckUser',
                 results: results
             });
-
-
-
             store.load(function(records, operation, success) {
 
                 if((store.getAllCount() != 0) && (store.getAt(0).data.uid != null)){
@@ -732,50 +745,31 @@ Ext.define('WebInspect.controller.MainControl',{
                         message: '验证成功,页面加载中...'
                     });
 
-
-                    me.onInsertUserInfo(me);
-
                     WebInspect.app.user.name = store.getAt(0).data.name;
                     WebInspect.app.user.mobile = store.getAt(0).data.mobile;
 
                     //将验证成功的用户信息，存在本地
                     me.onUserWriteJson();
-
                     //加载用户“待办事项”信息
                     me.onTaskStoreLoad(1);
                     me.onMessageLoad();
                 }
                 else{
                     Ext.Viewport.setMasked(false);
-                    Ext.Msg.alert('验证失败！请重新输入！');
+                    plugins.Toast.ShowToast("验证失败！请重新输入！",3000);
                 }
             });
         }
         else{
             //用户名、密码输入不完整
             Ext.Viewport.setMasked(false);
-            Ext.Msg.alert('用户名和密码不能为空！');
+            plugins.Toast.ShowToast("用户名和密码不能为空！",3000);
         }
-    },
-
-    //记录用户版本信息
-    onInsertUserInfo:function(me)
-    {
-        var results = WebInspect.app.user.sid  + "$" + WebInspect.app.user.name + "$" + WebInspect.app.user.version;
-        Ext.data.proxy.SkJsonp.validate('InsertTodayUser',results,{
-            success: function(response) {
-
-            },
-            failure: function() {
-
-            }
-        });
     },
 
     onMessageLoad: function(){
 
-//        var sdt = Ext.Date.add(new Date(), Ext.Date.DAY,-7).format(new Date(), 'Y-m-d').toString();
-        var sdt =Ext.Date.format(Ext.Date.add(new Date(), Ext.Date.DAY,-7), 'Y-m-d').toString();
+        var sdt = Ext.Date.format(Ext.Date.add(new Date(), Ext.Date.DAY,-7), 'Y-m-d').toString();
         var edt = Ext.Date.format(new Date(), 'Y-m-d').toString();
 
         var store = Ext.getStore('MessageStore');

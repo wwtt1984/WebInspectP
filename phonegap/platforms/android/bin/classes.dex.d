@@ -66,6 +66,8 @@ D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\bin\classes\org\apa
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\filetransfer\FileTransfer$TrackingInputStream.class \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\filetransfer\FileTransfer.class \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\filetransfer\FileUploadResult.class \
+D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\networkinformation\NetworkManager$1.class \
+D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\networkinformation\NetworkManager.class \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\bin\dexedLibs\classes-a9056aaeaad178073674f3804e9bd657.jar \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\bin\dexedLibs\SangforSDK-31ec14698a8e36705f4348f7b4e1b75a.jar \
-D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\bin\dexedLibs\jpush-sdk-release1.5.2-b132786aa27bc04fc008259c7ae98c9e.jar \
+D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\bin\dexedLibs\jpush-sdk-release1.6.0-12000025cc8602bd12ec8349323acf24.jar \

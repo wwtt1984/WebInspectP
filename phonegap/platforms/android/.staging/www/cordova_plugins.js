@@ -50,6 +50,21 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/org.apache.cordova.network-information/www/network.js",
+        "id": "org.apache.cordova.network-information.network",
+        "clobbers": [
+            "navigator.connection",
+            "navigator.network.connection"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.network-information/www/Connection.js",
+        "id": "org.apache.cordova.network-information.Connection",
+        "clobbers": [
+            "Connection"
+        ]
+    },
+    {
         "file": "plugins/org.apache.cordova.file/www/DirectoryEntry.js",
         "id": "org.apache.cordova.file.DirectoryEntry",
         "clobbers": [
@@ -181,6 +196,7 @@ module.exports.metadata =
     "com.phone.phone.Phone": "1.5.2",
     "com.vpn.vpn.Vpn": "1.5.2",
     "com.jpush.jpush.JPush": "1.6.0",
+    "org.apache.cordova.network-information": "0.2.7",
     "org.apache.cordova.file": "0.2.5"
 }
 // BOTTOM OF METADATA

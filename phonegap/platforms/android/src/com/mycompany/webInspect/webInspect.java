@@ -34,6 +34,8 @@ import android.app.Activity;
 import android.util.Log;
 import android.view.View;
 
+import cn.jpush.android.api.JPushInterface;
+
 public class webInspect extends CordovaActivity implements IVpnDelegate
 {
     public static IVpnDelegate ivg;
@@ -56,6 +58,18 @@ public class webInspect extends CordovaActivity implements IVpnDelegate
 		super.onDestroy();
 	}
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        JPushInterface.onResume(this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        JPushInterface.onPause(this);
+    }
+    
     public void vpnRndCodeCallback(byte[] data) {
         Log.d(TAG, "RndCode callback, the data is bitmap of rndCode.");
     }

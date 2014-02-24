@@ -16,6 +16,6 @@
 # view AndroidManifest.xml #generated:43
 -keep class com.jpush.jpush.MyReceiver { <init>(...); }
 
-# view AndroidManifest.xml #generated:6
+# view AndroidManifest.xml #generated:5
 -keep class com.mycompany.webInspect.webInspect { <init>(...); }
 

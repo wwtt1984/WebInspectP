@@ -748,6 +748,8 @@ Ext.ClassManager.addNameAlternateMappings({
     "Ext.viewport.WP"
   ],
   "WebInspect.controller.MainControl": [],
+  "WebInspect.controller.NoticeControl": [],
+  "WebInspect.controller.SettingsControl": [],
   "WebInspect.model.ContactModel": [],
   "WebInspect.model.FlowModel": [],
   "WebInspect.model.FunctionModel": [],
@@ -759,6 +761,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.model.ProjectFirstModel": [],
   "WebInspect.model.ProjectSecondModel": [],
   "WebInspect.model.PushModel": [],
+  "WebInspect.model.SettingsModel": [],
   "WebInspect.model.TaskModel": [],
   "WebInspect.model.TestModel": [],
   "WebInspect.model.TideModel": [],
@@ -803,6 +806,8 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.view.flow.Flow": [],
   "WebInspect.view.list.MainInfo": [],
   "WebInspect.view.list.Message": [],
+  "WebInspect.view.list.MessageItem": [],
+  "WebInspect.view.list.TaskDetail": [],
   "WebInspect.view.news.News": [],
   "WebInspect.view.news.NewsDetail": [],
   "WebInspect.view.news.NewsImg": [],
@@ -1758,6 +1763,8 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.Viewport": [],
   "Ext.viewport.WindowsPhone": [],
   "WebInspect.controller.MainControl": [],
+  "WebInspect.controller.NoticeControl": [],
+  "WebInspect.controller.SettingsControl": [],
   "WebInspect.model.ContactModel": [],
   "WebInspect.model.FlowModel": [],
   "WebInspect.model.FunctionModel": [],
@@ -1769,6 +1776,7 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.model.ProjectFirstModel": [],
   "WebInspect.model.ProjectSecondModel": [],
   "WebInspect.model.PushModel": [],
+  "WebInspect.model.SettingsModel": [],
   "WebInspect.model.TaskModel": [],
   "WebInspect.model.TestModel": [],
   "WebInspect.model.TideModel": [],
@@ -1838,6 +1846,12 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "WebInspect.view.list.Message": [
     "widget.message"
+  ],
+  "WebInspect.view.list.MessageItem": [
+    "widget.messageListItem"
+  ],
+  "WebInspect.view.list.TaskDetail": [
+    "widget.taskdetail"
   ],
   "WebInspect.view.news.News": [
     "widget.news"
