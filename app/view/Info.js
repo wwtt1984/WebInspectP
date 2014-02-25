@@ -23,7 +23,6 @@ Ext.define('WebInspect.view.Info', {
     },
 
     onImageShow: function(values){
-
         this.view = this.down('newsimg');
         if(!this.view){
             this.view = Ext.create('WebInspect.view.news.NewsImg');
@@ -40,5 +39,6 @@ Ext.define('WebInspect.view.Info', {
     onViewHide: function(){
 
         this.view.hide();
+        this.view.destroy();
     }
 });
