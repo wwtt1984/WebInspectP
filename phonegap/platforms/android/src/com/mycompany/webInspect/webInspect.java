@@ -33,6 +33,7 @@ import com.sangfor.vpn.common.VpnCommon;
 import android.app.Activity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import cn.jpush.android.api.JPushInterface;
 
@@ -55,6 +56,7 @@ public class webInspect extends CordovaActivity implements IVpnDelegate
 	@Override
 	public void onDestroy() {
 		SangforNbAuth.getInstance().vpnQuit();
+		vpnresult = null;////清空结果
 		super.onDestroy();
 	}
 

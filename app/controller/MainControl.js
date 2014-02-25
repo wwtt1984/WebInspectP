@@ -193,12 +193,10 @@ Ext.define('WebInspect.controller.MainControl',{
         else if(data.type == 'info'){
 
             this.onNoticeNewsStypeSet('InfoStore', 'GetInfoList', 'info$jsonp', data, '综合信息');
-
         }
         else if(data.type == 'notice'){
 
             this.onNoticeNewsStypeSet('NoticeStore', 'GetInfoList', 'notice$jsonp',data,  '通知公告');
-
         }
         else{
 
@@ -324,7 +322,7 @@ Ext.define('WebInspect.controller.MainControl',{
             plugins.Vpn.VpnOnWifi("",function(success) {   ///////////////得到网关值
 
                 var vpn = "true";
-                for(var i=0;i<gate.length;i++)
+                for(var i = 0;i < gate.length;i++)
                 {
                     if(success == gate[i])
                     {
@@ -343,13 +341,12 @@ Ext.define('WebInspect.controller.MainControl',{
                             plugins.Toast.ShowToast("VPN连接成功!",3000);
                             ////////////////////////////////////////////////
                             if(num == 0){
-                                me.onMessagePush(data);
+                                me.onMessagePush(data); ////执行推送里面的页面
                             }
                             else
                             {
-                                me.onCheckVesion(me); //////////////检查版本号////////////////////
+                                me.onUserCheck(); //////////////////执行正常页面
                             }
-                            me.onUserCheck();
                         }
                         else if(success == "false")
                         {
@@ -369,20 +366,29 @@ Ext.define('WebInspect.controller.MainControl',{
                 else
                 {
                     if(num == 0){
-                        me.onMessagePush(data);
+                        me.onMessagePush(data); ////执行推送里面的页面
                     }
                     else
                     {
-                        me.onCheckVesion(me); //////////////检查版本号////////////////////
+                        me.onUserCheck(); //////////////////执行正常页面
                     }
-                    me.onUserCheck();
                 }
+
             });
         }
         else
         {
             plugins.Toast.ShowToast("先检查你的网络是否正常,再重新登录!",3000);
         }
+    },
+
+    onVpnCheckOK:function(){  //////检查VPN是否正常
+
+        var res = false;
+        plugins.Vpn.VpnCheckOnLine(WebInspect.app.user.sid,WebInspect.app.user.password,function(success) {
+            if(success == 'true')  res = true;
+        });
+        return res;
     },
 
     onVpnCheckOnline:function(data){
@@ -753,6 +759,9 @@ Ext.define('WebInspect.controller.MainControl',{
                     //加载用户“待办事项”信息
                     me.onTaskStoreLoad(1);
                     me.onMessageLoad();
+
+                    /////////////////判断是否有新版本/////////////////////
+                    me.onCheckVesion(me);
                 }
                 else{
                     Ext.Viewport.setMasked(false);
