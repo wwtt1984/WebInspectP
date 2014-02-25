@@ -76,6 +76,11 @@ Ext.define('WebInspect.view.settings.Setting', {
 
     onToggleValueSet: function(){
 
+        Ext.Viewport.setMasked({
+            xtype: 'loadmask',
+            message: '努力加载中...'
+        });
+
         var me = this;
 
         var store = Ext.create('Ext.data.Store', {
@@ -100,6 +105,8 @@ Ext.define('WebInspect.view.settings.Setting', {
             });
 
             me.setRecord(user);
+
+            Ext.Viewport.setMasked(false);
 
             me.tag = 1;
         }, this);

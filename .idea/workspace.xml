@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97eeba59-43ed-481c-b450-8b573637ea50" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/Info.js" afterPath="$PROJECT_DIR$/app/view/Info.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/settings/Setting.js" afterPath="$PROJECT_DIR$/app/view/settings/Setting.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WebInspect.iws" />
@@ -29,7 +29,7 @@
       <file leaf-file-name="MainControl.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controller/MainControl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="758" column="34" selection-start="24195" selection-end="24195" vertical-scroll-proportion="0.2972441" vertical-offset="14251" max-vertical-offset="27645">
+            <state line="156" column="30" selection-start="4640" selection-end="4640" vertical-scroll-proportion="0.37007874" vertical-offset="2776" max-vertical-offset="27645">
               <folding />
             </state>
           </provider>
@@ -79,6 +79,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Setting.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/settings/Setting.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="77" column="0" selection-start="2003" selection-end="2003" vertical-scroll-proportion="0.0" vertical-offset="1247" max-vertical-offset="3154">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Info.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/view/Info.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -113,7 +122,6 @@
         <option value="$PROJECT_DIR$/app/view/Title.js" />
         <option value="$PROJECT_DIR$/app/view/tide/Tide.js" />
         <option value="$PROJECT_DIR$/app/model/TideModel.js" />
-        <option value="$PROJECT_DIR$/app/view/settings/Setting.js" />
         <option value="$PROJECT_DIR$/phonegap/platforms/android/src/com/mycompany/webInspect/webInspect.java" />
         <option value="$PROJECT_DIR$/phonegap/platforms/android/src/com/vpn/vpn/VpnPlugin.java" />
         <option value="$PROJECT_DIR$/app/model/NewsDetailModel.js" />
@@ -121,6 +129,7 @@
         <option value="$PROJECT_DIR$/resources/css/my.css" />
         <option value="$PROJECT_DIR$/app/view/news/NewsImg.js" />
         <option value="$PROJECT_DIR$/app/view/Info.js" />
+        <option value="$PROJECT_DIR$/app/view/settings/Setting.js" />
         <option value="$PROJECT_DIR$/app/controller/MainControl.js" />
       </list>
     </option>
@@ -258,6 +267,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="settings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -315,6 +346,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="126" />
     <property name="SearchEverywhereHistory" value="" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SfMobile" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="132" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="910" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="910" />
@@ -483,7 +515,11 @@
       <created>1393316580018</created>
       <updated>1393316580018</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Initial commit&#10;">
+      <created>1393317045051</created>
+      <updated>1393317045051</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -539,11 +575,6 @@
     <entry file="file://$PROJECT_DIR$/app/view/flow/Flow.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.7235495" vertical-offset="1010" max-vertical-offset="1596" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/settings/Setting.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="194" selection-end="194" vertical-scroll-proportion="-2.8259385" vertical-offset="1865" max-vertical-offset="3021" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/news/News.js">
@@ -633,9 +664,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/settings/Setting.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="0" selection-start="2003" selection-end="2003" vertical-scroll-proportion="0.0" vertical-offset="1247" max-vertical-offset="3154">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controller/MainControl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="758" column="34" selection-start="24195" selection-end="24195" vertical-scroll-proportion="0.2972441" vertical-offset="14251" max-vertical-offset="27645">
+        <state line="156" column="30" selection-start="4640" selection-end="4640" vertical-scroll-proportion="0.37007874" vertical-offset="2776" max-vertical-offset="27645">
           <folding />
         </state>
       </provider>
