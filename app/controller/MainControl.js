@@ -703,7 +703,7 @@ Ext.define('WebInspect.controller.MainControl',{
         WebInspect.app.user.password = Ext.getCmp('password').getValue();
         me.onVpnLogin(1, ''); /////成功写入开始执行VPN认证
         plugins.jPush.setAlias(WebInspect.app.user.sid,function(success){});//////推送标识，以用户名区分
-        //me.onUserCheck(); ////////测试的时候有
+//        me.onUserCheck(); ////////测试的时候有
     },
 
     onUserWriteJson: function(){

@@ -42,14 +42,26 @@ Ext.define('WebInspect.view.news.NewsImg',{
 
 		var img = [];
         img = values.simg.split('$');
+
         var item =[];
 
         this.down('carousel').removeAll();
 
-        for(var i=0; i<img.length; i++){
+        if(values.simgtitle){
+            var title = [];
+            title = values.simgtitle.split('$');
+
+            for(var i=0; i<img.length; i++){
         	
-			item.push({xtype: 'image',cls: 'my-carousel-item-img',src: img[i]});
-		}
+			    item.push({xtype: 'panel', fullscreen: true,items:[{xtype: 'image',cls: 'my-carousel-item-img',src: img[i]},{xtype: 'panel', cls: 'carousel-item-panel', html: title[i]}]});
+		    }
+        }
+        else{
+            for(var i=0; i<img.length; i++){
+
+                item.push({xtype: 'image',cls: 'my-carousel-item-img',src: img[i]});
+            }
+        }
         this.down('carousel').setItems(item);
 	}
 })

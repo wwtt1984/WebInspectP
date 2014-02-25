@@ -73,6 +73,6 @@ Ext.define('WebInspect.view.news.NewsDetail',{
 	},
 	
 	onDataSet: function(record){
-		this.setData({stitle: record.data.stitle, scontent: record.data.scontent, simg: record.data.simg});
+		this.setData({stitle: record.data.stitle, scontent: record.data.scontent, simg: record.data.simg, simgtitle: record.data.simgtitle});
 	}
 });

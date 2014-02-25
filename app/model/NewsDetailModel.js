@@ -5,7 +5,8 @@ Ext.define('WebInspect.model.NewsDetailModel',{
             'sid', 
             'stitle',
             'scontent',
-            'simg'
+            'simg',
+            'simgtitle'
         ]
     }
         
