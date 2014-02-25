@@ -118,6 +118,10 @@ Ext.define('WebInspect.view.settings.Setting', {
         var me = this;
 
         if(me.tag == 1){
+            Ext.Viewport.setMasked({
+                xtype: 'loadmask',
+                message: '努力加载中...'
+            });
 
             var results = WebInspect.app.user.sid + '$' + type + ',' + value + '$jsonp';
 
@@ -125,11 +129,14 @@ Ext.define('WebInspect.view.settings.Setting', {
                 success: function(response) {
 
                     if(response.success == "true"){
+                        Ext.Viewport.setMasked(false);
                         plugins.Toast.ShowToast("设置成功！",1000);
 //                        Ext.Msg.alert('设置成功！');
                     }
                     else{
+                        Ext.Viewport.setMasked(false);
                         plugins.Toast.ShowToast("设置失败，请重试！",1000);
+
 //                        Ext.Msg.alert('设置失败，请重试！');
 
                         var val = 0;
@@ -143,6 +150,7 @@ Ext.define('WebInspect.view.settings.Setting', {
                     }
                 },
                 failure: function() {
+                    Ext.Viewport.setMasked(false);
                     plugins.Toast.ShowToast("请求失败，请重试！",1000);
 //                    Ext.Msg.alert('请求失败，请重试！');
 
