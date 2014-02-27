@@ -158,6 +158,7 @@ D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\resource
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\resources\images\nopic.jpg \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\resources\images\notice \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\resources\images\pdf.jpg \
+D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\resources\images\qrcode.png \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\resources\images\status \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\assets\www\resources\images\vpn.png \

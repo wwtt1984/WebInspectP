@@ -6,9 +6,4 @@ D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\res\drawable-mdpi\i
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\res\drawable-xhdpi\icon.png \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\res\values\strings.xml \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\res\xml\config.xml \
-D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\bin\res\drawable\icon.png \
-D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\bin\res\drawable-hdpi\icon.png \
-D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\bin\res\drawable-ldpi\icon.png \
-D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\bin\res\drawable-mdpi\icon.png \
-D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\bin\res\drawable-xhdpi\icon.png \
 D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\bin\AndroidManifest.xml \
