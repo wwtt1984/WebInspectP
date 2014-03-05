@@ -66,9 +66,11 @@ Ext.application({
 
         'project.ProjectFirst',
         'project.ProjectSecond',
+        'project.ProjectElement',
 
-
-        'settings.Setting'
+        'settings.Setting',
+        'settings.PushSetting',
+        'settings.Version'
     ],
 
     models: [
@@ -98,8 +100,10 @@ Ext.application({
 
         'ProjectFirstModel',
         'ProjectSecondModel',
+        'ProjectElementModel',
 
-        'SettingsModel'
+        'SettingsModel',
+        'SettingModel'
     ],
 
     stores: [
@@ -130,7 +134,10 @@ Ext.application({
         'MainStore',
 
         'ProjectFirstStore',
-        'ProjectSecondStore'
+        'ProjectSecondStore',
+        'ProjectElementStore',
+
+        'SettingStore'
     ],
 
     controllers: [

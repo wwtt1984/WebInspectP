@@ -344,10 +344,10 @@ text-shadow: rgba(255, 255, 255, 0.25) 0 0.08em 0;
 }
 
 /****************************************************/
-.setting .x-component-outer {
+.pushsetting .x-component-outer {
     padding: 0.6em;
 }
-.setting .x-toggle {
+.pushsetting .x-toggle {
     height: 1.6em;
     width: 3.8em;
     webkit-border-radius: 0.9m;
@@ -356,11 +356,11 @@ text-shadow: rgba(255, 255, 255, 0.25) 0 0.08em 0;
     -o-border-radius: 0.9em;
     border-radius: 0.9em;
 }
-.setting .x-thumb {
+.pushsetting .x-thumb {
     height: 1.4em;
     width: 1.4em;
 }
-.setting .x-thumb:after {
+.pushsetting .x-thumb:after {
     width: 1.4em;
     height: 1.4em;
     top: 0.05em;
@@ -379,7 +379,9 @@ text-shadow: rgba(255, 255, 255, 0.25) 0 0.08em 0;
 
 .my-buttons{
     color: #d90303;
-    background: none;
+    background: #ddd;
+    top: 50%;
+    height: 2.5em;
     border: none;
 }
 .my-buttons .x-button-icon:before{
@@ -392,5 +394,19 @@ text-shadow: rgba(255, 255, 255, 0.25) 0 0.08em 0;
 }
 .my-buttons.x-iconalign-left .x-button-label,.my-buttons.x-iconalign-left .x-badge {
     margin-left: 0;
+}
+.my-buttons.x-unsized,.my-buttons.x-button-normal,.my-buttons.x-button,.my-buttons.x-iconalign-center,.my-buttons.x-dock-item.x-docked-right{
+    margin:15px 0px 0px 10px !important;
+}
+
+/************系统设置页面列表样式***********/
+.setting.x-list-round.x-list-ungrouped .x-list-item-tpl, .setting.x-list-round.x-list-ungrouped .x-list-item .x-dock-horizontal, .setting.x-list-round.x-list-grouped .x-list-item-tpl, .setting.x-list-round.x-list-grouped .x-list-item .x-dock-horizontal {
+    /*border: 1px solid #dedede;*/
+    /*font-size: 18px;*/
+    /*line-height: 1em;*/
+    /*height: 2.2em;*/
+    /*margin: 0px 0px 20px 0px;*/
+    /*border-radius: 0.4em;*/
+    background: #fff;
 }
 

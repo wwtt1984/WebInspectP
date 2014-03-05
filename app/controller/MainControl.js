@@ -33,8 +33,10 @@ Ext.define('WebInspect.controller.MainControl',{
             flowSegmentedButton: '[itemId=flowSegmentedButton]',
             sysquit: '[itemId=sysquit]',
             maininfo: 'info maininfo',
+
             projectfirst: 'info projectfirst',
-            projectsecond: 'info projectsecond'
+            projectsecond: 'info projectsecond',
+            projectelement: 'info projectelement'
         },
         control: {
             main: {
@@ -105,6 +107,9 @@ Ext.define('WebInspect.controller.MainControl',{
             },
             projectfirst: {
                 itemtap: 'onProjectFirstTap'
+            },
+            projectsecond: {
+                itemtap: 'onProjectSecondTap'
             }
         }
     },
@@ -631,6 +636,16 @@ Ext.define('WebInspect.controller.MainControl',{
                 me.onInfoFunctionBackTap();
                 break;
 
+            case 'pushsetting':
+                me.getInfo().pop();
+                me.getInfofunction().show();
+                break;
+
+            case 'version':
+                me.getInfo().pop();
+                me.getInfofunction().show();
+                break;
+
             case 'projectfirst':
                 me.onInfoFunctionBackTap();
                 break;
@@ -671,6 +686,10 @@ Ext.define('WebInspect.controller.MainControl',{
             case 'projectsecond':
                 me.getInfo().pop();
                 me.getInfofunction().show();
+                break;
+
+            case 'projectelement':
+                me.getInfo().pop();
                 break;
 
             case 'contact':
@@ -1446,5 +1465,42 @@ Ext.define('WebInspect.controller.MainControl',{
 
         this.getInfofunction().hide();
         this.getInfo().push(this.projectsecond);
+    },
+
+    onProjectSecondTap: function(list, index, target, record, e, eOpts){
+
+        var me = this;
+
+        Ext.Viewport.setMasked({
+            xtype: 'loadmask',
+            message: '努力加载中...'
+        });
+
+        me.projectelement = me.getProjectelement();
+
+        if(!me.projectelement){
+            me.projectelement = Ext.create('WebInspect.view.project.ProjectElement');
+        }
+
+        var store = Ext.getStore('ProjectElementStore');
+
+        store.removeAll();
+        store.getProxy().setExtraParams({
+            t: 'GetGqInfoSingle',
+            results: record.data.code + '$jsonp'
+        });
+
+        store.load(function(records, operation, success) {
+            Ext.Viewport.setMasked(false);
+
+            me.projectelement.onDataSet(store.getData().all, record.data.name);
+        });
+
+
+
+        me.getInfofunction().hide();
+        me.projectelement.setTitle(record.data.name);
+        me.getInfo().push(me.projectelement);
+
     }
 });
