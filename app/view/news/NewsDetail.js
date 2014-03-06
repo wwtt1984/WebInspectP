@@ -27,7 +27,7 @@ Ext.define('WebInspect.view.news.NewsDetail',{
 		    	    img = values.simg.split('$');
 		    	    
 		    	    if(img.length > 0){
-		    	    	if(img[0].toLowerCase().indexOf(".jpg") > 0){
+		    	    	if(img[0].toLowerCase().indexOf(".jpg") > 0 || img[0].toLowerCase().indexOf(".png") > 0){
 		    			    string += '<img src="' + img[0] + '" style="width:100%; height: auto; padding:3px; border:1px #f7f7f7 solid;background:white;" id="' + this.getLinkId(values) + '"/>';
                            // string += '<img style="width:100%; height: auto; padding:3px; border:1px #f7f7f7 solid;background:white;" id="' + this.getLinkId(values) + '"/>';
 
