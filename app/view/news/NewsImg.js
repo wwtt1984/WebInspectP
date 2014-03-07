@@ -52,8 +52,12 @@ Ext.define('WebInspect.view.news.NewsImg',{
             title = values.simgtitle.split('$');
 
             for(var i=0; i<img.length; i++){
-        	
-			    item.push({xtype: 'panel', fullscreen: true,items:[{xtype: 'image',cls: 'my-carousel-item-img',src: img[i]},{xtype: 'panel', cls: 'carousel-item-panel', html: title[i]}]});
+        	    if(title[i]){
+			        item.push({xtype: 'panel', fullscreen: true,items:[{xtype: 'image',cls: 'my-carousel-item-img',src: img[i]},{xtype: 'panel', cls: 'carousel-item-panel', html: title[i]}]});
+                }
+                else{
+                    item.push({xtype: 'panel', fullscreen: true,items:[{xtype: 'image',cls: 'my-carousel-item-img',src: img[i]}]});
+                }
 		    }
         }
         else{

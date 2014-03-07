@@ -38,7 +38,8 @@ Ext.define('WebInspect.view.tide.Tide', {
         {
         	docked: 'top',
             xtype: 'panel',
-            cls: 'tidelist-header',
+//            cls: 'tidelist-header',
+            cls: 'tide-header',
             html: '<div style="width:40%;height:100%;float:left;">观潮点</div><div style="width:30%;height:100%;float:left;">时间</div><div style="width:30%;height:100%;float:left;">高潮位</div>'
         },
         {

@@ -329,18 +329,41 @@
 }
 .tidetime {
 	background-image: none;
-background-color: #cccccc;
-background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f2f2f2), color-stop(3%, #d9d9d9), color-stop(100%, #bfbfbf));
-background-image: -webkit-linear-gradient(top, #f2f2f2,#d9d9d9 3%,#bfbfbf);
-background-image: linear-gradient(top, #f2f2f2,#d9d9d9 3%,#bfbfbf);
-color: #666;
-text-shadow: rgba(255, 255, 255, 0.25) 0 0.08em 0;
-border-top: 1px solid #cccccc;
-border-bottom: 1px solid #999999;
-font-weight: bold;
-font-size: 0.9em;
-padding: 0.2em 1.02em;
-text-shadow: rgba(255, 255, 255, 0.25) 0 0.08em 0;
+    background-color: #cccccc;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f2f2f2), color-stop(3%, #d9d9d9), color-stop(100%, #bfbfbf));
+    background-image: -webkit-linear-gradient(top, #f2f2f2,#d9d9d9 3%,#bfbfbf);
+    background-image: linear-gradient(top, #f2f2f2,#d9d9d9 3%,#bfbfbf);
+    color: #666;
+    text-shadow: rgba(255, 255, 255, 0.25) 0 0.08em 0;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #999999;
+    font-weight: bold;
+    font-size: 0.9em;
+    padding: 0.2em 1.02em;
+    text-shadow: rgba(255, 255, 255, 0.25) 0 0.08em 0;
+}
+.tide-header{
+    background-image: none;
+    background-color: #cccccc;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f2f2f2), color-stop(3%, #d9d9d9), color-stop(100%, #bfbfbf));
+    background-image: -webkit-linear-gradient(top, #f2f2f2,#d9d9d9 3%,#bfbfbf);
+    background-image: linear-gradient(top, #f2f2f2,#d9d9d9 3%,#bfbfbf);
+    color: #666;
+    text-shadow: rgba(255, 255, 255, 0.25) 0 0.08em 0;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #999999;
+    font-weight: bold;
+    font-size: 0.9em;
+    /*padding: 0.2em 1.02em;*/
+    text-shadow: rgba(255, 255, 255, 0.25) 0 0.08em 0;
+    /*padding:0 0 0 10px;*/
+    width:100%;
+    height: 2em;
+    font-size:18px;
+    font-weight: bold;
+    line-height: 2em;
+    color:#000;
+    text-align: center;
 }
 
 /****************************************************/
