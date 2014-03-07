@@ -120,13 +120,13 @@ Ext.define('WebInspect.controller.MainControl',{
         this.bpindex = 0;///默认请求
         this.beindex = 2;///默认请求总数
 
-        window.setTimeout(function(){me.checkJpush(me);},100);
-        document.addEventListener('deviceready',function(){me.onJpushReady(me);}, false);
+//        window.setTimeout(function(){me.checkJpush(me);},100);
+//        document.addEventListener('deviceready',function(){me.onJpushReady(me);}, false);
 
 
         me.onBtnConfirm();
         //android返回键事件监听
-        document.addEventListener("backbutton", me.onBackKeyDown, false);
+//        document.addEventListener("backbutton", me.onBackKeyDown, false);
     },
 
 
@@ -600,7 +600,12 @@ Ext.define('WebInspect.controller.MainControl',{
 
         switch(active.xtype){
             case 'news':
-                me.onInfoFunctionBackTap();
+                if((me.getNewsdetail().view) && (me.getNewsdetail().view.getHidden() == false)){
+                    me.getNewsdetail().view.hide();
+                }
+                else{
+                    me.onInfoFunctionBackTap();
+                }
                 break;
 
             case 'task':
@@ -720,9 +725,9 @@ Ext.define('WebInspect.controller.MainControl',{
         var me = this;
         WebInspect.app.user.sid = Ext.getCmp('name').getValue();
         WebInspect.app.user.password = Ext.getCmp('password').getValue();
-        me.onVpnLogin(1, ''); /////成功写入开始执行VPN认证
-        plugins.jPush.setAlias(WebInspect.app.user.sid,function(success){});//////推送标识，以用户名区分
-//        me.onUserCheck(); ////////测试的时候有
+//        me.onVpnLogin(1, ''); /////成功写入开始执行VPN认证
+//        plugins.jPush.setAlias(WebInspect.app.user.sid,function(success){});//////推送标识，以用户名区分
+        me.onUserCheck(); ////////测试的时候有
     },
 
     onUserWriteJson: function(){
@@ -774,7 +779,7 @@ Ext.define('WebInspect.controller.MainControl',{
                     WebInspect.app.user.mobile = store.getAt(0).data.mobile;
 
                     //将验证成功的用户信息，存在本地
-                    me.onUserWriteJson();
+//                    me.onUserWriteJson();
                     //加载用户“待办事项”信息
                     me.onTaskStoreLoad(1);
                     me.onMessageLoad();
@@ -1107,6 +1112,8 @@ Ext.define('WebInspect.controller.MainControl',{
     //“内网新闻”，“通知公告”，“综合信息”列表，进行单击选择后，加载“详细信息”页面
     onNewsListTap: function(list, index, target, record, e, eOpts ){
 
+        var me = this;
+
         var store = Ext.getStore('NewsDetailStore');
 
         store.removeAll();
@@ -1118,11 +1125,22 @@ Ext.define('WebInspect.controller.MainControl',{
         });
 
         if(record.data.simgtype == 'pdf'){
-            this.newspdf = this.getNewspdf();
-            if(!this.newspdf){
-                this.newspdf = Ext.create('WebInspect.view.news.NewsPdf');
-            }
-
+//            this.newspdf = this.getNewspdf();
+//            if(!this.newspdf){
+//                this.newspdf = Ext.create('WebInspect.view.news.NewsPdf');
+//            }
+//
+//            Ext.Viewport.setMasked({
+//                xtype: 'loadmask',
+//                message: '努力加载中...'
+//            });
+//
+//            store.load(function(records, operation, success){
+//                Ext.Viewport.setMasked(false);
+//                this.newspdf.setPdfUrl(store.getAt(0).data.simg);
+//            }, this);
+//            this.getInfofunction().hide();
+//            this.getInfo().push(this.newspdf);
             Ext.Viewport.setMasked({
                 xtype: 'loadmask',
                 message: '努力加载中...'
@@ -1130,10 +1148,12 @@ Ext.define('WebInspect.controller.MainControl',{
 
             store.load(function(records, operation, success){
                 Ext.Viewport.setMasked(false);
-                this.newspdf.setPdfUrl(store.getAt(0).data.simg);
+                if(store.getAllCount()){
+                    this.getInfo().onImageShow(store.getAt(0).data);
+                    this.getNewsback().setStyle('color: #ccc;');
+                }
             }, this);
-            this.getInfofunction().hide();
-            this.getInfo().push(this.newspdf);
+
         }
         else{
             this.newsdetail = this.getNewsdetail();
