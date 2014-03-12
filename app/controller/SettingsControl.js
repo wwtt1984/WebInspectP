@@ -18,25 +18,37 @@ Ext.define('WebInspect.controller.SettingsControl', {
             settinglist: '[itemId=settinglist]',
             pushsetting: 'info pushsetting',
             version: 'info version',
-            newsToggle: 'togglefield[itemId=newstoggle]',
-            infoToggle: 'togglefield[itemId=infotoggle]',
-            noticeToggle: 'togglefield[itemId=noticetoggle]'
+            newscheck: 'checkboxfield[itemId=newscheck]',
+            infocheck: 'checkboxfield[itemId=infocheck]',
+            noticecheck: 'checkboxfield[itemId=noticecheck]',
+            sysquit: '[itemId=sysquit]'
         },
 
         control: {
             settinglist: {
                 itemtap: 'onSettingListTap'
             },
-            newsToggle: {
-                change: 'onNewsToggleChange'
+            newscheck: {
+                change: 'onNewsCheckChange'
             },
-            infoToggle: {
-                change: 'onInfoToggleChange'
+            infocheck: {
+                change: 'onInfoCheckChange'
             },
-            noticeToggle: {
-                change: 'onNoticeToggleChange'
+            noticecheck: {
+                change: 'onNoticeCheckChange'
+            },
+            sysquit: {
+                tap: 'onQuitSystemTap'
             }
         }
+    },
+
+    onSettingInitialize: function(){
+        this.setting = this.getSetting();
+        if(!this.setting){
+            this.setting = Ext.create('WebInspect.view.settings.Setting');
+        }
+        this.getInfo().push(this.setting);
     },
 
     onSettingListTap: function(list, index, target, record, e, eOpts ){
@@ -63,7 +75,6 @@ Ext.define('WebInspect.controller.SettingsControl', {
             me.pushsetting = Ext.create('WebInspect.view.settings.PushSetting');
         }
         me.getInfofunction().hide();
-        me.pushsetting.onToggleValueSet();
         me.getInfo().push(me.pushsetting);
     },
 
@@ -79,24 +90,29 @@ Ext.define('WebInspect.controller.SettingsControl', {
         me.getInfo().push(me.version);
     },
 
-    onNewsToggleChange: function(toggle, newValue, oldValue, eOpts){
+    onNewsCheckChange: function(toggle, newValue, oldValue, eOpts){
 
         var me = this;
 
-        me.getPushsetting().onToggleChange('news', newValue);
+        me.getPushsetting().onCheckChange('news', me.getNewscheck(), newValue);
 
     },
 
-    onInfoToggleChange: function(toggle, newValue, oldValue, eOpts){
+    onInfoCheckChange: function(toggle, newValue, oldValue, eOpts){
         var me = this;
 
-        me.getPushsetting().onToggleChange('info', newValue);
+        me.getPushsetting().onCheckChange('info', me.getInfocheck(), newValue);
     },
 
-    onNoticeToggleChange: function(toggle, newValue, oldValue, eOpts){
+    onNoticeCheckChange: function(toggle, newValue, oldValue, eOpts){
         var me = this;
 
-        me.getPushsetting().onToggleChange('notice', newValue);
+        me.getPushsetting().onCheckChange('notice', me.getNoticecheck(), newValue);
+    },
+
+    onQuitSystemTap: function(){
+        var me = this;
+        me.getApplication().getController('MainControl').onQuitSystemTap();
     }
 
 })

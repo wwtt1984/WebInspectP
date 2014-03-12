@@ -22,27 +22,20 @@ Ext.define('WebInspect.view.settings.PushSetting', {
                 },
 
                 items:[
-                    {
-                        xtype: 'togglefield',
-                        cls: 'pushsetting',
-                        name: 'news',
-                        itemId: 'newstoggle',
-                        label: '内网新闻'
-                    },
-                    {
-                        xtype: 'togglefield',
-                        name: 'info',
-                        itemId: 'infotoggle',
-                        cls: 'pushsetting',
-                        label: '综合信息'
-                    },
-                    {
-                        xtype: 'togglefield',
-                        name: 'notice',
-                        itemId: 'noticetoggle',
-                        cls: 'pushsetting',
-                        label: '通知公告'
-                    }
+//                    {
+//                        xtype: 'checkboxfield',
+//                        name: 'info',
+//                        itemId: 'infotoggle',
+//                        cls: 'pushsetting',
+//                        label: '综合信息'
+//                    },
+//                    {
+//                        xtype: 'checkboxfield',
+//                        name: 'notice',
+//                        itemId: 'noticetoggle',
+//                        cls: 'pushsetting',
+//                        label: '通知公告'
+//                    }
                 ]
             }
         ]
@@ -52,10 +45,10 @@ Ext.define('WebInspect.view.settings.PushSetting', {
     initialize: function(){
 
         this.tag = 0;
-//        this.onToggleValueSet();
+        this.onCheckValueSet();
     },
 
-    onToggleValueSet: function(){
+    onCheckValueSet: function(){
 
         var me = this;
 
@@ -74,49 +67,50 @@ Ext.define('WebInspect.view.settings.PushSetting', {
 
         store.load(function(records, operation, success){
 
-            var user = Ext.create('WebInspect.model.SettingsModel', {
-                news:         store.getAt(0).data.news,
-                info:          store.getAt(0).data.info,
-                notice:       store.getAt(0).data.notice
-            });
+            var item = [];
+            item.push({xtype: 'checkboxfield',name: 'news',itemId: 'newscheck',label: '内网新闻',checked: store.getAt(0).data.news});
+            item.push({xtype: 'checkboxfield',name: 'info',itemId: 'infocheck',label: '综合信息',checked: store.getAt(0).data.info});
+            item.push({xtype: 'checkboxfield',name: 'notice',itemId: 'noticecheck',label: '通知公告',checked: store.getAt(0).data.notice});
 
-            me.setRecord(user);
-
+            me.getItems().items[0].setItems(item);
             me.tag = 1;
         }, this);
     },
 
-    onToggleChange: function(type, value){
-
+    onCheckChange: function(type, checkfield, value){
 
         var me = this;
 
-        if(me.tag == 1){
+        var value1 = 0;
+        if(value){
+            value1 = 1;
+        }
 
-            var results = WebInspect.app.user.sid + '$' + type + ',' + value + '$jsonp';
+        if(me.tag){
+
+            var results = WebInspect.app.user.sid + '$' + type + ',' + value1 + '$jsonp';
 
             Ext.data.proxy.SkJsonp.validate('UpdatePushPerson',results,{
                 success: function(response) {
-
                     if(response.success == "true"){
 
                         plugins.Toast.ShowToast("设置成功！",1000);
+                        me.tag = 1;
 //                        Ext.Msg.alert('设置成功！');
                     }
                     else{
 
                         plugins.Toast.ShowToast("设置失败，请重试！",1000);
-
 //                        Ext.Msg.alert('设置失败，请重试！');
-
+                        me.tag = 0;
                         var val = 0;
                         if(value){
-                            val = 0;
+                            checkfield.uncheck();
                         }
                         else{
-                            val = 1;
+                            checkfield.check()
                         }
-                        me.setRecord({name: type, value: val});
+                        me.tag = 1;
                     }
                 },
                 failure: function() {
@@ -124,14 +118,16 @@ Ext.define('WebInspect.view.settings.PushSetting', {
                     plugins.Toast.ShowToast("请求失败，请重试！",1000);
 //                    Ext.Msg.alert('请求失败，请重试！');
 
-                    var val = 0;
+                    me.tag = 0;
+
                     if(value){
-                        val = 0;
+                        checkfield.uncheck();
                     }
                     else{
-                        val = 1;
+                        checkfield.check()
                     }
-                    me.setRecord({name: type, value: val});
+                    me.tag = 1;
+
                 }
             });
         }

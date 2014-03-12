@@ -20,8 +20,8 @@ Ext.define('WebInspect.view.tide.Tide', {
 	      
         itemTpl: [
             '<div style="min-height:4em;width:100%; font-size:18px;line-height:2em;text-align:center;padding:0;margin:0;">',
-                '<div style="height:100%; width:40%; float: left;line-height:4em;">{sname}</div>',
-                '<div style="height:100%; width:60%; float: left;">',
+                '<div style="height:100%; width:30%; float: left;line-height:4em;">{sname}</div>',
+                '<div style="height:100%; width:70%; float: left;">',
                   '<div style="height:50%; width:100%;clear:both;">',
                     '<div style="height:100%; width:50%;border-left:1px #ccc solid;float:left;">{stime}</div>',
                     '<div style="height:100%; width:50%;float:left;">{stide}</div>',
@@ -40,7 +40,7 @@ Ext.define('WebInspect.view.tide.Tide', {
             xtype: 'panel',
 //            cls: 'tidelist-header',
             cls: 'tide-header',
-            html: '<div style="width:40%;height:100%;float:left;">观潮点</div><div style="width:30%;height:100%;float:left;">时间</div><div style="width:30%;height:100%;float:left;">高潮位</div>'
+            html: '<div style="width:30%;height:100%;float:left;">观潮点</div><div style="width:35%;height:100%;float:left;">时间</div><div style="width:35%;height:100%;float:left;">高潮位(m)</div>'
         },
         {
         	docked: 'bottom',

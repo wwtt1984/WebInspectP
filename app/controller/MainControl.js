@@ -13,30 +13,7 @@ Ext.define('WebInspect.controller.MainControl',{
             message: 'main info message',
             news: 'main info news',
             newspdf: 'info newspdf',
-            newsdetail: 'info newsdetail',
-            newsback: '[itemId=newsback]',
-            firstlevel: 'main info firstlevel',
-            secondlevel: 'main info secondlevel',
-            contact: 'main info contact',
-            popup: 'main info popup',
-            fullnum: '[itemId=fullnum]',
-            shortnum: '[itemId=shortnum]',
-            officenum: '[itemId=officenum]',
-            numcancel: '[itemId=numcancel]',
-            tide: 'info tide',
-            tidepop: 'info tidepop',
-            water: 'info water',
-            waterSegmentedButton: '[itemId=waterSegmentedButton]',
-            waterdetail: 'info waterdetail',
-            setting: 'info setting',
-            flow: 'info flow',
-            flowSegmentedButton: '[itemId=flowSegmentedButton]',
-            sysquit: '[itemId=sysquit]',
-            maininfo: 'info maininfo',
-
-            projectfirst: 'info projectfirst',
-            projectsecond: 'info projectsecond',
-            projectelement: 'info projectelement'
+            newsdetail: 'info newsdetail'
         },
         control: {
             main: {
@@ -48,69 +25,14 @@ Ext.define('WebInspect.controller.MainControl',{
             '#confirm': {
                 tap: 'onLoginTap'
             },
-            '#noticelist': {
-                itemtap: 'onNoticeListTap'
-            },
+
             '#functionlist': {
                 itemtap: 'onFunctionLsitTap'
             },
             'infofunction': {
                 tap: 'onInfoFunctionBackTap'
-            },
-            news: {
-                itemtap: 'onNewsListTap'
-            },
-            newsback: {
-                tap: 'onNewsBackTap'
-            },
-            firstlevel: {
-                itemtap: 'onFirstLevelTap'
-            },
-            secondlevel: {
-                itemtap: 'onSecondLevelTap'
-            },
-            contact: {
-                itemtap: 'onContactItemTap'
-            },
-            fullnum: {
-                tap: 'onFullNumTap'
-            },
-            shortnum: {
-                tap: 'onShortNumTap'
-            },
-            officenum: {
-                tap: 'onOfficeNumTap'
-            },
-            numcancel: {
-                tap: 'onNumCancelTap'
-            },
-            tide: {
-                itemtap: 'onTideItemTap'
-            },
-            '#tideSegmentedButton': {
-                toggle: 'onTideSegmentedTap'
-            },
-            water: {
-                itemtap: 'onWaterItemTap'
-            },
-            waterSegmentedButton: {
-                toggle: 'onWaterSegmentedTap'
-            },
-            flowSegmentedButton: {
-                toggle: 'onFlowSegmentedTap'
-            },
-            message: {
-                itemtap: 'onMessageItemTap'
-            },
-            sysquit: {
-                tap: 'onQuitSystemTap'
-            },
-            projectfirst: {
-                itemtap: 'onProjectFirstTap'
-            },
-            projectsecond: {
-                itemtap: 'onProjectSecondTap'
             }
+
         }
     },
     onMainInit: function(){
@@ -864,663 +786,66 @@ Ext.define('WebInspect.controller.MainControl',{
         });
     },
 
-    //“待办事项”等通知信息列表“单击”事件
-    onNoticeListTap: function(list, index, target, record, e, eOpts ){
-
-        //判断是否为itemtap
-        if (!list.lastTapHold || (list.lastTapHold - new Date() > 1000)) {
-
-            //判断是否为disclosure事件，若不是，则执行下列代码
-            if(!e.getTarget('.x-list-disclosure')){
-                //判断“删除”按钮是否已经显示，若已显示，则隐藏
-                if(Ext.getCmp('noticelist').getCls().length == 2){
-                    Ext.getCmp('noticelist').addCls('hidden-disclosure-list');
-                }
-                else{
-                    this.info = this.getInfo();
-                    if(!this.info){
-                        this.info = Ext.create('WebInspect.view.Info');
-                    }
-
-                    this.getMain().add(this.info);
-
-                    switch(index){
-                        case 0:
-                            //点击的信息是“待办事项”，加载用户“待办事项列表”页面
-
-                            this.task = this.getTask();
-                            if(!this.task){
-                                this.task = Ext.create('WebInspect.view.Task');
-                            }
-
-                            this.getInfo().push(this.task);
-
-                            this.getMain().setActiveItem(this.getInfo());
-
-                            break;
-                        case 1:
-
-                            this.message = this.getMessage();
-                            if(!this.message){
-                                this.message = Ext.create('WebInspect.view.list.Message');
-                            }
-
-                            this.getInfo().push(this.message);
-
-                            this.getMain().setActiveItem(this.getInfo());
-                            break;
-                        case 2:
-
-                            this.maininfo = this.getMaininfo();
-                            if(!this.maininfo){
-                                this.maininfo = Ext.create('WebInspect.view.list.MainInfo');
-                            }
-
-                            this.getInfo().push(this.maininfo);
-
-                            this.maininfo.onDataSet();
-
-                            this.getMain().setActiveItem(this.getInfo());
-                            break;
-                    }
-                }
-            }
-        }
-        list.lastTapHold = null;
-    },
-
-
-
-    onMessageItemTap: function(list, index, target, record, e, eOpts ){
-        Ext.Msg.alert('功能正在完善中！');
-    },
-
     //“主功能”页面的事件，判断进入选择的模块
     onFunctionLsitTap: function(list, index, target, record, e, eOpts ){
 
-        this.info = this.getInfo();
-        if(!this.info){
-            this.info = Ext.create('WebInspect.view.Info');
+        var me = this;
+
+        me.info = me.getInfo();
+        if(!me.info){
+            me.info = Ext.create('WebInspect.view.Info');
         }
 
-        this.getMain().add(this.info);
+        me.getMain().add(me.info);
 
         if(record.data.name == '内网新闻'){
 
-            this.onNewsStypeSet('NewsStore', 'GetInfoList', 'news$jsonp', record.data.name);
+            me.getApplication().getController('NewsControl').onNewsStypeSet('NewsStore', 'GetInfoList', 'news$jsonp', record.data.name);
         }
         else if(record.data.name == '综合信息'){
 
-            this.onNewsStypeSet('InfoStore', 'GetInfoList', 'info$jsonp', record.data.name);
+            me.getApplication().getController('NewsControl').onNewsStypeSet('InfoStore', 'GetInfoList', 'info$jsonp', record.data.name);
 
         }
         else if(record.data.name == '通知公告'){
 
-            this.onNewsStypeSet('NoticeStore', 'GetInfoList', 'notice$jsonp', record.data.name);
+            me.getApplication().getController('NewsControl').onNewsStypeSet('NoticeStore', 'GetInfoList', 'notice$jsonp', record.data.name);
 
         }
         else if(record.data.name == '通讯录'){
 
-            var store = Ext.getStore('FirstLevelStore');
-
-            store.removeAll();
-
-            store.getProxy().setExtraParams({
-                t: 'GetContactsList',
-                results: '00$jsonp'
-            });
-
-            this.firstlevel = this.getFirstlevel();
-
-            Ext.Viewport.setMasked({
-                xtype: 'loadmask',
-                message: '努力加载中...'
-            });
-
-            store.load(function(records, operation, success){
-                store.filter('ORG_Id_0', '0');
-                Ext.Viewport.setMasked(false);
-            }, this);
-
-            if(!this.firstlevel){
-                this.firstlevel = Ext.create('WebInspect.view.contact.FirstLevel');
-            }
-            this.firstlevel.setTitle('钱塘江管理局');
-            this.getInfo().push(this.firstlevel);
-            this.getMain().setActiveItem(this.getInfo());
+            me.getApplication().getController('ContactControl').onContactInitialize();
         }
         else if(record.data.name == '潮位信息'){
 
-            var store = Ext.getStore('TideStore');
-
-            store.removeAll();
-
-            store.getProxy().setExtraParams({
-                t: 'GetTidal',
-                results: 'jsonp'
-            });
-
-            Ext.Viewport.setMasked({
-                xtype: 'loadmask',
-                message: '努力加载中...'
-            });
-
-            this.tide = this.getTide();
-            if(!this.tide){
-                this.tide= Ext.create('WebInspect.view.tide.Tide');
-            }
-
-            store.load(function(records, operation, success){
-
-                store.clearFilter();
-                store.filter("sdate", Ext.Date.format(new Date(), 'Y-m-d').toString());
-                if(store.getAllCount() == store.getCount()){
-                    Ext.getCmp('tidetoolbar').hide();
-                    Ext.getCmp('tidepanel').show();
-                }
-                else{
-                    Ext.getCmp('tidetoolbar').show();
-                    Ext.getCmp('tidepanel').hide();
-                }
-                Ext.Viewport.setMasked(false);
-            }, this);
-
-            this.getInfo().push(this.tide);
-            this.getMain().setActiveItem(this.getInfo());
+            me.getApplication().getController('TideControl').onTideInitialize();
         }
         else if(record.data.name == '水情信息'){
 
-            this.onWaterStoreLoad('main', 0);
+            me.getApplication().getController('WaterControl').onWaterInitialize();
 
-            this.water = this.getWater();
-            if(!this.water){
-                this.water= Ext.create('WebInspect.view.water.Water');
-            }
-            this.getInfo().push(this.water);
-            this.getMain().setActiveItem(this.getInfo());
         }
         else if(record.data.name == '流量信息'){
 
-            this.onFlowStoreLoad(Ext.Date.format(new Date(), 'Y-m-d').toString(), 0);
-            this.flow = this.getFlow();
-            if(!this.flow){
-                this.flow = Ext.create('WebInspect.view.flow.Flow');
-            }
-            this.getInfo().push(this.flow);
-            this.getMain().setActiveItem(this.getInfo());
+            me.getApplication().getController('FlowControl').onFlowInitialize();
         }
         else if(record.data.name == '工情信息'){
 
-            this.onProjectFirstStoreLoad();
-            this.projectfirst = this.getProjectfirst();
-            if(!this.projectfirst){
-                this.projectfirst = Ext.create('WebInspect.view.project.ProjectFirst');
-            }
-            this.getInfo().push(this.projectfirst);
-            this.getMain().setActiveItem(this.getInfo());
+            me.getApplication().getController('ProjectControl').onProjectInitialize();
         }
         else if(record.data.name == '设置'){
 
-
-            this.setting = this.getSetting();
-            if(!this.setting){
-                this.setting = Ext.create('WebInspect.view.settings.Setting');
-            }
-            this.getInfo().push(this.setting);
-            this.getMain().setActiveItem(this.getInfo());
+            me.getApplication().getController('SettingsControl').onSettingInitialize();
         }
-        else{
-            Ext.Msg.alert('此模块正在完善中！');
-        }
-    },
-
-    //加载“内网新闻”，“通知公告”，“综合信息”模块页面
-    onNewsStypeSet: function(storename, t, results, title){
-
-        var store = Ext.getStore(storename);
-
-        store.removeAll();
-
-        store.getProxy().setExtraParams({
-            t: t,
-            results: results
-        });
-
-        Ext.Viewport.setMasked({
-            xtype: 'loadmask',
-            message: '努力加载中...'
-        });
-
-        store.loadPage(1,function(records, operation, success) {Ext.Viewport.setMasked(false)});
-
-        this.news = this.getNews();
-        if(!this.news){
-            this.news = Ext.create('WebInspect.view.news.News');
-        }
-        this.news.setStore(store);
-        this.news.setTitle(title);
-        this.getInfo().push(this.news);
-        this.getMain().setActiveItem(this.getInfo());
+        me.getMain().setActiveItem(me.getInfo());
     },
 
     //监听info页面的“主页面”按钮，点击后，返回“主功能”页面
     onInfoFunctionBackTap: function(){
         this.getMain().setActiveItem(this.getFunctionmain());
         this.getInfo().destroy();
-    },
-
-    //“内网新闻”，“通知公告”，“综合信息”列表，进行单击选择后，加载“详细信息”页面
-    onNewsListTap: function(list, index, target, record, e, eOpts ){
-
-        var me = this;
-
-        var store = Ext.getStore('NewsDetailStore');
-
-        store.removeAll();
-
-        store.getProxy().setExtraParams({
-            t: 'GetInfo',
-            results: record.data.stype + '$jsonp',
-            sid: record.data.sid
-        });
-
-        if(record.data.simgtype == 'pdf'){
-//            this.newspdf = this.getNewspdf();
-//            if(!this.newspdf){
-//                this.newspdf = Ext.create('WebInspect.view.news.NewsPdf');
-//            }
-//
-//            Ext.Viewport.setMasked({
-//                xtype: 'loadmask',
-//                message: '努力加载中...'
-//            });
-//
-//            store.load(function(records, operation, success){
-//                Ext.Viewport.setMasked(false);
-//                this.newspdf.setPdfUrl(store.getAt(0).data.simg);
-//            }, this);
-//            this.getInfofunction().hide();
-//            this.getInfo().push(this.newspdf);
-            Ext.Viewport.setMasked({
-                xtype: 'loadmask',
-                message: '努力加载中...'
-            });
-
-            store.load(function(records, operation, success){
-                Ext.Viewport.setMasked(false);
-                if(store.getAllCount()){
-                    this.getInfo().onImageShow(store.getAt(0).data);
-                    this.getNewsback().setStyle('color: #ccc;');
-                }
-            }, this);
-
-        }
-        else{
-            this.newsdetail = this.getNewsdetail();
-            if(!this.newsdetail){
-                this.newsdetail = Ext.create('WebInspect.view.news.NewsDetail');
-            }
-
-            Ext.Viewport.setMasked({
-                xtype: 'loadmask',
-                message: '努力加载中...'
-            });
-
-            store.load(function(records, operation, success){
-
-                this.newsdetail.onDataSet(store.getAt(0));
-            }, this);
-            this.getInfofunction().hide();
-            this.getInfo().push(this.newsdetail);
-
-        }
-    },
-
-    //查看“详细信息”中的图片后，返回至“详细信息”页面
-    onNewsBackTap: function(){
-        this.getInfo().onViewHide();
-    },
-
-    //加载通讯录二级信息
-    onContactLevelSet: function(storename, guid, view, viewname, title){
-        var store = Ext.getStore(storename);
-
-        store.removeAll();
-
-
-        store.getProxy().setExtraParams({
-            t: 'GetContactsList',
-            results: guid + '$jsonp'
-        });
-
-        Ext.Viewport.setMasked({
-            xtype: 'loadmask',
-            message: '努力加载中...'
-        });
-
-        store.load(function(records, operation, success){
-            store.filter('ORG_Id_0', '0');
-            Ext.Viewport.setMasked(false);
-        }, this);
-
-        if(!view){
-            view = Ext.create('WebInspect.view.' + viewname);
-        }
-        view.setTitle(title);
-
-        this.getInfofunction().hide();
-        this.getInfo().push(view);
-    },
-
-    //在通讯录一级列表中选择，加载二级信息列表
-    onFirstLevelTap: function(list, index, target, record, e, eOpts){
-        this.onContactLevelSet('SecondLevelStore', record.data.guid, this.getSecondlevel(), 'contact.SecondLevel', record.data.OUName);
-
-    },
-
-    //在通讯录二级列表中选择，加载三级信息列表
-    onSecondLevelTap: function(list, index, target, record, e, eOpts){
-
-        var store = Ext.getStore('ContactStore');
-
-        store.removeAll();
-
-        store.getProxy().setExtraParams({
-            t: 'GetContactsList',
-            results: record.data.guid + '$jsonp'
-        });
-
-        Ext.Viewport.setMasked({
-            xtype: 'loadmask',
-            message: '努力加载中...'
-        });
-
-        store.load(function(records, operation, success){
-            Ext.Viewport.setMasked(false);
-        }, this);
-
-        this.contact = this.getContact();
-        if(!this.contact){
-            this.contact = Ext.create('WebInspect.view.contact.Contact');
-        }
-        this.contact.setTitle(record.data.OUName);
-        this.getInfo().push(this.contact);
-    },
-
-    //点击通讯录中“人员”
-    onContactItemTap: function(list, index, target, record, e, eOpts){
-    	if (!this.popup) {
-//            this.popup.destroy();
-            this.popup = Ext.create('WebInspect.view.contact.PopUp');
-        }
-
-        if (Ext.os.deviceType.toLowerCase() == "phone") {
-            this.popup.setWidth(null);
-            this.popup.setHeight('40%');
-            this.popup.setTop(null);
-            this.popup.setLeft(0);
-        }
-
-        this.popup.onDataSet(record);
-        if (!this.popup.getParent()) {
-            Ext.Viewport.add(this.popup);
-        }
-        this.popup.show();
-    },
-
-    onFullNumTap: function(){
-        var num = Ext.ComponentQuery.query('#fullnum')[0].getText();
-
-        plugins.Phone.Call(num, function(obj) {
-//            alert(obj.number);
-        },function(error){
-//            alert(error);
-        });
-    },
-
-    onShortNumTap: function(){
-        var num = Ext.ComponentQuery.query('#shortnum')[0].getText();
-
-        plugins.Phone.Call(num, function(obj) {},function(error){});
-    },
-
-    onOfficeNumTap: function(){
-
-        var num = Ext.ComponentQuery.query('#officenum')[0].getText();
-
-        plugins.Phone.Call(num, function(obj) {},function(error){});
-    },
-
-    onNumCancelTap: function(){
-        this.popup.hide();
-    },
-
-    //点击选择“潮位信息”中的一条信息后，显示具体信息
-    onTideItemTap: function(list, index, target, record, e, eOpts){
-
-        if (!this.tidepop) {
-//            this.tidepop.destroy();
-            this.tidepop = Ext.create('WebInspect.view.tide.TidePop');
-        }
-        if (Ext.os.deviceType.toLowerCase() == "phone") {
-            this.tidepop.setWidth(null);
-            this.tidepop.setMinHeight('45%');
-            this.tidepop.setTop(null);
-            this.tidepop.setLeft(0);
-        }
-
-        this.tidepop.onDataSet(record);
-        if (!this.tidepop.getParent()) {
-            Ext.Viewport.add(this.tidepop);
-        }
-        this.tidepop.show();
-    },
-
-    //潮位信息中的“segmentedbutton”事件，选择后，显示该日期的“潮位信息”
-    onTideSegmentedTap: function(me, button, isPressed, eOpts){
-        if(isPressed){
-            var store = Ext.getStore('TideStore');
-            store.clearFilter();
-
-            store.filter("sdate",button._text);
-        }
-    },
-
-    //水情信息中的“主要、河、库、闸、潮”信息选择
-    onWaterSegmentedTap: function(me, button, isPressed, eOpts){
-//        var text = me.getPressedButtons()[0].getText();
-        if(isPressed){
-
-            var text = button._text;
-            switch(text){
-                case '主要':
-                    this.onWaterStoreLoad('main', 1);
-                    break;
-                case '河':
-                    this.onWaterStoreLoad('river', 1);
-                    break;
-                case '库':
-
-                    this.onWaterStoreLoad('reservoir', 1);
-                    break;
-                case '闸':
-
-                    this.onWaterStoreLoad('strobe', 1);
-                    break;
-                case '潮':
-
-                    this.onWaterStoreLoad('tidal', 1);
-                    break;
-            }
-        }
-    },
-
-    onWaterStoreLoad: function(result, num){
-        if(num == 0){
-            Ext.Viewport.setMasked({
-                xtype: 'loadmask',
-                message: '努力加载中...'
-            });
-        }
-
-        var store = Ext.getStore('WaterStore');
-
-        store.removeAll();
-        store.getProxy().setExtraParams({
-            t: 'GetWaterMainInfo',
-            results: result + '$jsonp'
-        });
-
-        store.load(function(records, operation, success) {
-            if(num == 0){
-                Ext.Viewport.setMasked(false);
-            }
-        }, this);
-    },
-
-    onWaterItemTap: function(list, index, target, record, e, eOpts){
-        Ext.Viewport.setMasked({
-            xtype: 'loadmask',
-            message: '努力加载中...'
-        });
-
-        var store = Ext.getStore('WaterDetailStore');
-
-        store.removeAll();
-        store.getProxy().setExtraParams({
-            t: 'GetWaterSingleInfo',
-            results: record.data.stcdt + '$jsonp'
-        });
-
-        store.load(function(records, operation, success){
-            Ext.Viewport.setMasked(false);
-        }, this);
-
-        this.waterdetail = this.getWaterdetail();
-
-        if(!this.waterdetail){
-            this.waterdetail = Ext.create('WebInspect.view.water.WaterDetail');
-        }
-
-        this.getInfofunction().hide();
-        this.getInfo().push(this.waterdetail);
-    },
-
-    onFlowStoreLoad: function(result, num){
-
-        if(num == 0){
-            Ext.Viewport.setMasked({
-                xtype: 'loadmask',
-                message: '努力加载中...'
-            });
-        }
-
-        var store = Ext.getStore('FlowStore');
-
-        store.removeAll();
-        store.getProxy().setExtraParams({
-            t: 'GetFlowMainInfo',
-            results: result + '$jsonp'
-        });
-
-        store.load(function(records, operation, success) {
-            if(num == 0){
-                Ext.Viewport.setMasked(false);
-            }
-        });
-    },
-
-    onFlowSegmentedTap: function(me, button, isPressed, eOpts){
-        if(isPressed){
-
-            var text = button._text;
-            this.onFlowStoreLoad(text, 1);
-        }
-    },
-
-    onProjectFirstStoreLoad: function(){
-
-        Ext.Viewport.setMasked({
-            xtype: 'loadmask',
-            message: '努力加载中...'
-        });
-
-        var store = Ext.getStore('ProjectFirstStore');
-
-        store.removeAll();
-        store.getProxy().setExtraParams({
-            t: 'GetGqList',
-            results: 'jsonp'
-        });
-
-        store.load(function(records, operation, success) {
-            Ext.Viewport.setMasked(false);
-        });
-    },
-
-    onProjectFirstTap: function(list, index, target, record, e, eOpts){
-
-        Ext.Viewport.setMasked({
-            xtype: 'loadmask',
-            message: '努力加载中...'
-        });
-
-        var store = Ext.getStore('ProjectSecondStore');
-
-        store.removeAll();
-        store.getProxy().setExtraParams({
-            t: 'GetGqInfo',
-            results: record.data.type + '$' + record.data.location + '$jsonp'
-        });
-
-        store.load(function(records, operation, success) {
-            Ext.Viewport.setMasked(false);
-        });
-
-        this.projectsecond = this.getProjectsecond();
-
-        if(!this.projectsecond){
-            this.projectsecond = Ext.create('WebInspect.view.project.ProjectSecond');
-        }
-
-        this.getInfofunction().hide();
-        this.getInfo().push(this.projectsecond);
-    },
-
-    onProjectSecondTap: function(list, index, target, record, e, eOpts){
-
-        var me = this;
-
-        Ext.Viewport.setMasked({
-            xtype: 'loadmask',
-            message: '努力加载中...'
-        });
-
-        me.projectelement = me.getProjectelement();
-
-        if(!me.projectelement){
-            me.projectelement = Ext.create('WebInspect.view.project.ProjectElement');
-        }
-
-        var store = Ext.getStore('ProjectElementStore');
-
-        store.removeAll();
-        store.getProxy().setExtraParams({
-            t: 'GetGqInfoSingle',
-            results: record.data.code + '$jsonp'
-        });
-
-        store.load(function(records, operation, success) {
-            Ext.Viewport.setMasked(false);
-
-            me.projectelement.onDataSet(store.getData().all, record.data.name);
-        });
-
-
-
-        me.getInfofunction().hide();
-        me.projectelement.setTitle(record.data.name);
-        me.getInfo().push(me.projectelement);
-
     }
+
+
+
 });

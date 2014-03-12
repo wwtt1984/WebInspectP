@@ -143,6 +143,12 @@ Ext.application({
     controllers: [
         'MainControl',
         'NoticeControl',
+        'NewsControl',
+        'ContactControl',
+        'TideControl',
+        'WaterControl',
+        'FlowControl',
+        'ProjectControl',
         'SettingsControl'
     ],
 

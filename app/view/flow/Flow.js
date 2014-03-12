@@ -45,7 +45,7 @@ Ext.define('WebInspect.view.flow.Flow', {
                 xtype: 'panel',
 //                cls: 'tidelist-header',
                 cls: 'tide-header',
-                html: '<div style="width:40%;height:100%;float:left;">站点</div><div style="width:30%;height:100%;float:left;">流量</div><div style="width:30%;height:100%;float:left;">水势</div>'
+                html: '<div style="width:40%;height:100%;float:left;">站点</div><div style="width:30%;height:100%;float:left;">流量(m³/s)</div><div style="width:30%;height:100%;float:left;">水势</div>'
             },
             {
                 docked: 'bottom',
