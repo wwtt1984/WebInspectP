@@ -66,11 +66,15 @@ Ext.application({
 
         'project.ProjectFirst',
         'project.ProjectSecond',
+        'project.ProjectCard',
+        'project.ProjectMain',
         'project.ProjectElement',
 
         'settings.Setting',
         'settings.PushSetting',
-        'settings.Version'
+        'settings.Version',
+
+        'rain.Rain'
     ],
 
     models: [
@@ -103,7 +107,9 @@ Ext.application({
         'ProjectElementModel',
 
         'SettingsModel',
-        'SettingModel'
+        'SettingModel',
+
+        'RainModel'
     ],
 
     stores: [
@@ -135,9 +141,12 @@ Ext.application({
 
         'ProjectFirstStore',
         'ProjectSecondStore',
+        'ProjectMainStore',
         'ProjectElementStore',
 
-        'SettingStore'
+        'SettingStore',
+
+        'RainStore'
     ],
 
     controllers: [
@@ -147,6 +156,7 @@ Ext.application({
         'ContactControl',
         'TideControl',
         'WaterControl',
+        'RainControl',
         'FlowControl',
         'ProjectControl',
         'SettingsControl'

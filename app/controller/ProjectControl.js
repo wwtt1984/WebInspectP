@@ -16,7 +16,10 @@ Ext.define('WebInspect.controller.ProjectControl', {
             infofunction: '[itemId=infofunction]',
             projectfirst: 'info projectfirst',
             projectsecond: 'info projectsecond',
-            projectelement: 'info projectelement'
+            projectcard: 'info projectcard',
+            projectmain: 'projectmain',
+            projectelement: 'projectelement',
+            projectSegmentedButton: '[itemId=projectSegmentedButton]'
         },
 
         control: {
@@ -25,6 +28,9 @@ Ext.define('WebInspect.controller.ProjectControl', {
             },
             projectsecond: {
                 itemtap: 'onProjectSecondTap'
+            },
+            projectSegmentedButton: {
+                toggle: 'onProjectSegmentedTap'
             }
         }
     },
@@ -96,31 +102,34 @@ Ext.define('WebInspect.controller.ProjectControl', {
             message: '努力加载中...'
         });
 
-        me.projectelement = me.getProjectelement();
+        me.projectcard = me.getProjectcard();
 
-        if(!me.projectelement){
-            me.projectelement = Ext.create('WebInspect.view.project.ProjectElement');
+        if(!me.projectcard){
+            me.projectcard = Ext.create('WebInspect.view.project.ProjectCard');
         }
 
-        var store = Ext.getStore('ProjectElementStore');
-
-        store.removeAll();
-        store.getProxy().setExtraParams({
-            t: 'GetGqInfoSingle',
-            results: record.data.code + '$jsonp'
-        });
-
-        store.load(function(records, operation, success) {
-            Ext.Viewport.setMasked(false);
-
-            me.projectelement.onDataSet(store.getData().all, record.data.name);
-        });
-
-
+        me.projectcard.onProjectElementInit(record.data.code);
 
         me.getInfofunction().hide();
-        me.projectelement.setTitle(record.data.name);
-        me.getInfo().push(me.projectelement);
+        me.projectcard.setTitle(record.data.name);
+        me.getInfo().push(me.projectcard);
 
+    },
+
+    onProjectSegmentedTap: function(me, button, isPressed, eOpts){
+        var me = this;
+        if(isPressed){
+            var text = button._text;
+            switch(text){
+                case '主要':
+
+                    me.projectcard.onProjectMainDataSet();
+                    break;
+
+                case '全部':
+                    me.projectcard.onProjectAllDataSet();
+                    break;
+            }
+        }
     }
 })

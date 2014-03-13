@@ -45,7 +45,7 @@ Ext.define('WebInspect.view.water.Water', {
                 xtype: 'panel',
 //                cls: 'tidelist-header',
                 cls: 'tide-header',
-                html: '<div style="width:40%;height:100%;float:left;">测站</div><div style="width:30%;height:100%;float:left;">水位(m)</div><div style="width:30%;height:100%;float:left;">超警</div>'
+                html: '<div style="width:40%;height:100%;float:left;">测站</div><div style="width:30%;height:100%;float:left;">水位(m)</div><div style="width:30%;height:100%;float:left;">超警(m)</div>'
             },
             {
                 docked: 'bottom',

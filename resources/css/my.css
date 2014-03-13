@@ -403,7 +403,7 @@
 .my-buttons{
     color: #d90303;
     background: #ddd;
-    top: 50%;
+    /*top: 50%;*/
     height: 2.5em;
     border: none;
 }

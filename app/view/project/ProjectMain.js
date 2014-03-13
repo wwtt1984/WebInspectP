@@ -1,6 +1,6 @@
-Ext.define('WebInspect.view.project.ProjectElement', {
+Ext.define('WebInspect.view.project.ProjectMain', {
     extend: 'Ext.Panel',
-    xtype: 'projectelement',
+    xtype: 'projectmain',
 
     requires: [
         'Ext.XTemplate'
@@ -15,6 +15,8 @@ Ext.define('WebInspect.view.project.ProjectElement', {
         },
 
         style: 'background-color: #f7f7f7;',
+
+//        emptyText: '<p class="no-searches" style="margin-top:50%;">没有离线消息</p>',
 
         tpl: Ext.create('Ext.XTemplate',
             '<table width="100%">',
@@ -41,11 +43,11 @@ Ext.define('WebInspect.view.project.ProjectElement', {
     onDataSet: function(code){
         var me = this;
 
-        var store = Ext.getStore('ProjectElementStore');
+        var store = Ext.getStore('ProjectMainStore');
 
         store.removeAll();
         store.getProxy().setExtraParams({
-            t: 'GetGqInfoSingle',
+            t: 'GetGqInfoCommon',
             results: code + '$jsonp'
         });
 
@@ -57,7 +59,7 @@ Ext.define('WebInspect.view.project.ProjectElement', {
                 me.setData(store.getData().all);
             }
             else{
-                me.setHtml('<p class="no-searches" style="margin-top:50%;text-align:center;">没有详细字段</p>');
+                me.setHtml('<p class="no-searches" style="margin-top:50%;text-align:center;">没有主要字段</p>');
             }
         });
     }

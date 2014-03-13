@@ -1,8 +1,8 @@
-Ext.define('WebInspect.store.WaterStore', {
+Ext.define('WebInspect.store.RainStore', {
     extend: 'Ext.data.Store',
 
     config: {
-        model: 'WebInspect.model.WaterModel',
+        model: 'WebInspect.model.RainModel',
 
 //        pageSize: 10,
 //        clearOnPageLoad: false,

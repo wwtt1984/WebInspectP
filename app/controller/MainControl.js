@@ -547,6 +547,10 @@ Ext.define('WebInspect.controller.MainControl',{
                 me.onInfoFunctionBackTap();
                 break;
 
+            case 'rain':
+                me.onInfoFunctionBackTap();
+                break;
+
             case 'flow':
                 me.onInfoFunctionBackTap();
                 break;
@@ -615,7 +619,7 @@ Ext.define('WebInspect.controller.MainControl',{
                 me.getInfofunction().show();
                 break;
 
-            case 'projectelement':
+            case 'projectcard':
                 me.getInfo().pop();
                 break;
 
@@ -824,6 +828,9 @@ Ext.define('WebInspect.controller.MainControl',{
 
             me.getApplication().getController('WaterControl').onWaterInitialize();
 
+        }
+        else if(record.data.name == '雨情信息'){
+            me.getApplication().getController('RainControl').onRainInitialize();
         }
         else if(record.data.name == '流量信息'){
 
