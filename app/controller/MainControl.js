@@ -179,9 +179,12 @@ Ext.define('WebInspect.controller.MainControl',{
                     detailstore.load(function(records, operation, success){
                         Ext.Viewport.setMasked(false);
 
-                        me.newspdf.setPdfUrl(detailstore.getAt(0).data.simg);
-                        me.getInfofunction().hide();
-                        me.getInfo().push(me.newspdf);
+                        if(detailstore.getAllCount()){
+
+                            me.newspdf.setPdfUrl(detailstore.getAt(0).data.simg);
+                            me.getInfofunction().hide();
+                            me.getInfo().push(me.newspdf);
+                        }
                         me.getMain().setActiveItem(me.getInfo());
                     }, this);
 
@@ -195,9 +198,11 @@ Ext.define('WebInspect.controller.MainControl',{
                     detailstore.load(function(records, operation, success){
 
                         Ext.Viewport.setMasked(false);
-                        me.newsdetail.onDataSet(detailstore.getAt(0));
-                        me.getInfofunction().hide();
-                        me.getInfo().push(me.newsdetail);
+                        if(detailstore.getAllCount()){
+                            me.newsdetail.onDataSet(detailstore.getAt(0));
+                            me.getInfofunction().hide();
+                            me.getInfo().push(me.newsdetail);
+                        }
                         me.getMain().setActiveItem(me.getInfo());
                     }, this);
                 }

@@ -120,6 +120,7 @@ Ext.define('WebInspect.view.settings.Module', {
             str[store.getAt(i).data.name] = true;
         }
         me.setValues(str);
+        me.initvalue = str;
     },
 
     onModuleRequest: function(){
@@ -151,16 +152,19 @@ Ext.define('WebInspect.view.settings.Module', {
                     Ext.Viewport.setMasked(false);
 //                    Ext.Msg.alert('设置成功');
                     plugins.Toast.ShowToast("设置成功！",1000);
+                    me.initvalue = me.getValues();
                     me.onFuncitonLoad();
                 }
                 else{
                     Ext.Viewport.setMasked(false);
+                    me.setValues(me.initvalue);
 //                    Ext.Msg.alert('设置失败，请重试！');
                     plugins.Toast.ShowToast("设置失败，请重试！",1000);
                 }
             },
             failure: function() {
                 Ext.Viewport.setMasked(false);
+                me.setValues(me.initvalue);
                 plugins.Toast.ShowToast("设置失败！",1000);
 //                Ext.Msg.alert('设置失败！');
             }

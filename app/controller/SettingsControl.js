@@ -23,21 +23,25 @@ Ext.define('WebInspect.controller.SettingsControl', {
             infocheck: 'checkboxfield[itemId=infocheck]',
             noticecheck: 'checkboxfield[itemId=noticecheck]',
             sysquit: '[itemId=sysquit]',
-            moduleconfirm: '[itemId=moduleconfirm]'
+            moduleconfirm: '[itemId=moduleconfirm]',
+            pushconfirm: '[itemId=pushconfirm]'
         },
 
         control: {
             settinglist: {
                 itemtap: 'onSettingListTap'
             },
-            newscheck: {
-                change: 'onNewsCheckChange'
-            },
-            infocheck: {
-                change: 'onInfoCheckChange'
-            },
-            noticecheck: {
-                change: 'onNoticeCheckChange'
+//            newscheck: {
+//                change: 'onNewsCheckChange'
+//            },
+//            infocheck: {
+//                change: 'onInfoCheckChange'
+//            },
+//            noticecheck: {
+//                change: 'onNoticeCheckChange'
+//            },
+            pushconfirm: {
+                tap: 'onPushConfirmTap'
             },
             sysquit: {
                 tap: 'onQuitSystemTap'
@@ -84,6 +88,11 @@ Ext.define('WebInspect.controller.SettingsControl', {
         me.getInfo().push(me.pushsetting);
     },
 
+    onPushConfirmTap: function(){
+        var me = this;
+        me.getPushsetting().onPushRequest();
+    },
+
     onModuleSet: function(){
         var me = this;
 
@@ -113,25 +122,25 @@ Ext.define('WebInspect.controller.SettingsControl', {
         me.getInfo().push(me.version);
     },
 
-    onNewsCheckChange: function(toggle, newValue, oldValue, eOpts){
-
-        var me = this;
-
-        me.getPushsetting().onCheckChange('news', me.getNewscheck(), newValue);
-
-    },
-
-    onInfoCheckChange: function(toggle, newValue, oldValue, eOpts){
-        var me = this;
-
-        me.getPushsetting().onCheckChange('info', me.getInfocheck(), newValue);
-    },
-
-    onNoticeCheckChange: function(toggle, newValue, oldValue, eOpts){
-        var me = this;
-
-        me.getPushsetting().onCheckChange('notice', me.getNoticecheck(), newValue);
-    },
+//    onNewsCheckChange: function(toggle, newValue, oldValue, eOpts){
+//
+//        var me = this;
+//
+//        me.getPushsetting().onCheckChange('news', me.getNewscheck(), newValue);
+//
+//    },
+//
+//    onInfoCheckChange: function(toggle, newValue, oldValue, eOpts){
+//        var me = this;
+//
+//        me.getPushsetting().onCheckChange('info', me.getInfocheck(), newValue);
+//    },
+//
+//    onNoticeCheckChange: function(toggle, newValue, oldValue, eOpts){
+//        var me = this;
+//
+//        me.getPushsetting().onCheckChange('notice', me.getNoticecheck(), newValue);
+//    },
 
     onQuitSystemTap: function(){
         var me = this;

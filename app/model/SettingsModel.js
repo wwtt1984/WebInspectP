@@ -6,7 +6,8 @@ Ext.define('WebInspect.model.SettingsModel',{
             'news',
             'info',
             'notice',
-            'report'
+            'report',
+            'inspect'
         ]
     }
 });
