@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97eeba59-43ed-481c-b450-8b573637ea50" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/MainControl.js" afterPath="$PROJECT_DIR$/app/controller/MainControl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/settings/Module.js" afterPath="$PROJECT_DIR$/app/view/settings/Module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/settings/PushSetting.js" afterPath="$PROJECT_DIR$/app/view/settings/PushSetting.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/store/SettingStore.js" afterPath="$PROJECT_DIR$/app/store/SettingStore.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/SettingsControl.js" afterPath="$PROJECT_DIR$/app/controller/SettingsControl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/SettingsModel.js" afterPath="$PROJECT_DIR$/app/model/SettingsModel.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WebInspect.iws" />
@@ -34,7 +28,7 @@
       <file leaf-file-name="MainControl.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controller/MainControl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="6" selection-start="1446" selection-end="1446" vertical-scroll-proportion="0.4691358" vertical-offset="741" max-vertical-offset="16834">
+            <state line="50" column="50" selection-start="1416" selection-end="1416" vertical-scroll-proportion="0.43004116" vertical-offset="741" max-vertical-offset="16834">
               <folding />
             </state>
           </provider>
@@ -710,7 +704,11 @@
       <created>1395129417360</created>
       <updated>1395129417360</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Initial commit&#10;">
+      <created>1395133787994</created>
+      <updated>1395133787994</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -888,7 +886,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controller/MainControl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="6" selection-start="1446" selection-end="1446" vertical-scroll-proportion="0.4691358" vertical-offset="741" max-vertical-offset="16834">
+        <state line="50" column="50" selection-start="1416" selection-end="1416" vertical-scroll-proportion="0.43004116" vertical-offset="741" max-vertical-offset="16834">
           <folding />
         </state>
       </provider>
