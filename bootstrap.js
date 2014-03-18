@@ -747,9 +747,16 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.viewport.WindowsPhone": [
     "Ext.viewport.WP"
   ],
+  "WebInspect.controller.ContactControl": [],
+  "WebInspect.controller.FlowControl": [],
   "WebInspect.controller.MainControl": [],
+  "WebInspect.controller.NewsControl": [],
   "WebInspect.controller.NoticeControl": [],
+  "WebInspect.controller.ProjectControl": [],
+  "WebInspect.controller.RainControl": [],
   "WebInspect.controller.SettingsControl": [],
+  "WebInspect.controller.TideControl": [],
+  "WebInspect.controller.WaterControl": [],
   "WebInspect.model.ContactModel": [],
   "WebInspect.model.FlowModel": [],
   "WebInspect.model.FunctionModel": [],
@@ -758,9 +765,12 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.model.MessageModel": [],
   "WebInspect.model.NewsDetailModel": [],
   "WebInspect.model.NewsModel": [],
+  "WebInspect.model.ProjectElementModel": [],
   "WebInspect.model.ProjectFirstModel": [],
   "WebInspect.model.ProjectSecondModel": [],
   "WebInspect.model.PushModel": [],
+  "WebInspect.model.RainModel": [],
+  "WebInspect.model.SettingModel": [],
   "WebInspect.model.SettingsModel": [],
   "WebInspect.model.TaskModel": [],
   "WebInspect.model.TestModel": [],
@@ -781,10 +791,14 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.store.NewsDetailStore": [],
   "WebInspect.store.NewsStore": [],
   "WebInspect.store.NoticeStore": [],
+  "WebInspect.store.ProjectElementStore": [],
   "WebInspect.store.ProjectFirstStore": [],
+  "WebInspect.store.ProjectMainStore": [],
   "WebInspect.store.ProjectSecondStore": [],
   "WebInspect.store.PushStore": [],
+  "WebInspect.store.RainStore": [],
   "WebInspect.store.SecondLevelStore": [],
+  "WebInspect.store.SettingStore": [],
   "WebInspect.store.TaskStore": [],
   "WebInspect.store.TestStore": [],
   "WebInspect.store.TideStore": [],
@@ -812,9 +826,15 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.view.news.NewsDetail": [],
   "WebInspect.view.news.NewsImg": [],
   "WebInspect.view.news.NewsPdf": [],
+  "WebInspect.view.project.ProjectCard": [],
+  "WebInspect.view.project.ProjectElement": [],
   "WebInspect.view.project.ProjectFirst": [],
+  "WebInspect.view.project.ProjectMain": [],
   "WebInspect.view.project.ProjectSecond": [],
+  "WebInspect.view.rain.Rain": [],
+  "WebInspect.view.settings.PushSetting": [],
   "WebInspect.view.settings.Setting": [],
+  "WebInspect.view.settings.Version": [],
   "WebInspect.view.tide.Tide": [],
   "WebInspect.view.tide.TidePop": [],
   "WebInspect.view.water.Water": [],
@@ -1762,9 +1782,16 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.Ios": [],
   "Ext.viewport.Viewport": [],
   "Ext.viewport.WindowsPhone": [],
+  "WebInspect.controller.ContactControl": [],
+  "WebInspect.controller.FlowControl": [],
   "WebInspect.controller.MainControl": [],
+  "WebInspect.controller.NewsControl": [],
   "WebInspect.controller.NoticeControl": [],
+  "WebInspect.controller.ProjectControl": [],
+  "WebInspect.controller.RainControl": [],
   "WebInspect.controller.SettingsControl": [],
+  "WebInspect.controller.TideControl": [],
+  "WebInspect.controller.WaterControl": [],
   "WebInspect.model.ContactModel": [],
   "WebInspect.model.FlowModel": [],
   "WebInspect.model.FunctionModel": [],
@@ -1773,9 +1800,12 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.model.MessageModel": [],
   "WebInspect.model.NewsDetailModel": [],
   "WebInspect.model.NewsModel": [],
+  "WebInspect.model.ProjectElementModel": [],
   "WebInspect.model.ProjectFirstModel": [],
   "WebInspect.model.ProjectSecondModel": [],
   "WebInspect.model.PushModel": [],
+  "WebInspect.model.RainModel": [],
+  "WebInspect.model.SettingModel": [],
   "WebInspect.model.SettingsModel": [],
   "WebInspect.model.TaskModel": [],
   "WebInspect.model.TestModel": [],
@@ -1796,10 +1826,14 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.store.NewsDetailStore": [],
   "WebInspect.store.NewsStore": [],
   "WebInspect.store.NoticeStore": [],
+  "WebInspect.store.ProjectElementStore": [],
   "WebInspect.store.ProjectFirstStore": [],
+  "WebInspect.store.ProjectMainStore": [],
   "WebInspect.store.ProjectSecondStore": [],
   "WebInspect.store.PushStore": [],
+  "WebInspect.store.RainStore": [],
   "WebInspect.store.SecondLevelStore": [],
+  "WebInspect.store.SettingStore": [],
   "WebInspect.store.TaskStore": [],
   "WebInspect.store.TestStore": [],
   "WebInspect.store.TideStore": [],
@@ -1865,14 +1899,32 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.view.news.NewsPdf": [
     "widget.newspdf"
   ],
+  "WebInspect.view.project.ProjectCard": [
+    "widget.projectcard"
+  ],
+  "WebInspect.view.project.ProjectElement": [
+    "widget.projectelement"
+  ],
   "WebInspect.view.project.ProjectFirst": [
     "widget.projectfirst"
+  ],
+  "WebInspect.view.project.ProjectMain": [
+    "widget.projectmain"
   ],
   "WebInspect.view.project.ProjectSecond": [
     "widget.projectsecond"
   ],
+  "WebInspect.view.rain.Rain": [
+    "widget.rain"
+  ],
+  "WebInspect.view.settings.PushSetting": [
+    "widget.pushsetting"
+  ],
   "WebInspect.view.settings.Setting": [
     "widget.setting"
+  ],
+  "WebInspect.view.settings.Version": [
+    "widget.version"
   ],
   "WebInspect.view.tide.Tide": [
     "widget.tide"

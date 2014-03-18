@@ -1,10 +1,12 @@
 Ext.define('WebInspect.model.FunctionModel',{
 	extend: 'Ext.data.Model',
     config: {
-       fields: [
-            'id', 
+        fields: [
+            'id',
+            'sid',
             'name',
-            'image'
+            'title',
+            'url'
         ]
     }
         

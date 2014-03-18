@@ -73,6 +73,7 @@ Ext.application({
         'settings.Setting',
         'settings.PushSetting',
         'settings.Version',
+        'settings.Module',
 
         'rain.Rain'
     ],
@@ -126,6 +127,8 @@ Ext.application({
         'NewsDetailStore',
         'InfoStore',
         'NoticeStore',
+
+        'InspectStore',
 
         'FirstLevelStore',
         'SecondLevelStore',

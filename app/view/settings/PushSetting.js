@@ -22,20 +22,6 @@ Ext.define('WebInspect.view.settings.PushSetting', {
                 },
 
                 items:[
-//                    {
-//                        xtype: 'checkboxfield',
-//                        name: 'info',
-//                        itemId: 'infotoggle',
-//                        cls: 'pushsetting',
-//                        label: '综合信息'
-//                    },
-//                    {
-//                        xtype: 'checkboxfield',
-//                        name: 'notice',
-//                        itemId: 'noticetoggle',
-//                        cls: 'pushsetting',
-//                        label: '通知公告'
-//                    }
                 ]
             }
         ]
@@ -108,7 +94,7 @@ Ext.define('WebInspect.view.settings.PushSetting', {
                             checkfield.uncheck();
                         }
                         else{
-                            checkfield.check()
+                            checkfield.check();
                         }
                         me.tag = 1;
                     }
@@ -124,7 +110,7 @@ Ext.define('WebInspect.view.settings.PushSetting', {
                         checkfield.uncheck();
                     }
                     else{
-                        checkfield.check()
+                        checkfield.check();
                     }
                     me.tag = 1;
 

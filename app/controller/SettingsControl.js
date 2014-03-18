@@ -17,11 +17,13 @@ Ext.define('WebInspect.controller.SettingsControl', {
             setting: 'info setting',
             settinglist: '[itemId=settinglist]',
             pushsetting: 'info pushsetting',
+            module: 'info module',
             version: 'info version',
             newscheck: 'checkboxfield[itemId=newscheck]',
             infocheck: 'checkboxfield[itemId=infocheck]',
             noticecheck: 'checkboxfield[itemId=noticecheck]',
-            sysquit: '[itemId=sysquit]'
+            sysquit: '[itemId=sysquit]',
+            moduleconfirm: '[itemId=moduleconfirm]'
         },
 
         control: {
@@ -39,6 +41,9 @@ Ext.define('WebInspect.controller.SettingsControl', {
             },
             sysquit: {
                 tap: 'onQuitSystemTap'
+            },
+            moduleconfirm: {
+                tap: 'onModuleConfirmTap'
             }
         }
     },
@@ -58,8 +63,8 @@ Ext.define('WebInspect.controller.SettingsControl', {
             case '推送设置':
                 me.onPushSettingSet();
                 break;
-            case '系统设置':
-
+            case '功能设置':
+                me.onModuleSet();
                 break;
             case '软件版本':
                 me.onVersionSet();
@@ -75,7 +80,25 @@ Ext.define('WebInspect.controller.SettingsControl', {
             me.pushsetting = Ext.create('WebInspect.view.settings.PushSetting');
         }
         me.getInfofunction().hide();
+
         me.getInfo().push(me.pushsetting);
+    },
+
+    onModuleSet: function(){
+        var me = this;
+
+        me.module = me.getModule();
+        if(!me.module){
+            me.module = Ext.create('WebInspect.view.settings.Module');
+        }
+        me.getInfofunction().hide();
+        me.module.onDataSet();
+        me.getInfo().push(me.module);
+    },
+
+    onModuleConfirmTap: function(){
+        var me = this;
+        me.getModule().onModuleRequest();
     },
 
     onVersionSet: function(){

@@ -42,13 +42,13 @@ Ext.define('WebInspect.controller.MainControl',{
         this.bpindex = 0;///默认请求
         this.beindex = 2;///默认请求总数
 
-//        window.setTimeout(function(){me.checkJpush(me);},100);
-//        document.addEventListener('deviceready',function(){me.onJpushReady(me);}, false);
+        window.setTimeout(function(){me.checkJpush(me);},100);
+        document.addEventListener('deviceready',function(){me.onJpushReady(me);}, false);
 
 
         me.onBtnConfirm();
         //android返回键事件监听
-//        document.addEventListener("backbutton", me.onBackKeyDown, false);
+        document.addEventListener("backbutton", me.onBackKeyDown, false);
     },
 
 
@@ -114,18 +114,24 @@ Ext.define('WebInspect.controller.MainControl',{
 
         this.getMain().add(this.info);
 
-        if(data.type == 'news'){
-            this.onNoticeNewsStypeSet('NewsStore', 'GetInfoList', 'news$jsonp', data, '内网新闻');
-        }
-        else if(data.type == 'info'){
+        var titlestr = ['news', 'info', 'notice', 'inspect'];
 
-            this.onNoticeNewsStypeSet('InfoStore', 'GetInfoList', 'info$jsonp', data, '综合信息');
-        }
-        else if(data.type == 'notice'){
+        switch(data.type){
+            case titlestr[0]:
+                this.onNoticeNewsStypeSet('NewsStore', 'GetInfoList', 'news$jsonp', data, '内网新闻');
+                break;
 
-            this.onNoticeNewsStypeSet('NoticeStore', 'GetInfoList', 'notice$jsonp',data,  '通知公告');
-        }
-        else{
+            case titlestr[1]:
+                this.onNoticeNewsStypeSet('InfoStore', 'GetInfoList', 'info$jsonp', data, '综合信息');
+                break;
+
+            case titlestr[2]:
+                this.onNoticeNewsStypeSet('NoticeStore', 'GetInfoList', 'notice$jsonp',data,  '通知公告');
+                break;
+
+            case titlestr[3]:
+                this.onNoticeNewsStypeSet('InspectStore', 'GetInfoList', 'inspect$jsonp', data, '海塘巡查');
+                break;
 
         }
     },
@@ -651,9 +657,9 @@ Ext.define('WebInspect.controller.MainControl',{
         var me = this;
         WebInspect.app.user.sid = Ext.getCmp('name').getValue();
         WebInspect.app.user.password = Ext.getCmp('password').getValue();
-//        me.onVpnLogin(1, ''); /////成功写入开始执行VPN认证
-//        plugins.jPush.setAlias(WebInspect.app.user.sid,function(success){});//////推送标识，以用户名区分
-        me.onUserCheck(); ////////测试的时候有
+        me.onVpnLogin(1, ''); /////成功写入开始执行VPN认证
+        plugins.jPush.setAlias(WebInspect.app.user.sid,function(success){});//////推送标识，以用户名区分
+//        me.onUserCheck(); ////////测试的时候有
     },
 
     onUserWriteJson: function(){
@@ -704,8 +710,11 @@ Ext.define('WebInspect.controller.MainControl',{
                     WebInspect.app.user.name = store.getAt(0).data.name;
                     WebInspect.app.user.mobile = store.getAt(0).data.mobile;
 
+                    //加载模块页面
+                    me.onFuncitonLoad();
+
                     //将验证成功的用户信息，存在本地
-//                    me.onUserWriteJson();
+                    me.onUserWriteJson();
                     //加载用户“待办事项”信息
                     me.onTaskStoreLoad(1);
                     me.onMessageLoad();
@@ -724,6 +733,18 @@ Ext.define('WebInspect.controller.MainControl',{
             Ext.Viewport.setMasked(false);
             plugins.Toast.ShowToast("用户名和密码不能为空！",3000);
         }
+    },
+
+    onFuncitonLoad: function(){
+        var me = this;
+        var store = Ext.getStore('FunctionStore');
+        store.removeAll();
+        store.getProxy().setExtraParams({
+            t: 'GetFunctionZt',
+            results: WebInspect.app.user.sid + '$jsonp'
+        });
+
+        store.load();
     },
 
     onMessageLoad: function(){
@@ -802,47 +823,44 @@ Ext.define('WebInspect.controller.MainControl',{
 
         me.getMain().add(me.info);
 
-        if(record.data.name == '内网新闻'){
+        var titlestr = ['内网新闻', '综合信息', '通知公告', '通讯录', '潮位信息', '水情信息', '雨情信息', '流量信息', '工情信息', '海塘巡查', '设置'];
 
-            me.getApplication().getController('NewsControl').onNewsStypeSet('NewsStore', 'GetInfoList', 'news$jsonp', record.data.name);
-        }
-        else if(record.data.name == '综合信息'){
+        switch(record.data.title){
+            case titlestr[0]:
+                me.getApplication().getController('NewsControl').onNewsStypeSet('NewsStore', 'GetInfoList', 'news$jsonp', record.data.title);
+                break;
+            case titlestr[1]:
+                me.getApplication().getController('NewsControl').onNewsStypeSet('InfoStore', 'GetInfoList', 'info$jsonp', record.data.title);
+                break;
+            case titlestr[2]:
+                me.getApplication().getController('NewsControl').onNewsStypeSet('NoticeStore', 'GetInfoList', 'notice$jsonp', record.data.title);
+                break;
+            case titlestr[3]:
+                me.getApplication().getController('ContactControl').onContactInitialize();
+                break;
+            case titlestr[4]:
+                me.getApplication().getController('TideControl').onTideInitialize();
+                break;
 
-            me.getApplication().getController('NewsControl').onNewsStypeSet('InfoStore', 'GetInfoList', 'info$jsonp', record.data.name);
+            case titlestr[5]:
+                me.getApplication().getController('WaterControl').onWaterInitialize();
+                break;
+            case titlestr[6]:
+                me.getApplication().getController('RainControl').onRainInitialize();
+                break;
+            case titlestr[7]:
+                me.getApplication().getController('FlowControl').onFlowInitialize();
+                break;
+            case titlestr[8]:
+                me.getApplication().getController('ProjectControl').onProjectInitialize();
+                break;
+            case titlestr[9]:
+                me.getApplication().getController('NewsControl').onNewsStypeSet('InspectStore', 'GetInfoList', 'inspect$jsonp', record.data.title);
+                break;
 
-        }
-        else if(record.data.name == '通知公告'){
-
-            me.getApplication().getController('NewsControl').onNewsStypeSet('NoticeStore', 'GetInfoList', 'notice$jsonp', record.data.name);
-
-        }
-        else if(record.data.name == '通讯录'){
-
-            me.getApplication().getController('ContactControl').onContactInitialize();
-        }
-        else if(record.data.name == '潮位信息'){
-
-            me.getApplication().getController('TideControl').onTideInitialize();
-        }
-        else if(record.data.name == '水情信息'){
-
-            me.getApplication().getController('WaterControl').onWaterInitialize();
-
-        }
-        else if(record.data.name == '雨情信息'){
-            me.getApplication().getController('RainControl').onRainInitialize();
-        }
-        else if(record.data.name == '流量信息'){
-
-            me.getApplication().getController('FlowControl').onFlowInitialize();
-        }
-        else if(record.data.name == '工情信息'){
-
-            me.getApplication().getController('ProjectControl').onProjectInitialize();
-        }
-        else if(record.data.name == '设置'){
-
-            me.getApplication().getController('SettingsControl').onSettingInitialize();
+            case titlestr[10]:
+                me.getApplication().getController('SettingsControl').onSettingInitialize();
+                break;
         }
         me.getMain().setActiveItem(me.getInfo());
     },

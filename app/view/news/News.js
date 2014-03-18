@@ -41,10 +41,19 @@ Ext.define('WebInspect.view.news.News', {
         itemTpl: Ext.create('Ext.XTemplate',
             '<div class="list-item">',
             '    {[this.getImg(values)]}',
-            '    <h1>{stitle}</h1>',
+            '    <h1>{[this.getTitle(values)]}</h1>',
             '    <div class="time">{spubdate}<div style="float: right;">{sauthor}</div></div>',
             '</div>',
             {
+                getTitle: function(values){
+                    var str = values.stitle;
+
+                    if(!values.stitle){
+                        str = '无标题';
+                    }
+                    return str;
+                },
+
 	        	getImg: function(values){
 	        		var string = '';
 
