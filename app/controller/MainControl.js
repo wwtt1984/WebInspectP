@@ -42,13 +42,13 @@ Ext.define('WebInspect.controller.MainControl',{
         this.bpindex = 0;///默认请求
         this.beindex = 2;///默认请求总数
 
-        window.setTimeout(function(){me.checkJpush(me);},100);
-        document.addEventListener('deviceready',function(){me.onJpushReady(me);}, false);
+//        window.setTimeout(function(){me.checkJpush(me);},100);
+//        document.addEventListener('deviceready',function(){me.onJpushReady(me);}, false);
 
 
         me.onBtnConfirm();
         //android返回键事件监听
-        document.addEventListener("backbutton", me.onBackKeyDown, false);
+//        document.addEventListener("backbutton", me.onBackKeyDown, false);
     },
 
 
@@ -585,6 +585,11 @@ Ext.define('WebInspect.controller.MainControl',{
                 me.getInfofunction().show();
                 break;
 
+            case 'module':
+                me.getInfo().pop();
+                me.getInfofunction().show();
+                break;
+
             case 'version':
                 me.getInfo().pop();
                 me.getInfofunction().show();
@@ -664,9 +669,9 @@ Ext.define('WebInspect.controller.MainControl',{
         var me = this;
         WebInspect.app.user.sid = Ext.getCmp('name').getValue();
         WebInspect.app.user.password = Ext.getCmp('password').getValue();
-        me.onVpnLogin(1, ''); /////成功写入开始执行VPN认证
-        plugins.jPush.setAlias(WebInspect.app.user.sid,function(success){});//////推送标识，以用户名区分
-//        me.onUserCheck(); ////////测试的时候有
+//        me.onVpnLogin(1, ''); /////成功写入开始执行VPN认证
+//        plugins.jPush.setAlias(WebInspect.app.user.sid,function(success){});//////推送标识，以用户名区分
+        me.onUserCheck(); ////////测试的时候有
     },
 
     onUserWriteJson: function(){
@@ -721,7 +726,7 @@ Ext.define('WebInspect.controller.MainControl',{
                     me.onFuncitonLoad();
 
                     //将验证成功的用户信息，存在本地
-                    me.onUserWriteJson();
+//                    me.onUserWriteJson();
                     //加载用户“待办事项”信息
                     me.onTaskStoreLoad(1);
                     me.onMessageLoad();
@@ -830,7 +835,7 @@ Ext.define('WebInspect.controller.MainControl',{
 
         me.getMain().add(me.info);
 
-        var titlestr = ['内网新闻', '综合信息', '通知公告', '通讯录', '潮位信息', '水情信息', '雨情信息', '流量信息', '工情信息', '海塘巡查', '设置'];
+        var titlestr = ['内网新闻', '综合信息', '通知公告', '通讯录', '潮位信息', '水情信息', '雨量信息', '流量信息', '工情信息', '海塘巡查', '设置'];
 
         switch(record.data.title){
             case titlestr[0]:

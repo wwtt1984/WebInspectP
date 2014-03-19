@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="97eeba59-43ed-481c-b450-8b573637ea50" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/MainControl.js" afterPath="$PROJECT_DIR$/app/controller/MainControl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/SettingsControl.js" afterPath="$PROJECT_DIR$/app/controller/SettingsControl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WebInspect.iws" />
@@ -30,7 +29,16 @@
       <file leaf-file-name="MainControl.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controller/MainControl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="234" column="48" selection-start="6900" selection-end="6900" vertical-scroll-proportion="0.56557375" vertical-offset="4170" max-vertical-offset="16872">
+            <state line="832" column="19" selection-start="26282" selection-end="26282" vertical-scroll-proportion="0.84156376" vertical-offset="15399" max-vertical-offset="16967">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="31" selection-start="47" selection-end="47" vertical-scroll-proportion="-0.6785714" vertical-offset="0" max-vertical-offset="1216">
               <folding />
             </state>
           </provider>
@@ -54,15 +62,6 @@
                 <marker date="1395128954589" expanded="false" signature="1691:1777" placeholder="..." />
                 <marker date="1395128954589" expanded="false" signature="1822:1844" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InspectStore.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/store/InspectStore.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="44" selection-start="135" selection-end="135" vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="361">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -153,8 +152,8 @@
         <option value="$PROJECT_DIR$/app/view/settings/Module.js" />
         <option value="$PROJECT_DIR$/app/store/SettingStore.js" />
         <option value="$PROJECT_DIR$/app/view/settings/PushSetting.js" />
-        <option value="$PROJECT_DIR$/app/controller/MainControl.js" />
         <option value="$PROJECT_DIR$/app/controller/SettingsControl.js" />
+        <option value="$PROJECT_DIR$/app/controller/MainControl.js" />
       </list>
     </option>
   </component>
@@ -712,13 +711,18 @@
       <created>1395133834978</created>
       <updated>1395133834978</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Initial commit&#10;">
+      <created>1395190751590</created>
+      <updated>1395190751590</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24342105" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283082" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -733,7 +737,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11965812" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24342105" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -760,11 +763,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/view/Function.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="22" selection-start="1991" selection-end="1991" vertical-scroll-proportion="0.0" vertical-offset="982" max-vertical-offset="1520" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/view/settings/Version.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="13" selection-start="0" selection-end="1750" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1159" />
@@ -857,9 +855,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="31" selection-start="47" selection-end="47" vertical-scroll-proportion="-0.6785714" vertical-offset="0" max-vertical-offset="1216">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controller/MainControl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="234" column="48" selection-start="6900" selection-end="6900" vertical-scroll-proportion="0.56557375" vertical-offset="4170" max-vertical-offset="16872">
+        <state line="832" column="19" selection-start="26282" selection-end="26282" vertical-scroll-proportion="0.84156376" vertical-offset="15399" max-vertical-offset="16967">
           <folding />
         </state>
       </provider>
