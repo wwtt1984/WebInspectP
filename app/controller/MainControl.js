@@ -100,6 +100,8 @@ Ext.define('WebInspect.controller.MainControl',{
         var me = this;
         me.onTaskStoreLoad(0);
 
+        me.onFuncitonLoad();
+
         if(this.getInfo()){
             this.getInfo().destroy();
         }

@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97eeba59-43ed-481c-b450-8b573637ea50" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/MainControl.js" afterPath="$PROJECT_DIR$/app/controller/MainControl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/SettingsControl.js" afterPath="$PROJECT_DIR$/app/controller/SettingsControl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WebInspect.iws" />
@@ -28,7 +30,7 @@
       <file leaf-file-name="MainControl.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controller/MainControl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="50" selection-start="1416" selection-end="1416" vertical-scroll-proportion="0.43004116" vertical-offset="741" max-vertical-offset="16834">
+            <state line="234" column="48" selection-start="6900" selection-end="6900" vertical-scroll-proportion="0.56557375" vertical-offset="4170" max-vertical-offset="16872">
               <folding />
             </state>
           </provider>
@@ -37,10 +39,8 @@
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="20" selection-start="2780" selection-end="2780" vertical-scroll-proportion="0.0" vertical-offset="2223" max-vertical-offset="4028">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state line="122" column="20" selection-start="2780" selection-end="2780" vertical-scroll-proportion="0.0" vertical-offset="2318" max-vertical-offset="4028">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -48,7 +48,7 @@
       <file leaf-file-name="News.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/view/news/News.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="13" selection-start="1173" selection-end="1173" vertical-scroll-proportion="0.0" vertical-offset="665" max-vertical-offset="1501">
+            <state line="46" column="13" selection-start="1173" selection-end="1173" vertical-scroll-proportion="0.0" vertical-offset="874" max-vertical-offset="1501">
               <folding>
                 <marker date="1395128954589" expanded="false" signature="1099:1112" placeholder="..." />
                 <marker date="1395128954589" expanded="false" signature="1691:1777" placeholder="..." />
@@ -61,7 +61,7 @@
       <file leaf-file-name="InspectStore.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/store/InspectStore.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="44" selection-start="135" selection-end="135" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="361">
+            <state line="4" column="44" selection-start="135" selection-end="135" vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="361">
               <folding />
             </state>
           </provider>
@@ -70,7 +70,7 @@
       <file leaf-file-name="SettingsControl.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controller/SettingsControl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="134" column="2" selection-start="3556" selection-end="3556" vertical-scroll-proportion="0.0" vertical-offset="2223" max-vertical-offset="2945">
+            <state line="69" column="22" selection-start="1944" selection-end="1944" vertical-scroll-proportion="0.0" vertical-offset="982" max-vertical-offset="2945">
               <folding />
             </state>
           </provider>
@@ -79,7 +79,7 @@
       <file leaf-file-name="Module.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/view/settings/Module.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="129" column="31" selection-start="3338" selection-end="3338" vertical-scroll-proportion="-3.64" vertical-offset="2269" max-vertical-offset="3610">
+            <state line="129" column="31" selection-start="3338" selection-end="3338" vertical-scroll-proportion="0.0" vertical-offset="2451" max-vertical-offset="3610">
               <folding />
             </state>
           </provider>
@@ -88,7 +88,7 @@
       <file leaf-file-name="SettingStore.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/store/SettingStore.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="5" selection-start="347" selection-end="347" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="380">
+            <state line="13" column="5" selection-start="347" selection-end="347" vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="380">
               <folding />
             </state>
           </provider>
@@ -97,7 +97,7 @@
       <file leaf-file-name="SettingsModel.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/model/SettingsModel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="3" selection-start="252" selection-end="252" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
+            <state line="12" column="3" selection-start="252" selection-end="252" vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="342">
               <folding />
             </state>
           </provider>
@@ -106,7 +106,7 @@
       <file leaf-file-name="PushSetting.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/view/settings/PushSetting.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="166" column="16" selection-start="4507" selection-end="4509" vertical-scroll-proportion="-3.24" vertical-offset="2992" max-vertical-offset="4560">
+            <state line="166" column="16" selection-start="4507" selection-end="4509" vertical-scroll-proportion="0.0" vertical-offset="2992" max-vertical-offset="4560">
               <folding />
             </state>
           </provider>
@@ -115,7 +115,7 @@
       <file leaf-file-name="FunctionStore.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/store/FunctionStore.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="51" selection-start="1000" selection-end="1000" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="589">
+            <state line="19" column="51" selection-start="1000" selection-end="1000" vertical-scroll-proportion="0.0" vertical-offset="361" max-vertical-offset="589">
               <folding />
             </state>
           </provider>
@@ -149,12 +149,12 @@
         <option value="$PROJECT_DIR$/app/store/InspectStore.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/app/view/news/News.js" />
-        <option value="$PROJECT_DIR$/app/controller/SettingsControl.js" />
         <option value="$PROJECT_DIR$/app/model/SettingsModel.js" />
         <option value="$PROJECT_DIR$/app/view/settings/Module.js" />
         <option value="$PROJECT_DIR$/app/store/SettingStore.js" />
         <option value="$PROJECT_DIR$/app/view/settings/PushSetting.js" />
         <option value="$PROJECT_DIR$/app/controller/MainControl.js" />
+        <option value="$PROJECT_DIR$/app/controller/SettingsControl.js" />
       </list>
     </option>
   </component>
@@ -504,16 +504,16 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../sencha touch 2.2 project/WebSecond" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="132" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="910" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="910" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="910" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="132" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="132" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -522,6 +522,14 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -532,23 +540,15 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -708,14 +708,17 @@
       <created>1395133787994</created>
       <updated>1395133787994</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Initial commit&#10;">
+      <created>1395133834978</created>
+      <updated>1395133834978</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24342105" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283082" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -730,6 +733,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11965812" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24342105" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -758,61 +762,32 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/view/Function.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="22" selection-start="1991" selection-end="1991" vertical-scroll-proportion="0.0" vertical-offset="982" max-vertical-offset="1520">
-          <folding>
-            <marker date="1395108507622" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1395108507622" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
+        <state line="62" column="22" selection-start="1991" selection-end="1991" vertical-scroll-proportion="0.0" vertical-offset="982" max-vertical-offset="1520" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/settings/Version.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="0" selection-end="1750" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1159">
-          <folding />
-        </state>
+        <state line="12" column="13" selection-start="0" selection-end="1750" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1159" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/tide/Tide.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="36" selection-start="257" selection-end="257" vertical-scroll-proportion="0.45910782" vertical-offset="0" max-vertical-offset="1634">
-          <folding>
-            <marker date="1394500833769" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1394500833769" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1394500833769" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1394500833769" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1394500833769" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1394500833769" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1394500833769" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1394500833769" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1394500833769" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1394500833769" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1394500833769" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1394500833769" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1394500833769" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
+        <state line="13" column="36" selection-start="257" selection-end="257" vertical-scroll-proportion="0.45910782" vertical-offset="0" max-vertical-offset="1634" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/news/NewsDetail.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="8" selection-start="163" selection-end="236" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1615">
-          <folding />
-        </state>
+        <state line="11" column="8" selection-start="163" selection-end="236" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1615" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/Login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="13" selection-start="1145" selection-end="1701" vertical-scroll-proportion="0.0" vertical-offset="399" max-vertical-offset="1501">
-          <folding />
-        </state>
+        <state line="65" column="13" selection-start="1145" selection-end="1701" vertical-scroll-proportion="0.0" vertical-offset="399" max-vertical-offset="1501" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/store/NoticeStore.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="258" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="361">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="258" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="361" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/store/InspectStore.js">
@@ -836,9 +811,7 @@
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="122" column="20" selection-start="2780" selection-end="2780" vertical-scroll-proportion="0.0" vertical-offset="2223" max-vertical-offset="4028">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -851,7 +824,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/settings/PushSetting.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="166" column="16" selection-start="4507" selection-end="4509" vertical-scroll-proportion="-3.24" vertical-offset="2992" max-vertical-offset="4560">
+        <state line="166" column="16" selection-start="4507" selection-end="4509" vertical-scroll-proportion="0.0" vertical-offset="2992" max-vertical-offset="4560">
           <folding />
         </state>
       </provider>
@@ -870,23 +843,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controller/SettingsControl.js">
+    <entry file="file://$PROJECT_DIR$/app/view/settings/Module.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="2" selection-start="3556" selection-end="3556" vertical-scroll-proportion="0.0" vertical-offset="2223" max-vertical-offset="2945">
+        <state line="129" column="31" selection-start="3338" selection-end="3338" vertical-scroll-proportion="0.0" vertical-offset="2451" max-vertical-offset="3610">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/settings/Module.js">
+    <entry file="file://$PROJECT_DIR$/app/controller/SettingsControl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="31" selection-start="3338" selection-end="3338" vertical-scroll-proportion="-3.64" vertical-offset="2269" max-vertical-offset="3610">
+        <state line="69" column="22" selection-start="1944" selection-end="1944" vertical-scroll-proportion="0.0" vertical-offset="982" max-vertical-offset="2945">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controller/MainControl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="50" selection-start="1416" selection-end="1416" vertical-scroll-proportion="0.43004116" vertical-offset="741" max-vertical-offset="16834">
+        <state line="234" column="48" selection-start="6900" selection-end="6900" vertical-scroll-proportion="0.56557375" vertical-offset="4170" max-vertical-offset="16872">
           <folding />
         </state>
       </provider>

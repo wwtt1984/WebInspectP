@@ -67,7 +67,7 @@ Ext.define('WebInspect.controller.SettingsControl', {
             case '推送设置':
                 me.onPushSettingSet();
                 break;
-            case '功能设置':
+            case '功能模块':
                 me.onModuleSet();
                 break;
             case '软件版本':
