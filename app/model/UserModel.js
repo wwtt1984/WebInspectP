@@ -15,7 +15,9 @@ Ext.define('WebInspect.model.UserModel',{
             'ITEM_Id',
             'DeptId',
             
-            'rtxsession'
+            'rtxsession',
+            'taskcount',
+            'rtxcount'
         ]
         
 //        proxy: {

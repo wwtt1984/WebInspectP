@@ -29,6 +29,7 @@ Ext.define('WebInspect.view.list.Message', {
                 defaultType: 'messageListItem',
                 store: 'MessageStore',
                 useComponents: true,
+                loadingText: '努力加载中...',
 
                 plugins: [
                     {

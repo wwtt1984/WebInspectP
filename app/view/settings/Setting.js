@@ -27,7 +27,7 @@ Ext.define('WebInspect.view.settings.Setting', {
 
                 store: 'SettingStore',
 
-                itemTpl: '<div>{name}<img src="resources/images/code3.png" style="height:18px;width:18px;margin:2px 0 0 0;float:right;"></div>'
+                itemTpl: '<div>{title}<img src="resources/images/code3.png" style="height:18px;width:18px;margin:2px 0 0 0;float:right;"></div>'
             },
             {
                 xtype: 'panel',

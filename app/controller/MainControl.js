@@ -98,8 +98,14 @@ Ext.define('WebInspect.controller.MainControl',{
 
     onMessagePush: function(data){
         var me = this;
-        me.onTaskStoreLoad(0);
 
+        //加载“天气预报”信息
+        me.onWeatherStoreLoad(0);
+
+        //加载“待办事项”和“离线消息”数量
+        me.onPushStoreSet();
+
+        //加载“功能模块”
         me.onFuncitonLoad();
 
         if(this.getInfo()){
@@ -427,6 +433,8 @@ Ext.define('WebInspect.controller.MainControl',{
             WebInspect.app.user.password = json.pwd;
             WebInspect.app.user.name = json.name;
             WebInspect.app.user.mobile = json.mobile;
+            WebInspect.app.user.taskcount = json.taskcount;
+            WebInspect.app.user.rtxcount = json.rtxcount;
 
             Ext.getCmp('name').setValue(WebInspect.app.user.sid);
             Ext.getCmp('password').setValue(WebInspect.app.user.password);
@@ -681,7 +689,9 @@ Ext.define('WebInspect.controller.MainControl',{
             sid: WebInspect.app.user.sid,
             pwd: WebInspect.app.user.password,
             name: WebInspect.app.user.name,
-            mobile: WebInspect.app.user.mobile
+            mobile: WebInspect.app.user.mobile,
+            taskcount: WebInspect.app.user.taskcount,
+            rtxcount: WebInspect.app.user.rtxcount
         });
 
         //将验证成功的用户信息，存在本地
@@ -713,7 +723,11 @@ Ext.define('WebInspect.controller.MainControl',{
             });
             store.load(function(records, operation, success) {
 
-                if((store.getAllCount() != 0) && (store.getAt(0).data.uid != null)){
+                if(records.length == 0){
+                    Ext.Viewport.setMasked(false);
+                    plugins.Toast.ShowToast("验证失败！请重新输入！",3000);
+                }
+                else{
                     Ext.Viewport.setMasked({
                         xtype: 'loadmask',
                         message: '验证成功,页面加载中...'
@@ -721,23 +735,25 @@ Ext.define('WebInspect.controller.MainControl',{
 
                     WebInspect.app.user.name = store.getAt(0).data.name;
                     WebInspect.app.user.mobile = store.getAt(0).data.mobile;
+                    WebInspect.app.user.taskcount = store.getAt(0).data.taskcount;
+                    WebInspect.app.user.rtxcount = store.getAt(0).data.rtxcount;
 
                     //加载模块页面
                     me.onFuncitonLoad();
 
                     //将验证成功的用户信息，存在本地
 //                    me.onUserWriteJson();
-                    //加载用户“待办事项”信息
-                    me.onTaskStoreLoad(1);
-                    me.onMessageLoad();
+
+                    //加载“天气预报”信息
+                    me.onWeatherStoreLoad(1);
+
+                    //加载“待办事项”和“离线消息”数量
+                    me.onPushStoreSet();
 
                     /////////////////判断是否有新版本/////////////////////
                     me.onCheckVesion(me);
                 }
-                else{
-                    Ext.Viewport.setMasked(false);
-                    plugins.Toast.ShowToast("验证失败！请重新输入！",3000);
-                }
+
             });
         }
         else{
@@ -745,6 +761,13 @@ Ext.define('WebInspect.controller.MainControl',{
             Ext.Viewport.setMasked(false);
             plugins.Toast.ShowToast("用户名和密码不能为空！",3000);
         }
+    },
+
+    onPushStoreSet: function(){
+        var pushstore = Ext.getStore('PushStore');
+        pushstore.getAt(0).data.num = WebInspect.app.user.taskcount;
+        pushstore.getAt(1).data.num = WebInspect.app.user.rtxcount;
+        Ext.getCmp('noticelist').refresh();
     },
 
     onFuncitonLoad: function(){
@@ -757,45 +780,6 @@ Ext.define('WebInspect.controller.MainControl',{
         });
 
         store.load();
-    },
-
-    onMessageLoad: function(){
-
-        var sdt = Ext.Date.format(Ext.Date.add(new Date(), Ext.Date.DAY,-7), 'Y-m-d').toString();
-        var edt = Ext.Date.format(new Date(), 'Y-m-d').toString();
-
-        var store = Ext.getStore('MessageStore');
-        store.removeAll();
-        store.getProxy().setExtraParams({
-            t: 'GetRtxList',
-            results: WebInspect.app.user.sid + '$'+ sdt + '$' + edt + '$jsonp'
-        });
-
-        store.load(function(records, operation, success){
-            var pushstore = Ext.getStore('PushStore');
-            pushstore.getAt(1).data.num = store.getAllCount();
-            Ext.getCmp('noticelist').refresh();
-        }, this);
-    },
-
-    //加载用户“待办事项”信息
-    onTaskStoreLoad: function(num){
-        var me = this;
-        var store = Ext.getStore('TaskStore');
-        store.removeAll();
-        store.getProxy().setExtraParams({
-            t: 'GetTaskListUser',
-            results: WebInspect.app.user.sid
-        });
-
-        store.load(function(records, operation, success){
-            var pushstore = Ext.getStore('PushStore');
-            pushstore.getAt(0).data.num = store.getAllCount();
-            Ext.getCmp('noticelist').refresh();
-
-            //加载“天气预报”信息
-            me.onWeatherStoreLoad(num);
-        }, this);
     },
 
     //加载“天气预报”信息，当num=0时，表示是“推送信息”， 当num=1时，表示是：应用程序正常启动
@@ -813,7 +797,6 @@ Ext.define('WebInspect.controller.MainControl',{
         store.load(function(records, operation, success) {
 
             Ext.getCmp('maintitle').onDataSet(store.getAt(0), WebInspect.app.user.name, WebInspect.app.user.mobile);
-            Ext.getCmp('noticelist').addCls('hidden-disclosure-list');
 
             if(num == 1){
                 Ext.Viewport.setMasked(false);
@@ -835,9 +818,9 @@ Ext.define('WebInspect.controller.MainControl',{
 
         me.getMain().add(me.info);
 
-        var titlestr = ['内网新闻', '综合信息', '通知公告', '通讯录', '潮位信息', '水情信息', '雨量信息', '流量信息', '工情信息', '海塘巡查', '设置'];
+        var titlestr = ['news', 'info', 'notice', 'contacts', 'tide', 'water', 'rain', 'flow', 'project', 'inspect', 'setting'];
 
-        switch(record.data.title){
+        switch(record.data.name){
             case titlestr[0]:
                 me.getApplication().getController('NewsControl').onNewsStypeSet('NewsStore', 'GetInfoList', 'news$jsonp', record.data.title);
                 break;

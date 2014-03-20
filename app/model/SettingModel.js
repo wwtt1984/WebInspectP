@@ -3,7 +3,8 @@ Ext.define('WebInspect.model.SettingModel',{
     config: {
        fields: [
             'id',
-            'name'
+            'name',
+            'title'
         ]
     }
 

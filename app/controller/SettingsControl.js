@@ -63,14 +63,16 @@ Ext.define('WebInspect.controller.SettingsControl', {
     onSettingListTap: function(list, index, target, record, e, eOpts ){
 
         var me = this;
+        var titlestr = ['pushsetting', 'module', 'version'];
+
         switch(record.data.name){
-            case '推送设置':
+            case titlestr[0]:
                 me.onPushSettingSet();
                 break;
-            case '功能模块':
+            case titlestr[1]:
                 me.onModuleSet();
                 break;
-            case '软件版本':
+            case titlestr[2]:
                 me.onVersionSet();
                 break;
         }

@@ -1,4 +1,4 @@
-Ext.define('WebInspect.view.Task', {
+Ext.define('WebInspect.view.list.Task', {
     extend: 'Ext.List',
     xtype: 'task',
     
@@ -12,6 +12,7 @@ Ext.define('WebInspect.view.Task', {
 
         style: 'background: #fff;',
     	store: 'TaskStore',
+        loadingText: '努力加载中...',
 
         plugins: [
             {
