@@ -19,11 +19,6 @@ Ext.define('WebInspect.model.UserModel',{
             'taskcount',
             'rtxcount'
         ]
-        
-//        proxy: {
-//            type: 'localstorage',
-//            id: 'user'
-//        }
     }
         
 });

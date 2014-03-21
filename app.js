@@ -80,7 +80,6 @@ Ext.application({
 
     models: [
         'UserModel',
-        'UserLocalModel',
 
         'WeatherModel',
         'PushModel',

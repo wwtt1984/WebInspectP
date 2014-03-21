@@ -99,15 +99,6 @@ Ext.define('WebInspect.controller.MainControl',{
     onMessagePush: function(data){
         var me = this;
 
-        //加载“天气预报”信息
-        me.onWeatherStoreLoad(0);
-
-        //加载“待办事项”和“离线消息”数量
-        me.onPushStoreSet();
-
-        //加载“功能模块”
-        me.onFuncitonLoad();
-
         if(this.getInfo()){
             this.getInfo().destroy();
         }
@@ -287,6 +278,8 @@ Ext.define('WebInspect.controller.MainControl',{
                             plugins.Toast.ShowToast("VPN连接成功!",3000);
                             ////////////////////////////////////////////////
                             if(num == 0){
+                                me.onVpnUserCheck();   //重新title、天气预报、待办事项、离线消息和主功能页面
+
                                 me.onMessagePush(data); ////执行推送里面的页面
                             }
                             else
@@ -312,6 +305,13 @@ Ext.define('WebInspect.controller.MainControl',{
                 else
                 {
                     if(num == 0){
+                        //加载“天气预报”信息
+                        me.onWeatherStoreLoad(0);
+                        //加载“待办事项”和“离线消息”数量
+                        me.onPushStoreSet();
+                        //加载“功能模块”
+                        me.onFuncitonLoad();
+
                         me.onMessagePush(data); ////执行推送里面的页面
                     }
                     else
@@ -433,8 +433,6 @@ Ext.define('WebInspect.controller.MainControl',{
             WebInspect.app.user.password = json.pwd;
             WebInspect.app.user.name = json.name;
             WebInspect.app.user.mobile = json.mobile;
-            WebInspect.app.user.taskcount = json.taskcount;
-            WebInspect.app.user.rtxcount = json.rtxcount;
 
             Ext.getCmp('name').setValue(WebInspect.app.user.sid);
             Ext.getCmp('password').setValue(WebInspect.app.user.password);
@@ -689,9 +687,7 @@ Ext.define('WebInspect.controller.MainControl',{
             sid: WebInspect.app.user.sid,
             pwd: WebInspect.app.user.password,
             name: WebInspect.app.user.name,
-            mobile: WebInspect.app.user.mobile,
-            taskcount: WebInspect.app.user.taskcount,
-            rtxcount: WebInspect.app.user.rtxcount
+            mobile: WebInspect.app.user.mobile
         });
 
         //将验证成功的用户信息，存在本地
@@ -709,18 +705,15 @@ Ext.define('WebInspect.controller.MainControl',{
         Ext.Viewport.setMasked({xtype: 'loadmask',message: '登录中,请稍后...'});
         if(WebInspect.app.user.sid && WebInspect.app.user.password){
             //用户名、密码输入完整
-            var store = Ext.create('Ext.data.Store',{
-                model: 'WebInspect.model.UserModel',
-                proxy: {
-                    type: 'sk'
-                }
-            });
+            var store = Ext.getStore('UserStore');
+
             var results = WebInspect.app.user.sid + '$' + WebInspect.app.user.password
                          + '$' + WebInspect.app.user.name + "$" + WebInspect.app.user.version;
             store.getProxy().setExtraParams({
                 t: 'CheckUser',
                 results: results
             });
+
             store.load(function(records, operation, success) {
 
                 if(records.length == 0){
@@ -761,6 +754,39 @@ Ext.define('WebInspect.controller.MainControl',{
             Ext.Viewport.setMasked(false);
             plugins.Toast.ShowToast("用户名和密码不能为空！",3000);
         }
+    },
+
+    //推送的时候，vpn未连接，vpn重新登录后，再次用户验证
+    onVpnUserCheck: function(){
+
+        var me = this;
+
+        var store = Ext.getStore('UserStore');
+
+        var results = WebInspect.app.user.sid + '$' + WebInspect.app.user.password
+            + '$' + WebInspect.app.user.name + "$" + WebInspect.app.user.version;
+
+        store.getProxy().setExtraParams({
+            t: 'CheckUser',
+            results: results
+        });
+
+        store.load(function(records, operation, success) {
+
+            WebInspect.app.user.name = store.getAt(0).data.name;
+            WebInspect.app.user.mobile = store.getAt(0).data.mobile;
+            WebInspect.app.user.taskcount = store.getAt(0).data.taskcount;
+            WebInspect.app.user.rtxcount = store.getAt(0).data.rtxcount;
+
+            //加载模块页面
+            me.onFuncitonLoad();
+
+            //加载“天气预报”信息
+            me.onWeatherStoreLoad(0);
+
+            //加载“待办事项”和“离线消息”数量
+            me.onPushStoreSet();
+        });
     },
 
     onPushStoreSet: function(){
