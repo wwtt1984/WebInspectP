@@ -671,10 +671,10 @@ Ext.define('WebInspect.controller.MainControl',{
                 }
                 else{
 
-                    WebInspect.app.user.name = store.getAt(0).data.name;
-                    WebInspect.app.user.mobile = store.getAt(0).data.mobile;
-                    WebInspect.app.user.taskcount = store.getAt(0).data.taskcount;
-                    WebInspect.app.user.rtxcount = store.getAt(0).data.rtxcount;
+                    WebInspect.app.user.name = records[0].data.name;
+                    WebInspect.app.user.mobile = records[0].data.mobile;
+                    WebInspect.app.user.taskcount = records[0].data.taskcount;
+                    WebInspect.app.user.rtxcount = records[0].data.rtxcount;
 
                     me.onFuncitonLoad(); //加载模块页面
                     me.onWeatherStoreLoad();  //加载“天气预报”信息
