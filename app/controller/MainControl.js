@@ -42,13 +42,12 @@ Ext.define('WebInspect.controller.MainControl',{
         this.bpindex = 0;///默认请求
         this.beindex = 2;///默认请求总数
 
-//        window.setTimeout(function(){me.checkJpush(me);},100);
-//        document.addEventListener('deviceready',function(){me.onJpushReady(me);}, false);
-
+        window.setTimeout(function(){me.checkJpush(me);},100);
+        document.addEventListener('deviceready',function(){me.onJpushReady(me);}, false);
 
         me.onBtnConfirm();
         //android返回键事件监听
-//        document.addEventListener("backbutton", me.onBackKeyDown, false);
+        document.addEventListener("backbutton", me.onBackKeyDown, false);
     },
 
 
@@ -74,25 +73,6 @@ Ext.define('WebInspect.controller.MainControl',{
             }
             me.bpindex++;
             window.setTimeout(function(){me.checkJpush(me);},100);
-        }
-    },
-
-    onDoChickTitle:function(data){       ////////执行点击标题栏事件
-
-        var me = this;
-        Ext.Viewport.setMasked({
-            xtype: 'loadmask',
-            message: '努力加载中...'
-        });
-
-        if(WebInspect.app.user.name && WebInspect.app.user.mobile){
-            this.onMessagePush(data);
-        }
-        else{
-            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0,
-                function(fileSystem){me.onwtreadFS(fileSystem,me,0,data);},
-                function(error){me.onwtfail(error,me);}
-            ); ////读文件
         }
     },
 
@@ -276,16 +256,7 @@ Ext.define('WebInspect.controller.MainControl',{
                         if(success == "true")
                         {
                             plugins.Toast.ShowToast("VPN连接成功!",3000);
-                            ////////////////////////////////////////////////
-                            if(num == 0){
-                                me.onVpnUserCheck();   //重新title、天气预报、待办事项、离线消息和主功能页面
-
-                                me.onMessagePush(data); ////执行推送里面的页面
-                            }
-                            else
-                            {
-                                me.onUserCheck(); //////////////////执行正常页面
-                            }
+                            me.onUserCheck(num,data);
                         }
                         else if(success == "false")
                         {
@@ -304,20 +275,7 @@ Ext.define('WebInspect.controller.MainControl',{
                 }
                 else
                 {
-                    if(num == 0){
-                        //加载“天气预报”信息
-                        me.onWeatherStoreLoad(0);
-                        //加载“待办事项”和“离线消息”数量
-                        me.onPushStoreSet();
-                        //加载“功能模块”
-                        me.onFuncitonLoad();
-
-                        me.onMessagePush(data); ////执行推送里面的页面
-                    }
-                    else
-                    {
-                        me.onUserCheck(); //////////////////执行正常页面
-                    }
+                    me.onUserCheck(num,data);
                 }
 
             });
@@ -326,15 +284,6 @@ Ext.define('WebInspect.controller.MainControl',{
         {
             plugins.Toast.ShowToast("先检查你的网络是否正常,再重新登录!",3000);
         }
-    },
-
-    onVpnCheckOK:function(){  //////检查VPN是否正常
-
-        var res = false;
-        plugins.Vpn.VpnCheckOnLine(WebInspect.app.user.sid,WebInspect.app.user.password,function(success) {
-            if(success == 'true')  res = true;
-        });
-        return res;
     },
 
     onVpnCheckOnline:function(data){
@@ -675,9 +624,9 @@ Ext.define('WebInspect.controller.MainControl',{
         var me = this;
         WebInspect.app.user.sid = Ext.getCmp('name').getValue();
         WebInspect.app.user.password = Ext.getCmp('password').getValue();
-//        me.onVpnLogin(1, ''); /////成功写入开始执行VPN认证
-//        plugins.jPush.setAlias(WebInspect.app.user.sid,function(success){});//////推送标识，以用户名区分
-        me.onUserCheck(); ////////测试的时候有
+        me.onVpnLogin(1, ''); /////成功写入开始执行VPN认证
+        plugins.jPush.setAlias(WebInspect.app.user.sid,function(success){});//////推送标识，以用户名区分
+//        me.onUserCheck(1,''); ////////测试的时候有
     },
 
     onUserWriteJson: function(){
@@ -698,11 +647,11 @@ Ext.define('WebInspect.controller.MainControl',{
         ); ////写文件
     },
 
-    //用户验证
-    onUserCheck: function(){
+    //用户验证 //////////////////1正常登陆,0为推送//////////////////////////////////////
+    onUserCheck: function(num,data){
 
         var me = this;
-        Ext.Viewport.setMasked({xtype: 'loadmask',message: '登录中,请稍后...'});
+        Ext.Viewport.setMasked({xtype: 'loadmask',message: '连接成功,页面加载中...'});
         if(WebInspect.app.user.sid && WebInspect.app.user.password){
             //用户名、密码输入完整
             var store = Ext.getStore('UserStore');
@@ -721,30 +670,27 @@ Ext.define('WebInspect.controller.MainControl',{
                     plugins.Toast.ShowToast("验证失败！请重新输入！",3000);
                 }
                 else{
-                    Ext.Viewport.setMasked({
-                        xtype: 'loadmask',
-                        message: '验证成功,页面加载中...'
-                    });
 
                     WebInspect.app.user.name = store.getAt(0).data.name;
                     WebInspect.app.user.mobile = store.getAt(0).data.mobile;
                     WebInspect.app.user.taskcount = store.getAt(0).data.taskcount;
                     WebInspect.app.user.rtxcount = store.getAt(0).data.rtxcount;
 
-                    //加载模块页面
-                    me.onFuncitonLoad();
+                    me.onFuncitonLoad(); //加载模块页面
+                    me.onWeatherStoreLoad();  //加载“天气预报”信息
+                    me.onPushStoreSet(); //加载“待办事项”和“离线消息”数量
 
-                    //将验证成功的用户信息，存在本地
-//                    me.onUserWriteJson();
-
-                    //加载“天气预报”信息
-                    me.onWeatherStoreLoad(1);
-
-                    //加载“待办事项”和“离线消息”数量
-                    me.onPushStoreSet();
-
-                    /////////////////判断是否有新版本/////////////////////
-                    me.onCheckVesion(me);
+                    if(num == 1)
+                    {
+                        Ext.Viewport.setMasked(false);
+                        me.getMain().setActiveItem(me.getFunctionmain());
+                        me.onUserWriteJson(); //将验证成功的用户信息，存在本地
+                        me.onCheckVesion(me);  /////////////////判断是否有新版本/////////////////////
+                    }
+                    else
+                    {
+                        me.onMessagePush(data);/////////////////////推送的消息
+                    }
                 }
 
             });
@@ -754,39 +700,6 @@ Ext.define('WebInspect.controller.MainControl',{
             Ext.Viewport.setMasked(false);
             plugins.Toast.ShowToast("用户名和密码不能为空！",3000);
         }
-    },
-
-    //推送的时候，vpn未连接，vpn重新登录后，再次用户验证
-    onVpnUserCheck: function(){
-
-        var me = this;
-
-        var store = Ext.getStore('UserStore');
-
-        var results = WebInspect.app.user.sid + '$' + WebInspect.app.user.password
-            + '$' + WebInspect.app.user.name + "$" + WebInspect.app.user.version;
-
-        store.getProxy().setExtraParams({
-            t: 'CheckUser',
-            results: results
-        });
-
-        store.load(function(records, operation, success) {
-
-            WebInspect.app.user.name = store.getAt(0).data.name;
-            WebInspect.app.user.mobile = store.getAt(0).data.mobile;
-            WebInspect.app.user.taskcount = store.getAt(0).data.taskcount;
-            WebInspect.app.user.rtxcount = store.getAt(0).data.rtxcount;
-
-            //加载模块页面
-            me.onFuncitonLoad();
-
-            //加载“天气预报”信息
-            me.onWeatherStoreLoad(0);
-
-            //加载“待办事项”和“离线消息”数量
-            me.onPushStoreSet();
-        });
     },
 
     onPushStoreSet: function(){
@@ -804,31 +717,21 @@ Ext.define('WebInspect.controller.MainControl',{
             t: 'GetFunctionZt',
             results: WebInspect.app.user.sid + '$jsonp'
         });
-
         store.load();
     },
 
     //加载“天气预报”信息，当num=0时，表示是“推送信息”， 当num=1时，表示是：应用程序正常启动
-    onWeatherStoreLoad: function(num){
+    onWeatherStoreLoad: function(){
         var me = this;
         var store = Ext.getStore('WeatherStore');
-
         store.removeAll();
-
         store.getProxy().setExtraParams({
             t: 'GetWeather',
             results: 'jsonp'
         });
-
         store.load(function(records, operation, success) {
 
             Ext.getCmp('maintitle').onDataSet(store.getAt(0), WebInspect.app.user.name, WebInspect.app.user.mobile);
-
-            if(num == 1){
-                Ext.Viewport.setMasked(false);
-                //当num=1时，表示是：应用程序正常启动, 加载“主功能”页面
-                me.getMain().setActiveItem(me.getFunctionmain());
-            }
         });
     },
 
@@ -891,7 +794,4 @@ Ext.define('WebInspect.controller.MainControl',{
         this.getMain().setActiveItem(this.getFunctionmain());
         this.getInfo().destroy();
     }
-
-
-
 });

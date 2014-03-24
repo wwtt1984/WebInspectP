@@ -1,2 +1,2 @@
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\CordovaLib\bin\AndroidManifest.xml : \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\CordovaLib\AndroidManifest.xml \
+D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\CordovaLib\bin\AndroidManifest.xml : \
+D:\work\touch\webinnew\WebInspect\phonegap\platforms\android\CordovaLib\AndroidManifest.xml \
