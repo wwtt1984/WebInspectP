@@ -32,30 +32,24 @@ Ext.define('WebInspect.controller.NewsControl', {
     //加载“内网新闻”，“通知公告”，“综合信息”模块页面
     onNewsStypeSet: function(storename, t, results, title){
 
-        var store = Ext.getStore(storename);
-
+        var store = Ext.getStore('NewsStore');
         store.removeAll();
-
         store.getProxy().setExtraParams({
             t: t,
             results: results
         });
-
-        Ext.Viewport.setMasked({
-            xtype: 'loadmask',
-            message: '努力加载中...'
+        store.loadPage(1,{
+            callback: function(records, operation, success) {
+                if(!success)
+                {
+                    plugins.Toast.ShowToast("网络不给力，无法读取数据!",3000);
+                }
+            },
+            scope: this
         });
-
-        store.loadPage(1,function(records, operation, success) {Ext.Viewport.setMasked(false)});
-
-        this.news = this.getNews();
-        if(!this.news){
-            this.news = Ext.create('WebInspect.view.news.News');
-        }
-        this.news.setStore(store);
-        this.news.setTitle(title);
-        this.getInfo().push(this.news);
-
+        var news = Ext.create('WebInspect.view.news.News'); ////////////都要新建出来的
+        news.setTitle(title);
+        this.getInfo().push(news);
     },
 
     //“内网新闻”，“通知公告”，“综合信息”列表，进行单击选择后，加载“详细信息”页面

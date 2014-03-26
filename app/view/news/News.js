@@ -10,12 +10,14 @@ Ext.define('WebInspect.view.news.News', {
     config: {
     	
     	title: '新闻通知',
-            	    
         cls: 'news-list',
-	    
-	    loadingText: '努力加载中...',
-	    scrollToTopOnRefresh: false,
-	    
+	    loadingText: false,
+        store:'NewsStore',
+        masked: {
+            xtype: 'loadmask',
+            message: '努力加载中...'
+        },
+
 	    plugins: [
         { 
             xclass: 'Ext.plugin.ListPaging',

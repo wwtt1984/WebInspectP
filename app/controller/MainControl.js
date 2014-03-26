@@ -490,12 +490,7 @@ Ext.define('WebInspect.controller.MainControl',{
 
         switch(active.xtype){
             case 'news':
-                if((me.getNewsdetail().view) && (me.getNewsdetail().view.getHidden() == false)){
-                    me.getNewsdetail().view.hide();
-                }
-                else{
-                    me.onInfoFunctionBackTap();
-                }
+                me.onInfoFunctionBackTap();
                 break;
 
             case 'task':
@@ -563,8 +558,8 @@ Ext.define('WebInspect.controller.MainControl',{
                 }
                 break;
             case 'newsdetail':
-                if((me.getNewsdetail().view) && (me.getNewsdetail().view.getHidden() == false)){
-                    me.getNewsdetail().view.hide();
+                if((me.getInfo().view) && (me.getInfo().view.getHidden() == false)){
+                    me.getInfo().onViewHide();
                 }
                 else{
                     me.getInfo().pop();
@@ -626,7 +621,7 @@ Ext.define('WebInspect.controller.MainControl',{
         WebInspect.app.user.password = Ext.getCmp('password').getValue();
         me.onVpnLogin(1, ''); /////成功写入开始执行VPN认证
         plugins.jPush.setAlias(WebInspect.app.user.sid,function(success){});//////推送标识，以用户名区分
-//        me.onUserCheck(1,''); ////////测试的时候有
+       // me.onUserCheck(1,''); ////////测试的时候有
     },
 
     onUserWriteJson: function(){
