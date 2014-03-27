@@ -534,10 +534,6 @@ Ext.define('WebInspect.controller.MainControl',{
                 me.onInfoFunctionBackTap();
                 break;
 
-            case 'markmain':
-                me.onInfoFunctionBackTap();
-                break;
-
             case 'pushsetting':
                 me.getInfo().pop();
                 me.getInfofunction().show();
