@@ -25,6 +25,9 @@
     <feature name="VpnPlugin">
         <param name="android-package" value="com.vpn.vpn.VpnPlugin" />
     </feature>
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+    </feature>
     <feature name="File">
         <param name="android-package" value="org.apache.cordova.file.FileUtils" />
     </feature>

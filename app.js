@@ -30,7 +30,8 @@ Ext.application({
         'Ext.MessageBox',
         'Ext.data.proxy.SkProxy',
         'Ext.data.proxy.SkJsonp',
-        'Ext.data.proxy.LocalStorage'
+        'Ext.data.proxy.LocalStorage',
+        'Ext.device.Camera'
     ],
 
     views: [
@@ -74,8 +75,14 @@ Ext.application({
         'settings.PushSetting',
         'settings.Version',
         'settings.Module',
+        'settings.Update',
 
-        'rain.Rain'
+        'rain.Rain',
+
+        'mark.MarkMain',
+        'mark.Mark',
+        'mark.Photo',
+        'mark.MarkList'
     ],
 
     models: [
@@ -108,8 +115,12 @@ Ext.application({
 
         'SettingsModel',
         'SettingModel',
+        'UpdateModel',
 
-        'RainModel'
+        'RainModel',
+
+        'PhotoModel',
+        'MarkModel'
     ],
 
     stores: [
@@ -147,8 +158,12 @@ Ext.application({
         'ProjectElementStore',
 
         'SettingStore',
+        'UpdateStore',
 
-        'RainStore'
+        'RainStore',
+
+        'PhotoStore',
+        'MarkStore'
     ],
 
     controllers: [
@@ -161,7 +176,8 @@ Ext.application({
         'RainControl',
         'FlowControl',
         'ProjectControl',
-        'SettingsControl'
+        'SettingsControl',
+        'MarkControl'
     ],
 
     icon: {

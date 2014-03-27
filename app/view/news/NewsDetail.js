@@ -8,7 +8,7 @@ Ext.define('WebInspect.view.news.NewsDetail',{
 	],
 	
 	config: {
-		title: '详细新闻',
+		title: '详细信息',
 		scrollable: {
     		direction: 'vertical',
     		directionLock: true

@@ -19,6 +19,7 @@ Ext.define('WebInspect.controller.SettingsControl', {
             pushsetting: 'info pushsetting',
             module: 'info module',
             version: 'info version',
+            update: 'info update',
             newscheck: 'checkboxfield[itemId=newscheck]',
             infocheck: 'checkboxfield[itemId=infocheck]',
             noticecheck: 'checkboxfield[itemId=noticecheck]',
@@ -63,7 +64,7 @@ Ext.define('WebInspect.controller.SettingsControl', {
     onSettingListTap: function(list, index, target, record, e, eOpts ){
 
         var me = this;
-        var titlestr = ['pushsetting', 'module', 'version'];
+        var titlestr = ['pushsetting', 'module', 'version', 'update'];
 
         switch(record.data.name){
             case titlestr[0]:
@@ -74,6 +75,9 @@ Ext.define('WebInspect.controller.SettingsControl', {
                 break;
             case titlestr[2]:
                 me.onVersionSet();
+                break;
+            case titlestr[3]:
+                me.onUpdateSet();
                 break;
         }
     },
@@ -143,6 +147,18 @@ Ext.define('WebInspect.controller.SettingsControl', {
 //
 //        me.getPushsetting().onCheckChange('notice', me.getNoticecheck(), newValue);
 //    },
+
+    onUpdateSet: function(){
+        var me = this;
+
+        me.update = me.getUpdate();
+        if(!me.update){
+            me.update = Ext.create('WebInspect.view.settings.Update');
+        }
+        me.getInfofunction().hide();
+        me.update.onDataSet();
+        me.getInfo().push(me.update);
+    },
 
     onQuitSystemTap: function(){
         var me = this;

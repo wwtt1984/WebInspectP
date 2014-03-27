@@ -1,4 +1,4 @@
-cordova.define("com.jpush.jpush.JPush.jpush", function(require, exports, module) { var JPush = function () {
+cordova.define("com.jpush.jpush.JPush.jpush", function(require, exports, module) {var JPush = function () {
     this.noticeData = null;
     this.noticeCallBack = function (noticeData) {
         console.log(noticeData);
@@ -133,5 +133,4 @@ JPush.prototype.setNoticeCallBack = function (noticeCallBack) {
 };
 
 module.exports = (new JPush());
-
 });

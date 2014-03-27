@@ -121,7 +121,9 @@ Ext.define('WebInspect.controller.NewsControl', {
 
     //查看“详细信息”中的图片后，返回至“详细信息”页面
     onNewsBackTap: function(){
-        this.getInfo().onViewHide();
+        var me = this;
+        me.getInfo().onViewHide();
+
     }
 
 })

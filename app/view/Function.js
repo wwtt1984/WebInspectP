@@ -19,6 +19,7 @@ Ext.define('WebInspect.view.Function', {
             },
             {
             	xtype: 'carousel',
+                cls: 'fun-carousel',
 
             	style: 'background: #ddd;',
             	items:[

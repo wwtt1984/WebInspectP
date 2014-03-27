@@ -209,22 +209,22 @@
 
 /******************************************/
 /*.my-carousel-item{background:url(images/loading.png) no-repeat center center}*/
-@media screen and (orientation: portrait){.my-carousel-item-img{background-size:100% auto}}
-@media screen and (orientation: landscape){.my-carousel-item-img{background-size:auto 100%}}
-.x-portrait .my-carousel-item-img{
+@media screen and (orientation: portrait){.fun-carousel .my-carousel-item-img{background-size:100% auto}}
+@media screen and (orientation: landscape){.fun-carousel .my-carousel-item-img{background-size:auto 100%}}
+.x-portrait .fun-carousel .my-carousel-item-img{
     background-size:100% auto;
     height: 100%;
 }
-.carousel-item-panel{
+.fun-carousel .carousel-item-panel{
     height: 10%;
     margin-top: -20%;
     text-align: center;
     color: #fff;
 }
-.x-landscape .my-carousel-item-img{background-size:auto 100%}
-.my-carousel-item-img{background-position:center center}
-.x-carousel-indicator>*{background-color:orange !important;opacity:0.4}
-.x-carousel-indicator>.x-carousel-indicator-active{opacity:1}
+.x-landscape .fun-carousel .my-carousel-item-img{background-size:auto 100%}
+.fun-carousel .my-carousel-item-img{background-position:center center}
+.fun-carousel .x-carousel-indicator>*{background-color:orange !important;opacity:0.4}
+.fun-carousel .x-carousel-indicator>.x-carousel-indicator-active{opacity:1}
 
 /*****************************************/
 /*.list-item .img-container{
@@ -433,3 +433,56 @@
     background: #fff;
 }
 
+/***********carousel样式************/
+.mycarousel{
+    background: #fff;
+}
+.mycarousel .x-carousel-inner {
+    position: absolute;
+    margin-top: 2em;
+    /*margin-top: 2em;*/
+}
+.mycarousel .x-carousel-indicator-horizontal{
+    width: 100%;
+    top: 0;
+    height: 2em;
+    display: inline-block;
+}
+
+.mycarousel .x-carousel-indicator span {
+    background: #ccc;
+
+    /*width: 50%;*/
+    float: left;
+    height: 2em;
+    line-height: 2em;
+    /*padding: 5px 10px;*/
+    top: 0;
+    text-align: center;
+    display: block;
+    background-color: #eee;
+
+    margin: 0;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+.mycarousel .x-carousel-indicator-dark span.x-carousel-indicator-active {
+    color: blue;
+    border-bottom: 2px blue solid;
+}
+
+/***************标识拍照图片显示样式***********************/
+.x-content .x-body .x-innerhtml{padding:1em;text-align:center}
+.x-phone .day{font-size:87%}
+.day{display:inline-block;width:80px;height:80px;padding:0;margin:5px;border:1px solid #ccc;}
+.date{font-size:.8em}
+.icon img{margin:0;width:78px;height:78px;}
+.temp{margin-top:.2em;display:block;font-size:2.2em;line-height:.5em}
+.temp_low{display:inline;font-size:.5em}
+.x-content{background:#fff}
+.day{text-align:center;background-color:#f9f9f9;color:rgba(0,0,0,0.6);text-shadow:#fff 0 1px 0;-webkit-border-radius:15px;-moz-border-radius:15px;-ms-border-radius:15px;-o-border-radius:15px;border-radius:15px;-webkit-box-shadow:inset 0 1px 1px #888;-moz-box-shadow:inset 0 1px 1px #888;box-shadow:inset 0 1px 1px #888}
+.icon img{-webkit-border-radius:15px;-moz-border-radius:15px;-ms-border-radius:15px;-o-border-radius:15px;border-radius:15px}
+.temp_low{color:rgba(30,30,30,0.5)}

@@ -6,6 +6,8 @@ Ext.define('WebInspect.view.Info', {
     ],
     config: {
 
+        itemId: 'info',
+
     	navigationBar: {
     		ui: 'light',
             items: [
@@ -37,8 +39,25 @@ Ext.define('WebInspect.view.Info', {
     },
 
     onViewHide: function(){
-
         this.view.hide();
         this.view.destroy();
+    },
+
+    onPhotoShow: function(id, index){
+        this.view = this.down('newsimg');
+        if(!this.view){
+            this.view = Ext.create('WebInspect.view.news.NewsImg');
+        }
+
+        this.view.onPhotoDataSet(id, index);
+
+        if (!this.view.getParent()) {
+            Ext.Viewport.add(this.view);
+        }
+        this.view.show();
+    },
+
+    onPhotoDelete: function(){
+        this.view.onPhotoDelete();
     }
 });

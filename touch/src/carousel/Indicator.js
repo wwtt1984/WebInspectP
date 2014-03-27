@@ -55,7 +55,17 @@ Ext.define('Ext.carousel.Indicator', {
         }
     },
 
+    addIndicatorTiTle: function(title, width) {
+
+        this.indicators.push(this.element.createChild({
+            tag: 'span',
+            html: title,
+            style: width
+        }));
+    },
+
     addIndicator: function() {
+
         this.indicators.push(this.element.createChild({
             tag: 'span'
         }));
@@ -91,18 +101,40 @@ Ext.define('Ext.carousel.Indicator', {
 
     // @private
     onTap: function(e) {
+
         var touch = e.touch,
             box = this.element.getPageBox(),
-            centerX = box.left + (box.width / 2),
-            centerY = box.top + (box.height / 2),
+            x = box.width,
+//            y = box.height,
             direction = this.getDirection();
+//        var touch = e.touch;
+//            box = this.element.getPageBox(),
+//            centerX = box.left + (box.width / 2),
+//            centerY = box.top + (box.height / 2),
+//
+//
+//        if ((direction === 'horizontal' && touch.pageX >= centerX) || (direction === 'vertical' && touch.pageY >= centerY)) {
+//            this.fireEvent('next', this);
+//        }
+//        else {
+//            this.fireEvent('previous', this);
+//        }
+        var carousel = this.getParent(),
+            items = carousel.getItems(),
+            count = items.getCount() - 1,
+            lenX = x/count,
+//            lenY = y/count,
+            index;
 
-        if ((direction === 'horizontal' && touch.pageX >= centerX) || (direction === 'vertical' && touch.pageY >= centerY)) {
-            this.fireEvent('next', this);
-        }
-        else {
-            this.fireEvent('previous', this);
-        }
+//        if (direction === 'horizontal'){
+            index = Math.floor(touch.pageX/lenX);
+//        }
+//        else {
+//            index = Math.floor(touch.pageY/lenY);
+//        }
+
+        this.setActiveIndex(index);
+        carousel.setActiveItem(items.items[index + 1]);
     },
 
     destroy: function() {

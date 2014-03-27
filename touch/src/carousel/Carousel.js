@@ -243,14 +243,39 @@ Ext.define('Ext.carousel.Carousel', {
     },
 
     onItemAdd: function(item, index) {
-        this.callParent(arguments);
 
+        this.callParent(arguments);
         var innerIndex = this.getInnerItems().indexOf(item),
             indicator = this.getIndicator();
 
-        if (indicator && item.isInnerItem()) {
-            indicator.addIndicator();
+        var config = this.config;
+
+        if((innerIndex != -1) && config.items){
+
+            var items = config.items,
+                title = items[innerIndex].mytitle;
+
+            if(title){
+                var length = items.length,
+                    width = "width:" + 100/length + "%";
+                if (indicator && item.isInnerItem()) {
+
+                    indicator.addIndicatorTiTle(title, width);
+                }
+            }
+            else{
+                if(indicator && item.isInnerItem()) {
+
+                    indicator.addIndicator();
+                }
+            }
         }
+        else{
+            if (indicator && item.isInnerItem()) {
+                indicator.addIndicator();
+            }
+        }
+
 
         if (innerIndex <= this.getActiveIndex()) {
             this.refreshActiveIndex();
@@ -492,6 +517,7 @@ Ext.define('Ext.carousel.Carousel', {
      * @chainable
      */
     setOffsetAnimated: function(offset) {
+
         var indicator = this.getIndicator();
 
         if (indicator) {
@@ -570,6 +596,7 @@ Ext.define('Ext.carousel.Carousel', {
     },
 
     refreshActiveItem: function() {
+
         this.doSetActiveItem(this.getActiveItem());
     },
 
@@ -638,6 +665,7 @@ Ext.define('Ext.carousel.Carousel', {
      * @return {Object}
      */
     applyActiveItem: function() {
+
         var activeItem = this.callParent(arguments),
             activeIndex;
 
@@ -652,6 +680,7 @@ Ext.define('Ext.carousel.Carousel', {
     },
 
     doSetActiveItem: function(activeItem) {
+
         var activeIndex = this.getActiveIndex(),
             maxIndex = this.getMaxItemIndex(),
             indicator = this.getIndicator(),
@@ -748,6 +777,7 @@ Ext.define('Ext.carousel.Carousel', {
      * @chainable
      */
     next: function() {
+
         this.setOffset(0);
 
         if (this.activeIndex === this.getMaxItemIndex()) {
@@ -765,6 +795,7 @@ Ext.define('Ext.carousel.Carousel', {
      * @chainable
      */
     previous: function() {
+
         this.setOffset(0);
 
         if (this.activeIndex === 0) {
