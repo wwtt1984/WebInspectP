@@ -534,6 +534,10 @@ Ext.define('WebInspect.controller.MainControl',{
                 me.onInfoFunctionBackTap();
                 break;
 
+            case 'markmain':
+                me.onInfoFunctionBackTap();
+                break;
+
             case 'pushsetting':
                 me.getInfo().pop();
                 me.getInfofunction().show();
@@ -716,7 +720,9 @@ Ext.define('WebInspect.controller.MainControl',{
             t: 'GetFunctionZt',
             results: WebInspect.app.user.sid + '$jsonp'
         });
-        store.load();
+        store.load(function(records, operation, success) {
+            store.add({id: 11, sid: WebInspect.app.user.sid, title: '海塘标识', name: 'mark', url: 'resources/images/function/setting.png'});
+        });
     },
 
     //加载“天气预报”信息，当num=0时，表示是“推送信息”， 当num=1时，表示是：应用程序正常启动
@@ -746,7 +752,7 @@ Ext.define('WebInspect.controller.MainControl',{
 
         me.getMain().add(me.info);
 
-        var titlestr = ['news', 'info', 'notice', 'contacts', 'tide', 'water', 'rain', 'flow', 'project', 'inspect', 'setting'];
+        var titlestr = ['news', 'info', 'notice', 'contacts', 'tide', 'water', 'rain', 'flow', 'project', 'inspect', 'setting', 'mark'];
 
         switch(record.data.name){
             case titlestr[0]:
@@ -784,6 +790,9 @@ Ext.define('WebInspect.controller.MainControl',{
             case titlestr[10]:
                 me.getApplication().getController('SettingsControl').onSettingInitialize();
                 break;
+
+            case titlestr[11]:
+                me.getApplication().getController('MarkControl').onMarkInitialize();
         }
         me.getMain().setActiveItem(me.getInfo());
     },
@@ -791,6 +800,9 @@ Ext.define('WebInspect.controller.MainControl',{
     //监听info页面的“主页面”按钮，点击后，返回“主功能”页面
     onInfoFunctionBackTap: function(){
         this.getMain().setActiveItem(this.getFunctionmain());
+        if(this.getInfo().getActiveItem().xtype == 'markmain'){
+            Ext.ComponentQuery.query('#photo')[0].clearImgListeners();
+        }
         this.getInfo().destroy();
     }
 });
