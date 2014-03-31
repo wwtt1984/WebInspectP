@@ -29,7 +29,7 @@
       <file leaf-file-name="MainControl.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controller/MainControl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="790" column="55" selection-start="25897" selection-end="25901" vertical-scroll-proportion="0.33333334" vertical-offset="14848" max-vertical-offset="15371">
+            <state line="496" column="47" selection-start="16046" selection-end="16046" vertical-scroll-proportion="0.5650558" vertical-offset="9120" max-vertical-offset="15466">
               <folding />
             </state>
           </provider>
@@ -38,7 +38,7 @@
       <file leaf-file-name="Info.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/view/Info.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="37" selection-start="1149" selection-end="1149" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1311">
+            <state line="53" column="37" selection-start="1149" selection-end="1149" vertical-scroll-proportion="0.0" vertical-offset="1007" max-vertical-offset="1311">
               <folding />
             </state>
           </provider>
@@ -47,7 +47,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="480" selection-end="480" vertical-scroll-proportion="-6.107143" vertical-offset="114" max-vertical-offset="1216">
+            <state line="15" column="0" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="1216">
               <folding />
             </state>
           </provider>
@@ -56,7 +56,7 @@
       <file leaf-file-name="MarkList.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/view/mark/MarkList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1501">
+            <state line="17" column="0" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="1501">
               <folding>
                 <marker date="1395913014994" expanded="false" signature="1170:1183" placeholder="..." />
               </folding>
@@ -67,7 +67,7 @@
       <file leaf-file-name="MarkMain.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/view/mark/MarkMain.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="296" selection-end="296" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
+            <state line="16" column="0" selection-start="296" selection-end="296" vertical-scroll-proportion="0.0" vertical-offset="304" max-vertical-offset="646">
               <folding />
             </state>
           </provider>
@@ -76,7 +76,7 @@
       <file leaf-file-name="Photo.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/view/mark/Photo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="45" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2660">
+            <state line="18" column="45" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="2660">
               <folding />
             </state>
           </provider>
@@ -85,10 +85,8 @@
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="13" selection-start="2161" selection-end="2165" vertical-scroll-proportion="35.52" vertical-offset="3315" max-vertical-offset="4313">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state line="81" column="13" selection-start="2161" selection-end="2165" vertical-scroll-proportion="0.0" vertical-offset="3315" max-vertical-offset="4313">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -96,7 +94,7 @@
       <file leaf-file-name="FunctionStore.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/store/FunctionStore.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="84" selection-start="1119" selection-end="1119" vertical-scroll-proportion="-7.02" vertical-offset="29" max-vertical-offset="589">
+            <state line="20" column="84" selection-start="1119" selection-end="1119" vertical-scroll-proportion="0.0" vertical-offset="29" max-vertical-offset="589">
               <folding />
             </state>
           </provider>
@@ -105,7 +103,7 @@
       <file leaf-file-name="NewsControl.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controller/NewsControl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="34" selection-start="1294" selection-end="1294" vertical-scroll-proportion="0.0" vertical-offset="684" max-vertical-offset="2546">
+            <state line="51" column="34" selection-start="1294" selection-end="1294" vertical-scroll-proportion="0.0" vertical-offset="969" max-vertical-offset="2546">
               <folding />
             </state>
           </provider>
@@ -192,6 +190,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -258,7 +257,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -276,16 +274,16 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../sencha touch 2.2 project/WebSecond" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="132" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="910" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="910" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="910" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="132" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="132" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -294,14 +292,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -312,15 +302,23 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -484,14 +482,17 @@
       <created>1395914451865</created>
       <updated>1395914451865</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Initial commit&#10;">
+      <created>1395914874104</created>
+      <updated>1395914874104</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24342105" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283082" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -506,6 +507,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5025126" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24342105" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -534,57 +536,40 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/store/MainStore.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="586">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="586" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/store/NewsStore.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="586">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="586" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/news/News.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="8" selection-start="860" selection-end="860" vertical-scroll-proportion="0.0" vertical-offset="464" max-vertical-offset="1539">
-          <folding />
-        </state>
+        <state line="40" column="8" selection-start="860" selection-end="860" vertical-scroll-proportion="0.0" vertical-offset="464" max-vertical-offset="1539" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/news/NewsDetail.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="22" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1615">
-          <folding />
-        </state>
+        <state line="10" column="22" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1615" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/mark/Mark.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1501">
-          <folding>
-            <marker date="1395913014993" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1395913014993" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1395913014993" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1395913014993" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
+        <state line="10" column="0" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1501" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/store/FunctionStore.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="84" selection-start="1119" selection-end="1119" vertical-scroll-proportion="-7.02" vertical-offset="29" max-vertical-offset="589">
+        <state line="20" column="84" selection-start="1119" selection-end="1119" vertical-scroll-proportion="0.0" vertical-offset="29" max-vertical-offset="589">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="13" selection-start="2161" selection-end="2165" vertical-scroll-proportion="35.52" vertical-offset="3315" max-vertical-offset="4313">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state line="81" column="13" selection-start="2161" selection-end="2165" vertical-scroll-proportion="0.0" vertical-offset="3315" max-vertical-offset="4313">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -630,14 +615,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/touch/src/carousel/Carousel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="37" selection-start="641" selection-end="641" vertical-scroll-proportion="-8.475837" vertical-offset="4845" max-vertical-offset="16853">
-          <folding />
-        </state>
+        <state line="15" column="37" selection-start="641" selection-end="641" vertical-scroll-proportion="-8.475837" vertical-offset="4845" max-vertical-offset="16853" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="480" selection-end="480" vertical-scroll-proportion="-6.107143" vertical-offset="114" max-vertical-offset="1216">
+        <state line="15" column="0" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="1216">
           <folding />
         </state>
       </provider>
@@ -651,7 +634,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controller/MainControl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="790" column="55" selection-start="25897" selection-end="25901" vertical-scroll-proportion="0.33333334" vertical-offset="14848" max-vertical-offset="15371">
+        <state line="496" column="47" selection-start="16046" selection-end="16046" vertical-scroll-proportion="0.5650558" vertical-offset="9120" max-vertical-offset="15466">
           <folding />
         </state>
       </provider>

@@ -490,7 +490,12 @@ Ext.define('WebInspect.controller.MainControl',{
 
         switch(active.xtype){
             case 'news':
-                me.onInfoFunctionBackTap();
+                if((me.getInfo().view) && (me.getInfo().view.getHidden() == false)){
+                    me.getInfo().onViewHide();
+                }
+                else{
+                    me.onInfoFunctionBackTap();
+                }
                 break;
 
             case 'task':
