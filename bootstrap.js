@@ -750,6 +750,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.controller.ContactControl": [],
   "WebInspect.controller.FlowControl": [],
   "WebInspect.controller.MainControl": [],
+  "WebInspect.controller.MarkControl": [],
   "WebInspect.controller.NewsControl": [],
   "WebInspect.controller.NoticeControl": [],
   "WebInspect.controller.ProjectControl": [],
@@ -762,9 +763,11 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.model.FunctionModel": [],
   "WebInspect.model.LevelModel": [],
   "WebInspect.model.MainModel": [],
+  "WebInspect.model.MarkModel": [],
   "WebInspect.model.MessageModel": [],
   "WebInspect.model.NewsDetailModel": [],
   "WebInspect.model.NewsModel": [],
+  "WebInspect.model.PhotoModel": [],
   "WebInspect.model.ProjectElementModel": [],
   "WebInspect.model.ProjectFirstModel": [],
   "WebInspect.model.ProjectSecondModel": [],
@@ -775,6 +778,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.model.TaskModel": [],
   "WebInspect.model.TestModel": [],
   "WebInspect.model.TideModel": [],
+  "WebInspect.model.UpdateModel": [],
   "WebInspect.model.UserModel": [],
   "WebInspect.model.VersionModel": [],
   "WebInspect.model.WaterDetailModel": [],
@@ -787,10 +791,12 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.store.InfoStore": [],
   "WebInspect.store.InspectStore": [],
   "WebInspect.store.MainStore": [],
+  "WebInspect.store.MarkStore": [],
   "WebInspect.store.MessageStore": [],
   "WebInspect.store.NewsDetailStore": [],
   "WebInspect.store.NewsStore": [],
   "WebInspect.store.NoticeStore": [],
+  "WebInspect.store.PhotoStore": [],
   "WebInspect.store.ProjectElementStore": [],
   "WebInspect.store.ProjectFirstStore": [],
   "WebInspect.store.ProjectMainStore": [],
@@ -802,6 +808,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.store.TaskStore": [],
   "WebInspect.store.TestStore": [],
   "WebInspect.store.TideStore": [],
+  "WebInspect.store.UpdateStore": [],
   "WebInspect.store.UserStore": [],
   "WebInspect.store.VersionStore": [],
   "WebInspect.store.WaterDetailStore": [],
@@ -822,6 +829,10 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.view.list.MessageItem": [],
   "WebInspect.view.list.Task": [],
   "WebInspect.view.list.TaskDetail": [],
+  "WebInspect.view.mark.Mark": [],
+  "WebInspect.view.mark.MarkList": [],
+  "WebInspect.view.mark.MarkMain": [],
+  "WebInspect.view.mark.Photo": [],
   "WebInspect.view.news.News": [],
   "WebInspect.view.news.NewsDetail": [],
   "WebInspect.view.news.NewsImg": [],
@@ -835,6 +846,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.view.settings.Module": [],
   "WebInspect.view.settings.PushSetting": [],
   "WebInspect.view.settings.Setting": [],
+  "WebInspect.view.settings.Update": [],
   "WebInspect.view.settings.Version": [],
   "WebInspect.view.tide.Tide": [],
   "WebInspect.view.tide.TidePop": [],
@@ -1786,6 +1798,7 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.controller.ContactControl": [],
   "WebInspect.controller.FlowControl": [],
   "WebInspect.controller.MainControl": [],
+  "WebInspect.controller.MarkControl": [],
   "WebInspect.controller.NewsControl": [],
   "WebInspect.controller.NoticeControl": [],
   "WebInspect.controller.ProjectControl": [],
@@ -1798,9 +1811,11 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.model.FunctionModel": [],
   "WebInspect.model.LevelModel": [],
   "WebInspect.model.MainModel": [],
+  "WebInspect.model.MarkModel": [],
   "WebInspect.model.MessageModel": [],
   "WebInspect.model.NewsDetailModel": [],
   "WebInspect.model.NewsModel": [],
+  "WebInspect.model.PhotoModel": [],
   "WebInspect.model.ProjectElementModel": [],
   "WebInspect.model.ProjectFirstModel": [],
   "WebInspect.model.ProjectSecondModel": [],
@@ -1811,6 +1826,7 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.model.TaskModel": [],
   "WebInspect.model.TestModel": [],
   "WebInspect.model.TideModel": [],
+  "WebInspect.model.UpdateModel": [],
   "WebInspect.model.UserModel": [],
   "WebInspect.model.VersionModel": [],
   "WebInspect.model.WaterDetailModel": [],
@@ -1823,10 +1839,12 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.store.InfoStore": [],
   "WebInspect.store.InspectStore": [],
   "WebInspect.store.MainStore": [],
+  "WebInspect.store.MarkStore": [],
   "WebInspect.store.MessageStore": [],
   "WebInspect.store.NewsDetailStore": [],
   "WebInspect.store.NewsStore": [],
   "WebInspect.store.NoticeStore": [],
+  "WebInspect.store.PhotoStore": [],
   "WebInspect.store.ProjectElementStore": [],
   "WebInspect.store.ProjectFirstStore": [],
   "WebInspect.store.ProjectMainStore": [],
@@ -1838,6 +1856,7 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.store.TaskStore": [],
   "WebInspect.store.TestStore": [],
   "WebInspect.store.TideStore": [],
+  "WebInspect.store.UpdateStore": [],
   "WebInspect.store.UserStore": [],
   "WebInspect.store.VersionStore": [],
   "WebInspect.store.WaterDetailStore": [],
@@ -1888,6 +1907,18 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.view.list.TaskDetail": [
     "widget.taskdetail"
   ],
+  "WebInspect.view.mark.Mark": [
+    "widget.mark"
+  ],
+  "WebInspect.view.mark.MarkList": [
+    "widget.marklist"
+  ],
+  "WebInspect.view.mark.MarkMain": [
+    "widget.markmain"
+  ],
+  "WebInspect.view.mark.Photo": [
+    "widget.photo"
+  ],
   "WebInspect.view.news.News": [
     "widget.news"
   ],
@@ -1926,6 +1957,9 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "WebInspect.view.settings.Setting": [
     "widget.setting"
+  ],
+  "WebInspect.view.settings.Update": [
+    "widget.update"
   ],
   "WebInspect.view.settings.Version": [
     "widget.version"

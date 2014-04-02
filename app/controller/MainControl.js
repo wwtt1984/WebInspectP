@@ -630,7 +630,7 @@ Ext.define('WebInspect.controller.MainControl',{
         WebInspect.app.user.password = Ext.getCmp('password').getValue();
         me.onVpnLogin(1, ''); /////成功写入开始执行VPN认证
         plugins.jPush.setAlias(WebInspect.app.user.sid,function(success){});//////推送标识，以用户名区分
-       // me.onUserCheck(1,''); ////////测试的时候有
+//       me.onUserCheck(1,''); ////////测试的时候有
     },
 
     onUserWriteJson: function(){
@@ -722,7 +722,7 @@ Ext.define('WebInspect.controller.MainControl',{
             results: WebInspect.app.user.sid + '$jsonp'
         });
         store.load(function(records, operation, success) {
-            store.add({id: 11, sid: WebInspect.app.user.sid, title: '海塘标识', name: 'mark', url: 'resources/images/function/setting.png'});
+            store.add({id: 11, sid: WebInspect.app.user.sid, title: '海塘标识', name: 'mark', url: 'resources/images/function/mark.png'});
         });
     },
 
