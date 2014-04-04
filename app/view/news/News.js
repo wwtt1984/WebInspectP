@@ -38,7 +38,7 @@ Ext.define('WebInspect.view.news.News', {
             lastUpdatedText: '刷新时间:&nbsp;'
         }],
         
-        emptyText: '<p class="no-searches">没有符合要求的记录</p>',
+        //emptyText: '<p class="no-searches">没有符合要求的记录</p>',
 
         itemTpl: Ext.create('Ext.XTemplate',
             '<div class="list-item">',

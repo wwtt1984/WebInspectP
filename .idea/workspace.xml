@@ -2,7 +2,82 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97eeba59-43ed-481c-b450-8b573637ea50" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/bin/classes.dex" afterPath="$PROJECT_DIR$/phonegap/platforms/android/bin/classes.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes.jar" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/bin/webInspect-debug-unaligned.apk" afterPath="$PROJECT_DIR$/phonegap/platforms/android/bin/webInspect-debug-unaligned.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/bin/webInspect-debug.apk" afterPath="$PROJECT_DIR$/phonegap/platforms/android/bin/webInspect-debug.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/bin/webInspect.ap_" afterPath="$PROJECT_DIR$/phonegap/platforms/android/bin/webInspect.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/AndroidManifest.xml" afterPath="$PROJECT_DIR$/phonegap/platforms/android/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/bin/AndroidManifest.xml" afterPath="$PROJECT_DIR$/phonegap/platforms/android/bin/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/DirectoryEntry.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/DirectoryEntry.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/DirectoryEntry.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/DirectoryEntry.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/DirectoryReader.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/DirectoryReader.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/DirectoryReader.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/DirectoryReader.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/Entry.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/Entry.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/Entry.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/Entry.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/File.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/File.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/File.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/File.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/FileEntry.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/FileEntry.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/FileEntry.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/FileEntry.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/FileError.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/FileError.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/FileError.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/FileError.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/FileReader.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/FileReader.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/FileReader.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/FileReader.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/FileSystem.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/FileSystem.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/FileSystem.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/FileSystem.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file-transfer/www/FileTransfer.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file-transfer/www/FileTransfer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file-transfer/www/FileTransfer.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file-transfer/www/FileTransfer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file-transfer/www/FileTransferError.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file-transfer/www/FileTransferError.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file-transfer/www/FileTransferError.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file-transfer/www/FileTransferError.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/FileUploadOptions.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/FileUploadOptions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/FileUploadOptions.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/FileUploadOptions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/FileUploadResult.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/FileUploadResult.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/FileUploadResult.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/FileUploadResult.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/FileWriter.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/FileWriter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/FileWriter.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/FileWriter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/Flags.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/Flags.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/Flags.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/Flags.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/LocalFileSystem.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/LocalFileSystem.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/LocalFileSystem.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/LocalFileSystem.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/MainControl.js" afterPath="$PROJECT_DIR$/app/controller/MainControl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/Metadata.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/Metadata.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/Metadata.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/Metadata.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/news/News.js" afterPath="$PROJECT_DIR$/app/view/news/News.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/NewsControl.js" afterPath="$PROJECT_DIR$/app/controller/NewsControl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/news/NewsDetail.js" afterPath="$PROJECT_DIR$/app/view/news/NewsDetail.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/mark/Photo.js" afterPath="$PROJECT_DIR$/app/view/mark/Photo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/ProgressEvent.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/ProgressEvent.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/ProgressEvent.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/ProgressEvent.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/Title.js" afterPath="$PROJECT_DIR$/app/view/Title.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/UserModel.js" afterPath="$PROJECT_DIR$/app/model/UserModel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/plugins/android.json" afterPath="$PROJECT_DIR$/phonegap/plugins/android.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/app.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/www/app.js" afterPath="$PROJECT_DIR$/phonegap/www/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap.js" afterPath="$PROJECT_DIR$/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/build.prop" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/build.prop" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/bin/build.prop" afterPath="$PROJECT_DIR$/phonegap/platforms/android/bin/build.prop" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/.cordova/config.json" afterPath="$PROJECT_DIR$/phonegap/.cordova/config.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.xml" afterPath="$PROJECT_DIR$/config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/config.xml" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/res/xml/config.xml" afterPath="$PROJECT_DIR$/phonegap/platforms/android/res/xml/config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/www/config.xml" afterPath="$PROJECT_DIR$/phonegap/www/config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/cordova_plugins.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/cordova_plugins.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/cordova_plugins.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/cordova_plugins.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/index.html" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/www/index.html" afterPath="$PROJECT_DIR$/phonegap/www/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/com.install.install.Install/www/install.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/com.install.install.Install/www/install.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/com.install.install.Install/www/install.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/com.install.install.Install/www/install.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/com.jpush.jpush.JPush/www/jPush.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/com.jpush.jpush.JPush/www/jPush.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/com.jpush.jpush.JPush/www/jPush.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/com.jpush.jpush.JPush/www/jPush.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/requestFileSystem.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/requestFileSystem.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/requestFileSystem.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/requestFileSystem.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/resolveLocalFileSystemURI.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/resolveLocalFileSystemURI.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/resolveLocalFileSystemURI.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/resolveLocalFileSystemURI.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/com.toast.toast.Toast/www/toast.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/com.toast.toast.Toast/www/toast.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/com.toast.toast.Toast/www/toast.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/com.toast.toast.Toast/www/toast.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/bin/webInspect.ap_.d" afterPath="$PROJECT_DIR$/phonegap/platforms/android/bin/webInspect.ap_.d" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WebInspect.iws" />
@@ -29,94 +104,8 @@
       <file leaf-file-name="MainControl.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controller/MainControl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="496" column="47" selection-start="16046" selection-end="16046" vertical-scroll-proportion="0.5650558" vertical-offset="9120" max-vertical-offset="15466">
+            <state line="116" column="0" selection-start="3683" selection-end="3683" vertical-scroll-proportion="0.8983957" vertical-offset="1700" max-vertical-offset="16682">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Info.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/view/Info.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="37" selection-start="1149" selection-end="1149" vertical-scroll-proportion="0.0" vertical-offset="1007" max-vertical-offset="1311">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="1216">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MarkList.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/view/mark/MarkList.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="1501">
-              <folding>
-                <marker date="1395913014994" expanded="false" signature="1170:1183" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MarkMain.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/view/mark/MarkMain.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="296" selection-end="296" vertical-scroll-proportion="0.0" vertical-offset="304" max-vertical-offset="646">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Photo.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/view/mark/Photo.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="45" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="2660">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="13" selection-start="2161" selection-end="2165" vertical-scroll-proportion="0.0" vertical-offset="3315" max-vertical-offset="4313">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FunctionStore.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/store/FunctionStore.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="84" selection-start="1119" selection-end="1119" vertical-scroll-proportion="0.0" vertical-offset="29" max-vertical-offset="589">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewsControl.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controller/NewsControl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="34" selection-start="1294" selection-end="1294" vertical-scroll-proportion="0.0" vertical-offset="969" max-vertical-offset="2546">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Function.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/view/Function.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="44" selection-start="1959" selection-end="1959" vertical-scroll-proportion="0.0" vertical-offset="969" max-vertical-offset="1539">
-              <folding>
-                <marker date="1395913014985" expanded="false" signature="1063:1144" placeholder="..." />
-                <marker date="1395913014985" expanded="false" signature="2177:2205" placeholder="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -139,6 +128,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/app/view/project/ProjectMain.js" />
+        <option value="$PROJECT_DIR$/app/view/project/ProjectElement.js" />
         <option value="$PROJECT_DIR$/app/view/project/ProjectCard.js" />
         <option value="$PROJECT_DIR$/app/store/FunctionStore.js" />
         <option value="$PROJECT_DIR$/app/model/FunctionModel.js" />
@@ -148,12 +139,26 @@
         <option value="$PROJECT_DIR$/app/view/settings/PushSetting.js" />
         <option value="$PROJECT_DIR$/app/view/settings/Module.js" />
         <option value="$PROJECT_DIR$/app/store/InspectStore.js" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/phonegap/platforms/android/local.properties" />
         <option value="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/local.properties" />
-        <option value="$PROJECT_DIR$/app/view/news/News.js" />
-        <option value="$PROJECT_DIR$/app/controller/NewsControl.js" />
         <option value="$PROJECT_DIR$/../../WebInspect/app/controller/NewsControl.js" />
+        <option value="$PROJECT_DIR$/app/controller/NewsControl.js" />
+        <option value="$PROJECT_DIR$/app/view/news/NewsDetail.js" />
+        <option value="$PROJECT_DIR$/app/view/news/News.js" />
+        <option value="$PROJECT_DIR$/config.xml" />
+        <option value="$PROJECT_DIR$/app/controller/MainControl - 副本.js" />
+        <option value="$PROJECT_DIR$/app/view/Login.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/app/view/Title.js" />
+        <option value="$PROJECT_DIR$/app/lib/SkJsonp.js" />
+        <option value="$PROJECT_DIR$/app/lib/SkProxy.js" />
+        <option value="$PROJECT_DIR$/app/model/UserModel.js" />
+        <option value="$PROJECT_DIR$/app/view/mark/Photo.js" />
+        <option value="$PROJECT_DIR$/phonegap/platforms/android/src/com/mycompany/webInspect/webInspect.java" />
+        <option value="$PROJECT_DIR$/phonegap/platforms/android/src/com/vpn/vpn/VpnPlugin.java" />
+        <option value="D:/扩展代码/cordova-plugin-vpn-master/src/android/VpnPlugin.java" />
+        <option value="D:/扩展代码/cordova-plugin-vpn-master/www/vpn.js" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/app/controller/MainControl.js" />
       </list>
     </option>
@@ -190,7 +195,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -219,7 +223,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="touch" />
+              <option name="myItemId" value="phonegap" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -233,7 +237,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="phonegap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -247,16 +255,163 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="phonegap" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.vpn.vpn.Vpn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phonegap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.vpn.vpn.Vpn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phonegap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="platforms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phonegap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="platforms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phonegap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="platforms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vpn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vpn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phonegap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="platforms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -292,6 +447,14 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -302,23 +465,15 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -479,25 +634,21 @@
       <updated>1395668517880</updated>
     </task>
     <task id="LOCAL-00032" summary="Initial commit&#10;">
-      <created>1395914451865</created>
-      <updated>1395914451865</updated>
+      <created>1395825566329</created>
+      <updated>1395825566330</updated>
     </task>
-    <task id="LOCAL-00033" summary="Initial commit&#10;">
-      <created>1395914874104</created>
-      <updated>1395914874104</updated>
-    </task>
-    <option name="localTasksCounter" value="34" />
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283082" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32463294" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24944155" sideWeight="0.6700855" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21072227" sideWeight="0.8803419" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19330855" sideWeight="0.8803419" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329653" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -512,6 +663,26 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32463294" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5025126" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329653" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45714286" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24342105" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24944155" sideWeight="0.6700855" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1724907" sideWeight="0.8803419" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USERS">
@@ -534,6 +705,116 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/view/Login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="13" selection-start="1145" selection-end="1701" vertical-scroll-proportion="0.0" vertical-offset="399" max-vertical-offset="1501" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/store/SettingStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="10" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0" vertical-offset="190" max-vertical-offset="380" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/settings/PushSetting.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="35" selection-start="2095" selection-end="2095" vertical-scroll-proportion="0.0" vertical-offset="1307" max-vertical-offset="2394" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/store/FunctionStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="34" selection-start="1067" selection-end="1069" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="589" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/settings/Version.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="13" selection-start="0" selection-end="1750" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1159" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/tide/Tide.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="36" selection-start="257" selection-end="257" vertical-scroll-proportion="0.45910782" vertical-offset="0" max-vertical-offset="1634" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/store/InspectStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="44" selection-start="135" selection-end="135" vertical-scroll-proportion="0.13333334" vertical-offset="0" max-vertical-offset="570" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controller/SettingsControl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="119" column="79" selection-start="3174" selection-end="3174" vertical-scroll-proportion="0.1" vertical-offset="2204" max-vertical-offset="2774" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/store/SettingStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="10" selection-start="317" selection-end="317" vertical-scroll-proportion="0.33333334" vertical-offset="0" max-vertical-offset="570" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/settings/PushSetting.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="35" selection-start="2095" selection-end="2095" vertical-scroll-proportion="0.47368422" vertical-offset="1307" max-vertical-offset="2394" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/store/FunctionStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="34" selection-start="1067" selection-end="1069" vertical-scroll-proportion="0.6333333" vertical-offset="19" max-vertical-offset="589" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/local.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="423" selection-end="423" vertical-scroll-proportion="0.34862384" vertical-offset="0" max-vertical-offset="545" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phonegap/platforms/android/local.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="37" selection-start="393" selection-end="422" vertical-scroll-proportion="0.31376147" vertical-offset="0" max-vertical-offset="545" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phonegap/platforms/android/project.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="602" selection-end="602" vertical-scroll-proportion="0.5229358" vertical-offset="0" max-vertical-offset="545" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controller/ContactControl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="192" column="5" selection-start="5133" selection-end="5133" vertical-scroll-proportion="0.0" vertical-offset="3211" max-vertical-offset="3781" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/settings/Module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="151" column="50" selection-start="3997" selection-end="3997" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3610" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/store/NoticeStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="3" selection-start="258" selection-end="258" vertical-scroll-proportion="0.4215017" vertical-offset="0" max-vertical-offset="586" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/store/InfoStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="3" selection-start="256" selection-end="256" vertical-scroll-proportion="0.4215017" vertical-offset="0" max-vertical-offset="586" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/NewsModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="586" />
+      </provider>
+    </entry>
+    <entry file="file://D:/soft/TouchSDK/examples/kiva/app/view/LoansList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="0" selection-start="606" selection-end="606" vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="912" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controller/NoticeControl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-4.15529" vertical-offset="2435" max-vertical-offset="3021" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../WebInspect/app/controller/NewsControl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="124" column="36" selection-start="3541" selection-end="3541" vertical-scroll-proportion="0.7440273" vertical-offset="1920" max-vertical-offset="2527" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/store/MainStore.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="586" />
@@ -546,95 +827,147 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/news/News.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="8" selection-start="860" selection-end="860" vertical-scroll-proportion="0.0" vertical-offset="464" max-vertical-offset="1539" />
+        <state line="40" column="10" selection-start="862" selection-end="862" vertical-scroll-proportion="0.0" vertical-offset="499" max-vertical-offset="1539" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/news/NewsDetail.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="22" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1615" />
+        <state line="10" column="22" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0" vertical-offset="113" max-vertical-offset="1615" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/mark/Mark.js">
+    <entry file="file://$PROJECT_DIR$/config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1501" />
+        <state line="1" column="55" selection-start="94" selection-end="94" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1083" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/store/FunctionStore.js">
+    <entry file="file://$PROJECT_DIR$/app/view/Login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="84" selection-start="1119" selection-end="1119" vertical-scroll-proportion="0.0" vertical-offset="29" max-vertical-offset="589">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="13" selection-start="2161" selection-end="2165" vertical-scroll-proportion="0.0" vertical-offset="3315" max-vertical-offset="4313">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/mark/MarkList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1501">
-          <folding>
-            <marker date="1395913014994" expanded="false" signature="1170:1183" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/mark/MarkMain.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="296" selection-end="296" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/mark/Photo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="45" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2660">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controller/NewsControl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="34" selection-start="1294" selection-end="1294" vertical-scroll-proportion="0.0" vertical-offset="684" max-vertical-offset="2546">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/Function.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="44" selection-start="1959" selection-end="1959" vertical-scroll-proportion="0.0" vertical-offset="969" max-vertical-offset="1539">
-          <folding>
-            <marker date="1395913014985" expanded="false" signature="1063:1144" placeholder="..." />
-            <marker date="1395913014985" expanded="false" signature="2177:2205" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/touch/src/carousel/Carousel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="37" selection-start="641" selection-end="641" vertical-scroll-proportion="-8.475837" vertical-offset="4845" max-vertical-offset="16853" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="1216">
-          <folding />
-        </state>
+        <state line="36" column="17" selection-start="869" selection-end="869" vertical-scroll-proportion="0.28668943" vertical-offset="516" max-vertical-offset="1501" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/Info.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="37" selection-start="1149" selection-end="1149" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1311">
+        <state line="35" column="25" selection-start="758" selection-end="758" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="950" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/Function.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="13" selection-start="439" selection-end="439" vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="1520" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/Main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="551" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="20" selection-start="1484" selection-end="1484" vertical-scroll-proportion="-0.4215017" vertical-offset="969" max-vertical-offset="3819" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/store/WeatherStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="586" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/WeatherModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="3" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/Title.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="113" selection-start="1516" selection-end="1516" vertical-scroll-proportion="0.0" vertical-offset="111" max-vertical-offset="684" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/SkJsonp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="8" selection-start="191" selection-end="191" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="798" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/SkProxy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="23" selection-start="500" selection-end="500" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="437" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/UserModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="5" selection-start="490" selection-end="490" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="589" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/mark/MarkMain.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="34" selection-start="453" selection-end="453" vertical-scroll-proportion="0.6433447" vertical-offset="60" max-vertical-offset="646" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/mark/MarkList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="32" selection-start="326" selection-end="326" vertical-scroll-proportion="-0.9778157" vertical-offset="915" max-vertical-offset="1501" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/mark/Mark.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="41" selection-start="1308" selection-end="1308" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1501" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/tide/TidePop.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1102" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/mark/Photo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="124" column="6" selection-start="4148" selection-end="4148" vertical-scroll-proportion="0.97098976" vertical-offset="1787" max-vertical-offset="2622" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controller/NewsControl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="38" selection-start="1950" selection-end="1950" vertical-scroll-proportion="1.4829352" vertical-offset="556" max-vertical-offset="2679" />
+      </provider>
+    </entry>
+    <entry file="file://D:/扩展代码/cordova-plugin-vpn-master/src/android/VpnPlugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="266" column="0" selection-start="8203" selection-end="8203" vertical-scroll-proportion="6.6740613" vertical-offset="1143" max-vertical-offset="5168" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phonegap/platforms/android/src/com/mycompany/webInspect/webInspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="17" selection-start="1514" selection-end="1514" vertical-scroll-proportion="0.0" vertical-offset="1466" max-vertical-offset="2128">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/扩展代码/cordova-plugin-vpn-master/www/vpn.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="603" selection-end="603" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phonegap/plugins/com.vpn.vpn.Vpn/www/vpn.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="586">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="432" selection-end="432" vertical-scroll-proportion="0.40860215" vertical-offset="0" max-vertical-offset="558">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phonegap/platforms/android/src/com/vpn/vpn/VpnPlugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.7662116" vertical-offset="1035" max-vertical-offset="5168">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controller/MainControl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="496" column="47" selection-start="16046" selection-end="16046" vertical-scroll-proportion="0.5650558" vertical-offset="9120" max-vertical-offset="15466">
+        <state line="116" column="0" selection-start="3683" selection-end="3683" vertical-scroll-proportion="0.8983957" vertical-offset="1700" max-vertical-offset="16682">
           <folding />
         </state>
       </provider>

@@ -44,12 +44,82 @@ Ext.define('WebInspect.controller.MainControl',{
 
         window.setTimeout(function(){me.checkJpush(me);},100);
         document.addEventListener('deviceready',function(){me.onJpushReady(me);}, false);
+        document.addEventListener("backbutton", me.onBackKeyDown, false);
+        document.addEventListener("offline", me.onOfflineListen, false);///////联机状态判断
+        document.addEventListener("online", me.onOnlineListen, false);///////在线判断
 
         me.onBtnConfirm();
         //android返回键事件监听
-        document.addEventListener("backbutton", me.onBackKeyDown, false);
     },
 
+    onOfflineListen:function(){ ////////////网络离线的时候监听
+
+        //alert("3333");
+    },
+    onOnlineListen:function() ///////////////////有网络在线的时候监听
+    {
+        var me = WebInspect.app.mainthis;
+        if(me.onNetWorkIsON("val") != "WiFi" && me.qgjwifi == "true")
+        {
+
+            alert("1111");
+
+            plugins.Toast.ShowToast("VPN连接中,请稍后...",3000);
+            ////重连VPN
+            plugins.Vpn.VpnLogin(WebInspect.app.user.sid,WebInspect.app.user.password,function(success) {
+
+                if(success == "true")
+                {
+                    plugins.Toast.ShowToast("VPN连接成功!",3000);
+                    me.qgjwifi = "false";
+                }
+                else if(success == "false")
+                {
+                    plugins.Toast.ShowToast("VPN连接超时,请重试!",3000);
+                }
+                else if(success == "initfalse")
+                {
+                    plugins.Toast.ShowToast("VPN初始化失败,请重试!",3000);
+                }
+                else if(success == "error")
+                {
+                    plugins.Toast.ShowToast("用户名或者密码输入有误!",3000);
+                }
+            });
+
+        }
+        else if(me.onNetWorkIsON("val") == "WiFi")
+        {
+
+
+            var gate = ['10.33.21.254','10.33.22.254','10.33.23.254','10.33.24.254','10.33.25.254','10.33.26.254','10.33.27.254','10.33.28.254'
+                ,'10.33.12.254','10.33.13.254','10.33.14.254'
+                ,'10.33.90.254'
+                ,'10.33.31.254','10.33.32.254','10.33.33.254','10.33.34.254','10.33.35.254'];
+            var vpn = "true";
+            ////////////获取网关值///////////////////////////
+            plugins.Vpn.VpnOnWifi("",function(success) {   ///////////////得到网关值
+
+                for(var i = 0;i < gate.length;i++)
+                {
+                    if(success == gate[i])
+                    {
+                        vpn = "false";
+                        break;
+                    }
+                }
+            });
+
+            if(vpn == "false")
+            {
+                plugins.Vpn.VpnOFF();//关闭VPN
+            }
+
+            alert(vpn);
+
+        }
+
+    },
 
     onJpushReady:function(me){
 
@@ -204,9 +274,9 @@ Ext.define('WebInspect.controller.MainControl',{
 
     },
 
-    onNetWorkIsON:function()  /////////////判断是否有网络
+    onNetWorkIsON:function(value)  /////////////判断是否有网络
     {
-        var res = false;
+        var res = "false";
         var networkState = navigator.connection.type;
         var states = {};
         states[Connection.UNKNOWN]  = 'Unknown';
@@ -218,16 +288,23 @@ Ext.define('WebInspect.controller.MainControl',{
         states[Connection.CELL]     = 'Cell';
         states[Connection.NONE]     = 'No';
 
-        if( states[networkState] != "No" && states[networkState] != "Unknown")
+        if(value == "bool")
         {
-            res = true;
+            if( states[networkState] != "No" && states[networkState] != "Unknown")
+            {
+                res = "true";
+            }
+        }
+        else if(value == "val")
+        {
+            res = states[networkState];
         }
         return res;
     },
 
     onVpnLogin:function(num, data)
     {
-        if(this.onNetWorkIsON())
+        if(this.onNetWorkIsON("bool") == "true")
         {
             var gate = ['10.33.21.254','10.33.22.254','10.33.23.254','10.33.24.254','10.33.25.254','10.33.26.254','10.33.27.254','10.33.28.254'
                 ,'10.33.12.254','10.33.13.254','10.33.14.254'
@@ -244,6 +321,7 @@ Ext.define('WebInspect.controller.MainControl',{
                     if(success == gate[i])
                     {
                         vpn = "false";
+                        me.qgjwifi = "true";
                         break;
                     }
                 }
@@ -286,6 +364,12 @@ Ext.define('WebInspect.controller.MainControl',{
         }
     },
 
+    onVpnIsON:function(){
+        plugins.Vpn.VpnCheckOnLine(WebInspect.app.user.sid,WebInspect.app.user.password,function(success) {
+            alert(success);
+        });
+    },
+
     onVpnCheckOnline:function(data){
 
         var me = this;
@@ -306,6 +390,12 @@ Ext.define('WebInspect.controller.MainControl',{
             }
 
         });
+    },
+
+    onListenNetWorkChange:function() //////////////监听网络是否有变化
+    {
+
+
     },
 
     onCheckVesion:function(me)
@@ -394,13 +484,7 @@ Ext.define('WebInspect.controller.MainControl',{
 
     onwtfail:function(error,me)
     {
-        //plugins.Toast.ShowToast(error,3000);
-        if(error.code == 1) //////////表示文件不存在
-
-        {
-            //////////////////不管它///////////////////////////
-        }
-
+        plugins.Toast.ShowToast(error,3000);
     },
 
     ////////////////////////////////////////////////////////////////////////////////////////
@@ -462,13 +546,6 @@ Ext.define('WebInspect.controller.MainControl',{
         else if(mainactive == "info")
         {
             document.removeEventListener("backbutton", me.onBackKeyDown, false); // 注销返回键
-            document.addEventListener("backbutton", me.onBackDo, false); // 返回键
-            var intervalID = window.setInterval(function() {
-                window.clearInterval(intervalID);
-                document.removeEventListener("backbutton", me.onBackDo, false); // 返回键
-                document.addEventListener("backbutton", me.onBackKeyDown, false); // 返回键
-            }, 2000);
-            //当前页面是其他的页面时，返回上一级页面
             me.onBackKeyTap();
         }
         else
@@ -609,6 +686,9 @@ Ext.define('WebInspect.controller.MainControl',{
                 }
                 break;
         }
+
+        document.addEventListener("backbutton", me.onBackKeyDown, false); // 返回键
+
     },
 
     onQuitSystemTap: function(){
@@ -630,7 +710,7 @@ Ext.define('WebInspect.controller.MainControl',{
         WebInspect.app.user.password = Ext.getCmp('password').getValue();
         me.onVpnLogin(1, ''); /////成功写入开始执行VPN认证
         plugins.jPush.setAlias(WebInspect.app.user.sid,function(success){});//////推送标识，以用户名区分
-       // me.onUserCheck(1,''); ////////测试的时候有
+//        me.onUserCheck(1,''); ////////测试的时候有
     },
 
     onUserWriteJson: function(){
@@ -679,9 +759,9 @@ Ext.define('WebInspect.controller.MainControl',{
                     WebInspect.app.user.mobile = records[0].data.mobile;
                     WebInspect.app.user.taskcount = records[0].data.taskcount;
                     WebInspect.app.user.rtxcount = records[0].data.rtxcount;
+                    Ext.getCmp('maintitle').onDataSet(records[0].data, WebInspect.app.user.name, WebInspect.app.user.mobile);
 
                     me.onFuncitonLoad(); //加载模块页面
-                    me.onWeatherStoreLoad();  //加载“天气预报”信息
                     me.onPushStoreSet(); //加载“待办事项”和“离线消息”数量
 
                     if(num == 1)
@@ -726,31 +806,14 @@ Ext.define('WebInspect.controller.MainControl',{
         });
     },
 
-    //加载“天气预报”信息，当num=0时，表示是“推送信息”， 当num=1时，表示是：应用程序正常启动
-    onWeatherStoreLoad: function(){
-        var me = this;
-        var store = Ext.getStore('WeatherStore');
-        store.removeAll();
-        store.getProxy().setExtraParams({
-            t: 'GetWeather',
-            results: 'jsonp'
-        });
-        store.load(function(records, operation, success) {
-
-            Ext.getCmp('maintitle').onDataSet(store.getAt(0), WebInspect.app.user.name, WebInspect.app.user.mobile);
-        });
-    },
-
     //“主功能”页面的事件，判断进入选择的模块
     onFunctionLsitTap: function(list, index, target, record, e, eOpts ){
 
         var me = this;
-
         me.info = me.getInfo();
         if(!me.info){
             me.info = Ext.create('WebInspect.view.Info');
         }
-
         me.getMain().add(me.info);
 
         var titlestr = ['news', 'info', 'notice', 'contacts', 'tide', 'water', 'rain', 'flow', 'project', 'inspect', 'setting', 'mark'];
@@ -796,6 +859,7 @@ Ext.define('WebInspect.controller.MainControl',{
                 me.getApplication().getController('MarkControl').onMarkInitialize();
         }
         me.getMain().setActiveItem(me.getInfo());
+
     },
 
     //监听info页面的“主页面”按钮，点击后，返回“主功能”页面

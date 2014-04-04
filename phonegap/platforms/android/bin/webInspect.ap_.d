@@ -43,6 +43,7 @@ D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\assets\
 D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\assets\www\plugins\com.phone.phone.Phone \
 D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\assets\www\plugins\com.toast.toast.Toast \
 D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\assets\www\plugins\com.vpn.vpn.Vpn \
+D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.camera \
 D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file \
 D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file-transfer \
 D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.network-information \
@@ -56,6 +57,11 @@ D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\assets\
 D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\assets\www\plugins\com.toast.toast.Toast\www\toast.js \
 D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\assets\www\plugins\com.vpn.vpn.Vpn\www \
 D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\assets\www\plugins\com.vpn.vpn.Vpn\www\vpn.js \
+D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.camera\www \
+D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.camera\www\Camera.js \
+D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.camera\www\CameraConstants.js \
+D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.camera\www\CameraPopoverHandle.js \
+D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.camera\www\CameraPopoverOptions.js \
 D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file\www \
 D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file\www\DirectoryEntry.js \
 D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file\www\DirectoryReader.js \
@@ -155,6 +161,7 @@ D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\assets\
 D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\assets\www\resources\icons\Icon~ipad@2x.png \
 D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\assets\www\resources\icons\iTunesArtwork.png \
 D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\assets\www\resources\images\001.png \
+D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\assets\www\resources\images\add.png \
 D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\assets\www\resources\images\background.jpg \
 D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\assets\www\resources\images\bg1.jpg \
 D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\assets\www\resources\images\code3.png \

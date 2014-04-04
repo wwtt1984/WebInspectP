@@ -111,11 +111,18 @@ Ext.define('WebInspect.controller.NewsControl', {
 
             store.load(function(records, operation, success){
 
-                this.newsdetail.onDataSet(store.getAt(0));
+                if(!success)
+                {
+                    Ext.Viewport.setMasked(false);
+                    plugins.Toast.ShowToast("网络不给力，无法读取数据!",3000);
+                }
+                else
+                {
+                    this.newsdetail.onDataSet(store.getAt(0));
+                }
             }, this);
             this.getInfofunction().hide();
             this.getInfo().push(this.newsdetail);
-
         }
     },
 

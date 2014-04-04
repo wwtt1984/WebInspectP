@@ -13,7 +13,7 @@ Ext.define('WebInspect.view.news.NewsDetail',{
     		direction: 'vertical',
     		directionLock: true
 		},
-		
+
 		style: 'background:#f7f7f7; padding: 10px;',
 		
 		tpl: Ext.create('Ext.XTemplate',

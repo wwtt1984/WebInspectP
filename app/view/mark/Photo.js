@@ -86,7 +86,6 @@ Ext.define('WebInspect.view.mark.Photo',{
 
     onDataSet: function(image){
 
-//        debugger;
         var me = this;
         var imgname = me.photoindex + 1;
         var data = {id: 'A' + imgname, name: imgname, imgadd: "imgadd" + imgname, src: image};
@@ -128,7 +127,6 @@ Ext.define('WebInspect.view.mark.Photo',{
     onPhotoDelete: function(record){
         var id = "imgsrc" + record.data.name;
         Ext.get(id).clearListeners();
-
         var div = document.getElementById(record.data.imgadd);
         div.parentNode.removeChild(div);   //删除
     }
