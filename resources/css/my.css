@@ -486,3 +486,19 @@
 .day{text-align:center;background-color:#f9f9f9;color:rgba(0,0,0,0.6);text-shadow:#fff 0 1px 0;-webkit-border-radius:15px;-moz-border-radius:15px;-ms-border-radius:15px;-o-border-radius:15px;border-radius:15px;-webkit-box-shadow:inset 0 1px 1px #888;-moz-box-shadow:inset 0 1px 1px #888;box-shadow:inset 0 1px 1px #888}
 .icon img{-webkit-border-radius:15px;-moz-border-radius:15px;-ms-border-radius:15px;-o-border-radius:15px;border-radius:15px}
 .temp_low{color:rgba(30,30,30,0.5)}
+
+
+/***************通讯录搜索栏************************/
+.contact-search{
+    background-image: none;
+    background-color: #cccccc;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f2f2f2), color-stop(3%, #d9d9d9), color-stop(100%, #bfbfbf));
+    background-image: -webkit-linear-gradient(top, #f2f2f2,#d9d9d9 3%,#bfbfbf);
+    background-image: linear-gradient(top, #f2f2f2,#d9d9d9 3%,#bfbfbf);
+    border: none;
+}
+.contact-search .x-field-search .x-component-outer {
+    -webkit-box-shadow: #A4A4A4 0 0.1em 0 inset,#A4A4A4 0 -0.1em 0 inset,#A4A4A4 0.1em 0 0 inset,#A4A4A4 -0.1em 0 0 inset,#A4A4A4 0 0.15em 0.4em inset;
+    -moz-box-shadow: #A4A4A4 0 0.1em 0 inset,#A4A4A4 0 -0.1em 0 inset,#A4A4A4 0.1em 0 0 inset,#A4A4A4 -0.1em 0 0 inset,#A4A4A4 0 0.15em 0.4em inset;
+    box-shadow: #A4A4A4 0 0.1em 0 inset,#A4A4A4 0 -0.1em 0 inset,#A4A4A4 0.1em 0 0 inset,#A4A4A4 -0.1em 0 0 inset,#A4A4A4 0 0.15em 0.4em inset;
+}

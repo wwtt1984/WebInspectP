@@ -51,18 +51,18 @@
             "path": "bootstrap.js",
             "x-bootstrap": true
         },
-        {
-            "path": "app/lib/pdf.js/compatibility.js"
-        },
-        {
-            "path": "app/lib/pdf.js/pdf.js"
-        },
-        {
-            "path": "app/lib/pdf.js/base64-binary.js"
-        },
-        {
-            "path": "touch/src/ux/panel/PDF.js"
-        },
+//        {
+//            "path": "app/lib/pdf.js/compatibility.js"
+//        },
+//        {
+//            "path": "app/lib/pdf.js/pdf.js"
+//        },
+//        {
+//            "path": "app/lib/pdf.js/base64-binary.js"
+//        },
+//        {
+//            "path": "touch/src/ux/panel/PDF.js"
+//        },
         {
             "path": "app.js",
             "bundle": true,  /* Indicates that all class dependencies are concatenated into this file when build */

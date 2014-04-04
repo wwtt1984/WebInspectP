@@ -9,6 +9,7 @@ Ext.define('WebInspect.controller.MainControl',{
             functionmain: 'main functionmain',
             info: 'main info',
             infofunction: '[itemId=infofunction]',
+            contactsearch: '[itemId=contactsearch]',
             task: 'main info task',
             message: 'main info message',
             news: 'main info news',
@@ -620,6 +621,9 @@ Ext.define('WebInspect.controller.MainControl',{
 
         if(view.getActiveItem() == view.getAt(1)){
             this.getInfofunction().show();
+            if(view.getActiveItem().xtype == 'firstlevel'){
+                this.getContactsearch().show();
+            }
         }
     },
 
@@ -723,6 +727,7 @@ Ext.define('WebInspect.controller.MainControl',{
         });
         store.load(function(records, operation, success) {
             store.add({id: 11, sid: WebInspect.app.user.sid, title: '海塘标识', name: 'mark', url: 'resources/images/function/mark.png'});
+            store.add({id: 12, sid: WebInspect.app.user.sid, title: '任务指派', name: 'assignment', url: 'resources/images/function/mark.png'});
         });
     },
 
@@ -753,7 +758,7 @@ Ext.define('WebInspect.controller.MainControl',{
 
         me.getMain().add(me.info);
 
-        var titlestr = ['news', 'info', 'notice', 'contacts', 'tide', 'water', 'rain', 'flow', 'project', 'inspect', 'setting', 'mark'];
+        var titlestr = ['news', 'info', 'notice', 'contacts', 'tide', 'water', 'rain', 'flow', 'project', 'inspect', 'setting', 'mark', 'assignment'];
 
         switch(record.data.name){
             case titlestr[0]:
@@ -794,6 +799,9 @@ Ext.define('WebInspect.controller.MainControl',{
 
             case titlestr[11]:
                 me.getApplication().getController('MarkControl').onMarkInitialize();
+
+            case titlestr[12]:
+                me.getApplication().getController('AssignControl').onAssignInitialize();
         }
         me.getMain().setActiveItem(me.getInfo());
     },

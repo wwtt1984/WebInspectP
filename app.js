@@ -56,6 +56,7 @@ Ext.application({
         'contact.SecondLevel',
         'contact.Contact',
         'contact.PopUp',
+        'contact.Search',
 
         'tide.Tide',
         'tide.TidePop',
@@ -82,7 +83,9 @@ Ext.application({
         'mark.MarkMain',
         'mark.Mark',
         'mark.Photo',
-        'mark.MarkList'
+        'mark.MarkList',
+
+        'assign.Assignment'
     ],
 
     models: [
@@ -143,6 +146,7 @@ Ext.application({
         'FirstLevelStore',
         'SecondLevelStore',
         'ContactStore',
+        'ContactSearchStore',
 
         'TideStore',
         'VersionStore',
@@ -177,7 +181,8 @@ Ext.application({
         'FlowControl',
         'ProjectControl',
         'SettingsControl',
-        'MarkControl'
+        'MarkControl',
+        'AssignControl'
     ],
 
     icon: {
