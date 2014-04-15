@@ -86,7 +86,6 @@ Ext.define('WebInspect.view.mark.Photo',{
 
     onDataSet: function(image){
 
-//        debugger;
         var me = this;
         var imgname = me.photoindex + 1;
         var data = {id: 'A' + imgname, name: imgname, imgadd: "imgadd" + imgname, src: image};

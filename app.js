@@ -85,7 +85,10 @@ Ext.application({
         'mark.Photo',
         'mark.MarkList',
 
-        'assign.Assignment'
+        'assign.Assignment',
+        'assign.AssignSelect',
+        'assign.AssignFirst',
+        'assign.AssignSecond'
     ],
 
     models: [
@@ -123,7 +126,10 @@ Ext.application({
         'RainModel',
 
         'PhotoModel',
-        'MarkModel'
+        'MarkModel',
+
+        'SegmentModel',
+        'GroupModel'
     ],
 
     stores: [
@@ -167,7 +173,12 @@ Ext.application({
         'RainStore',
 
         'PhotoStore',
-        'MarkStore'
+        'MarkStore',
+
+        'SegmentStore',
+        'SegmentDetailStore',
+        'GroupStore',
+        'GroupDetailStore'
     ],
 
     controllers: [
