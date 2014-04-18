@@ -93,6 +93,9 @@
         },
         {
             "path": "resources/css/my.css"
+        },
+        {
+            "path": "resources/css/TouchTreeGrid.css"
         }
     ],
 

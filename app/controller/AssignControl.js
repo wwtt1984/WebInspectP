@@ -19,6 +19,8 @@ Ext.define('WebInspect.controller.AssignControl', {
             assignfirst: 'assignselect assignfirst',
             assignsecond: 'assignselect assignsecond',
 
+            assignlist: 'info assignlist',
+
             assignconfirm: '[itemId=assignconfirm]',
             assigncancel: '[itemId=assigncancel]',
 
@@ -29,7 +31,9 @@ Ext.define('WebInspect.controller.AssignControl', {
             location: '[itemId=location]',
             secondfield: '[itemId=secondfield]',
             tdfield: '[itemId=td_field]',
-            tdms: '[itemId=td_ms]'
+            tdms: '[itemId=td_ms]',
+
+            selectionpanel: '[itemId=selectionpanel]'
         },
 
         control: {
@@ -47,6 +51,11 @@ Ext.define('WebInspect.controller.AssignControl', {
             },
             secondconfirm: {
                 tap: 'onSecondConfirmTap'
+            },
+            'container#firstexample': {
+                leafItemTap: 'onLeafItemTap',
+                selectionchange: 'onSelectionChange'
+//                select: 'onSelectionChange'
             }
         }
     },
@@ -65,6 +74,44 @@ Ext.define('WebInspect.controller.AssignControl', {
         me.getInfo().push(me.assignment);
         me.group = '';
         me.location = '';
+    },
+
+    onAssignListPush: function(index){
+        var me = this;
+
+        me.assignlist = me.getAssignlist();
+
+        if(!me.assignlist){
+            me.assignlist = Ext.create('WebInspect.view.assign.AssignList');
+        }
+
+//        me.assignlist.onLocationSet();
+        me.getInfo().push(me.assignlist);
+        me.getInfofunction().hide();
+    },
+
+    onLeafItemTap: function(list, index, target, record, e){
+    },
+
+    onSelectionChange: function(container, list, record, e){
+
+        var me = this;
+        var arr = list.getSelection().filter(function isLeafSelected(element, index, array) {
+            return (element.data.leaf);
+        });
+
+        var str = '';
+
+        if(arr.length){
+            for(var i=0; i<arr.length; i++){
+                str += arr[i].data.text + ',';
+            }
+            me.getSelectionpanel().setData({select: str});
+            me.getSelectionpanel().show();
+        }
+        else{
+            me.getSelectionpanel().hide();
+        }
     },
 
     onAssignSelectPush: function(index){

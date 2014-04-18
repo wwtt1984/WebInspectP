@@ -72,7 +72,8 @@ Ext.define('WebInspect.view.assign.Assignment', {
                                 e.stopEvent();
                                 Ext.ComponentQuery.query('#assign_ms')[0].blur();/////////////////把焦点失掉//////////////////////////
 
-                                WebInspect.app.getController('AssignControl').onAssignSelectPush(index);
+//                                WebInspect.app.getController('AssignControl').onAssignSelectPush(index);
+                                WebInspect.app.getController('AssignControl').onAssignListPush(index);
                             })//////增加add图片的事件
                         },
                         getContent: function(values){

@@ -88,7 +88,8 @@ Ext.application({
         'assign.Assignment',
         'assign.AssignSelect',
         'assign.AssignFirst',
-        'assign.AssignSecond'
+        'assign.AssignSecond',
+        'assign.AssignList'
     ],
 
     models: [
@@ -129,7 +130,9 @@ Ext.application({
         'MarkModel',
 
         'SegmentModel',
-        'GroupModel'
+        'GroupModel',
+
+        'TestModel'
     ],
 
     stores: [
@@ -178,7 +181,9 @@ Ext.application({
         'SegmentStore',
         'SegmentDetailStore',
         'GroupStore',
-        'GroupDetailStore'
+        'GroupDetailStore',
+
+        'TestStore'
     ],
 
     controllers: [
