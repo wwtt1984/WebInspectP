@@ -7,7 +7,6 @@ Ext.define('WebInspect.view.settings.PushSetting', {
     xtype: 'pushsetting',
 
     requires: [
-        'Ext.field.Toggle'
     ],
 
     config: {

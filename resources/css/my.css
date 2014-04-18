@@ -348,12 +348,11 @@
     background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f2f2f2), color-stop(3%, #d9d9d9), color-stop(100%, #bfbfbf));
     background-image: -webkit-linear-gradient(top, #f2f2f2,#d9d9d9 3%,#bfbfbf);
     background-image: linear-gradient(top, #f2f2f2,#d9d9d9 3%,#bfbfbf);
-    color: #666;
-    text-shadow: rgba(255, 255, 255, 0.25) 0 0.08em 0;
+
+
     border-top: 1px solid #cccccc;
     border-bottom: 1px solid #999999;
-    font-weight: bold;
-    font-size: 0.9em;
+
     /*padding: 0.2em 1.02em;*/
     text-shadow: rgba(255, 255, 255, 0.25) 0 0.08em 0;
     /*padding:0 0 0 10px;*/
@@ -486,3 +485,119 @@
 .day{text-align:center;background-color:#f9f9f9;color:rgba(0,0,0,0.6);text-shadow:#fff 0 1px 0;-webkit-border-radius:15px;-moz-border-radius:15px;-ms-border-radius:15px;-o-border-radius:15px;border-radius:15px;-webkit-box-shadow:inset 0 1px 1px #888;-moz-box-shadow:inset 0 1px 1px #888;box-shadow:inset 0 1px 1px #888}
 .icon img{-webkit-border-radius:15px;-moz-border-radius:15px;-ms-border-radius:15px;-o-border-radius:15px;border-radius:15px}
 .temp_low{color:rgba(30,30,30,0.5)}
+
+
+/***************通讯录搜索栏************************/
+.contact-search{
+    background-image: none;
+    background-color: #cccccc;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f2f2f2), color-stop(3%, #d9d9d9), color-stop(100%, #bfbfbf));
+    background-image: -webkit-linear-gradient(top, #f2f2f2,#d9d9d9 3%,#bfbfbf);
+    background-image: linear-gradient(top, #f2f2f2,#d9d9d9 3%,#bfbfbf);
+    border: none;
+}
+.contact-search .x-field-search .x-component-outer {
+    -webkit-box-shadow: #A4A4A4 0 0.1em 0 inset,#A4A4A4 0 -0.1em 0 inset,#A4A4A4 0.1em 0 0 inset,#A4A4A4 -0.1em 0 0 inset,#A4A4A4 0 0.15em 0.4em inset;
+    -moz-box-shadow: #A4A4A4 0 0.1em 0 inset,#A4A4A4 0 -0.1em 0 inset,#A4A4A4 0.1em 0 0 inset,#A4A4A4 -0.1em 0 0 inset,#A4A4A4 0 0.15em 0.4em inset;
+    box-shadow: #A4A4A4 0 0.1em 0 inset,#A4A4A4 0 -0.1em 0 inset,#A4A4A4 0.1em 0 0 inset,#A4A4A4 -0.1em 0 0 inset,#A4A4A4 0 0.15em 0.4em inset;
+}
+
+
+/******************仿照form样式*************/
+.local-form{
+    /*min-height: 4em;*/
+    margin: 0px 0px 15px;
+    border-radius: .4em;
+}
+.local-form .local-form-div{
+    width: 100%;
+    border-radius: .4em;
+    margin: 0;padding: 0;
+    border: 1px #ddd solid;
+    -webkit-border-radius: 0.4em;
+}
+.local-form .local-form-div .label{
+    width: 100%;
+    min-height: 2.5em;
+    background-color: #f7f7f7;
+    border-top-left-radius: 0.4em;
+    border-top-right-radius: 0.4em;
+    text-shadow:rgba(255,255,255,0.25) 0 0.08em 0;
+    padding:0.6em;
+}
+.local-form .local-form-div .label span{
+    font-size:0.8em;
+    font-weight: bold;
+}
+.local-form .local-form-div .choose{
+    width: 100%;
+    min-height: 2.5em;
+    padding: 0.6em;
+    border-bottom-left-radius: 0.4em;
+    border-bottom-right-radius: 0.4em;
+    background-color: #fff;
+}
+.local-form .local-form-div .choose span{
+    font-size:0.9em;
+}
+
+/**************************修改radio样式********************/
+.my-radio .x-form-label span {
+    font-size: .8em;
+    width: 20px;
+    word-wrap: break-word;
+    display: -moz-inline-box;
+    display: inline-block;
+    word-break: normal;
+}
+.my-radio .x-form-label{
+    min-width: 85%;
+}
+.my-radio .x-component-outer{
+    width: 2.5em;
+}
+.my-radio.x-field .x-field-input{
+    position: relative;
+    min-width: 2.5em;
+}
+
+/**************************修改radio样式********************/
+.my-checkbox .x-form-label span {
+    font-size: .8em;
+    width: 20px;
+    word-wrap: break-word;
+    display: -moz-inline-box;
+    display: inline-block;
+    word-break: normal;
+}
+.my-checkbox .x-form-label{
+    min-width: 85%;
+}
+.my-checkbox .x-component-outer{
+    width: 2.5em;
+}
+.my-checkbox.x-field .x-field-input{
+    position: relative;
+    min-width: 2.5em;
+}
+
+/******************弹窗-toolbar样式***************************/
+.pop-header{
+    background-image: none;
+    background-color: #cccccc;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f2f2f2), color-stop(3%, #d9d9d9), color-stop(100%, #bfbfbf));
+    background-image: -webkit-linear-gradient(top, #f2f2f2,#d9d9d9 3%,#bfbfbf);
+    background-image: linear-gradient(top, #f2f2f2,#d9d9d9 3%,#bfbfbf);
+
+    borer: none;
+
+    width:100%;
+    height: 1em;
+    font-size:14px;
+    font-weight: bold;
+    text-align: center;
+}
+.pop-header .x-title {
+    color: #000;
+    text-shadow: none;
+}

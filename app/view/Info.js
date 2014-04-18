@@ -9,14 +9,27 @@ Ext.define('WebInspect.view.Info', {
         itemId: 'info',
 
     	navigationBar: {
+            layout: {
+                pack: 'center',
+                type: 'hbox'
+            },
     		ui: 'light',
             items: [
-            {
-            	xtype: 'button',
-            	itemId: 'infofunction',
-            	ui: 'back',
-            	text: '主页面'
-            }]
+                {
+                	xtype: 'button',
+                	itemId: 'infofunction',
+                	ui: 'back',
+                	text: '主页面'
+                },
+                {
+                    xtype: 'button',
+                    itemId: 'contactsearch',
+                    ui: 'plain',
+                    iconCls: 'search',
+                    align: 'right',
+                    hidden: true
+                }
+            ]
         },
 
         itemId: 'info',

@@ -747,6 +747,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.viewport.WindowsPhone": [
     "Ext.viewport.WP"
   ],
+  "WebInspect.controller.AssignControl": [],
   "WebInspect.controller.ContactControl": [],
   "WebInspect.controller.FlowControl": [],
   "WebInspect.controller.MainControl": [],
@@ -761,6 +762,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.model.ContactModel": [],
   "WebInspect.model.FlowModel": [],
   "WebInspect.model.FunctionModel": [],
+  "WebInspect.model.GroupModel": [],
   "WebInspect.model.LevelModel": [],
   "WebInspect.model.MainModel": [],
   "WebInspect.model.MarkModel": [],
@@ -773,6 +775,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.model.ProjectSecondModel": [],
   "WebInspect.model.PushModel": [],
   "WebInspect.model.RainModel": [],
+  "WebInspect.model.SegmentModel": [],
   "WebInspect.model.SettingModel": [],
   "WebInspect.model.SettingsModel": [],
   "WebInspect.model.TaskModel": [],
@@ -784,10 +787,13 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.model.WaterDetailModel": [],
   "WebInspect.model.WaterModel": [],
   "WebInspect.model.WeatherModel": [],
+  "WebInspect.store.ContactSearchStore": [],
   "WebInspect.store.ContactStore": [],
   "WebInspect.store.FirstLevelStore": [],
   "WebInspect.store.FlowStore": [],
   "WebInspect.store.FunctionStore": [],
+  "WebInspect.store.GroupDetailStore": [],
+  "WebInspect.store.GroupStore": [],
   "WebInspect.store.InfoStore": [],
   "WebInspect.store.InspectStore": [],
   "WebInspect.store.MainStore": [],
@@ -804,6 +810,8 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.store.PushStore": [],
   "WebInspect.store.RainStore": [],
   "WebInspect.store.SecondLevelStore": [],
+  "WebInspect.store.SegmentDetailStore": [],
+  "WebInspect.store.SegmentStore": [],
   "WebInspect.store.SettingStore": [],
   "WebInspect.store.TaskStore": [],
   "WebInspect.store.TestStore": [],
@@ -819,9 +827,14 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.view.Login": [],
   "WebInspect.view.Main": [],
   "WebInspect.view.Title": [],
+  "WebInspect.view.assign.AssignFirst": [],
+  "WebInspect.view.assign.AssignSecond": [],
+  "WebInspect.view.assign.AssignSelect": [],
+  "WebInspect.view.assign.Assignment": [],
   "WebInspect.view.contact.Contact": [],
   "WebInspect.view.contact.FirstLevel": [],
   "WebInspect.view.contact.PopUp": [],
+  "WebInspect.view.contact.Search": [],
   "WebInspect.view.contact.SecondLevel": [],
   "WebInspect.view.flow.Flow": [],
   "WebInspect.view.list.MainInfo": [],
@@ -1795,6 +1808,7 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.Ios": [],
   "Ext.viewport.Viewport": [],
   "Ext.viewport.WindowsPhone": [],
+  "WebInspect.controller.AssignControl": [],
   "WebInspect.controller.ContactControl": [],
   "WebInspect.controller.FlowControl": [],
   "WebInspect.controller.MainControl": [],
@@ -1809,6 +1823,7 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.model.ContactModel": [],
   "WebInspect.model.FlowModel": [],
   "WebInspect.model.FunctionModel": [],
+  "WebInspect.model.GroupModel": [],
   "WebInspect.model.LevelModel": [],
   "WebInspect.model.MainModel": [],
   "WebInspect.model.MarkModel": [],
@@ -1821,6 +1836,7 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.model.ProjectSecondModel": [],
   "WebInspect.model.PushModel": [],
   "WebInspect.model.RainModel": [],
+  "WebInspect.model.SegmentModel": [],
   "WebInspect.model.SettingModel": [],
   "WebInspect.model.SettingsModel": [],
   "WebInspect.model.TaskModel": [],
@@ -1832,10 +1848,13 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.model.WaterDetailModel": [],
   "WebInspect.model.WaterModel": [],
   "WebInspect.model.WeatherModel": [],
+  "WebInspect.store.ContactSearchStore": [],
   "WebInspect.store.ContactStore": [],
   "WebInspect.store.FirstLevelStore": [],
   "WebInspect.store.FlowStore": [],
   "WebInspect.store.FunctionStore": [],
+  "WebInspect.store.GroupDetailStore": [],
+  "WebInspect.store.GroupStore": [],
   "WebInspect.store.InfoStore": [],
   "WebInspect.store.InspectStore": [],
   "WebInspect.store.MainStore": [],
@@ -1852,6 +1871,8 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.store.PushStore": [],
   "WebInspect.store.RainStore": [],
   "WebInspect.store.SecondLevelStore": [],
+  "WebInspect.store.SegmentDetailStore": [],
+  "WebInspect.store.SegmentStore": [],
   "WebInspect.store.SettingStore": [],
   "WebInspect.store.TaskStore": [],
   "WebInspect.store.TestStore": [],
@@ -1877,6 +1898,18 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.view.Title": [
     "widget.maintitle"
   ],
+  "WebInspect.view.assign.AssignFirst": [
+    "widget.assignfirst"
+  ],
+  "WebInspect.view.assign.AssignSecond": [
+    "widget.assignsecond"
+  ],
+  "WebInspect.view.assign.AssignSelect": [
+    "widget.assignselect"
+  ],
+  "WebInspect.view.assign.Assignment": [
+    "widget.assignment"
+  ],
   "WebInspect.view.contact.Contact": [
     "widget.contact"
   ],
@@ -1885,6 +1918,9 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "WebInspect.view.contact.PopUp": [
     "widget.popup"
+  ],
+  "WebInspect.view.contact.Search": [
+    "widget.ctsearch"
   ],
   "WebInspect.view.contact.SecondLevel": [
     "widget.secondlevel"

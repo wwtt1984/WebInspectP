@@ -56,6 +56,7 @@ Ext.application({
         'contact.SecondLevel',
         'contact.Contact',
         'contact.PopUp',
+        'contact.Search',
 
         'tide.Tide',
         'tide.TidePop',
@@ -82,7 +83,13 @@ Ext.application({
         'mark.MarkMain',
         'mark.Mark',
         'mark.Photo',
-        'mark.MarkList'
+        'mark.MarkList',
+
+        'assign.Assignment',
+        'assign.AssignSelect',
+        'assign.AssignFirst',
+        'assign.AssignSecond',
+        'assign.AssignList'
     ],
 
     models: [
@@ -120,7 +127,12 @@ Ext.application({
         'RainModel',
 
         'PhotoModel',
-        'MarkModel'
+        'MarkModel',
+
+        'SegmentModel',
+        'GroupModel',
+
+        'TestModel'
     ],
 
     stores: [
@@ -143,6 +155,7 @@ Ext.application({
         'FirstLevelStore',
         'SecondLevelStore',
         'ContactStore',
+        'ContactSearchStore',
 
         'TideStore',
         'VersionStore',
@@ -163,7 +176,14 @@ Ext.application({
         'RainStore',
 
         'PhotoStore',
-        'MarkStore'
+        'MarkStore',
+
+        'SegmentStore',
+        'SegmentDetailStore',
+        'GroupStore',
+        'GroupDetailStore',
+
+        'TestStore'
     ],
 
     controllers: [
@@ -177,7 +197,8 @@ Ext.application({
         'FlowControl',
         'ProjectControl',
         'SettingsControl',
-        'MarkControl'
+        'MarkControl',
+        'AssignControl'
     ],
 
     icon: {

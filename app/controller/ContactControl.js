@@ -18,6 +18,10 @@ Ext.define('WebInspect.controller.ContactControl', {
             secondlevel: 'main info secondlevel',
             contact: 'main info contact',
             popup: 'main info popup',
+
+            contactsearch: '[itemId=contactsearch]',
+            ctsearch: 'ctsearch',
+
             fullnum: '[itemId=fullnum]',
             shortnum: '[itemId=shortnum]',
             officenum: '[itemId=officenum]',
@@ -45,12 +49,19 @@ Ext.define('WebInspect.controller.ContactControl', {
             },
             numcancel: {
                 tap: 'onNumCancelTap'
+            },
+            contactsearch: {
+                tap: 'onContactSearchTap'
+            },
+            ctsearch: {
+                itemtap: 'onContactItemTap'
             }
         }
     },
 
     onContactInitialize: function(){
         var store = Ext.getStore('FirstLevelStore');
+        var me = this;
 
         store.removeAll();
 
@@ -75,7 +86,25 @@ Ext.define('WebInspect.controller.ContactControl', {
             this.firstlevel = Ext.create('WebInspect.view.contact.FirstLevel');
         }
         this.firstlevel.setTitle('钱塘江管理局');
+
         this.getInfo().push(this.firstlevel);
+
+
+
+        var csstore = Ext.getStore('ContactSearchStore');
+
+        csstore.getProxy().setExtraParams({
+            t: 'GetContactsListAll',
+            results: 'jsonp'
+        });
+
+        if(!csstore.getAllCount()){
+            csstore.load(function(records, operation, success){me.getContactsearch().show();});
+        }
+        else{
+            me.getContactsearch().show();
+        }
+
     },
 
     //加载通讯录二级信息
@@ -112,6 +141,7 @@ Ext.define('WebInspect.controller.ContactControl', {
     //在通讯录一级列表中选择，加载二级信息列表
     onFirstLevelTap: function(list, index, target, record, e, eOpts){
         this.onContactLevelSet('SecondLevelStore', record.data.guid, this.getSecondlevel(), 'contact.SecondLevel', record.data.OUName);
+        this.getContactsearch().hide();
 
     },
 
@@ -190,5 +220,16 @@ Ext.define('WebInspect.controller.ContactControl', {
 
     onNumCancelTap: function(){
         this.popup.hide();
+    },
+
+    onContactSearchTap: function(){
+        this.ctsearch = this.getCtsearch();
+        if(!this.ctsearch){
+            this.ctsearch = Ext.create('WebInspect.view.contact.Search');
+        }
+//        this.search.setTitle(record.data.OUName);
+        this.getInfofunction().hide();
+        this.getContactsearch().hide();
+        this.getInfo().push(this.ctsearch);
     }
 })

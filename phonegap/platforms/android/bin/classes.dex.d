@@ -1,73 +1,76 @@
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes.dex : \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\com\install\install\InstallPlugin$1.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\com\install\install\InstallPlugin.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\com\jpush\jpush\JPush$1.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\com\jpush\jpush\JPush.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\com\jpush\jpush\MyReceiver.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\com\mycompany\webInspect\BuildConfig.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\com\mycompany\webInspect\Manifest$permission.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\com\mycompany\webInspect\Manifest.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\com\mycompany\webInspect\R$attr.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\com\mycompany\webInspect\R$drawable.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\com\mycompany\webInspect\R$string.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\com\mycompany\webInspect\R$xml.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\com\mycompany\webInspect\R.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\com\mycompany\webInspect\webInspect.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\com\phone\phone\PhonePlugin.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\com\phone\phone\PhoneResult.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\com\toast\toast\ToastPlugin$1.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\com\toast\toast\ToastPlugin.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\com\vpn\vpn\VpnPlugin$1.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\com\vpn\vpn\VpnPlugin$RemindTask.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\com\vpn\vpn\VpnPlugin.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\DirectoryManager.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\EncodingException.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileExistsException.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileHelper.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$1.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$10.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$11.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$12.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$13.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$14.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$15.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$16.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$17.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$18.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$19.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$2.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$20.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$21.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$22.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$23.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$24.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$3.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$4.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$5.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$6.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$7.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$8.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$9.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$FileOp.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\InvalidModificationException.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\NoModificationAllowedException.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\TypeMismatchException.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\filetransfer\FileProgressResult.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\filetransfer\FileTransfer$1.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\filetransfer\FileTransfer$2.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\filetransfer\FileTransfer$3.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\filetransfer\FileTransfer$4.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\filetransfer\FileTransfer$5.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\filetransfer\FileTransfer$ExposedGZIPInputStream.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\filetransfer\FileTransfer$RequestContext.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\filetransfer\FileTransfer$SimpleTrackingInputStream.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\filetransfer\FileTransfer$TrackingGZIPInputStream.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\filetransfer\FileTransfer$TrackingInputStream.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\filetransfer\FileTransfer.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\filetransfer\FileUploadResult.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\networkinformation\NetworkManager$1.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\networkinformation\NetworkManager.class \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\dexedLibs\classes-0710dbaac4ee9616ee027792823a3db6.jar \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\dexedLibs\SangforSDK-de865973752fd69527af03b707235788.jar \
-D:\work\touch\webinnew\WebInspectP\WebInspect\phonegap\platforms\android\bin\dexedLibs\jpush-sdk-release1.6.0-ab0236b19744a70c832ea231a09d2450.jar \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes.dex : \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\com\install\install\InstallPlugin$1.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\com\install\install\InstallPlugin.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\com\jpush\jpush\JPush$1.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\com\jpush\jpush\JPush.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\com\jpush\jpush\MyReceiver.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\com\mycompany\webInspect\BuildConfig.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\com\mycompany\webInspect\Manifest$permission.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\com\mycompany\webInspect\Manifest.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\com\mycompany\webInspect\R$attr.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\com\mycompany\webInspect\R$drawable.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\com\mycompany\webInspect\R$string.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\com\mycompany\webInspect\R$xml.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\com\mycompany\webInspect\R.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\com\mycompany\webInspect\webInspect.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\com\phone\phone\PhonePlugin.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\com\phone\phone\PhoneResult.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\com\toast\toast\ToastPlugin$1.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\com\toast\toast\ToastPlugin.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\com\vpn\vpn\VpnPlugin$1.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\com\vpn\vpn\VpnPlugin$RemindTask.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\com\vpn\vpn\VpnPlugin.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\camera\CameraLauncher.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\camera\ExifHelper.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\camera\FileHelper.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\DirectoryManager.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\EncodingException.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileExistsException.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileHelper.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$1.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$10.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$11.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$12.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$13.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$14.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$15.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$16.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$17.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$18.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$19.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$2.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$20.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$21.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$22.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$23.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$24.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$3.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$4.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$5.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$6.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$7.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$8.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$9.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$FileOp.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\InvalidModificationException.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\NoModificationAllowedException.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\TypeMismatchException.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\filetransfer\FileProgressResult.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\filetransfer\FileTransfer$1.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\filetransfer\FileTransfer$2.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\filetransfer\FileTransfer$3.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\filetransfer\FileTransfer$4.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\filetransfer\FileTransfer$5.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\filetransfer\FileTransfer$ExposedGZIPInputStream.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\filetransfer\FileTransfer$RequestContext.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\filetransfer\FileTransfer$SimpleTrackingInputStream.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\filetransfer\FileTransfer$TrackingGZIPInputStream.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\filetransfer\FileTransfer$TrackingInputStream.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\filetransfer\FileTransfer.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\filetransfer\FileUploadResult.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\networkinformation\NetworkManager$1.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\networkinformation\NetworkManager.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\dexedLibs\classes-5aa32fdabaef74b3a9e6697aad7f42fc.jar \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\dexedLibs\SangforSDK-28278a845fbaa2fa71806ade860dc078.jar \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\dexedLibs\jpush-sdk-release1.6.0-f377d837f1459a02195801e718767ab0.jar \
