@@ -827,7 +827,9 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.view.Login": [],
   "WebInspect.view.Main": [],
   "WebInspect.view.Title": [],
+  "WebInspect.view.TouchTreeGrid": [],
   "WebInspect.view.assign.AssignFirst": [],
+  "WebInspect.view.assign.AssignList": [],
   "WebInspect.view.assign.AssignSecond": [],
   "WebInspect.view.assign.AssignSelect": [],
   "WebInspect.view.assign.Assignment": [],
@@ -1898,8 +1900,14 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.view.Title": [
     "widget.maintitle"
   ],
+  "WebInspect.view.TouchTreeGrid": [
+    "widget.touchtreegrid"
+  ],
   "WebInspect.view.assign.AssignFirst": [
     "widget.assignfirst"
+  ],
+  "WebInspect.view.assign.AssignList": [
+    "widget.assginlist"
   ],
   "WebInspect.view.assign.AssignSecond": [
     "widget.assignsecond"

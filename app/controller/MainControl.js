@@ -13,7 +13,8 @@ Ext.define('WebInspect.controller.MainControl',{
             message: 'main info message',
             news: 'main info news',
             newspdf: 'info newspdf',
-            newsdetail: 'info newsdetail'
+            newsdetail: 'info newsdetail',
+            contactsearch: '[itemId=contactsearch]'
         },
         control: {
             main: {
@@ -41,6 +42,8 @@ Ext.define('WebInspect.controller.MainControl',{
         this.bpush = false;///默认是直接点击软件进去的
         this.bpindex = 0;///默认请求
         this.beindex = 2;///默认请求总数
+        this.timeoutecount = 3; //默认VPN超时连接请求3次
+        this.timeoutscount = 0;// 当前VPN超时连接数
 
         window.setTimeout(function(){me.checkJpush(me);},100);
         document.addEventListener('deviceready',function(){me.onJpushReady(me);}, false);
@@ -61,9 +64,6 @@ Ext.define('WebInspect.controller.MainControl',{
         var me = WebInspect.app.mainthis;
         if(me.onNetWorkIsON("val") != "WiFi" && me.qgjwifi == "true")
         {
-
-            alert("1111");
-
             plugins.Toast.ShowToast("VPN连接中,请稍后...",3000);
             ////重连VPN
             plugins.Vpn.VpnLogin(WebInspect.app.user.sid,WebInspect.app.user.password,function(success) {
@@ -75,7 +75,18 @@ Ext.define('WebInspect.controller.MainControl',{
                 }
                 else if(success == "false")
                 {
-                    plugins.Toast.ShowToast("VPN连接超时,请重试!",3000);
+                    if(me.timeoutscount < me.timeoutecount)
+                    {
+                        plugins.Toast.ShowToast("VPN连接超时,请重试!",3000);
+                        me.timeoutscount++;
+                        me.onOnlineListen();
+                    }
+                    else
+                    {
+                        plugins.Toast.ShowToast("VPN连接失败,请重新打开应用程序!",3000);
+                        me.timeoutscount = 0;
+                        me.onQuitSystemTap();
+                    }
                 }
                 else if(success == "initfalse")
                 {
@@ -90,8 +101,6 @@ Ext.define('WebInspect.controller.MainControl',{
         }
         else if(me.onNetWorkIsON("val") == "WiFi")
         {
-
-
             var gate = ['10.33.21.254','10.33.22.254','10.33.23.254','10.33.24.254','10.33.25.254','10.33.26.254','10.33.27.254','10.33.28.254'
                 ,'10.33.12.254','10.33.13.254','10.33.14.254'
                 ,'10.33.90.254'
@@ -105,17 +114,18 @@ Ext.define('WebInspect.controller.MainControl',{
                     if(success == gate[i])
                     {
                         vpn = "false";
+                        me.qgjwifi = "true";
                         break;
                     }
                 }
+
+                if(vpn == "false")
+                {
+                    plugins.Toast.ShowToast("VPN连接关闭!",3000);
+                    plugins.Vpn.VpnOFF();//关闭VPN
+                }
+
             });
-
-            if(vpn == "false")
-            {
-                plugins.Vpn.VpnOFF();//关闭VPN
-            }
-
-            alert(vpn);
 
         }
 
@@ -402,7 +412,8 @@ Ext.define('WebInspect.controller.MainControl',{
     {
         var store = Ext.getStore('VersionStore');
         store.getProxy().setExtraParams({
-            t: 'CheckVersion'
+            t: 'CheckVersion',
+            results: 'android'
         });
         store.load(function(records, operation, success){
             if(records.length > 0)
@@ -700,6 +711,9 @@ Ext.define('WebInspect.controller.MainControl',{
 
         if(view.getActiveItem() == view.getAt(1)){
             this.getInfofunction().show();
+            if(view.getActiveItem().xtype == 'firstlevel'){
+                this.getContactsearch().show();
+            }
         }
     },
 
@@ -802,7 +816,8 @@ Ext.define('WebInspect.controller.MainControl',{
             results: WebInspect.app.user.sid + '$jsonp'
         });
         store.load(function(records, operation, success) {
-            store.add({id: 11, sid: WebInspect.app.user.sid, title: '海塘标识', name: 'mark', url: 'resources/images/function/setting.png'});
+            store.add({id: 11, sid: WebInspect.app.user.sid, title: '海塘标识', name: 'mark', url: 'resources/images/function/mark.png'});
+            store.add({id: 12, sid: WebInspect.app.user.sid, title: '指派任务', name: 'assign', url: 'resources/images/function/mark.png'});
         });
     },
 
@@ -816,7 +831,7 @@ Ext.define('WebInspect.controller.MainControl',{
         }
         me.getMain().add(me.info);
 
-        var titlestr = ['news', 'info', 'notice', 'contacts', 'tide', 'water', 'rain', 'flow', 'project', 'inspect', 'setting', 'mark'];
+        var titlestr = ['news', 'info', 'notice', 'contacts', 'tide', 'water', 'rain', 'flow', 'project', 'inspect', 'setting', 'mark', 'assign'];
 
         switch(record.data.name){
             case titlestr[0]:
@@ -857,6 +872,11 @@ Ext.define('WebInspect.controller.MainControl',{
 
             case titlestr[11]:
                 me.getApplication().getController('MarkControl').onMarkInitialize();
+                break;
+
+            case titlestr[12]:
+                me.getApplication().getController('AssignControl').onAssignInitialize();
+                break;
         }
         me.getMain().setActiveItem(me.getInfo());
 
