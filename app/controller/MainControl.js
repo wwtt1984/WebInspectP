@@ -42,12 +42,12 @@ Ext.define('WebInspect.controller.MainControl',{
         this.bpindex = 0;///默认请求
         this.beindex = 2;///默认请求总数
 
-        window.setTimeout(function(){me.checkJpush(me);},100);
-        document.addEventListener('deviceready',function(){me.onJpushReady(me);}, false);
+//        window.setTimeo/ut(function(){me.checkJpush(me);},100);
+//        document.addEventListener('deviceready',function(){me.onJpushReady(me);}, false);
 
         me.onBtnConfirm();
 //        android返回键事件监听
-        document.addEventListener("backbutton", me.onBackKeyDown, false);
+//        document.addEventListener("backbutton", me.onBackKeyDown, false);
     },
 
 
@@ -646,9 +646,9 @@ Ext.define('WebInspect.controller.MainControl',{
         var me = this;
         WebInspect.app.user.sid = Ext.getCmp('name').getValue();
         WebInspect.app.user.password = Ext.getCmp('password').getValue();
-        me.onVpnLogin(1, ''); /////成功写入开始执行VPN认证
-        plugins.jPush.setAlias(WebInspect.app.user.sid,function(success){});//////推送标识，以用户名区分
-//       me.onUserCheck(1,''); ////////测试的时候有
+//        me.onVpnLogin(1, ''); /////成功写入开始执行VPN认证
+//        plugins.jPush.setAlias(WebInspect.app.user.sid,function(success){});//////推送标识，以用户名区分
+       me.onUserCheck(1,''); ////////测试的时候有
     },
 
     onUserWriteJson: function(){
@@ -706,7 +706,7 @@ Ext.define('WebInspect.controller.MainControl',{
                     {
                         Ext.Viewport.setMasked(false);
                         me.getMain().setActiveItem(me.getFunctionmain());
-                        me.onUserWriteJson(); //将验证成功的用户信息，存在本地
+//                        me.onUserWriteJson(); //将验证成功的用户信息，存在本地
                         me.onCheckVesion(me);  /////////////////判断是否有新版本/////////////////////
                     }
                     else
