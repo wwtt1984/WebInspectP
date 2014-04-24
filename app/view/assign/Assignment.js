@@ -46,7 +46,8 @@ Ext.define('WebInspect.view.assign.Assignment', {
                             '<span>指定地点</span>',
                         '</div>',
                         '<div class="choose" id="{[this.getLinkId(values,0)]}">',
-                            '<span>{[this.getContent(values.location)]}</sapn>',
+//                            '<span>{[this.getContent(values.td)]}</sapn>',
+                            '<span>{td}</sapn>',
                         '</div>',
                     '</div>',
                     '<div class="local-form-div">',
@@ -54,7 +55,8 @@ Ext.define('WebInspect.view.assign.Assignment', {
                             '<span>指定人员</span>',
                         '</div>',
                         '<div class="choose" id="{[this.getLinkId(values,1)]}">',
-                            '<span>{[this.getContent(values.man)]}</sapn>',
+//                            '<span>{[this.getContent(values.ry)]}</sapn>',
+                            '<span>{ry}</sapn>',
                         '</div>',
                     '</div>',
                     {
@@ -72,25 +74,8 @@ Ext.define('WebInspect.view.assign.Assignment', {
                                 e.stopEvent();
                                 Ext.ComponentQuery.query('#assign_ms')[0].blur();/////////////////把焦点失掉//////////////////////////
 
-//                                WebInspect.app.getController('AssignControl').onAssignSelectPush(index);
                                 WebInspect.app.getController('AssignControl').onAssignListPush(index);
-                            })//////增加add图片的事件
-                        },
-                        getContent: function(values){
-
-                            var content = [];
-                            content = values.split('\r\n');
-                            var string = '';
-
-                            if(content.length > 0){
-                                for(var i = 0; i < content.length; i++){
-                                    if(content[i] != "" ){
-                                        string += '<p style="line-height:1.6em;">' + content[i] + '</p>';
-                                    }
-                                }
-                            }
-                            Ext.Viewport.setMasked(false);
-                            return string;
+                            })//////增加点击的事件
                         }
                     }
                 )
@@ -124,6 +109,6 @@ Ext.define('WebInspect.view.assign.Assignment', {
     },
 
     onLocationSet: function(){
-        Ext.ComponentQuery.query('#location')[0].setData({location: '请选择地点&nbsp;&nbsp;&nbsp;>', man: '请选择人员&nbsp;&nbsp;&nbsp;>'});
+        Ext.ComponentQuery.query('#location')[0].setData({td: '请选择地点&nbsp;&nbsp;&nbsp;>', ry: '请选择人员&nbsp;&nbsp;&nbsp;>', tdid: '', ryid: ''});
     }
 })

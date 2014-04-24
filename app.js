@@ -31,7 +31,8 @@ Ext.application({
         'Ext.data.proxy.SkProxy',
         'Ext.data.proxy.SkJsonp',
         'Ext.data.proxy.LocalStorage',
-        'Ext.device.Camera'
+        'Ext.device.Camera',
+        'Ext.data.TreeStore'
     ],
 
     views: [
@@ -52,11 +53,10 @@ Ext.application({
         'news.NewsImg',
         'news.NewsPdf',
 
-        'contact.FirstLevel',
-        'contact.SecondLevel',
-        'contact.Contact',
         'contact.PopUp',
         'contact.Search',
+
+        'contact.ContactList',
 
         'tide.Tide',
         'tide.TidePop',
@@ -86,9 +86,6 @@ Ext.application({
         'mark.MarkList',
 
         'assign.Assignment',
-        'assign.AssignSelect',
-        'assign.AssignFirst',
-        'assign.AssignSecond',
         'assign.AssignList'
     ],
 
@@ -105,7 +102,6 @@ Ext.application({
         'NewsModel',
         'NewsDetailModel',
 
-        'LevelModel',
         'ContactModel',
 
         'TideModel',
@@ -129,10 +125,7 @@ Ext.application({
         'PhotoModel',
         'MarkModel',
 
-        'SegmentModel',
-        'GroupModel',
-
-        'TestModel'
+        'TreeModel'
     ],
 
     stores: [
@@ -152,9 +145,6 @@ Ext.application({
 
         'InspectStore',
 
-        'FirstLevelStore',
-        'SecondLevelStore',
-        'ContactStore',
         'ContactSearchStore',
 
         'TideStore',
@@ -178,12 +168,9 @@ Ext.application({
         'PhotoStore',
         'MarkStore',
 
-        'SegmentStore',
-        'SegmentDetailStore',
-        'GroupStore',
-        'GroupDetailStore',
+        'SegmentTreeStore',
 
-        'TestStore'
+        'ContactTreeStore'
     ],
 
     controllers: [

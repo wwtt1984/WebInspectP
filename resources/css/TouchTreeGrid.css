@@ -36,7 +36,7 @@
   min-height:2.2em !important;
   /*padding:0.6em 0 0 0 !important; */
 /*  width:100% !important; */
-  font-size: .7em !important;
+  font-size: 18px !important;
   -webkit-box-shadow: 0px 0.1em 0.3em rgba(0, 0, 0, 0.3);
 }
 
@@ -136,10 +136,10 @@
 }
 
 .x-touchtreegrid-list .touchtreegrid-details-select{
-    width: 18px;
-    min-height: 18px;
-    max-height: 18px;  /* Added 8/24/13 */
-    border-radius: 9px;
+    width: 20px;
+    min-height: 20px;
+    max-height: 20px;  /* Added 8/24/13 */
+    border-radius: 10px;
     height: 100%;
     display: -moz-inline-box;
     display: inline-block;
@@ -147,7 +147,7 @@
     /*vertical-align: top;*/
     vertical-align: center;
     cursor: pointer;
-    margin-top: 8.5px;
+    margin-top: 10px;
     border: 0;
     border-image: initial;
     background-position: 0 0;
@@ -243,20 +243,23 @@
     border-top: none;
     border-bottom: none;
     -webkit-box-shadow: none;
-    height: 35px !important;
+    height: 40px !important;
+}
+.x-touchtreegrid-list-accordion .touchtreegrid-details-img-open {  /* 2nd arrow sprite pointing down for open category */
+    background-position: 0 -16px;
 }
 
 .x-touchtreegrid-list-accordion .touchtreegrid-details-img {   /* category row arrow */
-    margin-top: 9.5px !important;
+    margin-top: 11px !important;
 }
 .x-touchtreegrid-list-accordion .touchtreegrid-list-content{ /* Detail (leaf) rows  */
     color: black;
     background-color:white;
     /* width:100%; */
     /*padding:1em 0 0 0;*/
-    heigght: 35px;
+    heigght: 40px;
     margin:0;
-    font-size: .6em !important;
+    font-size: 18px !important;
 }
 .x-touchtreegrid-list-accordion .touchtreegrid-item-selected .touchtreegrid-details-select{  /* 2nd arrow sprite pointing down for open category */
     background-position: 0 0;
@@ -266,6 +269,47 @@
 }
 .x-touchtreegrid-list-accordion .touchtreegrid-item-selected,
 .x-touchtreegrid-list-accordion .touchtreegrid-item-selected .touchtreegrid-simplelist-cell{
+    /*background-color: #006bb6 !important;  *//* Sencha 2.1 default color for selected */
+    /*color: white !important;*/
+    background-color: none
+}
+
+/******************** BEGIN NORMAl EXAMPLE OVERRIDES *********************/
+
+/* 2.1 selectors to eliminate lines  ... 2nd set is for Touch 2.2 */
+.x-touchtreegrid-list-normal .x-list-normal .x-list-item .x-dock-horizontal,
+.x-touchtreegrid-list-normal .x-list-normal .x-list-item.x-list-item-tpl{
+    /*border: none; */
+}
+
+.x-touchtreegrid-list-normal .touchtreegrid-list-content{ /* Detail (leaf) rows  */
+    /*padding:.8em 0 0 0;*/
+}
+
+.x-touchtreegrid-list-normal .touchtreegrid-list-categ {
+    border-top: none;
+    border-bottom: none;
+    -webkit-box-shadow: none;
+    height: 40px !important;
+}
+.x-touchtreegrid-list-normal .touchtreegrid-details-img-open {  /* 2nd arrow sprite pointing down for open category */
+    background-position: 0 -16px;
+}
+
+.x-touchtreegrid-list-normal .touchtreegrid-details-img {   /* category row arrow */
+    margin-top: 11px !important;
+}
+.x-touchtreegrid-list-normal .touchtreegrid-list-content{ /* Detail (leaf) rows  */
+    color: black;
+    background-color:white;
+    /* width:100%; */
+    /*padding:1em 0 0 0;*/
+    heigght: 40px;
+    margin:0;
+    font-size: 18px !important;
+}
+.x-touchtreegrid-list-normal .touchtreegrid-item-selected,
+.x-touchtreegrid-list-normal .touchtreegrid-item-selected .touchtreegrid-simplelist-cell{
     /*background-color: #006bb6 !important;  *//* Sencha 2.1 default color for selected */
     /*color: white !important;*/
     background-color: none

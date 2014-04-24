@@ -28,6 +28,13 @@ Ext.define('WebInspect.view.Info', {
                     iconCls: 'search',
                     align: 'right',
                     hidden: true
+                },
+                {
+                    xtype: 'button',
+                    itemId: 'selectconfirm',
+                    text: '确定',
+                    align: 'right',
+                    hidden: true
                 }
             ]
         },

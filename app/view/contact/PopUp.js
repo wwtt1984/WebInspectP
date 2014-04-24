@@ -14,13 +14,13 @@ Ext.define('WebInspect.view.contact.PopUp', {
 
         // we always want the sheet to be 400px wide and to be as tall as the device allows
         width: '100%',
-        top: '48%',
+//        top: '48%',
         bottom: 0,
         right: 0,
 
         defaults: {
             xtype : 'button',
-            style: 'min-height:1.8em; max-height: 2.2em;width:94%;margin:10px 3% 10px 3%;',
+            style: 'min-height:1.8em; max-height: 2em;width:94%;margin:10px 3% 10px 3%;',
             cls   : 'demobtn',
             flex  : 1
         },

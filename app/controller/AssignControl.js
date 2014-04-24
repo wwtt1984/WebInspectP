@@ -15,25 +15,19 @@ Ext.define('WebInspect.controller.AssignControl', {
             infofunction: '[itemId=infofunction]',
 
             assignment: 'info assignment',
-            assignselect: 'assignselect',
-            assignfirst: 'assignselect assignfirst',
-            assignsecond: 'assignselect assignsecond',
 
             assignlist: 'info assignlist',
 
             assignconfirm: '[itemId=assignconfirm]',
             assigncancel: '[itemId=assigncancel]',
 
-            firstconfirm: '[itemId=firstconfirm]',
-            tofirst: '[itemId=tofirst]',
-            secondconfirm: '[itemId=secondconfirm]',
+            selectconfirm: '[itemId=selectconfirm]',
 
             location: '[itemId=location]',
-            secondfield: '[itemId=secondfield]',
-            tdfield: '[itemId=td_field]',
-            tdms: '[itemId=td_ms]',
+            assignms: '[itemId=assign_ms]',
 
-            selectionpanel: '[itemId=selectionpanel]'
+            selectionpanel: '[itemId=selectionpanel]',
+            treeselect: '[itemId=treeselect]'
         },
 
         control: {
@@ -43,19 +37,11 @@ Ext.define('WebInspect.controller.AssignControl', {
             assigncancel: {
                 tap: 'onAssignCancelTap'
             },
-            firstconfirm: {
-                tap: 'onFirstConfirmTap'
+            selectconfirm: {
+                tap: 'onSelectConfirmTap'
             },
-            tofirst: {
-                tap: 'onToFirstTap'
-            },
-            secondconfirm: {
-                tap: 'onSecondConfirmTap'
-            },
-            'container#firstexample': {
-                leafItemTap: 'onLeafItemTap',
+            treeselect: {
                 selectionchange: 'onSelectionChange'
-//                select: 'onSelectionChange'
             }
         }
     },
@@ -72,8 +58,26 @@ Ext.define('WebInspect.controller.AssignControl', {
 
         me.assignment.onLocationSet();
         me.getInfo().push(me.assignment);
-        me.group = '';
-        me.location = '';
+
+        var contactstore = Ext.getStore('ContactTreeStore');
+        if(!contactstore.getAllCount()){
+            contactstore.getProxy().setExtraParams({
+                t: 'GetZpPerson',
+                results: 'jsonp'
+            });
+
+            contactstore.load();
+        }
+
+        var segmentstore = Ext.getStore('SegmentTreeStore');
+        if(!segmentstore.getAllCount()){
+            segmentstore.getProxy().setExtraParams({
+                t: 'GetXcjhTD',
+                results: 'jsonp'
+            });
+
+            segmentstore.load();
+        }
     },
 
     onAssignListPush: function(index){
@@ -85,12 +89,28 @@ Ext.define('WebInspect.controller.AssignControl', {
             me.assignlist = Ext.create('WebInspect.view.assign.AssignList');
         }
 
-//        me.assignlist.onLocationSet();
-        me.getInfo().push(me.assignlist);
-        me.getInfofunction().hide();
-    },
+        me.index = '';
 
-    onLeafItemTap: function(list, index, target, record, e){
+        var store;
+
+        if(index == 0){
+            store = Ext.getStore('SegmentTreeStore');
+            me.index = 'segment';
+        }
+        else{
+            store = Ext.getStore('ContactTreeStore');
+            me.index = 'contact';
+        }
+
+        me.getTreeselect().setStore(store);
+
+        me.getInfofunction().hide();
+        me.getSelectconfirm().show();
+        me.getInfo().push(me.assignlist);
+
+        me.sid = '';
+        me.text = '';
+
     },
 
     onSelectionChange: function(container, list, record, e){
@@ -100,170 +120,69 @@ Ext.define('WebInspect.controller.AssignControl', {
             return (element.data.leaf);
         });
 
-        var str = '';
+        var text = '';
+        var sid = '';
 
         if(arr.length){
             for(var i=0; i<arr.length; i++){
-                str += arr[i].data.text + ',';
+                text += arr[i].data.text + '，';
+                sid += arr[i].data.sid + '@';
             }
-            me.getSelectionpanel().setData({select: str});
+            me.getSelectionpanel().setData({select: text});
             me.getSelectionpanel().show();
+
+            if(me.index == 'segment'){
+
+                me.tdtext = text.substr(0, text.length - 1);
+                me.tdid = sid.substr(0, sid.length - 1);
+            }
+            else{
+                me.rytext = text.substr(0, text.length - 1);
+                me.ryid = sid.substr(0, sid.length - 1);
+            }
         }
         else{
             me.getSelectionpanel().hide();
         }
     },
 
-    onAssignSelectPush: function(index){
+    onSelectConfirmTap: function(){
 
         var me = this;
-        me.index = index;
-        me.assignselect = me.getAssignselect();
 
-//        if (!me.assignselect) {
-//            me.assignselect = Ext.create('WebInspect.view.assign.AssignSelect');
-//        }
-        if (me.assignselect) {
-            me.assignselect.removeAll();
-            me.assignselect.destroy();
-        }
+        if(me.index == 'segment'){
+            if(!me.tdtext){
 
-        me.assignselect = Ext.create('WebInspect.view.assign.AssignSelect');
-
-        if(me.index == 0){
-            me.getAssignfirst().onAssignLocationInitialize();
-        }
-        else{
-            me.getAssignfirst().onAssignGroupInitialize();
-        }
-
-
-        if (!me.assignselect.getParent()) {
-            Ext.Viewport.add(me.assignselect);
-        }
-        me.assignselect.show();
-
-    },
-
-    onFirstConfirmTap: function(){
-        var me = this;
-
-        if(me.index == 0){
-
-            me.onLocationFirstConfirm();
-
-        }
-        else{
-            me.onGroupFirstConfirm();
-
-        }
-
-
-        me.getAssignselect().setActiveItem(me.getAssignsecond());
-
-        me.getFirstconfirm().hide();
-        me.getTofirst().show();
-        me.getSecondconfirm().show();
-
-
-    },
-
-    onLocationFirstConfirm: function(){
-
-        var me = this;
-        ///////////////塘段id/////////////////////////////
-        me.tdid = me.getAssignfirst().getValues().first;
-
-        var store = Ext.getStore('SegmentStore');
-        var index = store.find('tdid', me.tdid);
-        me.locationtitle = store.getAt(index).data.htmc_name;
-        me.getAssignselect().getItems().items[0].setTitle(me.locationtitle + '(可输入更多)');
-        me.getTdfield().show();
-        me.getAssignsecond().onAssignLocationInitialize(me.tdid);
-    },
-
-    onGroupFirstConfirm: function(){
-
-        var me = this;
-        ///////////////队伍id/////////////////////////////
-        me.guid = me.getAssignfirst().getValues().first;
-
-        var store = Ext.getStore('GroupStore');
-        var index = store.find('guid', me.guid);
-        me.grouptitle = store.getAt(index).data.OUName;
-        me.getAssignselect().getItems().items[0].setTitle(me.grouptitle);
-        me.getTdfield().hide();
-        me.getAssignsecond().onAssignGroupInitialize(me.guid);
-    },
-
-    onToFirstTap: function(){
-        var me = this;
-
-        me.getAssignselect().getItems().items[0].setTitle('请选择');
-        me.getAssignselect().setActiveItem(me.getAssignfirst());
-
-        me.getFirstconfirm().show();
-        me.getTofirst().hide();
-        me.getSecondconfirm().hide();
-    },
-
-    onSecondConfirmTap: function(){
-        var me = this;
-
-        if(me.index == 0){
-            me.onLocationSecondConfirm();
-        }
-        else{
-            me.onGroupSecondConfirm();
-        }
-
-        me.assignselect.hide();
-        me.assignselect.destroy();
-    },
-
-    onLocationSecondConfirm: function(){
-
-        var me = this;
-        var item = me.getSecondfield().getItems();
-        me.location += me.locationtitle  + '：\r\n';
-
-        for(var i=0; i<item.getCount(); i++){
-
-            if(item.items[i].getChecked()){
-                me.location += item.items[i].getLabel() + '，';
+                me.tdtext = '请选择地点&nbsp;&nbsp;&nbsp;>';
             }
-        }
 
-        if(me.getTdms().getValue()){
-            me.location += me.getTdms().getValue();
+            me.getLocation().setData({td: me.tdtext, ry:  me.getLocation().getData().ry, tdid: me.tdid, ryid:  me.getLocation().getData().ryid});
         }
         else{
-            me.location = me.location.substr(0, me.location.length - 1);
-        }
-        me.location += '\r\n';
+            if(!me.rytext){
 
-        me.getLocation().setData({location: me.location, man: me.getLocation().getData().man});
-    },
-
-    onGroupSecondConfirm: function(){
-
-        var me = this;
-        var item = me.getSecondfield().getItems();
-
-        for(var i=0; i<item.getCount(); i++){
-
-            if(item.items[i].getChecked()){
-                me.group += item.items[i].getLabel() + '，';
+                me.rytext = '请选择人员&nbsp;&nbsp;&nbsp;>';
             }
+            me.getLocation().setData({td: me.getLocation().getData().td, ry:  me.rytext, tdid: me.getLocation().getData().tdid, ryid:  me.ryid});
         }
 
-//        me.group = me.group.substr(0, me.group.length - 1);
-
-        me.getLocation().setData({location: me.getLocation().getData().location, man: me.group});
+        me.getInfofunction().show();
+        me.getSelectconfirm().hide();
+        me.getInfo().pop();
     },
 
     onAssignConfirmTap: function(){
-        alert('任务指派成功！');
+        var me = this;
+
+        if(me.getAssignms().getValue() && me.getLocation().getData().tdid && me.getLocation().getData().ryid){
+            alert('任务指派成功！');
+//            plugins.Toast.ShowToast("任务指派成功！",3000);
+        }
+        else{
+            alert('请填写所有信息！');
+//            plugins.Toast.ShowToast("请填写所有信息！",3000);
+        }
+
     },
 
     onAssignCancelTap: function(){

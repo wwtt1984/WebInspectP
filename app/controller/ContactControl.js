@@ -14,13 +14,14 @@ Ext.define('WebInspect.controller.ContactControl', {
         refs: {
             info: 'main info',
             infofunction: '[itemId=infofunction]',
-            firstlevel: 'main info firstlevel',
-            secondlevel: 'main info secondlevel',
-            contact: 'main info contact',
             popup: 'main info popup',
+
+            contactlist: 'info contactlist',
 
             contactsearch: '[itemId=contactsearch]',
             ctsearch: 'ctsearch',
+
+            contacttree: '[itemId=contacttree]',
 
             fullnum: '[itemId=fullnum]',
             shortnum: '[itemId=shortnum]',
@@ -29,14 +30,8 @@ Ext.define('WebInspect.controller.ContactControl', {
         },
 
         control: {
-            firstlevel: {
-                itemtap: 'onFirstLevelTap'
-            },
-            secondlevel: {
-                itemtap: 'onSecondLevelTap'
-            },
-            contact: {
-                itemtap: 'onContactItemTap'
+            contacttree: {
+                leafItemTap: 'onContactLeafItemTap'
             },
             fullnum: {
                 tap: 'onFullNumTap'
@@ -60,36 +55,25 @@ Ext.define('WebInspect.controller.ContactControl', {
     },
 
     onContactInitialize: function(){
-        var store = Ext.getStore('FirstLevelStore');
         var me = this;
 
-        store.removeAll();
+        var contactstore = Ext.getStore('ContactTreeStore');
+        if(!contactstore.getAllCount()){
+            contactstore.getProxy().setExtraParams({
+                t: 'GetZpPerson',
+                results: 'jsonp'
+            });
 
-        store.getProxy().setExtraParams({
-            t: 'GetContactsList',
-            results: '00$jsonp'
-        });
-
-        this.firstlevel = this.getFirstlevel();
-
-        Ext.Viewport.setMasked({
-            xtype: 'loadmask',
-            message: '努力加载中...'
-        });
-
-        store.load(function(records, operation, success){
-            store.filter('ORG_Id_0', '0');
-            Ext.Viewport.setMasked(false);
-        }, this);
-
-        if(!this.firstlevel){
-            this.firstlevel = Ext.create('WebInspect.view.contact.FirstLevel');
+            contactstore.load();
         }
-        this.firstlevel.setTitle('钱塘江管理局');
 
-        this.getInfo().push(this.firstlevel);
+        me.contactlist = me.getContactlist();
 
+        if(!me.contactlist){
+            me.contactlist = Ext.create('WebInspect.view.contact.ContactList');
+        }
 
+        me.getInfo().push(me.contactlist);
 
         var csstore = Ext.getStore('ContactSearchStore');
 
@@ -104,91 +88,26 @@ Ext.define('WebInspect.controller.ContactControl', {
         else{
             me.getContactsearch().show();
         }
-
-    },
-
-    //加载通讯录二级信息
-    onContactLevelSet: function(storename, guid, view, viewname, title){
-        var store = Ext.getStore(storename);
-
-        store.removeAll();
-
-
-        store.getProxy().setExtraParams({
-            t: 'GetContactsList',
-            results: guid + '$jsonp'
-        });
-
-        Ext.Viewport.setMasked({
-            xtype: 'loadmask',
-            message: '努力加载中...'
-        });
-
-        store.load(function(records, operation, success){
-            store.filter('ORG_Id_0', '0');
-            Ext.Viewport.setMasked(false);
-        }, this);
-
-        if(!view){
-            view = Ext.create('WebInspect.view.' + viewname);
-        }
-        view.setTitle(title);
-
-        this.getInfofunction().hide();
-        this.getInfo().push(view);
-    },
-
-    //在通讯录一级列表中选择，加载二级信息列表
-    onFirstLevelTap: function(list, index, target, record, e, eOpts){
-        this.onContactLevelSet('SecondLevelStore', record.data.guid, this.getSecondlevel(), 'contact.SecondLevel', record.data.OUName);
-        this.getContactsearch().hide();
-
-    },
-
-    //在通讯录二级列表中选择，加载三级信息列表
-    onSecondLevelTap: function(list, index, target, record, e, eOpts){
-
-        var store = Ext.getStore('ContactStore');
-
-        store.removeAll();
-
-        store.getProxy().setExtraParams({
-            t: 'GetContactsList',
-            results: record.data.guid + '$jsonp'
-        });
-
-        Ext.Viewport.setMasked({
-            xtype: 'loadmask',
-            message: '努力加载中...'
-        });
-
-        store.load(function(records, operation, success){
-            Ext.Viewport.setMasked(false);
-        }, this);
-
-        this.contact = this.getContact();
-        if(!this.contact){
-            this.contact = Ext.create('WebInspect.view.contact.Contact');
-        }
-        this.contact.setTitle(record.data.OUName);
-        this.getInfo().push(this.contact);
     },
 
     //点击通讯录中“人员”
-    onContactItemTap: function(list, index, target, record, e, eOpts){
+    onContactLeafItemTap: function(container, list, index, target, record, e){
         if (!this.popup) {
-//            this.popup.destroy();
             this.popup = Ext.create('WebInspect.view.contact.PopUp');
         }
 
+        var csstore = Ext.getStore('ContactSearchStore');
+        csstore.clearFilter();
+        csstore.filter('samaccountname', record.data.sid);
+
         if (Ext.os.deviceType.toLowerCase() == "phone") {
             this.popup.setWidth(null);
-            this.popup.setHeight('40%');
+            this.popup.setMinHeight('45%');
             this.popup.setTop(null);
             this.popup.setLeft(0);
         }
 
-        this.popup.onDataSet(record);
+        this.popup.onDataSet(csstore.getData().items[0]);
         if (!this.popup.getParent()) {
             Ext.Viewport.add(this.popup);
         }
@@ -227,7 +146,6 @@ Ext.define('WebInspect.controller.ContactControl', {
         if(!this.ctsearch){
             this.ctsearch = Ext.create('WebInspect.view.contact.Search');
         }
-//        this.search.setTitle(record.data.OUName);
         this.getInfofunction().hide();
         this.getContactsearch().hide();
         this.getInfo().push(this.ctsearch);

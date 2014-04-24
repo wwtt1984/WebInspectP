@@ -9,7 +9,6 @@ Ext.define('WebInspect.controller.MainControl',{
             functionmain: 'main functionmain',
             info: 'main info',
             infofunction: '[itemId=infofunction]',
-            contactsearch: '[itemId=contactsearch]',
             task: 'main info task',
             message: 'main info message',
             news: 'main info news',
@@ -43,12 +42,12 @@ Ext.define('WebInspect.controller.MainControl',{
         this.bpindex = 0;///默认请求
         this.beindex = 2;///默认请求总数
 
-//        window.setTimeout(function(){me.checkJpush(me);},100);
-//        document.addEventListener('deviceready',function(){me.onJpushReady(me);}, false);
+        window.setTimeout(function(){me.checkJpush(me);},100);
+        document.addEventListener('deviceready',function(){me.onJpushReady(me);}, false);
 
         me.onBtnConfirm();
-        //android返回键事件监听
-//        document.addEventListener("backbutton", me.onBackKeyDown, false);
+//        android返回键事件监听
+        document.addEventListener("backbutton", me.onBackKeyDown, false);
     },
 
 
@@ -528,10 +527,6 @@ Ext.define('WebInspect.controller.MainControl',{
                 me.onInfoFunctionBackTap();
                 break;
 
-            case 'firstlevel':
-                me.onInfoFunctionBackTap();
-                break;
-
             case 'setting':
                 me.onInfoFunctionBackTap();
                 break;
@@ -540,14 +535,15 @@ Ext.define('WebInspect.controller.MainControl',{
                 me.onInfoFunctionBackTap();
                 break;
 
+            case 'assginlist':
+                me.getInfofunction().show();
+                me.getApplication().getController('AssignControl').getSelectconfirm().hide();
+                me.getInfo().pop();
+                break;
+
             case 'markmain':
-                if((me.getApplication().getController('AssignControl').assignselect) && (me.getApplication().getController('AssignControl').assignselect.getHidden() == false)){
-                    me.getApplication().getController('AssignControl').assignselect.hide();
-                    me.getApplication().getController('AssignControl').assignselect.destroy();
-                }
-                else{
-                    me.onInfoFunctionBackTap();
-                }
+                me.onInfoFunctionBackTap();
+
                 break;
 
             case 'pushsetting':
@@ -570,8 +566,8 @@ Ext.define('WebInspect.controller.MainControl',{
                 break;
 
             case 'tide':
-                if((me.tidepop) && (me.tidepop.getHidden() == false)){
-                    me.tidepop.hide();
+                if((me.getApplication().getController('TideControl').tidepop) && (me.getApplication().getController('TideControl').tidepop.getHidden() == false)){
+                    me.getApplication().getController('TideControl').tidepop.hide();
                 }
                 else{
                     me.onInfoFunctionBackTap();
@@ -592,11 +588,6 @@ Ext.define('WebInspect.controller.MainControl',{
                 me.getInfofunction().show();
                 break;
 
-            case 'secondlevel':
-                me.getInfo().pop();
-                me.getInfofunction().show();
-                break;
-
             case 'waterdetail':
                 me.getInfo().pop();
                 me.getInfofunction().show();
@@ -611,13 +602,19 @@ Ext.define('WebInspect.controller.MainControl',{
                 me.getInfo().pop();
                 break;
 
-            case 'contact':
-                if((me.popup) && (me.popup.getHidden() == false)){
-                    me.popup.hide();
+            case 'contactlist':
+                if((me.getApplication().getController('ContactControl').popup) && (me.getApplication().getController('ContactControl').popup.getHidden() == false)){
+                    me.getApplication().getController('ContactControl').popup.hide();
                 }
                 else{
-                    me.getInfo().pop();
+                    me.onInfoFunctionBackTap();
                 }
+                break;
+
+            case 'ctsearch':
+                me.getInfofunction().show();
+                me.getApplication().getController('ContactControl').getContactsearch().show();
+                me.getInfo().pop();
                 break;
         }
     },
@@ -629,10 +626,17 @@ Ext.define('WebInspect.controller.MainControl',{
     //info的“返回键”事件，当只有一张页面时，返回至“主功能”页面
     onInfoBackTap: function(view, eOpts){
 
+        var me = this;
         if(view.getActiveItem() == view.getAt(1)){
-            this.getInfofunction().show();
-            if(view.getActiveItem().xtype == 'firstlevel'){
-                this.getContactsearch().show();
+            me.getInfofunction().show();
+
+            switch(view.getActiveItem().xtype){
+                case 'contactlist':
+                    me.getApplication().getController('ContactControl').getContactsearch().show();
+                    break;
+                case 'assignment':
+                    me.getApplication().getController('AssignControl').getSelectconfirm().hide();
+                    break;
             }
         }
     },
@@ -642,9 +646,9 @@ Ext.define('WebInspect.controller.MainControl',{
         var me = this;
         WebInspect.app.user.sid = Ext.getCmp('name').getValue();
         WebInspect.app.user.password = Ext.getCmp('password').getValue();
-//        me.onVpnLogin(1, ''); /////成功写入开始执行VPN认证
-//        plugins.jPush.setAlias(WebInspect.app.user.sid,function(success){});//////推送标识，以用户名区分
-       me.onUserCheck(1,''); ////////测试的时候有
+        me.onVpnLogin(1, ''); /////成功写入开始执行VPN认证
+        plugins.jPush.setAlias(WebInspect.app.user.sid,function(success){});//////推送标识，以用户名区分
+//       me.onUserCheck(1,''); ////////测试的时候有
     },
 
     onUserWriteJson: function(){
@@ -702,7 +706,7 @@ Ext.define('WebInspect.controller.MainControl',{
                     {
                         Ext.Viewport.setMasked(false);
                         me.getMain().setActiveItem(me.getFunctionmain());
-//                        me.onUserWriteJson(); //将验证成功的用户信息，存在本地
+                        me.onUserWriteJson(); //将验证成功的用户信息，存在本地
                         me.onCheckVesion(me);  /////////////////判断是否有新版本/////////////////////
                     }
                     else

@@ -22,19 +22,25 @@ Ext.define('WebInspect.view.assign.AssignList', {
                     {
                         dataIndex: 'text',
                         width: '95%',
-                        style: ' text-align: left; font-size: 1.2em;'
+                        style: ' text-align: left; font-size: 18px;'
 //                                categStyle: 'height:35px !important;'
                     }],
                 leafSelect: true,
-                itemHeight: 35,
+                itemHeight: 40,
                 listItemId: 'firstexamplelist',
                 mode: 'MULTI',
                 arrowPctWidth: '8',
                 disableSelection: false,
                 includeFooter: false,
+                categDepthColors: true,
+                categDepthColorsArr: [
+                    '#eee',
+                    '#f7f7f7',
+                    '#fff'
+                ],
                 includeFooterLevels: false,
 //                        helpHtml: './resources/html/TaskExample.html',
-                store: 'TestStore',
+//                store: 'ContactTreeStore',
                 includeHeader: false,
                 defaultCollapseLevel: 1,
                 singleExpand: true,
@@ -42,7 +48,7 @@ Ext.define('WebInspect.view.assign.AssignList', {
                     'x-touchtreegrid-list',
                     'x-touchtreegrid-list-accordion'
                 ],
-                itemId: 'firstexample'
+                itemId: 'treeselect'
             },
             {
                 xtype: 'panel',
