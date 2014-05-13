@@ -693,7 +693,7 @@ Ext.define('WebInspect.controller.MainControl',{
 
                     Ext.getCmp('maintitle').onDataSet(records[0].data, WebInspect.app.user.name, WebInspect.app.user.mobile);
 
-                    me.onFuncitonLoad(); //加载模块页面
+                    me.onFunctionLoad(); //加载模块页面
 //                    me.onWeatherStoreLoad();  //加载“天气预报”信息
                     me.onPushStoreSet(); //加载“待办事项”和“离线消息”数量
 
@@ -726,7 +726,7 @@ Ext.define('WebInspect.controller.MainControl',{
         Ext.getCmp('noticelist').refresh();
     },
 
-    onFuncitonLoad: function(){
+    onFunctionLoad: function(){
         var me = this;
         var store = Ext.getStore('FunctionStore');
         store.removeAll();
@@ -740,20 +740,20 @@ Ext.define('WebInspect.controller.MainControl',{
         });
     },
 
-    //加载“天气预报”信息，当num=0时，表示是“推送信息”， 当num=1时，表示是：应用程序正常启动
-    onWeatherStoreLoad: function(){
-        var me = this;
-        var store = Ext.getStore('WeatherStore');
-        store.removeAll();
-        store.getProxy().setExtraParams({
-            t: 'GetWeather',
-            results: 'jsonp'
-        });
-        store.load(function(records, operation, success) {
-
-            Ext.getCmp('maintitle').onDataSet(store.getAt(0), WebInspect.app.user.name, WebInspect.app.user.mobile);
-        });
-    },
+//    //加载“天气预报”信息，当num=0时，表示是“推送信息”， 当num=1时，表示是：应用程序正常启动
+//    onWeatherStoreLoad: function(){
+//        var me = this;
+//        var store = Ext.getStore('WeatherStore');
+//        store.removeAll();
+//        store.getProxy().setExtraParams({
+//            t: 'GetWeather',
+//            results: 'jsonp'
+//        });
+//        store.load(function(records, operation, success) {
+//
+//            Ext.getCmp('maintitle').onDataSet(store.getAt(0), WebInspect.app.user.name, WebInspect.app.user.mobile);
+//        });
+//    },
 
     //“主功能”页面的事件，判断进入选择的模块
     onFunctionListTap: function(list, index, target, record, e, eOpts ){
