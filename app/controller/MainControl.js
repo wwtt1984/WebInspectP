@@ -28,7 +28,7 @@ Ext.define('WebInspect.controller.MainControl',{
             },
 
             '#functionlist': {
-                itemtap: 'onFunctionLsitTap'
+                itemtap: 'onFunctionListTap'
             },
             'infofunction': {
                 tap: 'onInfoFunctionBackTap'
@@ -85,6 +85,7 @@ Ext.define('WebInspect.controller.MainControl',{
         }
 
         me.getMain().setActiveItem(me.getFunctionmain());
+        me.getMaincarousel().setActiveItem(Ext.getCmp('functionlist'));
 
         this.info = this.getInfo();
 
@@ -463,13 +464,6 @@ Ext.define('WebInspect.controller.MainControl',{
         else if(mainactive == "info")
         {
             document.removeEventListener("backbutton", me.onBackKeyDown, false); // 注销返回键
-            document.addEventListener("backbutton", me.onBackDo, false); // 返回键
-            var intervalID = window.setInterval(function() {
-                window.clearInterval(intervalID);
-                document.removeEventListener("backbutton", me.onBackDo, false); // 返回键
-                document.addEventListener("backbutton", me.onBackKeyDown, false); // 返回键
-            }, 2000);
-            //当前页面是其他的页面时，返回上一级页面
             me.onBackKeyTap();
         }
         else
@@ -528,10 +522,6 @@ Ext.define('WebInspect.controller.MainControl',{
                 me.onInfoFunctionBackTap();
                 break;
 
-            case 'firstlevel':
-                me.onInfoFunctionBackTap();
-                break;
-
             case 'setting':
                 me.onInfoFunctionBackTap();
                 break;
@@ -540,15 +530,14 @@ Ext.define('WebInspect.controller.MainControl',{
                 me.onInfoFunctionBackTap();
                 break;
 
-            case 'markmain':
-                if((me.getApplication().getController('AssignControl').assignselect) && (me.getApplication().getController('AssignControl').assignselect.getHidden() == false)){
-                    me.getApplication().getController('AssignControl').assignselect.hide();
-                    me.getApplication().getController('AssignControl').assignselect.destroy();
-                }
-                else{
-                    me.onInfoFunctionBackTap();
-                }
+            case 'assginlist':
+                me.getInfofunction().show();
+                me.getApplication().getController('AssignControl').getSelectconfirm().hide();
+                me.getInfo().pop();
                 break;
+
+            case 'markmain':
+                me.onInfoFunctionBackTap();
 
             case 'pushsetting':
                 me.getInfo().pop();
@@ -570,8 +559,8 @@ Ext.define('WebInspect.controller.MainControl',{
                 break;
 
             case 'tide':
-                if((me.tidepop) && (me.tidepop.getHidden() == false)){
-                    me.tidepop.hide();
+                if((me.getApplication().getController('TideControl').tidepop) && (me.getApplication().getController('TideControl').tidepop.getHidden() == false)){
+                    me.getApplication().getController('TideControl').tidepop.hide();
                 }
                 else{
                     me.onInfoFunctionBackTap();
@@ -592,11 +581,6 @@ Ext.define('WebInspect.controller.MainControl',{
                 me.getInfofunction().show();
                 break;
 
-            case 'secondlevel':
-                me.getInfo().pop();
-                me.getInfofunction().show();
-                break;
-
             case 'waterdetail':
                 me.getInfo().pop();
                 me.getInfofunction().show();
@@ -611,15 +595,23 @@ Ext.define('WebInspect.controller.MainControl',{
                 me.getInfo().pop();
                 break;
 
-            case 'contact':
-                if((me.popup) && (me.popup.getHidden() == false)){
-                    me.popup.hide();
+            case 'contactlist':
+                if((me.getApplication().getController('ContactControl').popup) && (me.getApplication().getController('ContactControl').popup.getHidden() == false)){
+                    me.getApplication().getController('ContactControl').popup.hide();
                 }
                 else{
-                    me.getInfo().pop();
+                    me.onInfoFunctionBackTap();
                 }
                 break;
+
+            case 'ctsearch':
+                me.getInfofunction().show();
+                me.getApplication().getController('ContactControl').getContactsearch().show();
+                me.getInfo().pop();
+                break;
         }
+
+        document.addEventListener("backbutton", me.onBackKeyDown, false); // 返回键
     },
 
     onQuitSystemTap: function(){
@@ -628,11 +620,16 @@ Ext.define('WebInspect.controller.MainControl',{
 
     //info的“返回键”事件，当只有一张页面时，返回至“主功能”页面
     onInfoBackTap: function(view, eOpts){
-
+        var me = this;
         if(view.getActiveItem() == view.getAt(1)){
-            this.getInfofunction().show();
-            if(view.getActiveItem().xtype == 'firstlevel'){
-                this.getContactsearch().show();
+            me.getInfofunction().show();
+            switch(view.getActiveItem().xtype){
+                case 'contactlist':
+                    me.getApplication().getController('ContactControl').getContactsearch().show();
+                    break;
+                case 'assignment':
+                    me.getApplication().getController('AssignControl').getSelectconfirm().hide();
+                    break;
             }
         }
     },
@@ -694,8 +691,10 @@ Ext.define('WebInspect.controller.MainControl',{
                     WebInspect.app.user.taskcount = records[0].data.taskcount;
                     WebInspect.app.user.rtxcount = records[0].data.rtxcount;
 
+                    Ext.getCmp('maintitle').onDataSet(records[0].data, WebInspect.app.user.name, WebInspect.app.user.mobile);
+
                     me.onFuncitonLoad(); //加载模块页面
-                    me.onWeatherStoreLoad();  //加载“天气预报”信息
+//                    me.onWeatherStoreLoad();  //加载“天气预报”信息
                     me.onPushStoreSet(); //加载“待办事项”和“离线消息”数量
 
                     if(num == 1)
@@ -757,7 +756,7 @@ Ext.define('WebInspect.controller.MainControl',{
     },
 
     //“主功能”页面的事件，判断进入选择的模块
-    onFunctionLsitTap: function(list, index, target, record, e, eOpts ){
+    onFunctionListTap: function(list, index, target, record, e, eOpts ){
 
         var me = this;
 

@@ -32,7 +32,8 @@ Ext.application({
         'Ext.data.proxy.SkJsonp',
         'Ext.data.proxy.LocalStorage',
         'Ext.device.Camera',
-        'Ext.data.TreeStore'
+        'Ext.data.TreeStore',
+        'Ext.field.Search'
     ],
 
     views: [
@@ -45,8 +46,6 @@ Ext.application({
         'list.MessageItem',
         'list.MainInfo',
         'list.TaskDetail',
-
-        'Ext.ux.panel.PDF',
 
         'news.News',
         'news.NewsDetail',
@@ -92,7 +91,7 @@ Ext.application({
     models: [
         'UserModel',
 
-        'WeatherModel',
+//        'WeatherModel',
         'PushModel',
         'FunctionModel',
 
@@ -131,7 +130,7 @@ Ext.application({
     stores: [
         'UserStore',
 
-        'WeatherStore',
+//        'WeatherStore',
         'PushStore',
         'FunctionStore',
 
