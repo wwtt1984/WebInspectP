@@ -6,5 +6,5 @@ Ext.define('WebInspect.model.TreeModel',{
             'sid'
         ]
     }
-        
+
 });

@@ -13,7 +13,8 @@ Ext.define('WebInspect.controller.MainControl',{
             message: 'main info message',
             news: 'main info news',
             newspdf: 'info newspdf',
-            newsdetail: 'info newsdetail'
+            newsdetail: 'info newsdetail',
+            maincarousel: '[itemId=maincarousel]'
         },
         control: {
             main: {
@@ -32,7 +33,6 @@ Ext.define('WebInspect.controller.MainControl',{
             'infofunction': {
                 tap: 'onInfoFunctionBackTap'
             }
-
         }
     },
     onMainInit: function(){
@@ -84,6 +84,7 @@ Ext.define('WebInspect.controller.MainControl',{
         }
 
         me.getMain().setActiveItem(me.getFunctionmain());
+        me.getMaincarousel().setActiveItem(Ext.getCmp('functionlist'));
 
         this.info = this.getInfo();
 
@@ -627,7 +628,9 @@ Ext.define('WebInspect.controller.MainControl',{
     onInfoBackTap: function(view, eOpts){
 
         var me = this;
+
         if(view.getActiveItem() == view.getAt(1)){
+
             me.getInfofunction().show();
 
             switch(view.getActiveItem().xtype){

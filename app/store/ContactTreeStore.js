@@ -6,7 +6,7 @@ Ext.define('WebInspect.store.ContactTreeStore', {
     ],
 
     config: {
-        autoLoad: true,
+        autoLoad: false,
         model: 'WebInspect.model.TreeModel',
         storeId: 'ContactTreeStore',
         defaultRootProperty: 'items',

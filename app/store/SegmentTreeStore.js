@@ -11,7 +11,7 @@ Ext.define('WebInspect.store.SegmentTreeStore', {
     ],
 
     config: {
-        autoLoad: true,
+//        autoLoad: true,
         model: 'WebInspect.model.TreeModel',
         defaultRootProperty: 'items',
         proxy: {
