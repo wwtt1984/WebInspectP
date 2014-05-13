@@ -43,13 +43,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/com.vpn.vpn.Vpn/www/vpn.js",
-        "id": "com.vpn.vpn.Vpn.vpn",
-        "clobbers": [
-            "window.plugins.Vpn"
-        ]
-    },
-    {
         "file": "plugins/org.apache.cordova.network-information/www/network.js",
         "id": "org.apache.cordova.network-information.network",
         "clobbers": [
@@ -90,6 +83,13 @@ module.exports = [
         "id": "org.apache.cordova.camera.CameraPopoverHandle",
         "clobbers": [
             "CameraPopoverHandle"
+        ]
+    },
+    {
+        "file": "plugins/com.vpn.vpn.Vpn/www/vpn.js",
+        "id": "com.vpn.vpn.Vpn.vpn",
+        "clobbers": [
+            "window.plugins.Vpn"
         ]
     },
     {
@@ -223,9 +223,9 @@ module.exports.metadata =
     "org.apache.cordova.file-transfer": "0.4.0",
     "com.phone.phone.Phone": "1.5.2",
     "com.jpush.jpush.JPush": "1.6.0",
-    "com.vpn.vpn.Vpn": "1.5.2",
     "org.apache.cordova.network-information": "0.2.7",
     "org.apache.cordova.camera": "0.2.8",
+    "com.vpn.vpn.Vpn": "1.5.2",
     "org.apache.cordova.file": "0.2.5"
 }
 // BOTTOM OF METADATA

@@ -26,6 +26,6 @@ Ext.define('WebInspect.view.Title', {
 	},
 	
 	onDataSet: function(record, user, telephone){
-		this.setData({user:user, telephone: telephone, stxt: record.data.stxt, simg: record.data.simg, stemperature: record.data.stemperature});
+		this.setData({user:user, telephone: telephone, stxt: record.stxt, simg: record.simg, stemperature: record.stemperature});
 	}	
 });

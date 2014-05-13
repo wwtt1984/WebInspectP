@@ -18,10 +18,12 @@ Ext.define('WebInspect.model.UserModel',{
             'rtxsession',
             'taskcount',
             'rtxcount',
-
+            
+            'stxt',
             'functionmodule',
             'mymodule',
             'stemperature'
+            
         ]
     }
         

@@ -127,7 +127,6 @@ Ext.define('WebInspect.view.mark.Photo',{
     onPhotoDelete: function(record){
         var id = "imgsrc" + record.data.name;
         Ext.get(id).clearListeners();
-
         var div = document.getElementById(record.data.imgadd);
         div.parentNode.removeChild(div);   //删除
     }
