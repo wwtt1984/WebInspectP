@@ -605,9 +605,14 @@ Ext.define('WebInspect.controller.MainControl',{
                 break;
 
             case 'ctsearch':
-                me.getInfofunction().show();
-                me.getApplication().getController('ContactControl').getContactsearch().show();
-                me.getInfo().pop();
+                if((me.getApplication().getController('ContactControl').popup) && (me.getApplication().getController('ContactControl').popup.getHidden() == false)){
+                    me.getApplication().getController('ContactControl').popup.hide();
+                }
+                else{
+                    me.getInfofunction().show();
+                    me.getApplication().getController('ContactControl').getContactsearch().show();
+                    me.getInfo().pop();
+                }
                 break;
         }
 
@@ -734,10 +739,11 @@ Ext.define('WebInspect.controller.MainControl',{
             t: 'GetFunctionZt',
             results: WebInspect.app.user.sid + '$jsonp'
         });
-        store.load(function(records, operation, success) {
-            store.add({id: 11, sid: WebInspect.app.user.sid, title: '海塘标识', name: 'mark', url: 'resources/images/function/mark.png'});
-            store.add({id: 12, sid: WebInspect.app.user.sid, title: '任务指派', name: 'assignment', url: 'resources/images/function/mark.png'});
-        });
+        store.load();
+//        store.load(function(records, operation, success) {
+//            store.add({id: 11, sid: WebInspect.app.user.sid, title: '海塘标识', name: 'mark', url: 'resources/images/function/mark.png'});
+//            store.add({id: 12, sid: WebInspect.app.user.sid, title: '任务指派', name: 'assignment', url: 'resources/images/function/mark.png'});
+//        });
     },
 
 //    //加载“天气预报”信息，当num=0时，表示是“推送信息”， 当num=1时，表示是：应用程序正常启动

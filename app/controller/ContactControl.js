@@ -149,5 +149,25 @@ Ext.define('WebInspect.controller.ContactControl', {
         this.getInfofunction().hide();
         this.getContactsearch().hide();
         this.getInfo().push(this.ctsearch);
+    },
+
+    onContactItemTap: function(list, index, target, record, e, eOpts){
+        if (!this.popup) {
+            this.popup = Ext.create('WebInspect.view.contact.PopUp');
+        }
+
+        if (Ext.os.deviceType.toLowerCase() == "phone") {
+            this.popup.setWidth(null);
+            this.popup.setMinHeight('45%');
+            this.popup.setTop(null);
+            this.popup.setLeft(0);
+        }
+
+        this.popup.onDataSet(record);
+
+        if (!this.popup.getParent()) {
+            Ext.Viewport.add(this.popup);
+        }
+        this.popup.show();
     }
 })

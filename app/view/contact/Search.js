@@ -136,6 +136,7 @@ Ext.define('WebInspect.view.contact.Search', {
     },
 
     onSearchClearIconTap: function() {
+        var me = this;
         //call the clearFilter method on the store instance
         Ext.getStore('ContactSearchStore').clearFilter();
         me.getStore().removeAll();
