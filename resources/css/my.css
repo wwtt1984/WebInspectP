@@ -601,3 +601,28 @@
     color: #000;
     text-shadow: none;
 }
+
+/*******************指派任务模块  任务列表****************************/
+.assign .list-item h1 {
+    /*    white-space: nowrap;*/
+    font-size: 90%;
+    line-height: 2em;
+    position:relative;
+    /*margin: 0 -15px 0 85px;*/
+}
+
+.assign .list-item h2 {
+    /*    white-space: nowrap;*/
+    font-size: 80%;
+    line-height: 2em;
+    position:relative;
+    /*margin: 0 -15px 0 85px;*/
+}
+
+.assign .list-item .time {
+    position:relative;
+    font-size: 13px;
+    line-height: 2em;
+    color:#333;
+    /*margin: 0 -10px -5px 85px;*/
+}

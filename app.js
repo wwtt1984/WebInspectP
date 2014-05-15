@@ -84,8 +84,10 @@ Ext.application({
         'mark.Photo',
         'mark.MarkList',
 
+        'assign.AssignMain',
         'assign.Assignment',
-        'assign.AssignList'
+        'assign.AssignList',
+        'assign.AssignHistory'
     ],
 
     models: [
@@ -124,7 +126,9 @@ Ext.application({
         'PhotoModel',
         'MarkModel',
 
-        'TreeModel'
+        'TreeModel',
+
+        'AssignModel'
     ],
 
     stores: [
@@ -169,7 +173,9 @@ Ext.application({
 
         'SegmentTreeStore',
 
-        'ContactTreeStore'
+        'ContactTreeStore',
+
+        'AssignStore'
     ],
 
     controllers: [

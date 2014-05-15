@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97eeba59-43ed-481c-b450-8b573637ea50" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/function/assignment.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/images/function/mark.png" afterPath="$PROJECT_DIR$/resources/images/function/mark.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/ContactControl.js" afterPath="$PROJECT_DIR$/app/controller/ContactControl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/view/assign/AssignHistory.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/view/assign/AssignMain.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/model/AssignModel.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/store/AssignStore.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/AssignControl.js" afterPath="$PROJECT_DIR$/app/controller/AssignControl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/assign/Assignment.js" afterPath="$PROJECT_DIR$/app/view/assign/Assignment.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/MainControl.js" afterPath="$PROJECT_DIR$/app/controller/MainControl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/contact/PopUp.js" afterPath="$PROJECT_DIR$/app/view/contact/PopUp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/contact/Search.js" afterPath="$PROJECT_DIR$/app/view/contact/Search.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/NoticeControl.js" afterPath="$PROJECT_DIR$/app/controller/NoticeControl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/list/TaskDetail.js" afterPath="$PROJECT_DIR$/app/view/list/TaskDetail.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/css/my.css" afterPath="$PROJECT_DIR$/resources/css/my.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WebInspect.iws" />
@@ -31,96 +36,109 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainControl.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MainControl.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controller/MainControl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="786" column="22" selection-start="26267" selection-end="26267" vertical-scroll-proportion="-0.5316456" vertical-offset="15144" max-vertical-offset="15941">
+            <state line="6" column="15" selection-start="154" selection-end="154" vertical-scroll-proportion="-2.28" vertical-offset="0" max-vertical-offset="16074">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContactList.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/view/contact/ContactList.js">
+      <file leaf-file-name="Function.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/Function.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="29" selection-start="328" selection-end="328" vertical-scroll-proportion="0.0" vertical-offset="456" max-vertical-offset="1140">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Module.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/view/settings/Module.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="182" column="21" selection-start="4775" selection-end="5032" vertical-scroll-proportion="0.0" vertical-offset="2080" max-vertical-offset="3610">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="20" selection-start="2392" selection-end="2392" vertical-scroll-proportion="0.0" vertical-offset="3610" max-vertical-offset="4446">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="10" selection-start="4075" selection-end="4075" vertical-scroll-proportion="0.0" vertical-offset="1539" max-vertical-offset="3116">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ContactControl.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controller/ContactControl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="166" column="0" selection-start="4466" selection-end="4466" vertical-scroll-proportion="0.0" vertical-offset="2873" max-vertical-offset="3382">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PopUp.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/view/contact/PopUp.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="0" selection-start="1360" selection-end="1360" vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="1425">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Search.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/view/contact/Search.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="141" column="34" selection-start="4647" selection-end="4647" vertical-scroll-proportion="0.0" vertical-offset="2337" max-vertical-offset="2831">
+            <state line="29" column="35" selection-start="696" selection-end="706" vertical-scroll-proportion="0.0" vertical-offset="399" max-vertical-offset="1558">
               <folding>
-                <marker date="1400120056990" expanded="false" signature="1618:1654" placeholder="..." />
+                <marker date="1399949806035" expanded="false" signature="1103:1184" placeholder="..." />
+                <marker date="1399949806035" expanded="false" signature="2217:2245" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
+      <file leaf-file-name="NoticeControl.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controller/NoticeControl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="432" selection-end="432" vertical-scroll-proportion="-8.142858" vertical-offset="0" max-vertical-offset="342">
+            <state line="72" column="32" selection-start="1809" selection-end="1809" vertical-scroll-proportion="-1.9" vertical-offset="1273" max-vertical-offset="2983">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TaskDetail.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/list/TaskDetail.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="214" column="15" selection-start="7543" selection-end="7546" vertical-scroll-proportion="0.0" vertical-offset="3865" max-vertical-offset="4294">
               <folding>
-                <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1400141321876" expanded="false" signature="626:747" placeholder="..." />
+                <marker date="1400141321876" expanded="false" signature="1423:1545" placeholder="..." />
+                <marker date="1400141321876" expanded="false" signature="1559:1597" placeholder="..." />
+                <marker date="1400141321876" expanded="false" signature="1620:1680" placeholder="..." />
+                <marker date="1400141321876" expanded="false" signature="1718:1756" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WaterControl.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controller/WaterControl.js">
+      <file leaf-file-name="TaskModel.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/model/TaskModel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="93" column="66" selection-start="2350" selection-end="2387" vertical-scroll-proportion="0.0" vertical-offset="1653" max-vertical-offset="2413">
+            <state line="19" column="26" selection-start="484" selection-end="484" vertical-scroll-proportion="0.81674206" vertical-offset="0" max-vertical-offset="551">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TaskStore.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/store/TaskStore.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="3" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="304">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Task.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/list/Task.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="0" selection-start="450" selection-end="450" vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="874">
+              <folding>
+                <marker date="1395304708354" expanded="false" signature="745:799" placeholder="..." />
+                <marker date="1395304708354" expanded="false" signature="842:877" placeholder="..." />
+                <marker date="1395304708354" expanded="false" signature="922:957" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AssignControl.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controller/AssignControl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="206" column="47" selection-start="5607" selection-end="5607" vertical-scroll-proportion="0.0" vertical-offset="3738" max-vertical-offset="4522">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AssignMain.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/assign/AssignMain.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="31" selection-start="511" selection-end="511" vertical-scroll-proportion="0.0" vertical-offset="185" max-vertical-offset="627">
+              <folding>
+                <element signature="e#0#38#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AssignHistory.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/assign/AssignHistory.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="20" selection-start="401" selection-end="401" vertical-scroll-proportion="0.0" vertical-offset="14" max-vertical-offset="1083">
+              <folding>
+                <element signature="e#0#38#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -143,22 +161,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/view/Info.js" />
-        <option value="$PROJECT_DIR$/app/view/contact/ContactList.js" />
-        <option value="$PROJECT_DIR$/resources/css/TouchTreeGrid.css" />
-        <option value="$PROJECT_DIR$/app/model/ContactModel.js" />
-        <option value="$PROJECT_DIR$/app/view/assign/Assignment.js" />
-        <option value="$PROJECT_DIR$/app/controller/AssignControl.js" />
-        <option value="$PROJECT_DIR$/app/model/TreeModel.js" />
-        <option value="$PROJECT_DIR$/app/store/ContactTreeStore.js" />
-        <option value="$PROJECT_DIR$/app/model/UserModel.js" />
         <option value="$PROJECT_DIR$/app/store/SegmentTreeStore.js" />
         <option value="$PROJECT_DIR$/app/view/Function.js" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/app/view/contact/PopUp.js" />
         <option value="$PROJECT_DIR$/app/view/contact/Search.js" />
         <option value="$PROJECT_DIR$/app/controller/ContactControl.js" />
+        <option value="$PROJECT_DIR$/app/view/assign/Assignment.js" />
+        <option value="$PROJECT_DIR$/app/view/assign/AssignMain.js" />
+        <option value="$PROJECT_DIR$/app/model/AssignModel.js" />
+        <option value="$PROJECT_DIR$/app/store/AssignStore.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/resources/css/my.css" />
+        <option value="$PROJECT_DIR$/app/view/assign/AssignHistory.js" />
+        <option value="$PROJECT_DIR$/app/controller/AssignControl.js" />
+        <option value="$PROJECT_DIR$/app/controller/NoticeControl.js" />
         <option value="$PROJECT_DIR$/app/controller/MainControl.js" />
+        <option value="$PROJECT_DIR$/app/view/list/TaskDetail.js" />
       </list>
     </option>
   </component>
@@ -466,6 +484,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="mark" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="list" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -606,16 +646,16 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Ext.ux.TouchCalendar-master" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="132" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="910" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="910" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="910" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="132" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="132" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -634,14 +674,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -652,15 +684,23 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -868,28 +908,32 @@
       <created>1400119120221</created>
       <updated>1400119120221</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Initial commit&#10;">
+      <created>1400120607930</created>
+      <updated>1400120607930</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24342105" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32820514" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24944155" sideWeight="0.6700855" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21072227" sideWeight="0.84444445" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21072227" sideWeight="0.83645654" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15555556" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16354345" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45714286" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.50085473" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24342105" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -916,124 +960,138 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/store/ContactTreeStore.js">
+    <entry file="file://$PROJECT_DIR$/app/model/NewsModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="9" selection-start="611" selection-end="611" vertical-scroll-proportion="0.0" vertical-offset="283" max-vertical-offset="627" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/WeatherModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="26" selection-start="191" selection-end="191" vertical-scroll-proportion="0.29166666" vertical-offset="0" max-vertical-offset="456" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controller/AssignControl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="189" column="81" selection-start="4938" selection-end="4938" vertical-scroll-proportion="0.0" vertical-offset="3287" max-vertical-offset="3743">
+        <state line="3" column="26" selection-start="91" selection-end="109" vertical-scroll-proportion="0.12895928" vertical-offset="0" max-vertical-offset="456">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/Title.js">
+    <entry file="file://$PROJECT_DIR$/app/store/ContactSearchStore.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="32" selection-start="1435" selection-end="1435" vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="684">
-          <folding>
-            <marker date="1399962018091" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1399962018091" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1399962018091" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1399962018091" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1399962018091" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1399962018091" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1399962018091" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1399962018091" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1399962018091" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/UserModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="26" selection-start="541" selection-end="541" vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="665">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controller/SettingsControl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="37" selection-start="3036" selection-end="3036" vertical-scroll-proportion="0.0" vertical-offset="1874" max-vertical-offset="3287">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/settings/Module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="182" column="21" selection-start="4775" selection-end="5032" vertical-scroll-proportion="0.0" vertical-offset="2080" max-vertical-offset="3610">
+        <state line="3" column="0" selection-start="38" selection-end="1507" vertical-scroll-proportion="0.0" vertical-offset="8" max-vertical-offset="513">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="20" selection-start="2392" selection-end="2392" vertical-scroll-proportion="0.0" vertical-offset="3610" max-vertical-offset="4446">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="10" selection-start="4075" selection-end="4075" vertical-scroll-proportion="0.0" vertical-offset="1539" max-vertical-offset="3116">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/contact/ContactList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="29" selection-start="328" selection-end="328" vertical-scroll-proportion="0.0" vertical-offset="456" max-vertical-offset="1140">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controller/WaterControl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="66" selection-start="2350" selection-end="2387" vertical-scroll-proportion="0.0" vertical-offset="1653" max-vertical-offset="2413">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="432" selection-end="432" vertical-scroll-proportion="-8.142858" vertical-offset="0" max-vertical-offset="342">
+        <state line="177" column="21" selection-start="3776" selection-end="3776" vertical-scroll-proportion="0.0" vertical-offset="3097" max-vertical-offset="4560">
           <folding>
-            <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/contact/PopUp.js">
+    <entry file="file://$PROJECT_DIR$/app/store/AssignStore.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="0" selection-start="1360" selection-end="1360" vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="1425">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/contact/Search.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="34" selection-start="4647" selection-end="4647" vertical-scroll-proportion="0.0" vertical-offset="2337" max-vertical-offset="2831">
+        <state line="4" column="40" selection-start="69" selection-end="80" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
           <folding>
-            <marker date="1400120056990" expanded="false" signature="1618:1654" placeholder="..." />
+            <element signature="e#0#38#0" expanded="false" />
+            <marker date="1400138895422" expanded="true" signature="-1:-1" placeholder="{&quot;extend&quot;: 'Ext.data.Store'...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controller/ContactControl.js">
+    <entry file="file://$PROJECT_DIR$/app/model/AssignModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="166" column="0" selection-start="4466" selection-end="4466" vertical-scroll-proportion="0.0" vertical-offset="2873" max-vertical-offset="3382">
+        <state line="16" column="18" selection-start="185" selection-end="320" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="456">
+          <folding>
+            <element signature="e#0#38#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/my.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="608" column="18" selection-start="19000" selection-end="19000" vertical-scroll-proportion="-1.5" vertical-offset="11477" max-vertical-offset="12027">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/assign/AssignHistory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="20" selection-start="401" selection-end="401" vertical-scroll-proportion="0.0" vertical-offset="14" max-vertical-offset="1083">
+          <folding>
+            <element signature="e#0#38#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/assign/AssignMain.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="31" selection-start="511" selection-end="511" vertical-scroll-proportion="0.0" vertical-offset="185" max-vertical-offset="627">
+          <folding>
+            <element signature="e#0#38#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controller/AssignControl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="206" column="47" selection-start="5607" selection-end="5607" vertical-scroll-proportion="0.0" vertical-offset="3738" max-vertical-offset="4522">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/list/Task.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="450" selection-end="450" vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="874">
+          <folding>
+            <marker date="1395304708354" expanded="false" signature="745:799" placeholder="..." />
+            <marker date="1395304708354" expanded="false" signature="842:877" placeholder="..." />
+            <marker date="1395304708354" expanded="false" signature="922:957" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/Function.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="35" selection-start="696" selection-end="706" vertical-scroll-proportion="0.0" vertical-offset="399" max-vertical-offset="1558">
+          <folding>
+            <marker date="1399949806035" expanded="false" signature="1103:1184" placeholder="..." />
+            <marker date="1399949806035" expanded="false" signature="2217:2245" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controller/MainControl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="786" column="22" selection-start="26267" selection-end="26267" vertical-scroll-proportion="-0.5316456" vertical-offset="15144" max-vertical-offset="15941">
+        <state line="6" column="15" selection-start="154" selection-end="154" vertical-scroll-proportion="-2.28" vertical-offset="0" max-vertical-offset="16074">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/store/TaskStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="3" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="304">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controller/NoticeControl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="32" selection-start="1809" selection-end="1809" vertical-scroll-proportion="-1.9" vertical-offset="1273" max-vertical-offset="2983">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/list/TaskDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="214" column="15" selection-start="7543" selection-end="7546" vertical-scroll-proportion="0.0" vertical-offset="3865" max-vertical-offset="4294">
+          <folding>
+            <marker date="1400141321876" expanded="false" signature="626:747" placeholder="..." />
+            <marker date="1400141321876" expanded="false" signature="1423:1545" placeholder="..." />
+            <marker date="1400141321876" expanded="false" signature="1559:1597" placeholder="..." />
+            <marker date="1400141321876" expanded="false" signature="1620:1680" placeholder="..." />
+            <marker date="1400141321876" expanded="false" signature="1718:1756" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/TaskModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="26" selection-start="484" selection-end="484" vertical-scroll-proportion="0.81674206" vertical-offset="0" max-vertical-offset="551">
           <folding />
         </state>
       </provider>

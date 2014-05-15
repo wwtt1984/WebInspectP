@@ -14,7 +14,8 @@ Ext.define('WebInspect.controller.AssignControl', {
             info: 'main info',
             infofunction: '[itemId=infofunction]',
 
-            assignment: 'info assignment',
+            assignmain: 'info assignmain',
+            assignment: 'assignment',
 
             assignlist: 'info assignlist',
 
@@ -50,14 +51,14 @@ Ext.define('WebInspect.controller.AssignControl', {
 
         var me = this;
 
-        me.assignment = me.getAssignment();
+        me.assignmain = me.getAssignmain();
 
-        if(!me.assignment){
-            me.assignment = Ext.create('WebInspect.view.assign.Assignment');
+        if(!me.assignmain){
+            me.assignmain = Ext.create('WebInspect.view.assign.AssignMain');
         }
 
-        me.assignment.onLocationSet();
-        me.getInfo().push(me.assignment);
+        me.getAssignment().onLocationSet();
+        me.getInfo().push(me.assignmain);
 
         var contactstore = Ext.getStore('ContactTreeStore');
         if(!contactstore.getAllCount()){
@@ -78,6 +79,18 @@ Ext.define('WebInspect.controller.AssignControl', {
 
             segmentstore.load();
         }
+
+        me.onAssignStoreLoad();
+    },
+
+    onAssignStoreLoad: function(){
+        var assignstore = Ext.getStore('AssignStore');
+        assignstore.getProxy().setExtraParams({
+            t: 'GetZprw',
+            results: WebInspect.app.user.sid + '$jsonp'
+        });
+
+        assignstore.load();
     },
 
     onAssignListPush: function(index){
@@ -126,8 +139,9 @@ Ext.define('WebInspect.controller.AssignControl', {
         if(arr.length){
             for(var i=0; i<arr.length; i++){
                 text += arr[i].data.text + '，';
-                sid += arr[i].data.sid + '@';
+                sid += arr[i].data.text + '@' + arr[i].data.sid + ',';
             }
+
             me.getSelectionpanel().setData({select: text});
             me.getSelectionpanel().show();
 
@@ -174,13 +188,40 @@ Ext.define('WebInspect.controller.AssignControl', {
     onAssignConfirmTap: function(){
         var me = this;
 
+        Ext.Viewport.setMasked({xtype: 'loadmask',message: '正在请求中...'});
+
+        var ms = me.getAssignms().getValue();
+        var td = me.tdid;
+        var ry = me.ryid;
+        var date = Ext.Date.format(new Date(), 'Y-m-d H:m:s');
+
         if(me.getAssignms().getValue() && me.getLocation().getData().tdid && me.getLocation().getData().ryid){
-            alert('任务指派成功！');
-//            plugins.Toast.ShowToast("任务指派成功！",3000);
+
+            var results = WebInspect.app.user.sid + '$' + ms + '$' + td + '$'+ ry + '$' + date + '$jsonp';
+
+            Ext.data.proxy.SkJsonp.validate('InsertZprw',results,{
+                success: function(response) {
+                    Ext.Viewport.setMasked(false);
+                    if(response.success == "true"){
+//                        alert('任务指派成功！');
+                        me.onAssignStoreLoad();
+                        plugins.Toast.ShowToast("任务指派成功！",1000);
+                    }
+                    else{
+//                        alert('任务指派失败！');
+                        plugins.Toast.ShowToast("任务指派失败，请重试！",1000);
+                    }
+                },
+                failure: function() {
+                    Ext.Viewport.setMasked(false);
+//                    alert('请求失败！');
+                    plugins.Toast.ShowToast("请求失败，请重试！",1000);
+                }
+            });
         }
         else{
-            alert('请填写所有信息！');
-//            plugins.Toast.ShowToast("请填写所有信息！",3000);
+//            alert('请填写所有信息！');
+            plugins.Toast.ShowToast("请填写所有信息！",1000);
         }
 
     },

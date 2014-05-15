@@ -11,7 +11,9 @@ Ext.define('WebInspect.view.assign.Assignment', {
 
     config: {
 
-        title: '任务指派',
+//        title: '任务指派',
+
+        itemId: 'assignment',
 
         scrollable: {
             direction: 'vertical',

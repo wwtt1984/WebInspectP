@@ -73,86 +73,86 @@ Ext.define('WebInspect.view.list.TaskDetail',{
                     labelWidth: '40%'
                 },
                 items: [
-                    {
-                        xtype: 'textfield',
-                        name: 'StepID',
-                        label: 'StepID',
-                        readOnly: true
-                    },
-                    {
-                        xtype: 'textfield',
-                        name: 'TaskID',
-                        label: 'TaskID',
-                        readOnly: true
-                    },
-                    {
-                        xtype: 'textfield',
-                        name: 'ProcessName',
-                        label: 'ProcessName',
-                        readOnly: true
-                    },
+//                    {
+//                        xtype: 'textfield',
+//                        name: 'StepID',
+//                        label: 'StepID',
+//                        readOnly: true
+//                    },
+//                    {
+//                        xtype: 'textfield',
+//                        name: 'TaskID',
+//                        label: 'TaskID',
+//                        readOnly: true
+//                    },
+//                    {
+//                        xtype: 'textfield',
+//                        name: 'ProcessName',
+//                        label: 'ProcessName',
+//                        readOnly: true
+//                    },
                     {
                         xtype: 'textfield',
                         name: 'NodeName',
-                        label: 'NodeName',
+                        label: '任务',
                         readOnly: true
                     },
                     {
                         xtype: 'textfield',
                         name: 'OwnerAccount',
-                        label: 'OwnerAccount',
+                        label: '人员',
                         readOnly: true
                     },
 
                     {
                         xtype: 'textfield',
                         name: 'ReceiveAt',
-                        label: 'ReceiveAt',
-                        readOnly: true
-                    },
-                    {
-                        xtype: 'textfield',
-                        name: 'Comments',
-                        label: 'Comments',
-                        readOnly: true
-                    },
-                    {
-                        xtype: 'textfield',
-                        name: 'TimeoutDeadline',
-                        label: 'TimeoutDeadline',
-                        readOnly: true
-                    },
-                    {
-                        xtype: 'textfield',
-                        name: 'CreateAt',
-                        label: 'CreateAt',
-                        readOnly: true
-                    },
-                    {
-                        xtype: 'textfield',
-                        name: 'Description',
-                        label: 'Description',
-                        readOnly: true
-                    },
-
-                    {
-                        xtype: 'textfield',
-                        name: 'State',
-                        label: 'State',
-                        readOnly: true
-                    },
-                    {
-                        xtype: 'textfield',
-                        name: 'SerialNum',
-                        label: 'SerialNum',
-                        readOnly: true
-                    },
-                    {
-                        xtype: 'textfield',
-                        name: 'AgentAccount',
-                        label: 'AgentAccount',
+                        label: '接收时间',
                         readOnly: true
                     }
+//                    {
+//                        xtype: 'textfield',
+//                        name: 'Comments',
+//                        label: 'Comments',
+//                        readOnly: true
+//                    },
+//                    {
+//                        xtype: 'textfield',
+//                        name: 'TimeoutDeadline',
+//                        label: 'TimeoutDeadline',
+//                        readOnly: true
+//                    },
+//                    {
+//                        xtype: 'textfield',
+//                        name: 'CreateAt',
+//                        label: 'CreateAt',
+//                        readOnly: true
+//                    },
+//                    {
+//                        xtype: 'textfield',
+//                        name: 'Description',
+//                        label: 'Description',
+//                        readOnly: true
+//                    },
+//
+//                    {
+//                        xtype: 'textfield',
+//                        name: 'State',
+//                        label: 'State',
+//                        readOnly: true
+//                    },
+//                    {
+//                        xtype: 'textfield',
+//                        name: 'SerialNum',
+//                        label: 'SerialNum',
+//                        readOnly: true
+//                    },
+//                    {
+//                        xtype: 'textfield',
+//                        name: 'AgentAccount',
+//                        label: 'AgentAccount',
+//                        readOnly: true
+//                    }
                 ]
             },
             {

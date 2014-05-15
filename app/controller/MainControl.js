@@ -80,38 +80,42 @@ Ext.define('WebInspect.controller.MainControl',{
     onMessagePush: function(data){
         var me = this;
 
-        if(this.getInfo()){
-            this.getInfo().destroy();
+        if(me.getInfo()){
+            me.getInfo().destroy();
         }
 
         me.getMain().setActiveItem(me.getFunctionmain());
-        me.getMaincarousel().setActiveItem(Ext.getCmp('functionlist'));
 
-        this.info = this.getInfo();
+        me.info = me.getInfo();
 
-        if(!this.info){
-            this.info = Ext.create('WebInspect.view.Info');
+        if(!me.info){
+            me.info = Ext.create('WebInspect.view.Info');
         }
 
-        this.getMain().add(this.info);
+        me.getMain().add(me.info);
 
-        var titlestr = ['news', 'info', 'notice', 'inspect'];
+        var titlestr = ['news', 'info', 'notice', 'inspect', 'assignment'];
 
         switch(data.type){
             case titlestr[0]:
-                this.onNoticeNewsStypeSet('NewsStore', 'GetInfoList', 'news$jsonp', data, '内网新闻');
+                me.onNoticeNewsStypeSet('NewsStore', 'GetInfoList', 'news$jsonp', data, '内网新闻');
                 break;
 
             case titlestr[1]:
-                this.onNoticeNewsStypeSet('InfoStore', 'GetInfoList', 'info$jsonp', data, '综合信息');
+                me.onNoticeNewsStypeSet('InfoStore', 'GetInfoList', 'info$jsonp', data, '综合信息');
                 break;
 
             case titlestr[2]:
-                this.onNoticeNewsStypeSet('NoticeStore', 'GetInfoList', 'notice$jsonp',data,  '通知公告');
+                me.onNoticeNewsStypeSet('NoticeStore', 'GetInfoList', 'notice$jsonp',data,  '通知公告');
                 break;
 
             case titlestr[3]:
-                this.onNoticeNewsStypeSet('InspectStore', 'GetInfoList', 'inspect$jsonp', data, '海塘巡查');
+                me.onNoticeNewsStypeSet('InspectStore', 'GetInfoList', 'inspect$jsonp', data, '海塘巡查');
+                break;
+
+            case titlestr[4]:
+                me.getMaincarousel().setActiveItem(Ext.getCmp('noticelist'));
+                me.getApplication().getController('NoticeControl').onTaskStoreLoad();
                 break;
 
         }
@@ -121,6 +125,9 @@ Ext.define('WebInspect.controller.MainControl',{
     onNoticeNewsStypeSet: function(storename, t, results, data, title){
 
         var me = this;
+
+        me.getMaincarousel().setActiveItem(Ext.getCmp('functionlist'));
+
         me.news = me.getNews();
         if(!me.news){
             me.news = Ext.create('WebInspect.view.news.News');
@@ -526,7 +533,7 @@ Ext.define('WebInspect.controller.MainControl',{
                 me.onInfoFunctionBackTap();
                 break;
 
-            case 'assignment':
+            case 'assignmain':
                 me.onInfoFunctionBackTap();
                 break;
 

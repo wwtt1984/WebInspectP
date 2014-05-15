@@ -80,8 +80,6 @@ Ext.define('WebInspect.controller.NoticeControl', {
 
         me.getInfo().push(me.task);
 
-        me.getMain().setActiveItem(me.getInfo());
-
         var store = Ext.getStore('TaskStore');
         store.removeAll();
         store.getProxy().setExtraParams({
@@ -92,7 +90,7 @@ Ext.define('WebInspect.controller.NoticeControl', {
         store.load(function(records, operation, success){
         }, this);
 
-
+        me.getMain().setActiveItem(me.getInfo());
     },
 
     onTaskItemTap: function(list, index, target, record, e, eOpts ){
