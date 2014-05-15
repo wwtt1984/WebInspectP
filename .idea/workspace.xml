@@ -2,114 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97eeba59-43ed-481c-b450-8b573637ea50" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/001.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/aiq.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/am.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/baiy.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/bb.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/bei.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/bj.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/status/blue.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/bz.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/code3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/cy.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/dao.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/db.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/dd.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/dg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/dh.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/dk.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/dp.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/ds.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/duoy.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/dx.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/dy.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/fad.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/fan.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/fd.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/feid.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/fendou.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/fn.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/fw.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/gg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/hanx.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/hl.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/hx.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/hy.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/jie.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/jk.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/jy.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/ka.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/kf.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/kl.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/kuk.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/kun.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/lh.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/ll.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/loading.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/lw.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/maom.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/maomao.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/mg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/mm.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/mn.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/nan.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/ng.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/nv.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/oh.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/pz.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/qianc.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/qiang.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/qiao.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/qrcode.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/qsh.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/qz.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/status/red.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/notice/rtx.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/ruo.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/se.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/function/setting.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/shan.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/shd.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/shl.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/shuai.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/shui.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/sj.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/notice/task.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/tiao.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/notice/today.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/tp.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/tu.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/tx.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/ty.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/wen.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/ws.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/wx.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/xg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/xig.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/xin.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/xixing.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/xr.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/xs.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/xu.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/xy.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/yb.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/status/yellow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/yiw.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/yj.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/yl.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/yun.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/yw.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/yy.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/zhao.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/zhd.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/zhem.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/zhm.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/zj.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/zk.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/zq.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rtx/zt.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/MainControl.js" afterPath="$PROJECT_DIR$/app/controller/MainControl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WebInspect.iws" />
@@ -136,7 +28,16 @@
       <file leaf-file-name="MainControl.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controller/MainControl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="745" column="51" selection-start="24501" selection-end="24501" vertical-scroll-proportion="-0.15443037" vertical-offset="14216" max-vertical-offset="15827">
+            <state line="585" column="44" selection-start="18480" selection-end="18480" vertical-scroll-proportion="0.47607052" vertical-offset="10926" max-vertical-offset="15827">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContactList.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/contact/ContactList.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="29" selection-start="328" selection-end="328" vertical-scroll-proportion="0.0" vertical-offset="456" max-vertical-offset="1140">
               <folding />
             </state>
           </provider>
@@ -145,7 +46,7 @@
       <file leaf-file-name="SettingsControl.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controller/SettingsControl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="37" selection-start="3036" selection-end="3036" vertical-scroll-proportion="-4.32" vertical-offset="1874" max-vertical-offset="3287">
+            <state line="110" column="37" selection-start="3036" selection-end="3036" vertical-scroll-proportion="0.0" vertical-offset="1874" max-vertical-offset="3287">
               <folding />
             </state>
           </provider>
@@ -164,9 +65,7 @@
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="94" column="20" selection-start="2392" selection-end="2392" vertical-scroll-proportion="0.0" vertical-offset="3610" max-vertical-offset="4446">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -174,7 +73,7 @@
       <file leaf-file-name="app.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="10" selection-start="4075" selection-end="4075" vertical-scroll-proportion="-7.464286" vertical-offset="1539" max-vertical-offset="3116">
+            <state line="92" column="10" selection-start="4075" selection-end="4075" vertical-scroll-proportion="0.0" vertical-offset="1539" max-vertical-offset="3116">
               <folding />
             </state>
           </provider>
@@ -567,6 +466,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="contact" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="assign" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -661,18 +582,18 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="126" />
     <property name="SearchEverywhereHistory" value="" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../GeMobile" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Ext.ux.TouchCalendar-master" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="132" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="910" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="910" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="910" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="132" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="132" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -691,6 +612,14 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -701,23 +630,15 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -917,28 +838,32 @@
       <created>1399965537049</created>
       <updated>1399965537049</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Initial commit&#10;">
+      <created>1399966550308</created>
+      <updated>1399966550308</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24342105" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32820514" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24944155" sideWeight="0.6700855" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21072227" sideWeight="0.84444445" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21072227" sideWeight="0.84497446" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15555556" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15502556" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45714286" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.50085473" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24342105" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -965,35 +890,31 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/app/controller/ContactControl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="74" selection-start="395" selection-end="395" vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="342">
+        <state line="100" column="39" selection-start="2589" selection-end="2589" vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="3002">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="74" selection-start="395" selection-end="395" vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="342" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/Function.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="37" selection-start="1835" selection-end="1847" vertical-scroll-proportion="0.0" vertical-offset="1022" max-vertical-offset="1558">
-          <folding>
-            <marker date="1399949806035" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1399949806035" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
+        <state line="58" column="37" selection-start="1835" selection-end="1847" vertical-scroll-proportion="0.0" vertical-offset="1022" max-vertical-offset="1558" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controller/MarkControl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="5" selection-start="871" selection-end="871" vertical-scroll-proportion="0.0" vertical-offset="549" max-vertical-offset="893">
-          <folding />
-        </state>
+        <state line="40" column="5" selection-start="871" selection-end="871" vertical-scroll-proportion="0.0" vertical-offset="549" max-vertical-offset="893" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/store/ContactTreeStore.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="9" selection-start="611" selection-end="611" vertical-scroll-proportion="0.0" vertical-offset="283" max-vertical-offset="627">
-          <folding />
-        </state>
+        <state line="25" column="9" selection-start="611" selection-end="611" vertical-scroll-proportion="0.0" vertical-offset="283" max-vertical-offset="627" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controller/ContactControl.js">
@@ -1005,9 +926,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/model/WeatherModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="26" selection-start="191" selection-end="191" vertical-scroll-proportion="0.29166666" vertical-offset="0" max-vertical-offset="456">
-          <folding />
-        </state>
+        <state line="7" column="26" selection-start="191" selection-end="191" vertical-scroll-proportion="0.29166666" vertical-offset="0" max-vertical-offset="456" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controller/AssignControl.js">
@@ -1043,7 +962,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controller/SettingsControl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="37" selection-start="3036" selection-end="3036" vertical-scroll-proportion="-4.32" vertical-offset="1874" max-vertical-offset="3287">
+        <state line="110" column="37" selection-start="3036" selection-end="3036" vertical-scroll-proportion="0.0" vertical-offset="1874" max-vertical-offset="3287">
           <folding />
         </state>
       </provider>
@@ -1058,22 +977,27 @@
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="94" column="20" selection-start="2392" selection-end="2392" vertical-scroll-proportion="0.0" vertical-offset="3610" max-vertical-offset="4446">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="10" selection-start="4075" selection-end="4075" vertical-scroll-proportion="-7.464286" vertical-offset="1539" max-vertical-offset="3116">
+        <state line="92" column="10" selection-start="4075" selection-end="4075" vertical-scroll-proportion="0.0" vertical-offset="1539" max-vertical-offset="3116">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/contact/ContactList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="29" selection-start="328" selection-end="328" vertical-scroll-proportion="0.0" vertical-offset="456" max-vertical-offset="1140">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controller/MainControl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="745" column="51" selection-start="24501" selection-end="24501" vertical-scroll-proportion="-0.15443037" vertical-offset="14216" max-vertical-offset="15827">
+        <state line="585" column="44" selection-start="18480" selection-end="18480" vertical-scroll-proportion="0.47607052" vertical-offset="10926" max-vertical-offset="15827">
           <folding />
         </state>
       </provider>
