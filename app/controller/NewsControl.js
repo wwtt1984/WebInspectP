@@ -130,7 +130,6 @@ Ext.define('WebInspect.controller.NewsControl', {
     onNewsBackTap: function(){
         var me = this;
         me.getInfo().onViewHide();
-
     }
 
 })
