@@ -179,6 +179,7 @@ E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\a
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\vpn.png \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\weather \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\woman.png \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\function\assignment.png \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\function\contacts.png \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\function\flow.png \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\function\header.png \

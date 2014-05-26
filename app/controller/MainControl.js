@@ -14,7 +14,8 @@ Ext.define('WebInspect.controller.MainControl',{
             news: 'main info news',
             newspdf: 'info newspdf',
             newsdetail: 'info newsdetail',
-            maincarousel: '[itemId=maincarousel]'
+            maincarousel: '[itemId=maincarousel]',
+            load: '[itemId=load]'
         },
         control: {
             main: {
@@ -331,7 +332,20 @@ Ext.define('WebInspect.controller.MainControl',{
                     Ext.Msg.confirm("当前版本 " + WebInspect.app.user.version,
                         "新版本("+records[0].data.strThisVersion+")，是否下载更新？",function(btn){
                         if(btn == 'yes'){
-                            me.downLoad();
+
+                            me.load = me.getLoad();
+                            if(!me.load){
+                                me.load = Ext.create('WebInspect.view.Load',{
+                                    itemId: 'load',
+                                    style: 'height: 20px; position:absolute; top:80%;'
+                                });
+                            }
+                            me.getLoad().onDataSet(0);
+                            me.getFunctionmain().add(me.load);
+
+                            me.downLoad(records[0].data.strFileName,records[0].data.strGetFileVersionFileURL,me);
+
+//                            me.downLoad();
                         }
                     });
                 }
@@ -414,22 +428,47 @@ Ext.define('WebInspect.controller.MainControl',{
 
     ////////////////////////////////////////////////////////////////////////////////////////
 
-    downLoad:function()
+    downLoad:function(name,url,me)
     {
-        Ext.Viewport.setMasked({xtype:'loadmask',message:'下载中,请稍后...'});
+//        Ext.Viewport.setMasked({xtype:'loadmask',message:'下载中,请稍后...'});
+//        var fileTransfer = new FileTransfer();
+//        var uri = encodeURI("http://bpm.qgj.cn/test/qgjapp.apk");
+//        fileTransfer.download(
+//            uri,
+//            "file:///mnt/sdcard/dx_download/qgjapp.apk",
+//            function(entry) {
+//                Ext.Viewport.setMasked(false);
+//                plugins.Toast.ShowToast("下载完成",3000);
+//                plugins.Install.InstallApk("mnt/sdcard/dx_download/qgjapp.apk");
+//            },
+//            function(error) {
+//                Ext.Viewport.setMasked(false);
+//                plugins.Toast.ShowToast('下载失败！请检查网络！',3000);
+//            }
+//        );
+        var uri = encodeURI(url);
         var fileTransfer = new FileTransfer();
-        var uri = encodeURI("http://bpm.qgj.cn/test/qgjapp.apk");
+
+        fileTransfer.onprogress = function(progressEvent) {
+            if (progressEvent.lengthComputable) {
+                var percent = Number((progressEvent.loaded / progressEvent.total) * 100).toFixed(0);
+                me.getLoad().onDataSet(percent);
+            } else {
+                plugins.Toast.ShowToast("error",1000);
+            }
+        };
+
         fileTransfer.download(
             uri,
-            "file:///mnt/sdcard/dx_download/qgjapp.apk",
+            "cdvfile://localhost/persistent/Download/" + name,
             function(entry) {
-                Ext.Viewport.setMasked(false);
-                plugins.Toast.ShowToast("下载完成",3000);
-                plugins.Install.InstallApk("mnt/sdcard/dx_download/qgjapp.apk");
+                plugins.Toast.ShowToast("下载完成"+entry.fullPath,3000);
+                me.getLoad().destroy();
+                plugins.Install.InstallApk("mnt/sdcard"+entry.fullPath);
             },
             function(error) {
-                Ext.Viewport.setMasked(false);
-                plugins.Toast.ShowToast('下载失败！请检查网络！',3000);
+                plugins.Toast.ShowToast(' '+error.source,3000);
+                me.getLoad().destroy();
             }
         );
     },
@@ -746,11 +785,10 @@ Ext.define('WebInspect.controller.MainControl',{
             t: 'GetFunctionZt',
             results: WebInspect.app.user.sid + '$jsonp'
         });
-        store.load();
-//        store.load(function(records, operation, success) {
-//            store.add({id: 11, sid: WebInspect.app.user.sid, title: '海塘标识', name: 'mark', url: 'resources/images/function/mark.png'});
-//            store.add({id: 12, sid: WebInspect.app.user.sid, title: '任务指派', name: 'assignment', url: 'resources/images/function/mark.png'});
-//        });
+//        store.load();
+        store.load(function(records, operation, success) {
+            store.add({id: 13, sid: WebInspect.app.user.sid, title: '工资信息', name: 'salary', url: 'resources/images/function/mark.png'});
+        });
     },
 
 //    //加载“天气预报”信息，当num=0时，表示是“推送信息”， 当num=1时，表示是：应用程序正常启动
@@ -780,7 +818,7 @@ Ext.define('WebInspect.controller.MainControl',{
 
         me.getMain().add(me.info);
 
-        var titlestr = ['news', 'info', 'notice', 'contacts', 'tide', 'water', 'rain', 'flow', 'project', 'inspect', 'setting', 'mark', 'assignment'];
+        var titlestr = ['news', 'info', 'notice', 'contacts', 'tide', 'water', 'rain', 'flow', 'project', 'inspect', 'setting', 'mark', 'assignment', 'salary'];
 
         switch(record.data.name){
             case titlestr[0]:
@@ -825,6 +863,10 @@ Ext.define('WebInspect.controller.MainControl',{
 
             case titlestr[12]:
                 me.getApplication().getController('AssignControl').onAssignInitialize();
+                break;
+
+            case titlestr[13]:
+                me.getApplication().getController('SalaryControl').onSalaryInitialize();
                 break;
         }
         me.getMain().setActiveItem(me.getInfo());

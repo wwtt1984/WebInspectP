@@ -759,6 +759,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.controller.SettingsControl": [],
   "WebInspect.controller.TideControl": [],
   "WebInspect.controller.WaterControl": [],
+  "WebInspect.model.AssignModel": [],
   "WebInspect.model.ContactModel": [],
   "WebInspect.model.FlowModel": [],
   "WebInspect.model.FunctionModel": [],
@@ -785,6 +786,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.model.WaterDetailModel": [],
   "WebInspect.model.WaterModel": [],
   "WebInspect.model.WeatherModel": [],
+  "WebInspect.store.AssignStore": [],
   "WebInspect.store.ContactSearchStore": [],
   "WebInspect.store.ContactTreeStore": [],
   "WebInspect.store.FlowStore": [],
@@ -820,7 +822,9 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.view.Main": [],
   "WebInspect.view.Title": [],
   "WebInspect.view.TouchTreeGrid": [],
+  "WebInspect.view.assign.AssignHistory": [],
   "WebInspect.view.assign.AssignList": [],
+  "WebInspect.view.assign.AssignMain": [],
   "WebInspect.view.assign.Assignment": [],
   "WebInspect.view.contact.ContactList": [],
   "WebInspect.view.contact.PopUp": [],
@@ -1809,6 +1813,7 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.controller.SettingsControl": [],
   "WebInspect.controller.TideControl": [],
   "WebInspect.controller.WaterControl": [],
+  "WebInspect.model.AssignModel": [],
   "WebInspect.model.ContactModel": [],
   "WebInspect.model.FlowModel": [],
   "WebInspect.model.FunctionModel": [],
@@ -1835,6 +1840,7 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.model.WaterDetailModel": [],
   "WebInspect.model.WaterModel": [],
   "WebInspect.model.WeatherModel": [],
+  "WebInspect.store.AssignStore": [],
   "WebInspect.store.ContactSearchStore": [],
   "WebInspect.store.ContactTreeStore": [],
   "WebInspect.store.FlowStore": [],
@@ -1884,8 +1890,14 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.view.TouchTreeGrid": [
     "widget.touchtreegrid"
   ],
+  "WebInspect.view.assign.AssignHistory": [
+    "widget.assignhistory"
+  ],
   "WebInspect.view.assign.AssignList": [
     "widget.assginlist"
+  ],
+  "WebInspect.view.assign.AssignMain": [
+    "widget.assignmain"
   ],
   "WebInspect.view.assign.Assignment": [
     "widget.assignment"

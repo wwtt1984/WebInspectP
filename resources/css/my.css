@@ -90,8 +90,10 @@
 	margin:0;
 }
 .grid .x-list-item .x-list-item-body, .grid .x-list-item.x-list-item-tpl .x-innerhtml {
-    padding: 12px 12px 0px 12px;
+    /*padding: 12px 12px 0px 12px;*/
+    padding: 0;
 }
+
 .grid .x-list-item {
     display: inline-block;
     width: auto;
@@ -106,13 +108,14 @@
 }
 .x-portrait .grid .x-list-item {
     display: inline-block;
-    width: 33%;
+    width: 25%;
     border: none !important;
 /*    padding-right: 10px;*/
 }
 .grid .x-list-item .movie {
 /*  display: flex;*/
     width: 100%;
+    margin: 12px 10px 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   -webkit-box-orient: vertical;
@@ -128,8 +131,8 @@
 }
 .grid .x-list-item .movie .img {
 /*  background-color: black;*/
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   background-position: 50%;
   background-size: cover;
   /*-webkit-box-shadow: 10px 10px 38px -8px black;
@@ -141,7 +144,7 @@
   width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 0.9em;
+  font-size: 0.85em;
   font-weight: bold;
   text-align: center;
   margin-top: 10px;
@@ -625,4 +628,22 @@
     line-height: 2em;
     color:#333;
     /*margin: 0 -10px -5px 85px;*/
+}
+
+/**********************下载进度条**********************/
+.download .loading-status{
+    width: 94%;
+    margin: 0 3% 0 3%;
+    border: 1px #669CB8 solid;
+    -webkit-box-shadow: 0px 2px 2px #D0D4D6;
+    height: 15px;
+    -webkit-border-radius: 10px;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#E1E9EE), to(white));
+    padding: 1px;
+}
+.download .percent {
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#7BC3FF), color-stop(0.5,#42A9FF), to(#7BC3FF));
+    /*width: 0%;*/
+    height: 100%;
+    -webkit-border-radius: 10px;
 }

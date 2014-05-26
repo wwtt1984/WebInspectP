@@ -33,8 +33,8 @@ Ext.define('WebInspect.view.Login', {
                     xtype: 'textfield',
                     id: 'name',
                     name: 'name',
+//                    value: 'xgh',
                     label: '用户名'
-//                    value: 'xgh'
                 },
                 {
                     xtype: 'passwordfield',
