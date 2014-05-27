@@ -8,13 +8,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/com.install.install.Install/www/install.js",
-        "id": "com.install.install.Install.install",
-        "clobbers": [
-            "window.plugins.Install"
-        ]
-    },
-    {
         "file": "plugins/org.apache.cordova.file-transfer/www/FileTransferError.js",
         "id": "org.apache.cordova.file-transfer.FileTransferError",
         "clobbers": [
@@ -90,6 +83,13 @@ module.exports = [
         "id": "com.vpn.vpn.Vpn.vpn",
         "clobbers": [
             "window.plugins.Vpn"
+        ]
+    },
+    {
+        "file": "plugins/com.install.install.Install/www/install.js",
+        "id": "com.install.install.Install.install",
+        "clobbers": [
+            "window.plugins.Install"
         ]
     },
     {
@@ -219,13 +219,13 @@ module.exports.metadata =
 // TOP OF METADATA
 {
     "com.toast.toast.Toast": "1.5.2",
-    "com.install.install.Install": "1.5.2",
     "org.apache.cordova.file-transfer": "0.4.0",
     "com.phone.phone.Phone": "1.5.2",
     "com.jpush.jpush.JPush": "1.6.0",
     "org.apache.cordova.network-information": "0.2.7",
     "org.apache.cordova.camera": "0.2.8",
     "com.vpn.vpn.Vpn": "1.5.2",
+    "com.install.install.Install": "1.5.2",
     "org.apache.cordova.file": "0.2.5"
 }
 // BOTTOM OF METADATA

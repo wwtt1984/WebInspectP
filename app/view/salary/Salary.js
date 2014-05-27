@@ -71,7 +71,7 @@ Ext.define('WebInspect.view.salary.Salary', {
     },
 
     onActiveItemChange: function(index){
-        debugger;
+
         var me = this;
         var car = me.down('carousel');
         var carindex = car.getActiveIndex();

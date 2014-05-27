@@ -168,12 +168,14 @@ E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\a
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\contact.png \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\function \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\green3.png \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\larr.png \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\loading.jpg \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\man.png \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\nopic.jpg \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\notice \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\pdf.jpg \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\qrcode.png \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rarr.png \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\status \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\vpn.png \

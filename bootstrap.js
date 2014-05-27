@@ -8,6 +8,7 @@ Ext.Loader.addClassPathMappings({
   "Ext": "touch/src",
   "Ext.data.proxy.SkJsonp": "app/lib/SkJsonp.js",
   "Ext.data.proxy.SkProxy": "app/lib/SkProxy.js",
+  "Ext.data.proxy.SkSalary": "app/lib/SkSalary.js",
   "Ext.device.Purchases.Product": "touch/src/device/purchases/Sencha.js",
   "Ext.device.filesystem.DirectoryEntry": "touch/src/device/filesystem/HTML5.js",
   "Ext.device.filesystem.Entry": "touch/src/device/filesystem/HTML5.js",
@@ -241,6 +242,7 @@ Ext.ClassManager.addNameAlternateMappings({
   ],
   "Ext.data.proxy.SkJsonp": [],
   "Ext.data.proxy.SkProxy": [],
+  "Ext.data.proxy.SkSalary": [],
   "Ext.data.proxy.Sql": [
     "Ext.data.proxy.SQL"
   ],
@@ -756,6 +758,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.controller.NoticeControl": [],
   "WebInspect.controller.ProjectControl": [],
   "WebInspect.controller.RainControl": [],
+  "WebInspect.controller.SalaryControl": [],
   "WebInspect.controller.SettingsControl": [],
   "WebInspect.controller.TideControl": [],
   "WebInspect.controller.WaterControl": [],
@@ -774,6 +777,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.model.ProjectSecondModel": [],
   "WebInspect.model.PushModel": [],
   "WebInspect.model.RainModel": [],
+  "WebInspect.model.SalaryModel": [],
   "WebInspect.model.SegmentModel": [],
   "WebInspect.model.SettingModel": [],
   "WebInspect.model.SettingsModel": [],
@@ -806,6 +810,9 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.store.ProjectSecondStore": [],
   "WebInspect.store.PushStore": [],
   "WebInspect.store.RainStore": [],
+  "WebInspect.store.SalaryNextStore": [],
+  "WebInspect.store.SalaryPreStore": [],
+  "WebInspect.store.SalaryStore": [],
   "WebInspect.store.SegmentTreeStore": [],
   "WebInspect.store.SettingStore": [],
   "WebInspect.store.TaskStore": [],
@@ -818,6 +825,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.store.WeatherStore": [],
   "WebInspect.view.Function": [],
   "WebInspect.view.Info": [],
+  "WebInspect.view.Load": [],
   "WebInspect.view.Login": [],
   "WebInspect.view.Main": [],
   "WebInspect.view.Title": [],
@@ -849,6 +857,9 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.view.project.ProjectMain": [],
   "WebInspect.view.project.ProjectSecond": [],
   "WebInspect.view.rain.Rain": [],
+  "WebInspect.view.salary.Salary": [],
+  "WebInspect.view.salary.SalaryCarousel": [],
+  "WebInspect.view.salary.SalaryList": [],
   "WebInspect.view.settings.Module": [],
   "WebInspect.view.settings.PushSetting": [],
   "WebInspect.view.settings.Setting": [],
@@ -1200,6 +1211,9 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.data.proxy.SkJsonp": [],
   "Ext.data.proxy.SkProxy": [
     "proxy.sk"
+  ],
+  "Ext.data.proxy.SkSalary": [
+    "proxy.salary"
   ],
   "Ext.data.proxy.Sql": [
     "proxy.sql"
@@ -1810,6 +1824,7 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.controller.NoticeControl": [],
   "WebInspect.controller.ProjectControl": [],
   "WebInspect.controller.RainControl": [],
+  "WebInspect.controller.SalaryControl": [],
   "WebInspect.controller.SettingsControl": [],
   "WebInspect.controller.TideControl": [],
   "WebInspect.controller.WaterControl": [],
@@ -1828,6 +1843,7 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.model.ProjectSecondModel": [],
   "WebInspect.model.PushModel": [],
   "WebInspect.model.RainModel": [],
+  "WebInspect.model.SalaryModel": [],
   "WebInspect.model.SegmentModel": [],
   "WebInspect.model.SettingModel": [],
   "WebInspect.model.SettingsModel": [],
@@ -1860,6 +1876,9 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.store.ProjectSecondStore": [],
   "WebInspect.store.PushStore": [],
   "WebInspect.store.RainStore": [],
+  "WebInspect.store.SalaryNextStore": [],
+  "WebInspect.store.SalaryPreStore": [],
+  "WebInspect.store.SalaryStore": [],
   "WebInspect.store.SegmentTreeStore": [
     "store.SegmentTreeStore"
   ],
@@ -1877,6 +1896,9 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "WebInspect.view.Info": [
     "widget.info"
+  ],
+  "WebInspect.view.Load": [
+    "widget.load"
   ],
   "WebInspect.view.Login": [
     "widget.login"
@@ -1970,6 +1992,15 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "WebInspect.view.rain.Rain": [
     "widget.rain"
+  ],
+  "WebInspect.view.salary.Salary": [
+    "widget.salary"
+  ],
+  "WebInspect.view.salary.SalaryCarousel": [
+    "widget.salarycarousel"
+  ],
+  "WebInspect.view.salary.SalaryList": [
+    "widget.salarylist"
   ],
   "WebInspect.view.settings.Module": [
     "widget.module"

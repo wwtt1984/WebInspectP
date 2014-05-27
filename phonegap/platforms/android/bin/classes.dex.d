@@ -1,5 +1,4 @@
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes.dex : \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\com\install\install\InstallPlugin$1.class \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\com\install\install\InstallPlugin.class \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\com\jpush\jpush\JPush$1.class \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\com\jpush\jpush\JPush.class \

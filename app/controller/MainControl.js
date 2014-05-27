@@ -333,15 +333,7 @@ Ext.define('WebInspect.controller.MainControl',{
                         "新版本("+records[0].data.strThisVersion+")，是否下载更新？",function(btn){
                         if(btn == 'yes'){
 
-                            me.load = me.getLoad();
-                            if(!me.load){
-                                me.load = Ext.create('WebInspect.view.Load',{
-                                    itemId: 'load',
-                                    style: 'height: 20px; position:absolute; top:80%;'
-                                });
-                            }
-                            me.getLoad().onDataSet(0);
-                            me.getFunctionmain().add(me.load);
+                            me.onLoadOrUploadViewShow();
 
                             me.downLoad(records[0].data.strFileName,records[0].data.strGetFileVersionFileURL,me);
 
@@ -352,6 +344,28 @@ Ext.define('WebInspect.controller.MainControl',{
             }
 
         }, this);
+
+    },
+
+    onLoadOrUploadViewShow: function(){
+
+        var me = this;
+
+        me.load = me.getLoad();
+
+        if(!me.load){
+            me.load = Ext.create('WebInspect.view.Load');
+        }
+
+        if (Ext.os.deviceType.toLowerCase() == "phone") {
+            me.load.setMinHeight('30%');
+        }
+
+        me.load.onDataSet(0);
+        if (!me.load.getParent()) {
+            Ext.Viewport.add(me.load);
+        }
+        me.load.show();
 
     },
 
@@ -455,6 +469,7 @@ Ext.define('WebInspect.controller.MainControl',{
                 me.getLoad().onDataSet(percent);
             } else {
                 plugins.Toast.ShowToast("error",1000);
+                me.getLoad().hide();
             }
         };
 
@@ -463,12 +478,12 @@ Ext.define('WebInspect.controller.MainControl',{
             "cdvfile://localhost/persistent/Download/" + name,
             function(entry) {
                 plugins.Toast.ShowToast("下载完成"+entry.fullPath,3000);
-                me.getLoad().destroy();
+                me.getLoad().hide();
                 plugins.Install.InstallApk("mnt/sdcard"+entry.fullPath);
             },
             function(error) {
                 plugins.Toast.ShowToast(' '+error.source,3000);
-                me.getLoad().destroy();
+                me.getLoad().hide();
             }
         );
     },

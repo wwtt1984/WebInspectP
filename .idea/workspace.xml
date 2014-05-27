@@ -1,93 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97eeba59-43ed-481c-b450-8b573637ea50" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/larr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/rarr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/view/Load.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/view/salary/Salary.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/view/salary/SalaryCarousel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controller/SalaryControl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/view/salary/SalaryList.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/model/SalaryModel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/store/SalaryNextStore.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/store/SalaryPreStore.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/store/SalaryStore.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/SkSalary.js" />
-      <change type="DELETED" beforePath="E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\app\store\TestStore.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/org/apache/cordova/App.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/org/apache/cordova/App.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/ConnectionPool$1.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/ConnectionPool$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/ConnectionPool.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/ConnectionPool.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/org/apache/cordova/CordovaActivity$4.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/org/apache/cordova/CordovaActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/org/apache/cordova/CordovaActivity$5.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/org/apache/cordova/CordovaActivity$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/org/apache/cordova/CordovaActivity.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/org/apache/cordova/CordovaActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/org/apache/cordova/CordovaChromeClient.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/org/apache/cordova/CordovaChromeClient.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/org/apache/cordova/CordovaWebView.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/org/apache/cordova/CordovaWebView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/org/apache/cordova/CordovaWebViewClient$1.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/org/apache/cordova/CordovaWebViewClient$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/org/apache/cordova/CordovaWebViewClient.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/org/apache/cordova/CordovaWebViewClient.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/internal/DiskLruCache.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/internal/DiskLruCache.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/internal/Dns.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/internal/Dns.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/bin/classes/org/apache/cordova/filetransfer/FileTransfer.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/bin/classes/org/apache/cordova/filetransfer/FileTransfer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/bin/classes/org/apache/cordova/file/FileUtils.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/bin/classes/org/apache/cordova/file/FileUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/internal/http/HttpDate.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/internal/http/HttpDate.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/internal/http/HttpEngine.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/internal/http/HttpEngine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/HttpResponseCache$CacheRequestImpl.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/HttpResponseCache$CacheRequestImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/internal/http/HttpResponseCache$CacheRequestImpl.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/internal/http/HttpResponseCache$CacheRequestImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/HttpResponseCache.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/HttpResponseCache.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/internal/http/HttpResponseCache.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/internal/http/HttpResponseCache.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/internal/http/HttpURLConnectionImpl.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/internal/http/HttpURLConnectionImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/internal/spdy/IncomingStreamHandler.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/internal/spdy/IncomingStreamHandler.class" />
+    <list default="true" id="97eeba59-43ed-481c-b450-8b573637ea50" name="Default" comment="Initial commit&#10;">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/proguard.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/gen/R.java.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/gen/org/apache/cordova/BuildConfig.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\com\install\install\InstallPlugin$1.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/bin/classes/com/install/install/InstallPlugin.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/bin/classes/com/install/install/InstallPlugin.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/bin/classes/com/jpush/jpush/JPush.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/bin/classes/com/jpush/jpush/JPush.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/bin/classes/com/jpush/jpush/MyReceiver.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/bin/classes/com/jpush/jpush/MyReceiver.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/org/apache/cordova/NativeToJsMessageQueue$LoadUrlBridgeMode.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/org/apache/cordova/NativeToJsMessageQueue$LoadUrlBridgeMode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/org/apache/cordova/NativeToJsMessageQueue$OnlineEventsBridgeMode.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/org/apache/cordova/NativeToJsMessageQueue$OnlineEventsBridgeMode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/org/apache/cordova/PluginManager$PluginManagerService.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/org/apache/cordova/PluginManager$PluginManagerService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/org/apache/cordova/PluginManager.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/org/apache/cordova/PluginManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/internal/http/RawHeaders.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/internal/http/RawHeaders.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/internal/http/RequestHeaders.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/internal/http/RequestHeaders.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/internal/http/ResponseHeaders.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/internal/http/ResponseHeaders.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/internal/spdy/SpdyConnection$Reader.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/internal/spdy/SpdyConnection$Reader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/internal/spdy/SpdyConnection.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/internal/spdy/SpdyConnection.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/internal/spdy/SpdyReader.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/internal/spdy/SpdyReader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/internal/spdy/SpdyWriter.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/internal/spdy/SpdyWriter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/internal/StrictLineReader.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes/com/squareup/okhttp/internal/StrictLineReader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/bin/classes/com/toast/toast/ToastPlugin.class" afterPath="$PROJECT_DIR$/phonegap/platforms/android/bin/classes/com/toast/toast/ToastPlugin.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/bin/classes.dex" afterPath="$PROJECT_DIR$/phonegap/platforms/android/bin/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes.jar" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/bin/webInspect-debug-unaligned.apk" afterPath="$PROJECT_DIR$/phonegap/platforms/android/bin/webInspect-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/bin/webInspect-debug.apk" afterPath="$PROJECT_DIR$/phonegap/platforms/android/bin/webInspect-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/bin/webInspect.ap_" afterPath="$PROJECT_DIR$/phonegap/platforms/android/bin/webInspect.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/plugins/com.install.install.Install/.fetch.json" afterPath="$PROJECT_DIR$/phonegap/plugins/com.install.install.Install/.fetch.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/AndroidManifest.xml.d" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/AndroidManifest.xml.d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/bin/AndroidManifest.xml.d" afterPath="$PROJECT_DIR$/phonegap/platforms/android/bin/AndroidManifest.xml.d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/AndroidManifest.xml" afterPath="$PROJECT_DIR$/phonegap/platforms/android/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/bin/AndroidManifest.xml" afterPath="$PROJECT_DIR$/phonegap/platforms/android/bin/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/DirectoryEntry.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/DirectoryEntry.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/DirectoryReader.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/DirectoryReader.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/Entry.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/Entry.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/File.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/File.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/FileEntry.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/FileEntry.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/FileError.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/FileError.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/FileReader.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/FileReader.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/FileSystem.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/FileSystem.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file-transfer/www/FileTransfer.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file-transfer/www/FileTransfer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file-transfer/www/FileTransferError.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file-transfer/www/FileTransferError.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/FileUploadOptions.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/FileUploadOptions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/FileUploadResult.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/FileUploadResult.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/FileWriter.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/FileWriter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/Flags.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/Flags.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/src/com/install/install/InstallPlugin.java" afterPath="$PROJECT_DIR$/phonegap/platforms/android/src/com/install/install/InstallPlugin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/plugins/com.install.install.Install/src/android/InstallPlugin.java" afterPath="$PROJECT_DIR$/phonegap/plugins/com.install.install.Install/src/android/InstallPlugin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/LocalFileSystem.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/LocalFileSystem.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/Login.js" afterPath="$PROJECT_DIR$/app/view/Login.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/DirectoryEntry.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/DirectoryEntry.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/DirectoryReader.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/DirectoryReader.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/Entry.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/Entry.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/File.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/File.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/FileEntry.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/FileEntry.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/FileError.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/FileError.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/FileReader.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/FileReader.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/FileSystem.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/FileSystem.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file-transfer/www/FileTransfer.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file-transfer/www/FileTransfer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file-transfer/www/FileTransferError.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file-transfer/www/FileTransferError.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/FileUploadOptions.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/FileUploadOptions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/FileUploadResult.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/FileUploadResult.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/FileWriter.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/FileWriter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/Flags.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/Flags.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/Load.js" afterPath="$PROJECT_DIR$/app/view/Load.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/LocalFileSystem.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/LocalFileSystem.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/MainControl.js" afterPath="$PROJECT_DIR$/app/controller/MainControl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/Metadata.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/Metadata.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/contact/PopUp.js" afterPath="$PROJECT_DIR$/app/view/contact/PopUp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/ProgressEvent.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/ProgressEvent.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/gen/R.java.d" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/gen/R.java.d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/gen/R.java.d" afterPath="$PROJECT_DIR$/phonegap/platforms/android/gen/R.java.d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/plugins/android.json" afterPath="$PROJECT_DIR$/phonegap/plugins/android.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/Metadata.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/Metadata.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/ProgressEvent.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/ProgressEvent.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/salary/Salary.js" afterPath="$PROJECT_DIR$/app/view/salary/Salary.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/app.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/www/app.js" afterPath="$PROJECT_DIR$/phonegap/www/app.js" />
@@ -96,20 +40,13 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/bin/build.prop" afterPath="$PROJECT_DIR$/phonegap/platforms/android/bin/build.prop" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/bin/classes.dex.d" afterPath="$PROJECT_DIR$/phonegap/platforms/android/bin/classes.dex.d" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/res/xml/config.xml" afterPath="$PROJECT_DIR$/phonegap/platforms/android/res/xml/config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/cordova_plugins.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/cordova_plugins.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/temp/native/WebInspect/sencha-compiler/app/full-page-master-bundle.js" afterPath="$PROJECT_DIR$/build/temp/native/WebInspect/sencha-compiler/app/full-page-master-bundle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/index.html" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/www/index.html" afterPath="$PROJECT_DIR$/phonegap/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/com.install.install.Install/www/install.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/com.install.install.Install/www/install.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/plugins/com.install.install.Install/www/install.js" afterPath="$PROJECT_DIR$/phonegap/plugins/com.install.install.Install/www/install.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/com.jpush.jpush.JPush/www/jPush.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/com.jpush.jpush.JPush/www/jPush.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/local.properties" afterPath="$PROJECT_DIR$/phonegap/platforms/android/local.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/local.properties" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/local.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/cordova_plugins.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/cordova_plugins.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/com.install.install.Install/www/install.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/com.install.install.Install/www/install.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/com.jpush.jpush.JPush/www/jPush.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/com.jpush.jpush.JPush/www/jPush.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/css/my.css" afterPath="$PROJECT_DIR$/resources/css/my.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/requestFileSystem.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/requestFileSystem.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/resolveLocalFileSystemURI.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/org.apache.cordova.file/www/resolveLocalFileSystemURI.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/com.toast.toast.Toast/www/toast.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/.staging/www/plugins/com.toast.toast.Toast/www/toast.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/bin/webInspect-debug-unaligned.apk.d" afterPath="$PROJECT_DIR$/phonegap/platforms/android/bin/webInspect-debug-unaligned.apk.d" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/requestFileSystem.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/requestFileSystem.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/resolveLocalFileSystemURI.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/org.apache.cordova.file/www/resolveLocalFileSystemURI.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/com.toast.toast.Toast/www/toast.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/plugins/com.toast.toast.Toast/www/toast.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/bin/webInspect.ap_.d" afterPath="$PROJECT_DIR$/phonegap/platforms/android/bin/webInspect.ap_.d" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -134,86 +71,92 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainControl.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MainControl.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controller/MainControl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="22" selection-start="55" selection-end="65" vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="16872">
+            <state line="359" column="57" selection-start="11147" selection-end="11147" vertical-scroll-proportion="0.79512197" vertical-offset="6495" max-vertical-offset="17157">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app.js">
+      <file leaf-file-name="ProjectElement.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/project/ProjectElement.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="205" column="24" selection-start="4423" selection-end="4423" vertical-scroll-proportion="0.6958175" vertical-offset="3522" max-vertical-offset="4636">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SalaryList.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/view/salary/SalaryList.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="36" selection-start="76" selection-end="76" vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="817">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="1.0" vertical-offset="50" max-vertical-offset="1330">
               <folding>
-                <marker date="1400661908109" expanded="true" signature="623:733" placeholder="..." />
-                <marker date="1400661908109" expanded="false" signature="763:784" placeholder="..." />
-                <marker date="1400661908109" expanded="false" signature="826:848" placeholder="..." />
+                <marker date="1394693759452" expanded="false" signature="482:569" placeholder="..." />
+                <marker date="1394693759452" expanded="false" signature="610:632" placeholder="..." />
+                <marker date="1394693759452" expanded="false" signature="689:711" placeholder="..." />
+                <marker date="1394693759452" expanded="false" signature="1661:1694" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SalaryCarousel.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/view/salary/SalaryCarousel.js">
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="117" column="66" selection-start="3706" selection-end="3706" vertical-scroll-proportion="0.0" vertical-offset="2223" max-vertical-offset="3211">
+            <state line="51" column="0" selection-start="1661" selection-end="1661" vertical-scroll-proportion="0.0" vertical-offset="684" max-vertical-offset="4826">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProjectFirst.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/project/ProjectFirst.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="24" selection-start="65" selection-end="66" vertical-scroll-proportion="-0.72" vertical-offset="40" max-vertical-offset="703">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SalaryControl.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controller/SalaryControl.js">
+      <file leaf-file-name="Load.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/Load.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="0" selection-start="865" selection-end="865" vertical-scroll-proportion="0.0" vertical-offset="798" max-vertical-offset="1444">
+            <state line="24" column="37" selection-start="502" selection-end="502" vertical-scroll-proportion="0.0" vertical-offset="241" max-vertical-offset="1387">
+              <folding>
+                <marker date="1401178217979" expanded="true" signature="490:516" placeholder="..." />
+                <marker date="1401178217979" expanded="false" signature="712:787" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProjectSecond.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/project/ProjectSecond.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="1.0" vertical-offset="50" max-vertical-offset="532">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SalaryStore.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/store/SalaryStore.js">
+      <file leaf-file-name="Rain.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/rain/Rain.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="13" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0" vertical-offset="133" max-vertical-offset="532">
-              <folding />
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="1.0" vertical-offset="50" max-vertical-offset="1957">
+              <folding>
+                <marker date="1394611428667" expanded="false" signature="727:874" placeholder="..." />
+                <marker date="1394611428667" expanded="false" signature="916:1007" placeholder="..." />
+                <marker date="1394611428667" expanded="false" signature="1073:1164" placeholder="..." />
+                <marker date="1394611428667" expanded="false" signature="1230:1322" placeholder="..." />
+                <marker date="1394611428667" expanded="false" signature="1854:1887" placeholder="..." />
+                <marker date="1394611428667" expanded="false" signature="1909:1942" placeholder="..." />
+                <marker date="1394611428667" expanded="false" signature="1965:1998" placeholder="..." />
+                <marker date="1394611428667" expanded="false" signature="2021:2054" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SalaryPreStore.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/store/SalaryPreStore.js">
+      <file leaf-file-name="my.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/css/my.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="40" selection-end="515" vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="532">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SalaryNextStore.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/store/SalaryNextStore.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="18" selection-start="436" selection-end="436" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="532">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SkSalary.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/lib/SkSalary.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="24" selection-start="134" selection-end="140" vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="475">
+            <state line="655" column="36" selection-start="20053" selection-end="20053" vertical-scroll-proportion="0.0" vertical-offset="12205" max-vertical-offset="12711">
               <folding />
             </state>
           </provider>
@@ -222,16 +165,25 @@
       <file leaf-file-name="Salary.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/view/salary/Salary.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="16" selection-start="2948" selection-end="2988" vertical-scroll-proportion="0.0" vertical-offset="1412" max-vertical-offset="1995">
+            <state line="78" column="0" selection-start="2859" selection-end="2859" vertical-scroll-proportion="0.0" vertical-offset="1368" max-vertical-offset="1995">
               <folding>
-                <marker date="1400662858689" expanded="false" signature="608:632" placeholder="..." />
-                <marker date="1400662858689" expanded="false" signature="670:703" placeholder="..." />
-                <marker date="1400662858689" expanded="false" signature="819:852" placeholder="..." />
-                <marker date="1400662858689" expanded="false" signature="904:938" placeholder="..." />
-                <marker date="1400662858689" expanded="false" signature="1084:1164" placeholder="..." />
-                <marker date="1400662858689" expanded="false" signature="1202:1235" placeholder="..." />
-                <marker date="1400662858689" expanded="false" signature="1281:1315" placeholder="..." />
+                <marker date="1401155716227" expanded="false" signature="608:632" placeholder="..." />
+                <marker date="1401155716227" expanded="false" signature="670:703" placeholder="..." />
+                <marker date="1401155716227" expanded="false" signature="819:852" placeholder="..." />
+                <marker date="1401155716227" expanded="false" signature="904:938" placeholder="..." />
+                <marker date="1401155716227" expanded="false" signature="1084:1164" placeholder="..." />
+                <marker date="1401155716227" expanded="false" signature="1202:1235" placeholder="..." />
+                <marker date="1401155716227" expanded="false" signature="1281:1315" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SalaryCarousel.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/salary/SalaryCarousel.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="1.0" vertical-offset="50" max-vertical-offset="3211">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -254,22 +206,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/phonegap/platforms/android/local.properties" />
         <option value="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/local.properties" />
         <option value="$PROJECT_DIR$/app/view/Login.js" />
-        <option value="$PROJECT_DIR$/app/view/Load.js" />
-        <option value="$PROJECT_DIR$/resources/css/my.css" />
         <option value="$PROJECT_DIR$/app/model/SalaryModel.js" />
         <option value="$PROJECT_DIR$/app/lib/SkSalary.js" />
         <option value="$PROJECT_DIR$/app/store/SalaryStore.js" />
         <option value="$PROJECT_DIR$/app/store/SalaryPreStore.js" />
-        <option value="$PROJECT_DIR$/app/controller/MainControl.js" />
         <option value="$PROJECT_DIR$/app/view/salary/SalaryList.js" />
         <option value="$PROJECT_DIR$/app/store/SalaryNextStore.js" />
         <option value="$PROJECT_DIR$/app/controller/SalaryControl.js" />
         <option value="$PROJECT_DIR$/app/view/salary/SalaryCarousel.js" />
-        <option value="$PROJECT_DIR$/app/view/salary/Salary.js" />
+        <option value="$PROJECT_DIR$/app/view/tide/TidePop.js" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/app/view/salary/Salary.js" />
+        <option value="$PROJECT_DIR$/resources/css/my.css" />
+        <option value="$PROJECT_DIR$/app/view/Load.js" />
+        <option value="$PROJECT_DIR$/app/controller/MainControl.js" />
       </list>
     </option>
   </component>
@@ -305,7 +257,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -335,24 +286,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebInspect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebInspect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -452,7 +385,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="store" />
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tide" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -470,7 +407,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="salary" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -488,7 +429,165 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="news" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mark" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="list" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="flow" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contact" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assign" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -512,6 +611,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -529,16 +629,16 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/SfMobile" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="132" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="910" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="910" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="910" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="132" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="132" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -557,14 +657,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -575,15 +667,23 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -787,19 +887,23 @@
       <created>1399966550308</created>
       <updated>1399966550308</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Initial commit&#10;">
+      <created>1401084702095</created>
+      <updated>1401084702095</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32820514" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3811966" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12991454" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24944155" sideWeight="0.6700855" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20997766" sideWeight="0.61880344" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20997766" sideWeight="0.8700855" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15497553" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -835,114 +939,153 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/view/tide/Tide.js">
+    <entry file="file://$PROJECT_DIR$/app/view/mark/MarkMain.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="3" selection-start="0" selection-end="2737" vertical-scroll-proportion="0.0" vertical-offset="1074" max-vertical-offset="1634" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/rain/Rain.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="25" selection-start="727" selection-end="727" vertical-scroll-proportion="0.0" vertical-offset="456" max-vertical-offset="1957" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/SalaryModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="17" selection-start="156" selection-end="174" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="361" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/settings/PushSetting.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="18" selection-start="395" selection-end="395" vertical-scroll-proportion="0.0" vertical-offset="1881" max-vertical-offset="4541" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/SkJsonp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="32" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="798" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/SkProxy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="8" selection-start="298" selection-end="298" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="399" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/store/SalaryPreStore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="40" selection-end="515" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="494">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="1.0" vertical-offset="50" max-vertical-offset="646">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controller/MainControl.js">
+    <entry file="file://$PROJECT_DIR$/app/view/news/News.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="22" selection-start="55" selection-end="65" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="16872">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/salary/SalaryList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="36" selection-start="76" selection-end="76" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="779">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="1.0" vertical-offset="50" max-vertical-offset="1539">
           <folding>
-            <marker date="1400661908109" expanded="true" signature="623:733" placeholder="..." />
-            <marker date="1400661908109" expanded="false" signature="763:784" placeholder="..." />
-            <marker date="1400661908109" expanded="false" signature="826:848" placeholder="..." />
+            <marker date="1399962018157" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1399962018157" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1399962018157" expanded="false" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/store/SalaryStore.js">
+    <entry file="file://$PROJECT_DIR$/app/view/news/NewsDetail.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="494">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="1.0" vertical-offset="50" max-vertical-offset="1615">
+          <folding>
+            <marker date="1399962018160" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1399962018160" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1399962018160" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1399962018160" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1399962018160" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1399962018160" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1399962018160" expanded="false" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/news/NewsImg.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="1.0" vertical-offset="50" max-vertical-offset="2337">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/store/SalaryNextStore.js">
+    <entry file="file://$PROJECT_DIR$/app/view/news/NewsPdf.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="18" selection-start="436" selection-end="436" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="494">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="1.0" vertical-offset="50" max-vertical-offset="1273">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controller/SalaryControl.js">
+    <entry file="file://$PROJECT_DIR$/app/view/project/ProjectCard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="0" selection-start="865" selection-end="865" vertical-scroll-proportion="0.0" vertical-offset="513" max-vertical-offset="1406">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="1.0" vertical-offset="50" max-vertical-offset="1634">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/SkSalary.js">
+    <entry file="file://$PROJECT_DIR$/app/view/project/ProjectElement.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="24" selection-start="134" selection-end="140" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="437">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="1.0" vertical-offset="50" max-vertical-offset="1330">
+          <folding>
+            <marker date="1394693759452" expanded="false" signature="482:569" placeholder="..." />
+            <marker date="1394693759452" expanded="false" signature="610:632" placeholder="..." />
+            <marker date="1394693759452" expanded="false" signature="689:711" placeholder="..." />
+            <marker date="1394693759452" expanded="false" signature="1661:1694" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/project/ProjectFirst.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="24" selection-start="65" selection-end="66" vertical-scroll-proportion="-0.72" vertical-offset="40" max-vertical-offset="703">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/project/ProjectSecond.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="1.0" vertical-offset="50" max-vertical-offset="532">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/salary/SalaryCarousel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="66" selection-start="3706" selection-end="3706" vertical-scroll-proportion="0.0" vertical-offset="2622" max-vertical-offset="3173">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="1.0" vertical-offset="50" max-vertical-offset="3211">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/rain/Rain.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="1.0" vertical-offset="50" max-vertical-offset="1957">
+          <folding>
+            <marker date="1394611428667" expanded="false" signature="727:874" placeholder="..." />
+            <marker date="1394611428667" expanded="false" signature="916:1007" placeholder="..." />
+            <marker date="1394611428667" expanded="false" signature="1073:1164" placeholder="..." />
+            <marker date="1394611428667" expanded="false" signature="1230:1322" placeholder="..." />
+            <marker date="1394611428667" expanded="false" signature="1854:1887" placeholder="..." />
+            <marker date="1394611428667" expanded="false" signature="1909:1942" placeholder="..." />
+            <marker date="1394611428667" expanded="false" signature="1965:1998" placeholder="..." />
+            <marker date="1394611428667" expanded="false" signature="2021:2054" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/salary/Salary.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="16" selection-start="2948" selection-end="2988" vertical-scroll-proportion="0.0" vertical-offset="1412" max-vertical-offset="1995">
+        <state line="78" column="0" selection-start="2859" selection-end="2859" vertical-scroll-proportion="0.0" vertical-offset="1368" max-vertical-offset="1995">
           <folding>
-            <marker date="1400662858689" expanded="false" signature="608:632" placeholder="..." />
-            <marker date="1400662858689" expanded="false" signature="670:703" placeholder="..." />
-            <marker date="1400662858689" expanded="false" signature="819:852" placeholder="..." />
-            <marker date="1400662858689" expanded="false" signature="904:938" placeholder="..." />
-            <marker date="1400662858689" expanded="false" signature="1084:1164" placeholder="..." />
-            <marker date="1400662858689" expanded="false" signature="1202:1235" placeholder="..." />
-            <marker date="1400662858689" expanded="false" signature="1281:1315" placeholder="..." />
+            <marker date="1401155716227" expanded="false" signature="608:632" placeholder="..." />
+            <marker date="1401155716227" expanded="false" signature="670:703" placeholder="..." />
+            <marker date="1401155716227" expanded="false" signature="819:852" placeholder="..." />
+            <marker date="1401155716227" expanded="false" signature="904:938" placeholder="..." />
+            <marker date="1401155716227" expanded="false" signature="1084:1164" placeholder="..." />
+            <marker date="1401155716227" expanded="false" signature="1202:1235" placeholder="..." />
+            <marker date="1401155716227" expanded="false" signature="1281:1315" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="205" column="24" selection-start="4423" selection-end="4423" vertical-scroll-proportion="0.6958175" vertical-offset="3522" max-vertical-offset="4636">
+        <state line="51" column="0" selection-start="1661" selection-end="1661" vertical-scroll-proportion="0.0" vertical-offset="684" max-vertical-offset="4826">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/my.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="655" column="36" selection-start="20053" selection-end="20053" vertical-scroll-proportion="0.0" vertical-offset="12205" max-vertical-offset="12711">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/Load.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="37" selection-start="502" selection-end="502" vertical-scroll-proportion="0.0" vertical-offset="241" max-vertical-offset="1387">
+          <folding>
+            <marker date="1401178217979" expanded="true" signature="490:516" placeholder="..." />
+            <marker date="1401178217979" expanded="false" signature="712:787" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controller/MainControl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="359" column="57" selection-start="11147" selection-end="11147" vertical-scroll-proportion="0.79512197" vertical-offset="6495" max-vertical-offset="17157">
           <folding />
         </state>
       </provider>
