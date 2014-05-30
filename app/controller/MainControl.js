@@ -801,10 +801,10 @@ Ext.define('WebInspect.controller.MainControl',{
             t: 'GetFunctionZt',
             results: WebInspect.app.user.sid + '$jsonp'
         });
-//        store.load();
-        store.load(function(records, operation, success) {
-            store.add({id: 13, sid: WebInspect.app.user.sid, title: '工资信息', name: 'salary', url: 'resources/images/function/mark.png'});
-        });
+        store.load();
+//        store.load(function(records, operation, success) {
+//            store.add({id: 13, sid: WebInspect.app.user.sid, title: '工资信息', name: 'salary', url: 'resources/images/function/salary.png'});
+//        });
     },
 
 //    //加载“天气预报”信息，当num=0时，表示是“推送信息”， 当num=1时，表示是：应用程序正常启动
