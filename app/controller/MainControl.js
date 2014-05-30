@@ -763,6 +763,7 @@ Ext.define('WebInspect.controller.MainControl',{
 //                    me.onWeatherStoreLoad();  //加载“天气预报”信息
                     me.onPushStoreSet(); //加载“待办事项”和“离线消息”数量
 
+                    me.getApplication().getController('SalaryControl').onAllStoreLoad();
                     if(num == 1)
                     {
                         Ext.Viewport.setMasked(false);
@@ -889,10 +890,14 @@ Ext.define('WebInspect.controller.MainControl',{
 
     //监听info页面的“主页面”按钮，点击后，返回“主功能”页面
     onInfoFunctionBackTap: function(){
-        this.getMain().setActiveItem(this.getFunctionmain());
-        if(this.getInfo().getActiveItem().xtype == 'markmain'){
+        var me = this;
+        me.getMain().setActiveItem(me.getFunctionmain());
+        if(me.getInfo().getActiveItem().xtype == 'markmain'){
             Ext.ComponentQuery.query('#photo')[0].clearImgListeners();
         }
-        this.getInfo().destroy();
+        else if(me.getInfo().getActiveItem().xtype == 'salary'){
+            me.getApplication().getController('SalaryControl').getSalarycarousel().removeAll();
+        }
+        me.getInfo().destroy();
     }
 });

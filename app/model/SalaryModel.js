@@ -5,11 +5,9 @@
 Ext.define('WebInspect.model.SalaryModel', {
     extend: 'Ext.data.Model',
     config: {
-        idProperty: 'tfbh',
+        idProperty: 'type',
         fields: [
-            { name: 'tfbh', type: 'float' },
-            { name: 'tfname', type: 'string' },
-            { name: 'tfyear', type: 'float' },
-            { name: 'tfactive', type: 'string' }]
+            { name: 'type', type: 'string' },
+            { name: 'value', type: 'string' }]
     }
 });

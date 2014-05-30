@@ -46,25 +46,25 @@ Ext.define('WebInspect.controller.SalaryControl', {
     onAllStoreLoad: function(){
 
         var now = new Date();
-        var year = now.getFullYear();
-        var store = Ext.getStore('TfList');
+
+        var store = Ext.getStore('SalaryStore');
         store.getProxy().setExtraParams({
-            t: 'GetTflist',
-            tfyear: year
+            t: 'GetSalary',
+            results: WebInspect.app.user.sid + '$' + Ext.Date.format(now, 'Y-m').toString() + '-01$jsonp'
         });
         store.load();
 
-        var store1 = Ext.getStore('TfListPre');
+        var store1 = Ext.getStore('SalaryPreStore');
         store1.getProxy().setExtraParams({
-            t: 'GetTflist',
-            tfyear: year-1
+            t: 'GetSalary',
+            results: WebInspect.app.user.sid + '$' + Ext.Date.format(Ext.Date.add(now, Ext.Date.MONTH, -1), 'Y-m').toString() + '-01$jsonp'
         });
         store1.load();
 
-        var store2 = Ext.getStore('TfListNext');
+        var store2 = Ext.getStore('SalaryNextStore');
         store2.getProxy().setExtraParams({
-            t: 'GetTflist',
-            tfyear: year+1
+            t: 'GetSalary',
+            results: WebInspect.app.user.sid + '$' + Ext.Date.format(Ext.Date.add(now, Ext.Date.MONTH, +1), 'Y-m').toString() + '-01$jsonp'
         });
         store2.load();
     }

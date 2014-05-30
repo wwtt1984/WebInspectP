@@ -30,8 +30,8 @@ Ext.define('WebInspect.view.salary.SalaryList', {
 
         itemTpl: Ext.create('Ext.XTemplate',
             '<div style="width:100%;height:100%;font-size:18px;line-height:2.2em;min-height:42px; text-align:center;padding:0;margin:0;">',
-            '<div style="width:30%;float:left;">{tfbh}</div>',
-            '<div style="width:70%;float:right;">{tfname}、{tfname}</div>',
+            '<div style="width:30%;float:left;overflow:hidden;text-overflow:clip;white-space:nowrap;">{type}</div>',
+            '<div style="width:70%;float:right;">{value}</div>',
             '</div>'
         )
     }

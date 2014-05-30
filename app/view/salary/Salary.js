@@ -56,12 +56,12 @@ Ext.define('WebInspect.view.salary.Salary', {
     },
 
     onDataSet: function(){
-        Ext.ComponentQuery.query('#salary_header')[0].setData({header:2014});
+        Ext.ComponentQuery.query('#salary_header')[0].setData({header:Ext.Date.format(new Date(), 'Y-m').toString()});
         var sche = Ext.create('WebInspect.view.salary.SalaryCarousel',{
             xtype: 'salarycarousel',
             salaryHeader: '#salary_header',
 //            itemId: 'schedulecarousel',
-            currentDate: 2014,
+            currentDate: new Date(),
             direction: 'horizontal',
             preStore: 'SalaryPreStore',
             currentStore: 'SalaryStore',

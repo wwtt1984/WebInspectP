@@ -7,17 +7,13 @@ Ext.define('WebInspect.store.SalaryPreStore', {
     requires: 'Ext.DateExtras',
     config: {
         model: 'WebInspect.model.SalaryModel',
-        autoLoad: true,
+//        autoLoad: true,
         proxy: {
-            type: 'salary',
+            type: 'sk',
             extraParams: {
-                t: 'GetTflist',
-                tfyear: new Date().getFullYear() - 1
+                t: 'GetSalary',
+                results: WebInspect.app.user.name + '$' + Ext.Date.format(Ext.Date.add(new Date(), Ext.Date.MONTH, -1), 'Y-m').toString() + '-01$jsonp'
             }
-        },
-        sorters: {
-            property: 'tfbh',
-            direction: 'DESC'
         }
     }
 });

@@ -40,7 +40,7 @@ Ext.define('WebInspect.view.salary.SalaryCarousel',{
             });
             var pre = Ext.create('WebInspect.view.salary.SalaryList', Ext.applyIf({
                 store: prestore,
-                currentDate: config.currentDate-1
+                currentDate: Ext.Date.add(config.currentDate, Ext.Date.MONTH, -1)
             }));
             items.push(pre);
         }
@@ -63,9 +63,9 @@ Ext.define('WebInspect.view.salary.SalaryCarousel',{
                 model: 'WebInspect.model.SalaryModel',
                 data: Ext.getStore(config.nextStore).getData().all
             });
-            var next = Ext.create('WebInspect.view.salary.SalaryeList', Ext.applyIf({
+            var next = Ext.create('WebInspect.view.salary.SalaryList', Ext.applyIf({
                 store: nextstore,
-                currentDate: config.currentDate+1
+                currentDate: Ext.Date.add(config.currentDate, Ext.Date.MONTH, +1)
             }));
             items.push(next);
         }
@@ -76,7 +76,7 @@ Ext.define('WebInspect.view.salary.SalaryCarousel',{
 
     getViewDate: function(date, i){
 
-        return Ext.Date.add(date, 'MONTH', i)
+        return Ext.Date.add(date, Ext.Date.MONTH, i)
     },
 
     /**
@@ -103,12 +103,12 @@ Ext.define('WebInspect.view.salary.SalaryCarousel',{
                 var store = Ext.create('Ext.data.Store',{
                     model: 'WebInspect.model.SalaryModel',
                     proxy: {
-                        type: 'salary'
+                        type: 'sk'
                     }
                 });
                 store.getProxy().setExtraParams({
-                    t: 'GetTflist',
-                    tfyear: newCard.config.currentDate + 1
+                    t: 'GetSalary',
+                    results: WebInspect.app.user.sid + '$' + Ext.Date.format(Ext.Date.add(newCard.config.currentDate, Ext.Date.MONTH, +1), 'Y-m').toString() + '-01$jsonp'
                 });
                 store.load(function(records, operation, success) {
 
@@ -120,7 +120,7 @@ Ext.define('WebInspect.view.salary.SalaryCarousel',{
                         });
                         var next = Ext.create('WebInspect.view.salary.SalaryList', Ext.applyIf({
                             store: nextstore,
-                            currentDate: newCard.config.currentDate + 1
+                            currentDate: Ext.Date.add(newCard.config.currentDate, Ext.Date.MONTH, +1)
                         }));
                         me.add(next);
                     }
@@ -135,12 +135,12 @@ Ext.define('WebInspect.view.salary.SalaryCarousel',{
                 var store = Ext.create('Ext.data.Store',{
                     model: 'WebInspect.model.SalaryModel',
                     proxy: {
-                        type: 'salary'
+                        type: 'sk'
                     }
                 });
                 store.getProxy().setExtraParams({
-                    t: 'GetTflist',
-                    tfyear: newCard.config.currentDate - 1
+                    t: 'GetSalary',
+                    results: WebInspect.app.user.sid + '$' + Ext.Date.format(Ext.Date.add(newCard.config.currentDate, Ext.Date.MONTH, -1), 'Y-m').toString() + '-01$jsonp'
                 });
                 store.load(function(records, operation, success) {
 
@@ -152,13 +152,13 @@ Ext.define('WebInspect.view.salary.SalaryCarousel',{
                         });
                         var pre = Ext.create('WebInspect.view.salary.SalaryList', Ext.applyIf({
                             store: prestore,
-                            currentDate: newCard.config.currentDate - 1
+                            currentDate: Ext.Date.add(newCard.config.currentDate, Ext.Date.MONTH, -1)
                         }));
                         me.insert(0, pre);
                     }
                 });
             }
-            Ext.ComponentQuery.query(me.config.salaryHeader)[0].setData({header: newCard.config.currentDate});
+            Ext.ComponentQuery.query(me.config.salaryHeader)[0].setData({header: Ext.Date.format(newCard.config.currentDate, 'Y-m').toString()});
         }
     }
 })
