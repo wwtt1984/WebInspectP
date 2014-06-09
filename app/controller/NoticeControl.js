@@ -19,7 +19,11 @@ Ext.define('WebInspect.controller.NoticeControl', {
             task: 'main info task',
             taskdetail: 'main info taskdetail',
             messageDataView: 'dataview[itemId=messageDataView]',
-            maininfo: 'info maininfo'
+            maininfo: 'info maininfo',
+
+            opinion: '[itemId=opinion]',
+            opinionpanel: '[itemId=opinion_panel]',
+            opinionms: '[itemId=opinion_ms]'
         },
 
         control: {
@@ -31,6 +35,9 @@ Ext.define('WebInspect.controller.NoticeControl', {
             },
             messageDataView: {
                 itemswipe: 'onMessageItemSwipe'
+            },
+            opinion: {
+                change: 'onOpinionChange'
             }
         }
     },
@@ -146,6 +153,24 @@ Ext.define('WebInspect.controller.NoticeControl', {
             }
         }, single:true});
 
+    },
+
+    onOpinionChange: function(field, newValue, oldValue, eOpts){
+        var me = this;
+
+        switch(newValue){
+            case 'agree':
+                me.getOpinionpanel().hide();
+                break;
+            case 'ignore':
+                me.getOpinionpanel().show();
+                me.getOpinionms().setValue('');
+                break;
+            case 'report':
+                me.getOpinionpanel().show();
+                me.getOpinionms().setValue('');
+                break;
+        }
     }
 
 })

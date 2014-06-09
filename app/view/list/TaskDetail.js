@@ -73,24 +73,6 @@ Ext.define('WebInspect.view.list.TaskDetail',{
                     labelWidth: '40%'
                 },
                 items: [
-//                    {
-//                        xtype: 'textfield',
-//                        name: 'StepID',
-//                        label: 'StepID',
-//                        readOnly: true
-//                    },
-//                    {
-//                        xtype: 'textfield',
-//                        name: 'TaskID',
-//                        label: 'TaskID',
-//                        readOnly: true
-//                    },
-//                    {
-//                        xtype: 'textfield',
-//                        name: 'ProcessName',
-//                        label: 'ProcessName',
-//                        readOnly: true
-//                    },
                     {
                         xtype: 'textfield',
                         name: 'NodeName',
@@ -110,49 +92,6 @@ Ext.define('WebInspect.view.list.TaskDetail',{
                         label: '接收时间',
                         readOnly: true
                     }
-//                    {
-//                        xtype: 'textfield',
-//                        name: 'Comments',
-//                        label: 'Comments',
-//                        readOnly: true
-//                    },
-//                    {
-//                        xtype: 'textfield',
-//                        name: 'TimeoutDeadline',
-//                        label: 'TimeoutDeadline',
-//                        readOnly: true
-//                    },
-//                    {
-//                        xtype: 'textfield',
-//                        name: 'CreateAt',
-//                        label: 'CreateAt',
-//                        readOnly: true
-//                    },
-//                    {
-//                        xtype: 'textfield',
-//                        name: 'Description',
-//                        label: 'Description',
-//                        readOnly: true
-//                    },
-//
-//                    {
-//                        xtype: 'textfield',
-//                        name: 'State',
-//                        label: 'State',
-//                        readOnly: true
-//                    },
-//                    {
-//                        xtype: 'textfield',
-//                        name: 'SerialNum',
-//                        label: 'SerialNum',
-//                        readOnly: true
-//                    },
-//                    {
-//                        xtype: 'textfield',
-//                        name: 'AgentAccount',
-//                        label: 'AgentAccount',
-//                        readOnly: true
-//                    }
                 ]
             },
             {
@@ -168,21 +107,38 @@ Ext.define('WebInspect.view.list.TaskDetail',{
                         xtype: 'selectfield',
                         label: '批复意见',
                         name: 'opinion',
+                        itemId: 'opinion',
                         defaultPhonePickerConfig: {
                             doneButton: '确定',
                             cancelButton: '取消'
                         },
                         options: [
                             {
-                                text: '同意',  value: 'tongyi'
+                                text: '同意',  value: 'agree'
                             },
                             {
-                                text: '忽略',  value: 'hulue'
+                                text: '忽略',  value: 'ignore'
                             },
                             {
                                 text: '上报',  value: 'report'
                             }
                         ]
+                    }
+                ]
+            },
+            {
+                xtype: 'fieldset',
+                style: 'border-radius: .4em;background-color: #fff;',
+                itemId: 'opinion_panel',
+                hidden: true,
+                items: [
+                    {
+                        label: '请输入原因',
+                        labelAlign: 'top',
+                        xtype: 'textareafield',
+                        cls: 'miaos',
+                        itemId:'opinion_ms',
+                        value: '同意'
                     }
                 ]
             },
@@ -201,7 +157,8 @@ Ext.define('WebInspect.view.list.TaskDetail',{
                 },
                 items: [
                     {
-                        text: '确定'
+                        text: '确定',
+                        itemId: 'taskconfirm'
                     }
                 ]
             }

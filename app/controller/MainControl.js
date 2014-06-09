@@ -44,12 +44,12 @@ Ext.define('WebInspect.controller.MainControl',{
         this.bpindex = 0;///默认请求
         this.beindex = 2;///默认请求总数
 
-//        window.setTimeout(function(){me.checkJpush(me);},100);
-//        document.addEventListener('deviceready',function(){me.onJpushReady(me);}, false);
+        window.setTimeout(function(){me.checkJpush(me);},100);
+        document.addEventListener('deviceready',function(){me.onJpushReady(me);}, false);
 
         me.onBtnConfirm();
         //android返回键事件监听
-//        document.addEventListener("backbutton", me.onBackKeyDown, false);
+        document.addEventListener("backbutton", me.onBackKeyDown, false);
     },
 
 
@@ -335,8 +335,9 @@ Ext.define('WebInspect.controller.MainControl',{
 
                             me.onLoadOrUploadViewShow();
 
+                            alert('download');
                             me.downLoad(records[0].data.strFileName,records[0].data.strGetFileVersionFileURL,me);
-
+                            alert('download-end');
 //                            me.downLoad();
                         }
                     });
@@ -366,6 +367,8 @@ Ext.define('WebInspect.controller.MainControl',{
             Ext.Viewport.add(me.load);
         }
         me.load.show();
+
+        alert('load-show');
 
     },
 
@@ -460,10 +463,12 @@ Ext.define('WebInspect.controller.MainControl',{
 //                plugins.Toast.ShowToast('下载失败！请检查网络！',3000);
 //            }
 //        );
+        alert('download-in');
         var uri = encodeURI(url);
         var fileTransfer = new FileTransfer();
 
         fileTransfer.onprogress = function(progressEvent) {
+            alert('download-onprogress');
             if (progressEvent.lengthComputable) {
                 var percent = Number((progressEvent.loaded / progressEvent.total) * 100).toFixed(0);
                 me.getLoad().onDataSet(percent);
@@ -477,11 +482,13 @@ Ext.define('WebInspect.controller.MainControl',{
             uri,
             "cdvfile://localhost/persistent/Download/" + name,
             function(entry) {
+                alert('download-all');
                 plugins.Toast.ShowToast("下载完成"+entry.fullPath,3000);
                 me.getLoad().hide();
                 plugins.Install.InstallApk("mnt/sdcard"+entry.fullPath);
             },
             function(error) {
+                alert('download-error');
                 plugins.Toast.ShowToast(' '+error.source,3000);
                 me.getLoad().hide();
             }
@@ -705,9 +712,9 @@ Ext.define('WebInspect.controller.MainControl',{
         var me = this;
         WebInspect.app.user.sid = Ext.getCmp('name').getValue();
         WebInspect.app.user.password = Ext.getCmp('password').getValue();
-//        me.onVpnLogin(1, ''); /////成功写入开始执行VPN认证
-//        plugins.jPush.setAlias(WebInspect.app.user.sid,function(success){});//////推送标识，以用户名区分
-       me.onUserCheck(1,''); ////////测试的时候有
+        me.onVpnLogin(1, ''); /////成功写入开始执行VPN认证
+        plugins.jPush.setAlias(WebInspect.app.user.sid,function(success){});//////推送标识，以用户名区分
+//       me.onUserCheck(1,''); ////////测试的时候有
     },
 
     onUserWriteJson: function(){
@@ -768,7 +775,7 @@ Ext.define('WebInspect.controller.MainControl',{
                     {
                         Ext.Viewport.setMasked(false);
                         me.getMain().setActiveItem(me.getFunctionmain());
-//                        me.onUserWriteJson(); //将验证成功的用户信息，存在本地
+                        me.onUserWriteJson(); //将验证成功的用户信息，存在本地
                         me.onCheckVesion(me);  /////////////////判断是否有新版本/////////////////////
                     }
                     else
@@ -801,10 +808,10 @@ Ext.define('WebInspect.controller.MainControl',{
             t: 'GetFunctionZt',
             results: WebInspect.app.user.sid + '$jsonp'
         });
-        store.load();
-//        store.load(function(records, operation, success) {
-//            store.add({id: 13, sid: WebInspect.app.user.sid, title: '工资信息', name: 'salary', url: 'resources/images/function/salary.png'});
-//        });
+//        store.load();
+        store.load(function(records, operation, success) {
+            store.add({id: 15, sid: WebInspect.app.user.sid, title: '已办事项', name: 'done', url: 'resources/images/function/salary.png'});
+        });
     },
 
 //    //加载“天气预报”信息，当num=0时，表示是“推送信息”， 当num=1时，表示是：应用程序正常启动
@@ -834,7 +841,7 @@ Ext.define('WebInspect.controller.MainControl',{
 
         me.getMain().add(me.info);
 
-        var titlestr = ['news', 'info', 'notice', 'contacts', 'tide', 'water', 'rain', 'flow', 'project', 'inspect', 'setting', 'mark', 'assignment', 'salary'];
+        var titlestr = ['news', 'info', 'notice', 'contacts', 'tide', 'water', 'rain', 'flow', 'project', 'inspect', 'setting', 'mark', 'assignment', 'salary', 'done'];
 
         switch(record.data.name){
             case titlestr[0]:
@@ -883,6 +890,10 @@ Ext.define('WebInspect.controller.MainControl',{
 
             case titlestr[13]:
                 me.getApplication().getController('SalaryControl').onSalaryInitialize();
+                break;
+
+            case titlestr[14]:
+                me.getApplication().getController('DoneControl').onDoneInitialize();
                 break;
         }
         me.getMain().setActiveItem(me.getInfo());

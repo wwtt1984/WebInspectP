@@ -11,8 +11,7 @@ Ext.define('WebInspect.store.SalaryStore', {
         proxy: {
             type: 'sk',
             extraParams: {
-                t: 'GetSalary',
-                tfyear: WebInspect.app.user.name + '$' + Ext.Date.format(new Date(), 'Y-m').toString() + '-01$jsonp'
+                t: 'GetSalary'
             }
         }
     }

@@ -15,12 +15,10 @@ Ext.Loader.setPath({
     'Ext': 'touch/src',
     'WebInspect': 'app',
     'Ext.data.proxy.SkProxy': 'app/lib/SkProxy.js',
-    'Ext.data.proxy.SkSalary': 'app/lib/SkSalary.js',
     'Ext.data.proxy.SkJsonp': 'app/lib/SkJsonp.js'
 });
 
 Ext.ClassManager.setAlias('Ext.data.proxy.SkProxy', 'proxy.sk');
-Ext.ClassManager.setAlias('Ext.data.proxy.SkSalary', 'proxy.salary');
 
 Ext.application({
     name: 'WebInspect',
@@ -94,7 +92,10 @@ Ext.application({
 
         'salary.Salary',
         'salary.SalaryCarousel',
-        'salary.SalaryList'
+        'salary.SalaryList',
+
+        'done.Done',
+        'done.Procedure'
     ],
 
     models: [
@@ -137,7 +138,9 @@ Ext.application({
 
         'AssignModel',
 
-        'SalaryModel'
+        'SalaryModel',
+
+        'ProcedureModel'
     ],
 
     stores: [
@@ -188,7 +191,10 @@ Ext.application({
 
         'SalaryStore',
         'SalaryPreStore',
-        'SalaryNextStore'
+        'SalaryNextStore',
+
+        'DoneStore',
+        'ProcedureStore'
     ],
 
     controllers: [
@@ -204,7 +210,8 @@ Ext.application({
         'SettingsControl',
         'MarkControl',
         'AssignControl',
-        'SalaryControl'
+        'SalaryControl',
+        'DoneControl'
     ],
 
     icon: {

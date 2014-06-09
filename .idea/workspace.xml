@@ -2,8 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97eeba59-43ed-481c-b450-8b573637ea50" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/function/salary.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/prebg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/prefirst.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/prepoint.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/view/done/Done.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controller/DoneControl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/store/DoneStore.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/view/done/Procedure.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/model/ProcedureModel.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/store/ProcedureStore.js" />
+      <change type="DELETED" beforePath="E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\app\lib\SkSalary.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes.jar" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/bin/webInspect-debug-unaligned.apk" afterPath="$PROJECT_DIR$/phonegap/platforms/android/bin/webInspect-debug-unaligned.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/bin/webInspect-debug.apk" afterPath="$PROJECT_DIR$/phonegap/platforms/android/bin/webInspect-debug.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/bin/webInspect.ap_" afterPath="$PROJECT_DIR$/phonegap/platforms/android/bin/webInspect.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/MainControl.js" afterPath="$PROJECT_DIR$/app/controller/MainControl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/NoticeControl.js" afterPath="$PROJECT_DIR$/app/controller/NoticeControl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/store/SalaryNextStore.js" afterPath="$PROJECT_DIR$/app/store/SalaryNextStore.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/store/SalaryPreStore.js" afterPath="$PROJECT_DIR$/app/store/SalaryPreStore.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/store/SalaryStore.js" afterPath="$PROJECT_DIR$/app/store/SalaryStore.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/list/TaskDetail.js" afterPath="$PROJECT_DIR$/app/view/list/TaskDetail.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/app.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/www/app.js" afterPath="$PROJECT_DIR$/phonegap/www/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap.js" afterPath="$PROJECT_DIR$/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/build.prop" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/build.prop" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/bin/build.prop" afterPath="$PROJECT_DIR$/phonegap/platforms/android/bin/build.prop" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/bin/webInspect.ap_.d" afterPath="$PROJECT_DIR$/phonegap/platforms/android/bin/webInspect.ap_.d" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WebInspect.iws" />
@@ -27,114 +52,121 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="213" column="20" selection-start="4468" selection-end="4468" vertical-scroll-proportion="0.0" vertical-offset="3648" max-vertical-offset="4769">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DoneControl.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controller/DoneControl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="10" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1425">
+              <folding>
+                <element signature="e#0#37#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="MainControl.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controller/MainControl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="804" column="21" selection-start="26309" selection-end="26309" vertical-scroll-proportion="0.45061728" vertical-offset="15057" max-vertical-offset="17252">
+            <state line="51" column="31" selection-start="1481" selection-end="1482" vertical-scroll-proportion="0.4820296" vertical-offset="741" max-vertical-offset="17461">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SalaryControl.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controller/SalaryControl.js">
+      <file leaf-file-name="Done.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/done/Done.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="0" selection-start="900" selection-end="900" vertical-scroll-proportion="0.0" vertical-offset="564" max-vertical-offset="1444">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SalaryNextStore.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/store/SalaryNextStore.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="106" selection-start="444" selection-end="444" vertical-scroll-proportion="-5.32" vertical-offset="0" max-vertical-offset="456">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SalaryPreStore.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/store/SalaryPreStore.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="113" selection-start="450" selection-end="450" vertical-scroll-proportion="-5.32" vertical-offset="0" max-vertical-offset="456">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SalaryStore.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/store/SalaryStore.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="116" selection-start="358" selection-end="450" vertical-scroll-proportion="-5.32" vertical-offset="0" max-vertical-offset="456">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Salary.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/view/salary/Salary.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="0" selection-start="1380" selection-end="1380" vertical-scroll-proportion="0.0" vertical-offset="317" max-vertical-offset="1995">
+            <state line="44" column="3" selection-start="1032" selection-end="1032" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="912">
               <folding>
-                <marker date="1401439950120" expanded="false" signature="608:632" placeholder="..." />
-                <marker date="1401439950120" expanded="false" signature="670:703" placeholder="..." />
-                <marker date="1401439950120" expanded="false" signature="819:852" placeholder="..." />
-                <marker date="1401439950120" expanded="true" signature="904:938" placeholder="..." />
-                <marker date="1401439950120" expanded="true" signature="1084:1164" placeholder="..." />
-                <marker date="1401439950120" expanded="true" signature="1202:1235" placeholder="..." />
-                <marker date="1401439950120" expanded="true" signature="1281:1315" placeholder="..." />
+                <element signature="e#0#37#0" expanded="false" />
+                <marker date="1402299038487" expanded="false" signature="763:817" placeholder="..." />
+                <marker date="1402299038487" expanded="false" signature="863:898" placeholder="..." />
+                <marker date="1402299038487" expanded="false" signature="952:987" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Water.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/view/water/Water.js">
+      <file leaf-file-name="Procedure.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/done/Procedure.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="10" selection-start="1112" selection-end="1112" vertical-scroll-proportion="0.0" vertical-offset="513" max-vertical-offset="1748">
+            <state line="70" column="3" selection-start="3255" selection-end="3255" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1406">
               <folding>
-                <marker date="1394593382808" expanded="true" signature="731:822" placeholder="..." />
-                <marker date="1394593382808" expanded="true" signature="864:955" placeholder="..." />
-                <marker date="1394593382808" expanded="true" signature="995:1087" placeholder="..." />
-                <marker date="1394593382808" expanded="false" signature="1321:1354" placeholder="..." />
-                <marker date="1394593382808" expanded="false" signature="1376:1409" placeholder="..." />
-                <marker date="1394593382808" expanded="false" signature="1434:1467" placeholder="..." />
+                <element signature="e#0#37#0" expanded="false" />
+                <marker date="1402299109533" expanded="false" signature="423:567" placeholder="..." />
+                <marker date="1402299109533" expanded="false" signature="607:754" placeholder="..." />
+                <marker date="1402299109533" expanded="false" signature="1670:1708" placeholder="..." />
+                <marker date="1402299109533" expanded="false" signature="1754:1787" placeholder="..." />
+                <marker date="1402299109533" expanded="false" signature="1837:1881" placeholder="..." />
+                <marker date="1402299109533" expanded="false" signature="1934:2003" placeholder="..." />
+                <marker date="1402299109533" expanded="false" signature="2217:2228" placeholder="..." />
+                <marker date="1402299109533" expanded="false" signature="2366:2404" placeholder="..." />
+                <marker date="1402299109533" expanded="false" signature="2450:2483" placeholder="..." />
+                <marker date="1402299109533" expanded="false" signature="2533:2577" placeholder="..." />
+                <marker date="1402299109533" expanded="false" signature="2630:2725" placeholder="..." />
+                <marker date="1402299109533" expanded="false" signature="2939:2950" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SalaryList.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/view/salary/SalaryList.js">
+      <file leaf-file-name="DoneStore.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/store/DoneStore.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="28" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="817">
+            <state line="14" column="3" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
               <folding>
-                <marker date="1401440133625" expanded="true" signature="88:958" placeholder="{&quot;extend&quot;: 'Ext.List'...}" />
-                <marker date="1401440133625" expanded="true" signature="176:956" placeholder="{&quot;currentDate&quot;: ''...}" />
-                <marker date="1401440133625" expanded="false" signature="623:733" placeholder="..." />
-                <marker date="1401440133625" expanded="true" signature="763:800" placeholder="..." />
-                <marker date="1401440133625" expanded="true" signature="763:818" placeholder="..." />
-                <marker date="1401440133625" expanded="true" signature="763:838" placeholder="..." />
-                <marker date="1401440133625" expanded="true" signature="880:902" placeholder="..." />
+                <element signature="e#0#37#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TouchTreeGrid.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/css/TouchTreeGrid.css">
+      <file leaf-file-name="ProcedureStore.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/store/ProcedureStore.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="4" selection-start="1926" selection-end="1975" vertical-scroll-proportion="-3.54" vertical-offset="830" max-vertical-offset="6099">
-              <folding />
+            <state line="9" column="47" selection-start="166" selection-end="180" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="646">
+              <folding>
+                <element signature="e#0#37#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SalaryCarousel.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/view/salary/SalaryCarousel.js">
+      <file leaf-file-name="ProcedureModel.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/model/ProcedureModel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="149" column="66" selection-start="5236" selection-end="5236" vertical-scroll-proportion="-47.5" vertical-offset="456" max-vertical-offset="3211">
+            <state line="5" column="43" selection-start="69" selection-end="83" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="361">
+              <folding>
+                <element signature="e#0#37#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Load.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/Load.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="22" selection-start="412" selection-end="420" vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="1387">
+              <folding>
+                <marker date="1401178217979" expanded="false" signature="490:516" placeholder="..." />
+                <marker date="1401178217979" expanded="false" signature="712:787" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="my.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/css/my.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="655" column="80" selection-start="20097" selection-end="20097" vertical-scroll-proportion="-10.98" vertical-offset="11896" max-vertical-offset="12711">
               <folding />
             </state>
           </provider>
@@ -158,21 +190,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/local.properties" />
-        <option value="$PROJECT_DIR$/app/view/Login.js" />
-        <option value="$PROJECT_DIR$/app/lib/SkSalary.js" />
-        <option value="$PROJECT_DIR$/app/view/tide/TidePop.js" />
-        <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/resources/css/my.css" />
-        <option value="$PROJECT_DIR$/app/view/Load.js" />
         <option value="$PROJECT_DIR$/app/model/SalaryModel.js" />
-        <option value="$PROJECT_DIR$/app/store/SalaryStore.js" />
-        <option value="$PROJECT_DIR$/app/store/SalaryNextStore.js" />
-        <option value="$PROJECT_DIR$/app/store/SalaryPreStore.js" />
-        <option value="$PROJECT_DIR$/app/view/salary/SalaryCarousel.js" />
         <option value="$PROJECT_DIR$/app/view/salary/Salary.js" />
+        <option value="$PROJECT_DIR$/app/view/salary/SalaryCarousel.js" />
         <option value="$PROJECT_DIR$/app/view/salary/SalaryList.js" />
         <option value="$PROJECT_DIR$/app/controller/SalaryControl.js" />
+        <option value="$PROJECT_DIR$/app/view/list/TaskDetail.js" />
+        <option value="$PROJECT_DIR$/app/controller/NoticeControl.js" />
+        <option value="$PROJECT_DIR$/app/view/done.js" />
+        <option value="$PROJECT_DIR$/app/view/done/done.js" />
+        <option value="$PROJECT_DIR$/app/view/done/Procedure.js" />
+        <option value="$PROJECT_DIR$/app/store/DoneStore.js" />
+        <option value="$PROJECT_DIR$/app/store/ProcedureStore.js" />
+        <option value="$PROJECT_DIR$/app/model/ProcedureModel.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/app/controller/DoneControl.js" />
         <option value="$PROJECT_DIR$/app/controller/MainControl.js" />
       </list>
     </option>
@@ -209,6 +241,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -381,7 +414,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="water" />
+              <option name="myItemId" value="salary" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -403,7 +436,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="salary" />
+              <option name="myItemId" value="done" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -457,13 +490,30 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -479,44 +529,36 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="126" />
     <property name="SearchEverywhereHistory" value="" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/SfMobile" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../WebInspect" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="132" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="910" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="910" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="910" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="132" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="132" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\resources\images\function" />
       <recent name="E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\resources\images" />
-      <recent name="E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\app\view" />
-      <recent name="E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\resources\css" />
+      <recent name="E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\app\store" />
       <recent name="E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\app\model" />
+      <recent name="E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\app\view" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\app\view\done" />
       <recent name="E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\resources\images" />
       <recent name="E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\resources\images\notice" />
       <recent name="E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\resources\images\rtx" />
       <recent name="E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\resources\images\status" />
-      <recent name="E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\resources\images\function" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -527,15 +569,23 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -751,19 +801,22 @@
       <created>1401440633930</created>
       <updated>1401440633930</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Initial commit&#10;">
+      <created>1401440866834</created>
+      <updated>1401440866834</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24342105" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32820514" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24944155" sideWeight="0.6700855" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20997766" sideWeight="0.8700855" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2300819" sideWeight="0.8700855" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15497553" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -773,6 +826,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12991454" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24342105" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -799,153 +853,162 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/store/SegmentTreeStore.js">
+    <entry file="file://$PROJECT_DIR$/app/view/salary/SalaryCarousel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.21189591" vertical-offset="114" max-vertical-offset="703">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/tide/Tide.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="33" selection-start="353" selection-end="353" vertical-scroll-proportion="0.0" vertical-offset="1096" max-vertical-offset="1634">
-          <folding>
-            <marker date="1394500833769" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1394500833769" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1394500833769" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1394500833769" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1394500833769" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1394500833769" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1394500833769" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1394500833769" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1394500833769" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1394500833769" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1394500833769" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1394500833769" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1394500833769" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controller/TideControl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="81" selection-start="1168" selection-end="1215" vertical-scroll-proportion="0.0" vertical-offset="1457" max-vertical-offset="1995">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="100" selection-start="305" selection-end="305" vertical-scroll-proportion="0.22352941" vertical-offset="0" max-vertical-offset="510">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/SalaryModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="46" selection-start="267" selection-end="267" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="361">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="0" selection-start="2598" selection-end="2598" vertical-scroll-proportion="0.0" vertical-offset="1710" max-vertical-offset="4826">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/store/SalaryNextStore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="106" selection-start="444" selection-end="444" vertical-scroll-proportion="-5.32" vertical-offset="0" max-vertical-offset="456">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/store/SalaryPreStore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="113" selection-start="450" selection-end="450" vertical-scroll-proportion="-5.32" vertical-offset="0" max-vertical-offset="456">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/store/SalaryStore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="116" selection-start="358" selection-end="450" vertical-scroll-proportion="-5.32" vertical-offset="0" max-vertical-offset="456">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/water/Water.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="10" selection-start="1112" selection-end="1112" vertical-scroll-proportion="0.0" vertical-offset="513" max-vertical-offset="1748">
-          <folding>
-            <marker date="1394593382808" expanded="true" signature="731:822" placeholder="..." />
-            <marker date="1394593382808" expanded="true" signature="864:955" placeholder="..." />
-            <marker date="1394593382808" expanded="true" signature="995:1087" placeholder="..." />
-            <marker date="1394593382808" expanded="false" signature="1321:1354" placeholder="..." />
-            <marker date="1394593382808" expanded="false" signature="1376:1409" placeholder="..." />
-            <marker date="1394593382808" expanded="false" signature="1434:1467" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/salary/Salary.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="1380" selection-end="1380" vertical-scroll-proportion="0.0" vertical-offset="317" max-vertical-offset="1995">
-          <folding>
-            <marker date="1401439950120" expanded="false" signature="608:632" placeholder="..." />
-            <marker date="1401439950120" expanded="false" signature="670:703" placeholder="..." />
-            <marker date="1401439950120" expanded="false" signature="819:852" placeholder="..." />
-            <marker date="1401439950120" expanded="true" signature="904:938" placeholder="..." />
-            <marker date="1401439950120" expanded="true" signature="1084:1164" placeholder="..." />
-            <marker date="1401439950120" expanded="true" signature="1202:1235" placeholder="..." />
-            <marker date="1401439950120" expanded="true" signature="1281:1315" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/css/TouchTreeGrid.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="4" selection-start="1926" selection-end="1975" vertical-scroll-proportion="-3.54" vertical-offset="830" max-vertical-offset="6099">
+        <state line="152" column="88" selection-start="5407" selection-end="5407" vertical-scroll-proportion="0.0" vertical-offset="2612" max-vertical-offset="3211">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/salary/SalaryList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="28" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="817">
+        <state line="28" column="58" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="817">
           <folding>
-            <marker date="1401440133625" expanded="true" signature="88:958" placeholder="{&quot;extend&quot;: 'Ext.List'...}" />
-            <marker date="1401440133625" expanded="true" signature="176:956" placeholder="{&quot;currentDate&quot;: ''...}" />
-            <marker date="1401440133625" expanded="false" signature="623:733" placeholder="..." />
-            <marker date="1401440133625" expanded="true" signature="763:800" placeholder="..." />
-            <marker date="1401440133625" expanded="true" signature="763:818" placeholder="..." />
-            <marker date="1401440133625" expanded="true" signature="763:838" placeholder="..." />
-            <marker date="1401440133625" expanded="true" signature="880:902" placeholder="..." />
+            <marker date="1402282231977" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402282231977" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1402282231977" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controller/SalaryControl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="0" selection-start="900" selection-end="900" vertical-scroll-proportion="0.0" vertical-offset="564" max-vertical-offset="1444">
+        <state line="54" column="21" selection-start="1190" selection-end="1190" vertical-scroll-proportion="0.0" vertical-offset="772" max-vertical-offset="1444">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/salary/SalaryCarousel.js">
+    <entry file="file://$PROJECT_DIR$/app/view/list/TaskDetail.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="149" column="66" selection-start="5236" selection-end="5236" vertical-scroll-proportion="-47.5" vertical-offset="456" max-vertical-offset="3211">
+        <state line="171" column="21" selection-start="5910" selection-end="5910" vertical-scroll-proportion="0.0" vertical-offset="2704" max-vertical-offset="3477">
+          <folding>
+            <marker date="1402294946712" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402294946712" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402294946712" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402294946712" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402294946712" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402294946712" expanded="true" signature="-1:-1" placeholder="{&quot;xtype&quot;: 'fieldset'...}" />
+            <marker date="1402294946712" expanded="true" signature="-1:-1" placeholder="[...]" />
+            <marker date="1402294946712" expanded="true" signature="-1:-1" placeholder="{&quot;label&quot;: '请输入原因'...}" />
+            <marker date="1402294946712" expanded="true" signature="-1:-1" placeholder="{&quot;xtype&quot;: 'panel'...}" />
+            <marker date="1402294946712" expanded="true" signature="-1:-1" placeholder="{&quot;xtype&quot;: 'button'...}" />
+            <marker date="1402294946712" expanded="true" signature="-1:-1" placeholder="{&quot;type&quot;: 'hbox'...}" />
+            <marker date="1402294946712" expanded="true" signature="-1:-1" placeholder="[...]" />
+            <marker date="1402294946712" expanded="true" signature="-1:-1" placeholder="{&quot;text&quot;: '确定'...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controller/NoticeControl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="50" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="3458">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/Login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1501">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/Load.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="22" selection-start="412" selection-end="420" vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="1387">
+          <folding>
+            <marker date="1401178217979" expanded="false" signature="490:516" placeholder="..." />
+            <marker date="1401178217979" expanded="false" signature="712:787" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/my.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="655" column="80" selection-start="20097" selection-end="20097" vertical-scroll-proportion="-10.98" vertical-offset="11896" max-vertical-offset="12711">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/done/Done.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="3" selection-start="1032" selection-end="1032" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="912">
+          <folding>
+            <element signature="e#0#37#0" expanded="false" />
+            <marker date="1402299038487" expanded="false" signature="763:817" placeholder="..." />
+            <marker date="1402299038487" expanded="false" signature="863:898" placeholder="..." />
+            <marker date="1402299038487" expanded="false" signature="952:987" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/done/Procedure.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="3" selection-start="3255" selection-end="3255" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1406">
+          <folding>
+            <element signature="e#0#37#0" expanded="false" />
+            <marker date="1402299109533" expanded="false" signature="423:567" placeholder="..." />
+            <marker date="1402299109533" expanded="false" signature="607:754" placeholder="..." />
+            <marker date="1402299109533" expanded="false" signature="1670:1708" placeholder="..." />
+            <marker date="1402299109533" expanded="false" signature="1754:1787" placeholder="..." />
+            <marker date="1402299109533" expanded="false" signature="1837:1881" placeholder="..." />
+            <marker date="1402299109533" expanded="false" signature="1934:2003" placeholder="..." />
+            <marker date="1402299109533" expanded="false" signature="2217:2228" placeholder="..." />
+            <marker date="1402299109533" expanded="false" signature="2366:2404" placeholder="..." />
+            <marker date="1402299109533" expanded="false" signature="2450:2483" placeholder="..." />
+            <marker date="1402299109533" expanded="false" signature="2533:2577" placeholder="..." />
+            <marker date="1402299109533" expanded="false" signature="2630:2725" placeholder="..." />
+            <marker date="1402299109533" expanded="false" signature="2939:2950" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/store/DoneStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="3" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
+          <folding>
+            <element signature="e#0#37#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/store/ProcedureStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="47" selection-start="166" selection-end="180" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="646">
+          <folding>
+            <element signature="e#0#37#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/ProcedureModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="43" selection-start="69" selection-end="83" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="361">
+          <folding>
+            <element signature="e#0#37#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="213" column="20" selection-start="4468" selection-end="4468" vertical-scroll-proportion="0.0" vertical-offset="3648" max-vertical-offset="4769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controller/DoneControl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="10" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1425">
+          <folding>
+            <element signature="e#0#37#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controller/MainControl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="804" column="21" selection-start="26309" selection-end="26309" vertical-scroll-proportion="0.45061728" vertical-offset="15057" max-vertical-offset="17252">
+        <state line="51" column="31" selection-start="1481" selection-end="1482" vertical-scroll-proportion="0.4820296" vertical-offset="741" max-vertical-offset="17461">
           <folding />
         </state>
       </provider>

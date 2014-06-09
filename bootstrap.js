@@ -8,7 +8,6 @@ Ext.Loader.addClassPathMappings({
   "Ext": "touch/src",
   "Ext.data.proxy.SkJsonp": "app/lib/SkJsonp.js",
   "Ext.data.proxy.SkProxy": "app/lib/SkProxy.js",
-  "Ext.data.proxy.SkSalary": "app/lib/SkSalary.js",
   "Ext.device.Purchases.Product": "touch/src/device/purchases/Sencha.js",
   "Ext.device.filesystem.DirectoryEntry": "touch/src/device/filesystem/HTML5.js",
   "Ext.device.filesystem.Entry": "touch/src/device/filesystem/HTML5.js",
@@ -242,7 +241,6 @@ Ext.ClassManager.addNameAlternateMappings({
   ],
   "Ext.data.proxy.SkJsonp": [],
   "Ext.data.proxy.SkProxy": [],
-  "Ext.data.proxy.SkSalary": [],
   "Ext.data.proxy.Sql": [
     "Ext.data.proxy.SQL"
   ],
@@ -751,6 +749,7 @@ Ext.ClassManager.addNameAlternateMappings({
   ],
   "WebInspect.controller.AssignControl": [],
   "WebInspect.controller.ContactControl": [],
+  "WebInspect.controller.DoneControl": [],
   "WebInspect.controller.FlowControl": [],
   "WebInspect.controller.MainControl": [],
   "WebInspect.controller.MarkControl": [],
@@ -772,6 +771,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.model.NewsDetailModel": [],
   "WebInspect.model.NewsModel": [],
   "WebInspect.model.PhotoModel": [],
+  "WebInspect.model.ProcedureModel": [],
   "WebInspect.model.ProjectElementModel": [],
   "WebInspect.model.ProjectFirstModel": [],
   "WebInspect.model.ProjectSecondModel": [],
@@ -793,6 +793,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.store.AssignStore": [],
   "WebInspect.store.ContactSearchStore": [],
   "WebInspect.store.ContactTreeStore": [],
+  "WebInspect.store.DoneStore": [],
   "WebInspect.store.FlowStore": [],
   "WebInspect.store.FunctionStore": [],
   "WebInspect.store.InfoStore": [],
@@ -804,6 +805,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.store.NewsStore": [],
   "WebInspect.store.NoticeStore": [],
   "WebInspect.store.PhotoStore": [],
+  "WebInspect.store.ProcedureStore": [],
   "WebInspect.store.ProjectElementStore": [],
   "WebInspect.store.ProjectFirstStore": [],
   "WebInspect.store.ProjectMainStore": [],
@@ -837,6 +839,8 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.view.contact.ContactList": [],
   "WebInspect.view.contact.PopUp": [],
   "WebInspect.view.contact.Search": [],
+  "WebInspect.view.done.Done": [],
+  "WebInspect.view.done.Procedure": [],
   "WebInspect.view.flow.Flow": [],
   "WebInspect.view.list.MainInfo": [],
   "WebInspect.view.list.Message": [],
@@ -1211,9 +1215,6 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.data.proxy.SkJsonp": [],
   "Ext.data.proxy.SkProxy": [
     "proxy.sk"
-  ],
-  "Ext.data.proxy.SkSalary": [
-    "proxy.salary"
   ],
   "Ext.data.proxy.Sql": [
     "proxy.sql"
@@ -1817,6 +1818,7 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.WindowsPhone": [],
   "WebInspect.controller.AssignControl": [],
   "WebInspect.controller.ContactControl": [],
+  "WebInspect.controller.DoneControl": [],
   "WebInspect.controller.FlowControl": [],
   "WebInspect.controller.MainControl": [],
   "WebInspect.controller.MarkControl": [],
@@ -1838,6 +1840,7 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.model.NewsDetailModel": [],
   "WebInspect.model.NewsModel": [],
   "WebInspect.model.PhotoModel": [],
+  "WebInspect.model.ProcedureModel": [],
   "WebInspect.model.ProjectElementModel": [],
   "WebInspect.model.ProjectFirstModel": [],
   "WebInspect.model.ProjectSecondModel": [],
@@ -1859,6 +1862,7 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.store.AssignStore": [],
   "WebInspect.store.ContactSearchStore": [],
   "WebInspect.store.ContactTreeStore": [],
+  "WebInspect.store.DoneStore": [],
   "WebInspect.store.FlowStore": [],
   "WebInspect.store.FunctionStore": [],
   "WebInspect.store.InfoStore": [],
@@ -1870,6 +1874,7 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.store.NewsStore": [],
   "WebInspect.store.NoticeStore": [],
   "WebInspect.store.PhotoStore": [],
+  "WebInspect.store.ProcedureStore": [],
   "WebInspect.store.ProjectElementStore": [],
   "WebInspect.store.ProjectFirstStore": [],
   "WebInspect.store.ProjectMainStore": [],
@@ -1932,6 +1937,12 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "WebInspect.view.contact.Search": [
     "widget.ctsearch"
+  ],
+  "WebInspect.view.done.Done": [
+    "widget.done"
+  ],
+  "WebInspect.view.done.Procedure": [
+    "widget.procedure"
   ],
   "WebInspect.view.flow.Flow": [
     "widget.flow"
