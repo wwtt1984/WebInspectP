@@ -67,6 +67,7 @@ Ext.define('WebInspect.controller.AssignControl', {
                 results: 'jsonp'
             });
 
+            contactstore.setRoot({expanded: true});
             contactstore.load();
         }
 
@@ -77,6 +78,7 @@ Ext.define('WebInspect.controller.AssignControl', {
                 results: 'jsonp'
             });
 
+            segmentstore.setRoot({expanded: true});
             segmentstore.load();
         }
 

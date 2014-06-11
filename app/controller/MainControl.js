@@ -44,12 +44,95 @@ Ext.define('WebInspect.controller.MainControl',{
         this.bpindex = 0;///默认请求
         this.beindex = 2;///默认请求总数
 
+        this.timeoutecount = 3; //默认VPN超时连接请求3次
+        this.timeoutscount = 0;// 当前VPN超时连接数
+
         window.setTimeout(function(){me.checkJpush(me);},100);
         document.addEventListener('deviceready',function(){me.onJpushReady(me);}, false);
 
         me.onBtnConfirm();
         //android返回键事件监听
         document.addEventListener("backbutton", me.onBackKeyDown, false);
+
+        document.addEventListener("offline", me.onOfflineListen, false);///////联机状态判断
+        document.addEventListener("online", me.onOnlineListen, false);///////在线判断
+
+    },
+
+    onOfflineListen:function(){ ////////////网络离线的时候监听
+
+        //alert("3333");
+    },
+    onOnlineListen:function() ///////////////////有网络在线的时候监听
+    {
+        var me = WebInspect.app.mainthis;
+        if(me.onNetWorkIsON("val") != "WiFi" && me.qgjwifi == "true")
+        {
+            plugins.Toast.ShowToast("VPN连接中,请稍后...",3000);
+            ////重连VPN
+            plugins.Vpn.VpnLogin(WebInspect.app.user.sid,WebInspect.app.user.password,function(success) {
+
+                if(success == "true")
+                {
+                    plugins.Toast.ShowToast("VPN连接成功!",3000);
+                    me.qgjwifi = "false";
+                }
+                else if(success == "false")
+                {
+                    if(me.timeoutscount < me.timeoutecount)
+                    {
+                        plugins.Toast.ShowToast("VPN连接超时,请重试!",3000);
+                        me.timeoutscount++;
+                        me.onOnlineListen();
+                    }
+                    else
+                    {
+                        plugins.Toast.ShowToast("VPN连接失败,请重新打开应用程序!",3000);
+                        me.timeoutscount = 0;
+                        me.onQuitSystemTap();
+                    }
+                }
+                else if(success == "initfalse")
+                {
+                    plugins.Toast.ShowToast("VPN初始化失败,请重试!",3000);
+                }
+                else if(success == "error")
+                {
+                    plugins.Toast.ShowToast("用户名或者密码输入有误!",3000);
+                }
+            });
+
+        }
+        else if(me.onNetWorkIsON("val") == "WiFi")
+        {
+            var gate = ['10.33.21.254','10.33.22.254','10.33.23.254','10.33.24.254','10.33.25.254','10.33.26.254','10.33.27.254','10.33.28.254'
+                ,'10.33.12.254','10.33.13.254','10.33.14.254'
+                ,'10.33.90.254'
+                ,'10.33.31.254','10.33.32.254','10.33.33.254','10.33.34.254','10.33.35.254'];
+            var vpn = "true";
+            ////////////获取网关值///////////////////////////
+            plugins.Vpn.VpnOnWifi("",function(success) {   ///////////////得到网关值
+
+                for(var i = 0;i < gate.length;i++)
+                {
+                    if(success == gate[i])
+                    {
+                        vpn = "false";
+                        me.qgjwifi = "true";
+                        break;
+                    }
+                }
+
+                if(vpn == "false")
+                {
+                    plugins.Toast.ShowToast("VPN连接关闭!",3000);
+                    plugins.Vpn.VpnOFF();//关闭VPN
+                }
+
+            });
+
+        }
+
     },
 
 
@@ -335,10 +418,7 @@ Ext.define('WebInspect.controller.MainControl',{
 
                             me.onLoadOrUploadViewShow();
 
-                            alert('download');
                             me.downLoad(records[0].data.strFileName,records[0].data.strGetFileVersionFileURL,me);
-                            alert('download-end');
-//                            me.downLoad();
                         }
                     });
                 }
@@ -367,8 +447,6 @@ Ext.define('WebInspect.controller.MainControl',{
             Ext.Viewport.add(me.load);
         }
         me.load.show();
-
-        alert('load-show');
 
     },
 
@@ -447,28 +525,10 @@ Ext.define('WebInspect.controller.MainControl',{
 
     downLoad:function(name,url,me)
     {
-//        Ext.Viewport.setMasked({xtype:'loadmask',message:'下载中,请稍后...'});
-//        var fileTransfer = new FileTransfer();
-//        var uri = encodeURI("http://bpm.qgj.cn/test/qgjapp.apk");
-//        fileTransfer.download(
-//            uri,
-//            "file:///mnt/sdcard/dx_download/qgjapp.apk",
-//            function(entry) {
-//                Ext.Viewport.setMasked(false);
-//                plugins.Toast.ShowToast("下载完成",3000);
-//                plugins.Install.InstallApk("mnt/sdcard/dx_download/qgjapp.apk");
-//            },
-//            function(error) {
-//                Ext.Viewport.setMasked(false);
-//                plugins.Toast.ShowToast('下载失败！请检查网络！',3000);
-//            }
-//        );
-        alert('download-in');
         var uri = encodeURI(url);
         var fileTransfer = new FileTransfer();
 
         fileTransfer.onprogress = function(progressEvent) {
-            alert('download-onprogress');
             if (progressEvent.lengthComputable) {
                 var percent = Number((progressEvent.loaded / progressEvent.total) * 100).toFixed(0);
                 me.getLoad().onDataSet(percent);
@@ -482,13 +542,11 @@ Ext.define('WebInspect.controller.MainControl',{
             uri,
             "cdvfile://localhost/persistent/Download/" + name,
             function(entry) {
-                alert('download-all');
                 plugins.Toast.ShowToast("下载完成"+entry.fullPath,3000);
                 me.getLoad().hide();
                 plugins.Install.InstallApk("mnt/sdcard"+entry.fullPath);
             },
             function(error) {
-                alert('download-error');
                 plugins.Toast.ShowToast(' '+error.source,3000);
                 me.getLoad().hide();
             }
@@ -552,13 +610,10 @@ Ext.define('WebInspect.controller.MainControl',{
         var active = info.getActiveItem();
 
         switch(active.xtype){
-            case 'news':
-                if((me.getInfo().view) && (me.getInfo().view.getHidden() == false)){
-                    me.getInfo().onViewHide();
-                }
-                else{
-                    me.onInfoFunctionBackTap();
-                }
+
+            ////////////////消息列表//////////////
+            case 'maininfo':
+                me.onInfoFunctionBackTap();
                 break;
 
             case 'task':
@@ -574,66 +629,16 @@ Ext.define('WebInspect.controller.MainControl',{
                 me.onInfoFunctionBackTap();
                 break;
 
-            case 'water':
-                me.onInfoFunctionBackTap();
-                break;
-
-            case 'rain':
-                me.onInfoFunctionBackTap();
-                break;
-
-            case 'flow':
-                me.onInfoFunctionBackTap();
-                break;
-
-            case 'maininfo':
-                me.onInfoFunctionBackTap();
-                break;
-
-            case 'setting':
-                me.onInfoFunctionBackTap();
-                break;
-
-            case 'assignmain':
-                me.onInfoFunctionBackTap();
-                break;
-
-            case 'assginlist':
-                me.getInfofunction().show();
-                me.getApplication().getController('AssignControl').getSelectconfirm().hide();
-                me.getInfo().pop();
-                break;
-
-            case 'markmain':
-                me.onInfoFunctionBackTap();
-
-            case 'pushsetting':
-                me.getInfo().pop();
-                me.getInfofunction().show();
-                break;
-
-            case 'module':
-                me.getInfo().pop();
-                me.getInfofunction().show();
-                break;
-
-            case 'version':
-                me.getInfo().pop();
-                me.getInfofunction().show();
-                break;
-
-            case 'projectfirst':
-                me.onInfoFunctionBackTap();
-                break;
-
-            case 'tide':
-                if((me.getApplication().getController('TideControl').tidepop) && (me.getApplication().getController('TideControl').tidepop.getHidden() == false)){
-                    me.getApplication().getController('TideControl').tidepop.hide();
+            ////////////////新闻、通知、公告等//////////////
+            case 'news':
+                if((me.getInfo().view) && (me.getInfo().view.getHidden() == false)){
+                    me.getInfo().onViewHide();
                 }
                 else{
                     me.onInfoFunctionBackTap();
                 }
                 break;
+
             case 'newsdetail':
                 if((me.getInfo().view) && (me.getInfo().view.getHidden() == false)){
                     me.getInfo().onViewHide();
@@ -649,9 +654,51 @@ Ext.define('WebInspect.controller.MainControl',{
                 me.getInfofunction().show();
                 break;
 
+            ////////////////水情信息//////////////
+            case 'water':
+                me.onInfoFunctionBackTap();
+                break;
+
             case 'waterdetail':
                 me.getInfo().pop();
                 me.getInfofunction().show();
+                break;
+
+            ////////////////雨情信息//////////////
+            case 'rain':
+                me.onInfoFunctionBackTap();
+                break;
+
+            ////////////////流量信息//////////////
+            case 'flow':
+                me.onInfoFunctionBackTap();
+                break;
+
+            ////////////////指派任务//////////////
+            case 'assignmain':
+                me.onInfoFunctionBackTap();
+                break;
+
+            case 'assginlist':
+                me.getInfofunction().show();
+                me.getApplication().getController('AssignControl').getSelectconfirm().hide();
+                me.getInfo().pop();
+                break;
+
+            ////////////////海塘标识//////////////
+            case 'markmain':
+//                me.onInfoFunctionBackTap();
+                if((me.getInfo().view) && (me.getInfo().view.getHidden() == false)){
+                    me.getInfo().onViewHide();
+                }
+                else{
+                    me.onInfoFunctionBackTap();
+                }
+                break;
+
+            ////////////////工情信息//////////////
+            case 'projectfirst':
+                me.onInfoFunctionBackTap();
                 break;
 
             case 'projectsecond':
@@ -663,6 +710,17 @@ Ext.define('WebInspect.controller.MainControl',{
                 me.getInfo().pop();
                 break;
 
+            ////////////////潮位信息//////////////
+            case 'tide':
+                if((me.getApplication().getController('TideControl').tidepop) && (me.getApplication().getController('TideControl').tidepop.getHidden() == false)){
+                    me.getApplication().getController('TideControl').tidepop.hide();
+                }
+                else{
+                    me.onInfoFunctionBackTap();
+                }
+                break;
+
+            //////////////通讯录///////////////////
             case 'contactlist':
                 if((me.getApplication().getController('ContactControl').popup) && (me.getApplication().getController('ContactControl').popup.getHidden() == false)){
                     me.getApplication().getController('ContactControl').popup.hide();
@@ -682,6 +740,43 @@ Ext.define('WebInspect.controller.MainControl',{
                     me.getInfo().pop();
                 }
                 break;
+
+            ////////////////工资信息///////////////
+            case 'salary':
+                me.onInfoFunctionBackTap();
+                break;
+
+            ////////////////已办事项////////////////
+            case 'done':
+                me.onInfoFunctionBackTap();
+                break;
+
+            case 'procedure':
+                me.getInfo().pop();
+                me.getInfofunction().show();
+                break;
+
+
+            ////////////////设置//////////////
+            case 'setting':
+                me.onInfoFunctionBackTap();
+                break;
+
+            case 'pushsetting':
+                me.getInfo().pop();
+                me.getInfofunction().show();
+                break;
+
+            case 'module':
+                me.getInfo().pop();
+                me.getInfofunction().show();
+                break;
+
+            case 'version':
+                me.getInfo().pop();
+                me.getInfofunction().show();
+                break;
+
         }
 
         document.addEventListener("backbutton", me.onBackKeyDown, false); // 返回键
@@ -714,7 +809,7 @@ Ext.define('WebInspect.controller.MainControl',{
         WebInspect.app.user.password = Ext.getCmp('password').getValue();
         me.onVpnLogin(1, ''); /////成功写入开始执行VPN认证
         plugins.jPush.setAlias(WebInspect.app.user.sid,function(success){});//////推送标识，以用户名区分
-//       me.onUserCheck(1,''); ////////测试的时候有
+//       me.onUserCheck(1,''); /////////测试的时候有
     },
 
     onUserWriteJson: function(){

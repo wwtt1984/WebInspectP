@@ -62,6 +62,7 @@ E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\a
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.camera\www\CameraPopoverHandle.js \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.camera\www\CameraPopoverOptions.js \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file\www \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file\www\android \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file\www\DirectoryEntry.js \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file\www\DirectoryReader.js \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file\www\Entry.js \
@@ -79,6 +80,7 @@ E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\a
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file\www\ProgressEvent.js \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file\www\requestFileSystem.js \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file\www\resolveLocalFileSystemURI.js \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file\www\android\FileSystem.js \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file-transfer\www \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file-transfer\www\FileTransfer.js \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file-transfer\www\FileTransferError.js \

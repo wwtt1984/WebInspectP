@@ -22,10 +22,15 @@ E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\a
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\camera\CameraLauncher.class \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\camera\ExifHelper.class \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\camera\FileHelper.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\ContentFilesystem.class \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\DirectoryManager.class \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\EncodingException.class \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileExistsException.class \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileHelper.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\Filesystem$1.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\Filesystem$LimitedInputStream.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\Filesystem$ReadFileCallback.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\Filesystem.class \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$1.class \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$10.class \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$11.class \
@@ -53,6 +58,8 @@ E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\a
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils$FileOp.class \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\FileUtils.class \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\InvalidModificationException.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\LocalFilesystem.class \
+E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\LocalFilesystemURL.class \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\NoModificationAllowedException.class \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\file\TypeMismatchException.class \
 E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\classes\org\apache\cordova\filetransfer\FileProgressResult.class \

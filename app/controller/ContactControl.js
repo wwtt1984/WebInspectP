@@ -64,7 +64,12 @@ Ext.define('WebInspect.controller.ContactControl', {
                 results: 'jsonp'
             });
 
-            contactstore.load();
+            Ext.Viewport.setMasked({xtype: 'loadmask',message: '列表加载中...'});
+
+            contactstore.setRoot({expanded: true});
+            contactstore.load(function(records, operation, success) {
+                Ext.Viewport.setMasked(false);
+            });
         }
 
         me.contactlist = me.getContactlist();
@@ -83,6 +88,7 @@ Ext.define('WebInspect.controller.ContactControl', {
         });
 
         if(!csstore.getAllCount()){
+
             csstore.load(function(records, operation, success){me.getContactsearch().show();});
         }
         else{

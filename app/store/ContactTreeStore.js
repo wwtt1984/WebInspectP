@@ -8,21 +8,21 @@ Ext.define('WebInspect.store.ContactTreeStore', {
     config: {
         autoLoad: false,
         model: 'WebInspect.model.TreeModel',
-        storeId: 'ContactTreeStore',
+//        storeId: 'ContactTreeStore',
         defaultRootProperty: 'items',
         proxy: {
-            type: 'sk',
+            type: 'sk'
 //            extraParams: {
 //                t: 'GetZpPerson',
 //                results: 'jsonp'
 //            },
-            reader: {
-                type: 'json'
-            }
+//            reader: {
+//                type: 'json'
+//            }
         },
         root: {
-            id:'ry',
-            expanded:true
+            id:'ry'
+//            expanded: false
         }
     }
 });

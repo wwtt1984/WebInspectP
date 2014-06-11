@@ -11,22 +11,22 @@ Ext.define('WebInspect.store.SegmentTreeStore', {
     ],
 
     config: {
-//        autoLoad: true,
+        autoLoad: false,
         model: 'WebInspect.model.TreeModel',
         defaultRootProperty: 'items',
         proxy: {
-            type: 'sk',
+            type: 'sk'
 //            extraParams: {
 //                t: 'GetXcjhTD',
 //                results: 'jsonp'
 //            },
-            reader: {
-                type: 'json'
-            }
+//            reader: {
+//                type: 'json'
+//            }
         },
         root: {
             id:'td',
-            expanded:true
+            expanded:false
         }
     }
 })

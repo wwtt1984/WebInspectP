@@ -8,20 +8,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/org.apache.cordova.file-transfer/www/FileTransferError.js",
-        "id": "org.apache.cordova.file-transfer.FileTransferError",
-        "clobbers": [
-            "window.FileTransferError"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.file-transfer/www/FileTransfer.js",
-        "id": "org.apache.cordova.file-transfer.FileTransfer",
-        "clobbers": [
-            "window.FileTransfer"
-        ]
-    },
-    {
         "file": "plugins/com.phone.phone.Phone/www/phone.js",
         "id": "com.phone.phone.Phone.phone",
         "clobbers": [
@@ -90,6 +76,20 @@ module.exports = [
         "id": "com.install.install.Install.install",
         "clobbers": [
             "window.plugins.Install"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.file-transfer/www/FileTransferError.js",
+        "id": "org.apache.cordova.file-transfer.FileTransferError",
+        "clobbers": [
+            "window.FileTransferError"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.file-transfer/www/FileTransfer.js",
+        "id": "org.apache.cordova.file-transfer.FileTransfer",
+        "clobbers": [
+            "window.FileTransfer"
         ]
     },
     {
@@ -210,8 +210,15 @@ module.exports = [
     {
         "file": "plugins/org.apache.cordova.file/www/resolveLocalFileSystemURI.js",
         "id": "org.apache.cordova.file.resolveLocalFileSystemURI",
-        "clobbers": [
-            "window.resolveLocalFileSystemURI"
+        "merges": [
+            "window"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.file/www/android/FileSystem.js",
+        "id": "org.apache.cordova.file.androidFileSystem",
+        "merges": [
+            "window.FileSystem"
         ]
     }
 ];
@@ -219,14 +226,14 @@ module.exports.metadata =
 // TOP OF METADATA
 {
     "com.toast.toast.Toast": "1.5.2",
-    "org.apache.cordova.file-transfer": "0.4.0",
     "com.phone.phone.Phone": "1.5.2",
     "com.jpush.jpush.JPush": "1.6.0",
     "org.apache.cordova.network-information": "0.2.7",
     "org.apache.cordova.camera": "0.2.8",
     "com.vpn.vpn.Vpn": "1.5.2",
     "com.install.install.Install": "1.5.2",
-    "org.apache.cordova.file": "0.2.5"
+    "org.apache.cordova.file-transfer": "0.4.5-dev",
+    "org.apache.cordova.file": "1.1.0"
 }
 // BOTTOM OF METADATA
 });

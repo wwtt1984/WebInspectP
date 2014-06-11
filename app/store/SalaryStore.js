@@ -9,10 +9,7 @@ Ext.define('WebInspect.store.SalaryStore', {
         model: 'WebInspect.model.SalaryModel',
 //        autoLoad: true,
         proxy: {
-            type: 'sk',
-            extraParams: {
-                t: 'GetSalary'
-            }
+            type: 'sk'
         }
     }
 });
