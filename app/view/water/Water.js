@@ -34,9 +34,17 @@ Ext.define('WebInspect.view.water.Water', {
         emptyText: '<p class="no-searches">没有符合要求的记录</p>',
 
         itemTpl: [
-            '<div style="width:40%;font-size:18px;line-height:2.2em;text-align:center;padding:0;margin:0;float:left;">{stnm}</div>',
-            '<div style="width:30%;font-size:18px;line-height:2.2em;text-align:center;padding:0;margin:0;float:left;">{zu}</div>',
-            '<div style="width:30%;font-size:18px;line-height:2.2em;text-align:center;padding:0;margin:0;float:right;">{jjz}</div>'
+            '<div style="width:31%;font-size:18px;line-height:2.2em;text-align:center;padding:0;margin:0;float:left;overflow:hidden;text-overflow: clip;white-space: nowrap;">{stnm}</div>',
+            '<div style="width:20%;font-size:18px;line-height:2.2em;text-align:center;padding:0;margin:0;float:left;overflow:hidden;text-overflow: clip;white-space: nowrap;">{zu}</div>',
+            '<div style="width:20%;font-size:18px;line-height:2.2em;text-align:center;padding:0;margin:0;float:left;overflow:hidden;text-overflow: clip;white-space: nowrap;">{jjz}</div>',
+            '<div style="width:29%;font-size:18px;line-height:2.2em;text-align:center;padding:0;margin:0;float:right;overflow:hidden;text-overflow: clip;white-space: nowrap;">{[this.getTime(values)]}</div>',
+            {
+                getTime: function(values){
+
+                    var  str = values.ymdhm;
+                    return str.substring(3);
+                }
+            }
         ],
 
         items: [
@@ -45,7 +53,7 @@ Ext.define('WebInspect.view.water.Water', {
                 xtype: 'panel',
 //                cls: 'tidelist-header',
                 cls: 'tide-header',
-                html: '<div style="width:40%;height:100%;float:left;">测站</div><div style="width:30%;height:100%;float:left;">水位(m)</div><div style="width:30%;height:100%;float:left;">超警(m)</div>'
+                html: '<div style="width:31%;height:100%;float:left;">测站</div><div style="width:20%;height:100%;float:left;">水位(m)</div><div style="width:20%;height:100%;float:left;">超警(m)</div><div style="width:29%;height:100%;float:right;">时间</div>'
             },
             {
                 docked: 'bottom',
