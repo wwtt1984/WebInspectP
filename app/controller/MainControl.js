@@ -52,7 +52,7 @@ Ext.define('WebInspect.controller.MainControl',{
 
         me.onBtnConfirm();
         //android返回键事件监听
-//        document.addEventListener("backbutton", me.onBackKeyDown, false);
+        document.addEventListener("backbutton", me.onBackKeyDown, false);
 
 //        document.addEventListener("offline", me.onOfflineListen, false);///////联机状态判断
 //        document.addEventListener("online", me.onOnlineListen, false);///////在线判断
@@ -706,6 +706,10 @@ Ext.define('WebInspect.controller.MainControl',{
                 me.getInfofunction().show();
                 break;
 
+            case 'projectthird':
+                me.getInfo().pop();
+                break;
+
             case 'projectcard':
                 me.getInfo().pop();
                 break;
@@ -905,7 +909,7 @@ Ext.define('WebInspect.controller.MainControl',{
         });
 //        store.load();
         store.load(function(records, operation, success) {
-            store.add({id: 15, sid: WebInspect.app.user.sid, title: '已办事项', name: 'done', url: 'resources/images/function/salary.png'});
+            store.add({id: 15, sid: WebInspect.app.user.sid, title: '已办事项', name: 'done', url: 'resources/images/function/done.png'});
         });
     },
 

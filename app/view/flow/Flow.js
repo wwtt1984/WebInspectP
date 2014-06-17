@@ -10,11 +10,16 @@ Ext.define('WebInspect.view.flow.Flow', {
 
         title: '流量信息',
 
-        loadingText: '努力加载中...',
+        loadingText: false,
         scrollToTopOnRefresh: false,
 
         cls: 'tidelist',
         store: 'FlowStore',
+
+        masked: {
+            xtype: 'loadmask',
+            message: '努力加载中...'
+        },
 
         plugins: [
             {

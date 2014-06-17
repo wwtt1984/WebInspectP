@@ -34,6 +34,8 @@ Ext.define('Ext.plugin.ListPaging', {
          * @cfg {Boolean} autoPaging
          * True to automatically load the next page when you scroll to the bottom of the list.
          */
+
+        totalCount: 0,
         autoPaging: false,
 
         /**
@@ -250,6 +252,7 @@ Ext.define('Ext.plugin.ListPaging', {
      * @private
      */
     onStoreLoad: function(store) {
+
         var loadCmp  = this.getLoadMoreCmp(),
             template = this.getLoadTpl(),
             message  = this.storeFullyLoaded() ? this.getNoMoreRecordsText() : this.getLoadMoreText();
@@ -312,10 +315,12 @@ Ext.define('Ext.plugin.ListPaging', {
      * @return {Boolean}
      */
     storeFullyLoaded: function() {
-        var store = this.getList().getStore(),
-            total = store.getTotalCount();
+        var store = this.getList().getStore();
 
-        return total !== null ? store.getTotalCount() <= (store.currentPage * store.getPageSize()) : false;
+//        this.totalCount = store.getTotalCount();
+        var total = this.getTotalCount();
+
+        return total !== null ? total <= (store.currentPage * store.getPageSize()) : false;
     },
 
     /**

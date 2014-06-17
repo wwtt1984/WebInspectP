@@ -51,6 +51,10 @@ Ext.define('WebInspect.controller.DoneControl', {
         });
 
         store.load(function(records, operation, success){
+            if(!success)
+            {
+                plugins.Toast.ShowToast("网络不给力，无法读取数据!",3000);
+            }
         }, this);
     },
 

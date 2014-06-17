@@ -34,11 +34,6 @@ Ext.define('WebInspect.controller.RainControl', {
 
     onRainStoreLoad: function(){
 
-        Ext.Viewport.setMasked({
-            xtype: 'loadmask',
-            message: '努力加载中...'
-        });
-
         var store = Ext.getStore('RainStore');
 
         store.removeAll();
@@ -48,6 +43,10 @@ Ext.define('WebInspect.controller.RainControl', {
         });
 
         store.load(function(records, operation, success) {
+            if(!success)
+            {
+                plugins.Toast.ShowToast("网络不给力，无法读取数据!",3000);
+            }
             Ext.Viewport.setMasked(false);
         }, this);
     }

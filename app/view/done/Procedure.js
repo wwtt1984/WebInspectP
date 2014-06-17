@@ -18,7 +18,7 @@ Ext.define('WebInspect.view.done.Procedure', {
         },
         style: 'background:#f7f7f7;',
         tpl:  Ext.create('Ext.XTemplate',
-            '<div style="height:2em;width:100%;padding:0 5px 0 5px; font-size:15px;line-height:2em;background:#ddd;filter:alpha(opacity=50);-moz-opacity:0.5;opacity:0.5;">物流跟踪</div>',
+            '<div style="height:2em;width:100%;padding:0 5px 0 5px; font-size:15px;line-height:2em;background:#ddd;filter:alpha(opacity=50);-moz-opacity:0.5;opacity:0.5;">流程</div>',
             '<div style="width:100%;height:auto;border-bottom:1px #ccc solid;background:url(resources/images/prebg.png);background-position:left;background-repeat:repeat-y;">',
             '<tpl for=".">',
 //                '<div style="height:100%;width:98%;margin:0 2% 0 0;">',

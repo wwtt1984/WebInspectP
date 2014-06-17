@@ -152,8 +152,15 @@ Ext.define('WebInspect.view.list.MainInfo', {
         });
 
         store.load(function(records, operation, success){
-            me.setData(store.getAt(0).data);
+
             Ext.Viewport.setMasked(false);
+            if(!success)
+            {
+                plugins.Toast.ShowToast("网络不给力，无法读取数据!",3000);
+            }
+            else{
+                me.setData(store.getAt(0).data);
+            }
         }, this);
 
     }

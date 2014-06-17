@@ -16,6 +16,7 @@ Ext.define('WebInspect.controller.ProjectControl', {
             infofunction: '[itemId=infofunction]',
             projectfirst: 'info projectfirst',
             projectsecond: 'info projectsecond',
+            projectthird:'info projectthird',
             projectcard: 'info projectcard',
             projectmain: 'projectmain',
             projectelement: 'projectelement',
@@ -28,6 +29,9 @@ Ext.define('WebInspect.controller.ProjectControl', {
             },
             projectsecond: {
                 itemtap: 'onProjectSecondTap'
+            },
+            projectthird: {
+                itemtap: 'onProjectThirdTap'
             },
             projectSegmentedButton: {
                 toggle: 'onProjectSegmentedTap'
@@ -46,11 +50,6 @@ Ext.define('WebInspect.controller.ProjectControl', {
 
     onProjectFirstStoreLoad: function(){
 
-        Ext.Viewport.setMasked({
-            xtype: 'loadmask',
-            message: '努力加载中...'
-        });
-
         var store = Ext.getStore('ProjectFirstStore');
 
         store.removeAll();
@@ -60,41 +59,94 @@ Ext.define('WebInspect.controller.ProjectControl', {
         });
 
         store.load(function(records, operation, success) {
+            if(!success)
+            {
+                plugins.Toast.ShowToast("网络不给力，无法读取数据!",3000);
+            }
             Ext.Viewport.setMasked(false);
         });
     },
 
     onProjectFirstTap: function(list, index, target, record, e, eOpts){
 
-        Ext.Viewport.setMasked({
-            xtype: 'loadmask',
-            message: '努力加载中...'
-        });
+        var me = this;
 
         var store = Ext.getStore('ProjectSecondStore');
 
         store.removeAll();
+
         store.getProxy().setExtraParams({
             t: 'GetGqInfo',
             results: record.data.type + '$' + record.data.location + '$jsonp'
         });
 
-        store.load(function(records, operation, success) {
+        store.loadPage(1,function(records, operation, success) {
+            if(!success)
+            {
+                plugins.Toast.ShowToast("网络不给力，无法读取数据!",3000);
+            }
             Ext.Viewport.setMasked(false);
         });
 
-        this.projectsecond = this.getProjectsecond();
+        me.projectsecond = me.getProjectsecond();
 
-        if(!this.projectsecond){
-            this.projectsecond = Ext.create('WebInspect.view.project.ProjectSecond');
+        if(!me.projectsecond){
+            me.projectsecond = Ext.create('WebInspect.view.project.ProjectSecond');
         }
 
-        this.getInfofunction().hide();
-        this.getInfo().push(this.projectsecond);
+        me.projectsecond.getPlugins()[0].setTotalCount(parseFloat(record.data.num));
+        me.projectsecond.setTitle(record.data.type + '-' + record.data.location);
+        me.getInfofunction().hide();
+        me.getInfo().push(me.projectsecond);
     },
 
     onProjectSecondTap: function(list, index, target, record, e, eOpts){
 
+        var me = this;
+
+        if(record.data.leaf == 'true'){
+            me.onThirdViewShow(record);
+        }
+        else{
+            me.onElementViewShow(record);
+        }
+    },
+
+    onThirdViewShow: function(record){
+        var me = this;
+
+        var store = Ext.getStore('ProjectThirdStore');
+
+        store.removeAll();
+
+        store.getProxy().setExtraParams({
+            t: 'GetGqInfoLeaf',
+            results: record.data.code + '$jsonp'
+        });
+
+        store.load(function(records, operation, success) {
+            if(!success)
+            {
+                plugins.Toast.ShowToast("网络不给力，无法读取数据!",3000);
+            }
+            Ext.Viewport.setMasked(false);
+        });
+
+        me.projectthird = me.getProjectthird();
+
+        if(!me.projectthird){
+            me.projectthird = Ext.create('WebInspect.view.project.ProjectThird');
+        }
+        me.projectthird.setTitle(record.data.name);
+        me.getInfo().push(me.projectthird);
+    },
+
+    onProjectThirdTap: function(list, index, target, record, e, eOpts){
+        var me = this;
+        me.onElementViewShow(record);
+    },
+
+    onElementViewShow: function(record){
         var me = this;
 
         Ext.Viewport.setMasked({
@@ -113,7 +165,6 @@ Ext.define('WebInspect.controller.ProjectControl', {
         me.getInfofunction().hide();
         me.projectcard.setTitle(record.data.name);
         me.getInfo().push(me.projectcard);
-
     },
 
     onProjectSegmentedTap: function(me, button, isPressed, eOpts){

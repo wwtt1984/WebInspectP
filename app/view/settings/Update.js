@@ -58,7 +58,13 @@ Ext.define('WebInspect.view.settings.Update', {
         });
 
         store.load(function(records, operation, success) {
-            me.setData(store.getData().all);
+            if(!success)
+            {
+                plugins.Toast.ShowToast("网络不给力，无法读取数据!",3000);
+            }
+            else{
+                me.setData(store.getData().all);
+            }
         });
     }
 })

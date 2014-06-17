@@ -92,7 +92,12 @@ Ext.define('WebInspect.controller.AssignControl', {
             results: WebInspect.app.user.sid + '$jsonp'
         });
 
-        assignstore.load();
+        assignstore.load(function(records, operation, success){
+            if(!success)
+            {
+                plugins.Toast.ShowToast("网络不给力，无法读取数据!",3000);
+            }
+        });
     },
 
     onAssignListPush: function(index){

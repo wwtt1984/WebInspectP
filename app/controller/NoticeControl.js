@@ -95,6 +95,10 @@ Ext.define('WebInspect.controller.NoticeControl', {
         });
 
         store.load(function(records, operation, success){
+            if(!success)
+            {
+                plugins.Toast.ShowToast("网络不给力，无法读取数据!",3000);
+            }
         }, this);
 
         me.getMain().setActiveItem(me.getInfo());
@@ -135,7 +139,12 @@ Ext.define('WebInspect.controller.NoticeControl', {
             results: WebInspect.app.user.sid + '$'+ sdt + '$' + edt + '$jsonp'
         });
 
-        store.load();
+        store.load(function(records, operation, success){
+            if(!success)
+            {
+                plugins.Toast.ShowToast("网络不给力，无法读取数据!",3000);
+            }
+        }, this);
 
 
     },

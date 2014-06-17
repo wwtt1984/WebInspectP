@@ -10,8 +10,12 @@ Ext.define('WebInspect.view.water.WaterDetail', {
 
         title: '水位站信息',
 
-        loadingText: '努力加载中...',
+        loadingText: false,
         scrollToTopOnRefresh: false,
+        masked: {
+            xtype: 'loadmask',
+            message: '努力加载中...'
+        },
 
         store: 'WaterDetailStore',
 

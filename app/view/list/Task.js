@@ -12,7 +12,11 @@ Ext.define('WebInspect.view.list.Task', {
 
         style: 'background: #fff;',
     	store: 'TaskStore',
-        loadingText: '努力加载中...',
+        loadingText: false,
+        masked: {
+            xtype: 'loadmask',
+            message: '努力加载中...'
+        },
 
         plugins: [
             {

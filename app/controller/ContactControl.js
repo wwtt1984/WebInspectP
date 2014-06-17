@@ -67,9 +67,10 @@ Ext.define('WebInspect.controller.ContactControl', {
             Ext.Viewport.setMasked({xtype: 'loadmask',message: '列表加载中...'});
 
             contactstore.setRoot({expanded: true});
-            contactstore.load(function(records, operation, success) {
-                Ext.Viewport.setMasked(false);
-            });
+//            contactstore.load(function(records, operation, success){
+//                Ext.Viewport.setMasked(false);
+//            });
+            contactstore.load();
         }
 
         me.contactlist = me.getContactlist();
@@ -89,7 +90,16 @@ Ext.define('WebInspect.controller.ContactControl', {
 
         if(!csstore.getAllCount()){
 
-            csstore.load(function(records, operation, success){me.getContactsearch().show();});
+            csstore.load(function(records, operation, success){
+                me.getContactsearch().show();
+
+                if(!success)
+                {
+                    plugins.Toast.ShowToast("网络不给力，无法读取数据!",3000);
+                }
+
+                Ext.Viewport.setMasked(false);
+            });
         }
         else{
             me.getContactsearch().show();

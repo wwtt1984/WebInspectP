@@ -52,12 +52,18 @@ Ext.define('WebInspect.view.project.ProjectElement', {
         store.load(function(records, operation, success) {
             Ext.Viewport.setMasked(false);
 
-            if(store.getAllCount()){
-
-                me.setData(store.getData().all);
+            if(!success)
+            {
+                plugins.Toast.ShowToast("网络不给力，无法读取数据!",3000);
             }
             else{
-                me.setHtml('<p class="no-searches" style="margin-top:50%;text-align:center;">没有详细字段</p>');
+                if(store.getAllCount()){
+
+                    me.setData(store.getData().all);
+                }
+                else{
+                    me.setHtml('<p class="no-searches" style="margin-top:50%;text-align:center;">没有详细字段</p>');
+                }
             }
         });
     }

@@ -19,6 +19,11 @@ Ext.define('WebInspect.view.mark.MarkList', {
         loadingText: '努力加载中...',
         scrollToTopOnRefresh: false,
 
+//        masked: {
+//            xtype: 'loadmask',
+//            message: '努力加载中...'
+//        },
+
         plugins: [
             {
                 xclass: 'Ext.plugin.ListPaging',

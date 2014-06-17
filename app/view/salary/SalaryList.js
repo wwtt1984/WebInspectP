@@ -18,7 +18,11 @@ Ext.define('WebInspect.view.salary.SalaryList', {
 
         currentDate: '',
 
-        loadingText: '努力加载中...',
+        loadingText: false,
+//        masked: {
+//            xtype: 'loadmask',
+//            message: '努力加载中...'
+//        },
         scrollToTopOnRefresh: false,
         cls: 'tidelist',
         infinite: true,

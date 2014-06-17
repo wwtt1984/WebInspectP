@@ -17,9 +17,12 @@ Ext.define('WebInspect.view.assign.AssignHistory', {
 
         store: 'AssignStore',
 
-        loadingText: '努力加载中...',
+        loadingText: false,
         scrollToTopOnRefresh: false,
-
+        masked: {
+            xtype: 'loadmask',
+            message: '努力加载中...'
+        },
 //        plugins: [
 //            {
 //                xclass: 'Ext.plugin.ListPaging',

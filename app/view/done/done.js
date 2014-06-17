@@ -16,7 +16,11 @@ Ext.define('WebInspect.view.done.Done', {
 
         style: 'background: #fff;',
         store: 'DoneStore',
-        loadingText: '努力加载中...',
+        loadingText: false,
+        masked: {
+            xtype: 'loadmask',
+            message: '努力加载中...'
+        },
 
         plugins: [
             {

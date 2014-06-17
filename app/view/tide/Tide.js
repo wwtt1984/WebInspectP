@@ -10,11 +10,15 @@ Ext.define('WebInspect.view.tide.Tide', {
     	
     	title: '潮位信息',
 	    
-	    loadingText: '努力加载中...',
+	    loadingText: false,
 	    scrollToTopOnRefresh: false,
 	    
 	    cls: 'tidelist',
 	    store: 'TideStore',
+        masked: {
+            xtype: 'loadmask',
+            message: '努力加载中...'
+        },
         
         emptyText: '<p class="no-searches">没有符合要求的记录</p>',
 	      

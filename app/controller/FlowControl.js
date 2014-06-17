@@ -43,13 +43,6 @@ Ext.define('WebInspect.controller.FlowControl', {
 
     onFlowStoreLoad: function(result, num){
 
-        if(num == 0){
-            Ext.Viewport.setMasked({
-                xtype: 'loadmask',
-                message: '努力加载中...'
-            });
-        }
-
         var store = Ext.getStore('FlowStore');
 
         store.removeAll();
@@ -59,9 +52,11 @@ Ext.define('WebInspect.controller.FlowControl', {
         });
 
         store.load(function(records, operation, success) {
-            if(num == 0){
-                Ext.Viewport.setMasked(false);
+            if(!success)
+            {
+                plugins.Toast.ShowToast("网络不给力，无法读取数据!",3000);
             }
+            Ext.Viewport.setMasked(false);
         });
     }
 })

@@ -71,6 +71,7 @@ Ext.application({
         'project.ProjectCard',
         'project.ProjectMain',
         'project.ProjectElement',
+        'project.ProjectThird',
 
         'settings.Setting',
         'settings.PushSetting',
@@ -124,6 +125,7 @@ Ext.application({
         'ProjectFirstModel',
         'ProjectSecondModel',
         'ProjectElementModel',
+        'ProjectThirdModel',
 
         'SettingsModel',
         'SettingModel',
@@ -174,6 +176,7 @@ Ext.application({
         'ProjectSecondStore',
         'ProjectMainStore',
         'ProjectElementStore',
+        'ProjectThirdStore',
 
         'SettingStore',
         'UpdateStore',

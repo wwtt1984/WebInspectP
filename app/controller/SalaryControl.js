@@ -52,20 +52,35 @@ Ext.define('WebInspect.controller.SalaryControl', {
             t: 'GetSalary',
             results: WebInspect.app.user.sid + '$' + Ext.Date.format(now, 'Y-m').toString() + '-01$jsonp'
         });
-        store.load();
+        store.load(function(records, operation, success){
+            if(!success)
+            {
+                plugins.Toast.ShowToast("网络不给力，无法读取数据!",3000);
+            }
+        });
 
         var store1 = Ext.getStore('SalaryPreStore');
         store1.getProxy().setExtraParams({
             t: 'GetSalary',
             results: WebInspect.app.user.sid + '$' + Ext.Date.format(Ext.Date.add(now, Ext.Date.MONTH, -1), 'Y-m').toString() + '-01$jsonp'
         });
-        store1.load();
+        store1.load(function(records, operation, success){
+            if(!success)
+            {
+                plugins.Toast.ShowToast("网络不给力，无法读取数据!",3000);
+            }
+        });
 
         var store2 = Ext.getStore('SalaryNextStore');
         store2.getProxy().setExtraParams({
             t: 'GetSalary',
             results: WebInspect.app.user.sid + '$' + Ext.Date.format(Ext.Date.add(now, Ext.Date.MONTH, +1), 'Y-m').toString() + '-01$jsonp'
         });
-        store2.load();
+        store2.load(function(records, operation, success){
+            if(!success)
+            {
+                plugins.Toast.ShowToast("网络不给力，无法读取数据!",3000);
+            }
+        });
     }
 })

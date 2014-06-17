@@ -38,11 +38,6 @@ Ext.define('WebInspect.controller.TideControl', {
             results: 'jsonp'
         });
 
-        Ext.Viewport.setMasked({
-            xtype: 'loadmask',
-            message: '努力加载中...'
-        });
-
         this.tide = this.getTide();
         if(!this.tide){
             this.tide= Ext.create('WebInspect.view.tide.Tide');
@@ -50,15 +45,22 @@ Ext.define('WebInspect.controller.TideControl', {
 
         store.load(function(records, operation, success){
 
-            store.clearFilter();
-            store.filter("sdate", Ext.Date.format(new Date(), 'Y-m-d').toString());
-            if(store.getAllCount() == store.getCount()){
-                Ext.getCmp('tidetoolbar').hide();
-                Ext.getCmp('tidepanel').show();
+            if(!success)
+            {
+                plugins.Toast.ShowToast("网络不给力，无法读取数据!",3000);
             }
-            else{
-                Ext.getCmp('tidetoolbar').show();
-                Ext.getCmp('tidepanel').hide();
+            else
+            {
+                store.clearFilter();
+                store.filter("sdate", Ext.Date.format(new Date(), 'Y-m-d').toString());
+                if(store.getAllCount() == store.getCount()){
+                    Ext.getCmp('tidetoolbar').hide();
+                    Ext.getCmp('tidepanel').show();
+                }
+                else{
+                    Ext.getCmp('tidetoolbar').show();
+                    Ext.getCmp('tidepanel').hide();
+                }
             }
             Ext.Viewport.setMasked(false);
         }, this);

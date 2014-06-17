@@ -91,10 +91,18 @@ Ext.define('WebInspect.controller.NewsControl', {
 
             store.load(function(records, operation, success){
                 Ext.Viewport.setMasked(false);
-                if(store.getAllCount()){
-                    this.getInfo().onImageShow(store.getAt(0).data);
-                    this.getNewsback().setStyle('color: #ccc;');
+
+                if(!success)
+                {
+                    plugins.Toast.ShowToast("网络不给力，无法读取数据!",3000);
                 }
+                else{
+                    if(store.getAllCount()){
+                        this.getInfo().onImageShow(store.getAt(0).data);
+                        this.getNewsback().setStyle('color: #ccc;');
+                    }
+                }
+
             }, this);
 
         }
@@ -110,10 +118,9 @@ Ext.define('WebInspect.controller.NewsControl', {
             });
 
             store.load(function(records, operation, success){
-
+                Ext.Viewport.setMasked(false);
                 if(!success)
                 {
-                    Ext.Viewport.setMasked(false);
                     plugins.Toast.ShowToast("网络不给力，无法读取数据!",3000);
                 }
                 else
