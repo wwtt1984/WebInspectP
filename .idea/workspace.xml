@@ -1,55 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97eeba59-43ed-481c-b450-8b573637ea50" name="Default" comment="Initial commit&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/function/done.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/view/project/ProjectThird.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/model/ProjectThirdModel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/store/ProjectThirdStore.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes.jar" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/classes.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/bin/webInspect-debug-unaligned.apk" afterPath="$PROJECT_DIR$/phonegap/platforms/android/bin/webInspect-debug-unaligned.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/bin/webInspect-debug.apk" afterPath="$PROJECT_DIR$/phonegap/platforms/android/bin/webInspect-debug.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/bin/webInspect.ap_" afterPath="$PROJECT_DIR$/phonegap/platforms/android/bin/webInspect.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/AssignControl.js" afterPath="$PROJECT_DIR$/app/controller/AssignControl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/assign/AssignHistory.js" afterPath="$PROJECT_DIR$/app/view/assign/AssignHistory.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/ContactControl.js" afterPath="$PROJECT_DIR$/app/controller/ContactControl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/DoneControl.js" afterPath="$PROJECT_DIR$/app/controller/DoneControl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/flow/Flow.js" afterPath="$PROJECT_DIR$/app/view/flow/Flow.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/FlowControl.js" afterPath="$PROJECT_DIR$/app/controller/FlowControl.js" />
+    <list default="true" id="97eeba59-43ed-481c-b450-8b573637ea50" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/touch/src/plugin/ListPaging.js" afterPath="$PROJECT_DIR$/touch/src/plugin/ListPaging.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/Login.js" afterPath="$PROJECT_DIR$/app/view/Login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/MainControl.js" afterPath="$PROJECT_DIR$/app/controller/MainControl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/list/MainInfo.js" afterPath="$PROJECT_DIR$/app/view/list/MainInfo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/mark/MarkList.js" afterPath="$PROJECT_DIR$/app/view/mark/MarkList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/NewsControl.js" afterPath="$PROJECT_DIR$/app/controller/NewsControl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/NoticeControl.js" afterPath="$PROJECT_DIR$/app/controller/NoticeControl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/done/Procedure.js" afterPath="$PROJECT_DIR$/app/view/done/Procedure.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/store/ProcedureStore.js" afterPath="$PROJECT_DIR$/app/store/ProcedureStore.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/ProjectControl.js" afterPath="$PROJECT_DIR$/app/controller/ProjectControl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/project/ProjectElement.js" afterPath="$PROJECT_DIR$/app/view/project/ProjectElement.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/project/ProjectFirst.js" afterPath="$PROJECT_DIR$/app/view/project/ProjectFirst.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/project/ProjectMain.js" afterPath="$PROJECT_DIR$/app/view/project/ProjectMain.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/project/ProjectSecond.js" afterPath="$PROJECT_DIR$/app/view/project/ProjectSecond.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/ProjectSecondModel.js" afterPath="$PROJECT_DIR$/app/model/ProjectSecondModel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/store/ProjectSecondStore.js" afterPath="$PROJECT_DIR$/app/store/ProjectSecondStore.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/rain/Rain.js" afterPath="$PROJECT_DIR$/app/view/rain/Rain.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/RainControl.js" afterPath="$PROJECT_DIR$/app/controller/RainControl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/SalaryControl.js" afterPath="$PROJECT_DIR$/app/controller/SalaryControl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/salary/SalaryList.js" afterPath="$PROJECT_DIR$/app/view/salary/SalaryList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/list/Task.js" afterPath="$PROJECT_DIR$/app/view/list/Task.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/tide/Tide.js" afterPath="$PROJECT_DIR$/app/view/tide/Tide.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/TideControl.js" afterPath="$PROJECT_DIR$/app/controller/TideControl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/settings/Update.js" afterPath="$PROJECT_DIR$/app/view/settings/Update.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/water/Water.js" afterPath="$PROJECT_DIR$/app/view/water/Water.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/WaterControl.js" afterPath="$PROJECT_DIR$/app/controller/WaterControl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/water/WaterDetail.js" afterPath="$PROJECT_DIR$/app/view/water/WaterDetail.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/app.js" afterPath="$PROJECT_DIR$/phonegap/platforms/android/assets/www/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/www/app.js" afterPath="$PROJECT_DIR$/phonegap/www/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/build.prop" afterPath="$PROJECT_DIR$/phonegap/platforms/android/CordovaLib/bin/build.prop" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phonegap/platforms/android/bin/build.prop" afterPath="$PROJECT_DIR$/phonegap/platforms/android/bin/build.prop" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/view/done/Done.js" afterPath="$PROJECT_DIR$/app/view/done/Done.js" />
     </list>
     <ignored path="WebInspect.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,7 +29,7 @@
       <file leaf-file-name="DoneStore.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/store/DoneStore.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="3" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="380">
+            <state line="14" column="3" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0" vertical-offset="266" max-vertical-offset="380">
               <folding />
             </state>
           </provider>
@@ -119,17 +73,39 @@
       <file leaf-file-name="ProcedureStore.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/store/ProcedureStore.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="22" selection-start="603" selection-end="603" vertical-scroll-proportion="0.0" vertical-offset="29" max-vertical-offset="589">
+            <state line="20" column="22" selection-start="603" selection-end="603" vertical-scroll-proportion="0.0" vertical-offset="380" max-vertical-offset="589">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContactControl.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ContactControl.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controller/ContactControl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="46" selection-start="2636" selection-end="2636" vertical-scroll-proportion="1.425" vertical-offset="1102" max-vertical-offset="3686">
+            <state line="43" column="14" selection-start="1039" selection-end="1039" vertical-scroll-proportion="0.0" vertical-offset="513" max-vertical-offset="3686">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="0" selection-start="432" selection-end="432" vertical-scroll-proportion="-8.142858" vertical-offset="0" max-vertical-offset="342">
+              <folding>
+                <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListPaging.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/touch/src/plugin/ListPaging.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="56" selection-start="1194" selection-end="1194" vertical-scroll-proportion="0.27142859" vertical-offset="627" max-vertical-offset="6517">
+              <folding>
+                <marker date="1403052865857" expanded="false" signature="1808:1843" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -156,7 +132,6 @@
         <option value="$PROJECT_DIR$/app/controller/SalaryControl.js" />
         <option value="$PROJECT_DIR$/app/store/ProjectSecondStore.js" />
         <option value="$PROJECT_DIR$/app/view/Login.js" />
-        <option value="$PROJECT_DIR$/touch/src/plugin/ListPaging.js" />
         <option value="$PROJECT_DIR$/app/view/project/ProjectSecond.js" />
         <option value="$PROJECT_DIR$/app/model/ProjectSecondModel.js" />
         <option value="$PROJECT_DIR$/app/model/ProjectThirdModel.js" />
@@ -168,6 +143,7 @@
         <option value="$PROJECT_DIR$/app/view/done/Procedure.js" />
         <option value="$PROJECT_DIR$/app/store/ProcedureStore.js" />
         <option value="$PROJECT_DIR$/app/controller/ContactControl.js" />
+        <option value="$PROJECT_DIR$/touch/src/plugin/ListPaging.js" />
       </list>
     </option>
   </component>
@@ -218,6 +194,60 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="touch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="touch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebInspect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="touch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -645,16 +675,16 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../GeMobile" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="132" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="910" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="910" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="910" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="132" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="132" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -673,6 +703,14 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -683,23 +721,15 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -935,7 +965,11 @@
       <created>1402639582087</created>
       <updated>1402639582087</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Initial commit&#10;">
+      <created>1402991857150</created>
+      <updated>1402991857150</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -983,94 +1017,49 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/store/ProjectSecondStore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="305" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="380">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/project/ProjectSecond.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="3" selection-start="0" selection-end="773" vertical-scroll-proportion="0.7625" vertical-offset="276" max-vertical-offset="836">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/model/ProjectThirdModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="46" selection-start="69" selection-end="86" vertical-scroll-proportion="0.067857146" vertical-offset="0" max-vertical-offset="560">
-          <folding>
-            <element signature="e#0#38#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="4" column="46" selection-start="69" selection-end="86" vertical-scroll-proportion="0.067857146" vertical-offset="0" max-vertical-offset="560" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/store/ProjectThirdStore.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="46" selection-start="69" selection-end="86" vertical-scroll-proportion="0.067857146" vertical-offset="0" max-vertical-offset="560">
-          <folding>
-            <element signature="e#0#38#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="4" column="46" selection-start="69" selection-end="86" vertical-scroll-proportion="0.067857146" vertical-offset="0" max-vertical-offset="560" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/project/ProjectThird.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="48" selection-start="68" selection-end="88" vertical-scroll-proportion="0.067857146" vertical-offset="0" max-vertical-offset="627">
-          <folding>
-            <element signature="e#0#38#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="4" column="48" selection-start="68" selection-end="88" vertical-scroll-proportion="0.067857146" vertical-offset="0" max-vertical-offset="627" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="31" selection-start="2032" selection-end="2032" vertical-scroll-proportion="0.54285717" vertical-offset="1083" max-vertical-offset="5016">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
+        <state line="73" column="31" selection-start="2032" selection-end="2032" vertical-scroll-proportion="0.54285717" vertical-offset="1083" max-vertical-offset="5016" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/model/ProjectSecondModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="21" selection-start="194" selection-end="202" vertical-scroll-proportion="0.2375" vertical-offset="0" max-vertical-offset="560">
-          <folding />
-        </state>
+        <state line="7" column="21" selection-start="194" selection-end="202" vertical-scroll-proportion="0.2375" vertical-offset="0" max-vertical-offset="560" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/project/ProjectCard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="22" selection-start="292" selection-end="292" vertical-scroll-proportion="-1.5892193" vertical-offset="1083" max-vertical-offset="1634">
-          <folding />
-        </state>
+        <state line="12" column="22" selection-start="292" selection-end="292" vertical-scroll-proportion="-1.5892193" vertical-offset="1083" max-vertical-offset="1634" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/project/ProjectElement.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="13" selection-start="1599" selection-end="1599" vertical-scroll-proportion="1.2713754" vertical-offset="399" max-vertical-offset="1444">
-          <folding>
-            <marker date="1402648335077" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1402648335077" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1402648335077" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1402648335077" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
+        <state line="57" column="13" selection-start="1599" selection-end="1599" vertical-scroll-proportion="1.2713754" vertical-offset="399" max-vertical-offset="1444" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controller/ProjectControl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="22" selection-start="2945" selection-end="2945" vertical-scroll-proportion="0.6003717" vertical-offset="1653" max-vertical-offset="3629">
-          <folding />
-        </state>
+        <state line="104" column="22" selection-start="2945" selection-end="2945" vertical-scroll-proportion="0.6003717" vertical-offset="1653" max-vertical-offset="3629" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controller/MainControl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="911" column="126" selection-start="29900" selection-end="29900" vertical-scroll-proportion="0.6526316" vertical-offset="16999" max-vertical-offset="19342">
-          <folding />
-        </state>
+        <state line="911" column="126" selection-start="29900" selection-end="29900" vertical-scroll-proportion="0.6526316" vertical-offset="16999" max-vertical-offset="19342" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/done/Done.js">
@@ -1120,8 +1109,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controller/ContactControl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="46" selection-start="2636" selection-end="2636" vertical-scroll-proportion="1.425" vertical-offset="1102" max-vertical-offset="3686">
+        <state line="43" column="14" selection-start="1039" selection-end="1039" vertical-scroll-proportion="0.0" vertical-offset="513" max-vertical-offset="3686">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="432" selection-end="432" vertical-scroll-proportion="-8.142858" vertical-offset="0" max-vertical-offset="342">
+          <folding>
+            <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/touch/src/plugin/ListPaging.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="56" selection-start="1194" selection-end="1194" vertical-scroll-proportion="0.27142859" vertical-offset="627" max-vertical-offset="6517">
+          <folding>
+            <marker date="1403052865857" expanded="false" signature="1808:1843" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

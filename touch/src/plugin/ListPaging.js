@@ -35,7 +35,7 @@ Ext.define('Ext.plugin.ListPaging', {
          * True to automatically load the next page when you scroll to the bottom of the list.
          */
 
-        totalCount: 0,
+        totalCount: null,
         autoPaging: false,
 
         /**
