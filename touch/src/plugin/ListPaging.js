@@ -317,7 +317,7 @@ Ext.define('Ext.plugin.ListPaging', {
     storeFullyLoaded: function() {
         var store = this.getList().getStore();
 
-//        this.totalCount = store.getTotalCount();
+//        var total = store.getTotalCount();
         var total = this.getTotalCount();
 
         return total !== null ? total <= (store.currentPage * store.getPageSize()) : false;
