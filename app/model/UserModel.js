@@ -8,6 +8,7 @@ Ext.define('WebInspect.model.UserModel',{
             'password',
             'mobile',
             'tel',
+            'oulevel',
             
             'sms',
             'mail',

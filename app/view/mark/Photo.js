@@ -54,7 +54,7 @@ Ext.define('WebInspect.view.mark.Photo',{
                     }
                     else
                     {
-                        window.plugins.ToastPlugin.ShowToast("单次同时最多只能上传5张图片!",3000);
+                        plugins.Toast.ShowToast("单次同时最多只能上传5张图片!",3000);
                     }
 
                 },
@@ -65,7 +65,7 @@ Ext.define('WebInspect.view.mark.Photo',{
 
                 },
                 onFail: function(message) {
-                    window.plugins.ToastPlugin.ShowToast(message,3000);
+                    plugins.Toast.ShowToast(message,3000);
                 }
             }
         ]);
@@ -109,7 +109,7 @@ Ext.define('WebInspect.view.mark.Photo',{
         Ext.get(id).addListener('tap', function(e){
             e.stopEvent();
             Ext.ComponentQuery.query('#tarea_ms')[0].blur();/////////////////把焦点失掉//////////////////////////
-            Ext.ComponentQuery.query('#info')[0].onPhotoShow(id, storeid);
+            Ext.ComponentQuery.query('#info')[0].onPhotoShow(me.store, Ext.ComponentQuery.query('#photo')[0]);
         });
     },
 

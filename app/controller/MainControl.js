@@ -194,7 +194,8 @@ Ext.define('WebInspect.controller.MainControl',{
                 break;
 
             case titlestr[3]:
-                me.onNoticeNewsStypeSet('InspectStore', 'GetInfoList', 'inspect$jsonp', data, '海塘巡查');
+                me.getMaincarousel().setActiveItem(Ext.getCmp('functionlist'));
+                me.getApplication().getController('InspectControl').onInspectPushData(data);
                 break;
 
             case titlestr[4]:
@@ -470,7 +471,7 @@ Ext.define('WebInspect.controller.MainControl',{
         writer.onwriteend = function(evt) {
 
         }
-        writer.write("{\"sid\":\""+json.sid+"\",\"pwd\":\""+json.pwd+"\",\"name\":\""+json.name+"\",\"mobile\":\""+json.mobile+"\"}");
+        writer.write("{\"sid\":\""+json.sid+"\",\"pwd\":\""+json.pwd+"\",\"name\":\""+json.name+"\",\"oulevel\":\""+json.oulevel+"\",\"mobile\":\""+json.mobile+"\"}");
     },
 
     //////////////////////////////////////////////////////////////////////////////////////////
@@ -500,6 +501,7 @@ Ext.define('WebInspect.controller.MainControl',{
             WebInspect.app.user.password = json.pwd;
             WebInspect.app.user.name = json.name;
             WebInspect.app.user.mobile = json.mobile;
+            WebInspect.app.user.oulevel = json.oulevel;
 
             Ext.getCmp('name').setValue(WebInspect.app.user.sid);
             Ext.getCmp('password').setValue(WebInspect.app.user.password);
@@ -799,8 +801,11 @@ Ext.define('WebInspect.controller.MainControl',{
                 case 'contactlist':
                     me.getApplication().getController('ContactControl').getContactsearch().show();
                     break;
-                case 'assignment':
+                case 'assignmain':
                     me.getApplication().getController('AssignControl').getSelectconfirm().hide();
+                    break;
+                case 'inspectmain':
+                    me.getApplication().getController('InspectControl').getInspectselectconfirm().hide();
                     break;
             }
         }
@@ -813,7 +818,7 @@ Ext.define('WebInspect.controller.MainControl',{
         WebInspect.app.user.password = Ext.getCmp('password').getValue();
 //        me.onVpnLogin(1, ''); /////成功写入开始执行VPN认证
 //        plugins.jPush.setAlias(WebInspect.app.user.sid,function(success){});//////推送标识，以用户名区分
-       me.onUserCheck(1,''); /////////测试的时候有
+        me.onUserCheck(1,''); /////////测试的时候有
     },
 
     onUserWriteJson: function(){
@@ -823,7 +828,8 @@ Ext.define('WebInspect.controller.MainControl',{
             sid: WebInspect.app.user.sid,
             pwd: WebInspect.app.user.password,
             name: WebInspect.app.user.name,
-            mobile: WebInspect.app.user.mobile
+            mobile: WebInspect.app.user.mobile,
+            oulevel: WebInspect.app.user.oulevel
         });
 
         //将验证成功的用户信息，存在本地
@@ -838,7 +844,7 @@ Ext.define('WebInspect.controller.MainControl',{
     onUserCheck: function(num,data){
 
         var me = this;
-        Ext.Viewport.setMasked({xtype: 'loadmask',message: '连接成功,页面加载中...'});
+        Ext.Viewport.setMasked({xtype: 'loadmask',message: '密码验证中...'});
         if(WebInspect.app.user.sid && WebInspect.app.user.password){
             //用户名、密码输入完整
             var store = Ext.getStore('UserStore');
@@ -851,7 +857,6 @@ Ext.define('WebInspect.controller.MainControl',{
             });
 
             store.load(function(records, operation, success) {
-
                 if(records.length == 0){
                     Ext.Viewport.setMasked(false);
                     plugins.Toast.ShowToast("验证失败！请重新输入！",3000);
@@ -860,10 +865,11 @@ Ext.define('WebInspect.controller.MainControl',{
 
                     WebInspect.app.user.name = records[0].data.name;
                     WebInspect.app.user.mobile = records[0].data.mobile;
+                    WebInspect.app.user.oulevel = records[0].data.oulevel;
                     WebInspect.app.user.taskcount = records[0].data.taskcount;
                     WebInspect.app.user.rtxcount = records[0].data.rtxcount;
 
-                    Ext.getCmp('maintitle').onDataSet(records[0].data, WebInspect.app.user.name, WebInspect.app.user.mobile);
+                    Ext.getCmp('maintitle').onDataSet(records[0].data, WebInspect.app.user.name, WebInspect.app.user.mobile, WebInspect.app.user.oulevel);
 
                     me.onFunctionLoad(); //加载模块页面
 //                    me.onWeatherStoreLoad();  //加载“天气预报”信息
@@ -972,7 +978,7 @@ Ext.define('WebInspect.controller.MainControl',{
                 me.getApplication().getController('ProjectControl').onProjectInitialize();
                 break;
             case titlestr[9]:
-                me.getApplication().getController('NewsControl').onNewsStypeSet('InspectStore', 'GetInfoList', 'inspect$jsonp', record.data.title);
+                me.getApplication().getController('InspectControl').onInspectInitialize();
                 break;
 
             case titlestr[10]:

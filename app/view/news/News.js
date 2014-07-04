@@ -18,6 +18,11 @@ Ext.define('WebInspect.view.news.News', {
             message: '努力加载中...'
         },
 
+        scrollable: {
+            direction: 'vertical',
+            directionLock: true
+        },
+
 	    plugins: [
         { 
             xclass: 'Ext.plugin.ListPaging',

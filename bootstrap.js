@@ -751,6 +751,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.controller.ContactControl": [],
   "WebInspect.controller.DoneControl": [],
   "WebInspect.controller.FlowControl": [],
+  "WebInspect.controller.InspectControl": [],
   "WebInspect.controller.MainControl": [],
   "WebInspect.controller.MarkControl": [],
   "WebInspect.controller.NewsControl": [],
@@ -775,6 +776,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.model.ProjectElementModel": [],
   "WebInspect.model.ProjectFirstModel": [],
   "WebInspect.model.ProjectSecondModel": [],
+  "WebInspect.model.ProjectThirdModel": [],
   "WebInspect.model.PushModel": [],
   "WebInspect.model.RainModel": [],
   "WebInspect.model.SalaryModel": [],
@@ -797,7 +799,9 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.store.FlowStore": [],
   "WebInspect.store.FunctionStore": [],
   "WebInspect.store.InfoStore": [],
+  "WebInspect.store.InspectPhotoStore": [],
   "WebInspect.store.InspectStore": [],
+  "WebInspect.store.InspectTreeStore": [],
   "WebInspect.store.MainStore": [],
   "WebInspect.store.MarkStore": [],
   "WebInspect.store.MessageStore": [],
@@ -810,6 +814,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.store.ProjectFirstStore": [],
   "WebInspect.store.ProjectMainStore": [],
   "WebInspect.store.ProjectSecondStore": [],
+  "WebInspect.store.ProjectThirdStore": [],
   "WebInspect.store.PushStore": [],
   "WebInspect.store.RainStore": [],
   "WebInspect.store.SalaryNextStore": [],
@@ -842,6 +847,10 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.view.done.Done": [],
   "WebInspect.view.done.Procedure": [],
   "WebInspect.view.flow.Flow": [],
+  "WebInspect.view.inspect.Inspect": [],
+  "WebInspect.view.inspect.InspectMain": [],
+  "WebInspect.view.inspect.InspectPhoto": [],
+  "WebInspect.view.inspect.InspectTreeList": [],
   "WebInspect.view.list.MainInfo": [],
   "WebInspect.view.list.Message": [],
   "WebInspect.view.list.MessageItem": [],
@@ -860,6 +869,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.view.project.ProjectFirst": [],
   "WebInspect.view.project.ProjectMain": [],
   "WebInspect.view.project.ProjectSecond": [],
+  "WebInspect.view.project.ProjectThird": [],
   "WebInspect.view.rain.Rain": [],
   "WebInspect.view.salary.Salary": [],
   "WebInspect.view.salary.SalaryCarousel": [],
@@ -1820,6 +1830,7 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.controller.ContactControl": [],
   "WebInspect.controller.DoneControl": [],
   "WebInspect.controller.FlowControl": [],
+  "WebInspect.controller.InspectControl": [],
   "WebInspect.controller.MainControl": [],
   "WebInspect.controller.MarkControl": [],
   "WebInspect.controller.NewsControl": [],
@@ -1844,6 +1855,7 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.model.ProjectElementModel": [],
   "WebInspect.model.ProjectFirstModel": [],
   "WebInspect.model.ProjectSecondModel": [],
+  "WebInspect.model.ProjectThirdModel": [],
   "WebInspect.model.PushModel": [],
   "WebInspect.model.RainModel": [],
   "WebInspect.model.SalaryModel": [],
@@ -1866,7 +1878,11 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.store.FlowStore": [],
   "WebInspect.store.FunctionStore": [],
   "WebInspect.store.InfoStore": [],
+  "WebInspect.store.InspectPhotoStore": [],
   "WebInspect.store.InspectStore": [],
+  "WebInspect.store.InspectTreeStore": [
+    "store.InspectTreeStore"
+  ],
   "WebInspect.store.MainStore": [],
   "WebInspect.store.MarkStore": [],
   "WebInspect.store.MessageStore": [],
@@ -1879,6 +1895,7 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.store.ProjectFirstStore": [],
   "WebInspect.store.ProjectMainStore": [],
   "WebInspect.store.ProjectSecondStore": [],
+  "WebInspect.store.ProjectThirdStore": [],
   "WebInspect.store.PushStore": [],
   "WebInspect.store.RainStore": [],
   "WebInspect.store.SalaryNextStore": [],
@@ -1947,6 +1964,18 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.view.flow.Flow": [
     "widget.flow"
   ],
+  "WebInspect.view.inspect.Inspect": [
+    "widget.inspect"
+  ],
+  "WebInspect.view.inspect.InspectMain": [
+    "widget.inspectmain"
+  ],
+  "WebInspect.view.inspect.InspectPhoto": [
+    "widget.inspectphoto"
+  ],
+  "WebInspect.view.inspect.InspectTreeList": [
+    "widget.inspecttreelist"
+  ],
   "WebInspect.view.list.MainInfo": [
     "widget.maininfo"
   ],
@@ -2000,6 +2029,9 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "WebInspect.view.project.ProjectSecond": [
     "widget.projectsecond"
+  ],
+  "WebInspect.view.project.ProjectThird": [
+    "widget.projectthird"
   ],
   "WebInspect.view.rain.Rain": [
     "widget.rain"

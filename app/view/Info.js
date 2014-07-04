@@ -35,6 +35,13 @@ Ext.define('WebInspect.view.Info', {
                     text: '确定',
                     align: 'right',
                     hidden: true
+                },
+                {
+                    xtype: 'button',
+                    itemId: 'inspectselectconfirm',
+                    text: '确定',
+                    align: 'right',
+                    hidden: true
                 }
             ]
         },
@@ -63,13 +70,13 @@ Ext.define('WebInspect.view.Info', {
         this.view.destroy();
     },
 
-    onPhotoShow: function(id, index){
+    onPhotoShow: function(storeid, index){
         this.view = this.down('newsimg');
         if(!this.view){
             this.view = Ext.create('WebInspect.view.news.NewsImg');
         }
 
-        this.view.onPhotoDataSet(id, index);
+        this.view.onPhotoDataSet(storeid, index);
 
         if (!this.view.getParent()) {
             Ext.Viewport.add(this.view);

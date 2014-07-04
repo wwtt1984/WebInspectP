@@ -68,7 +68,7 @@ Ext.define('WebInspect.controller.AssignControl', {
             });
 
             contactstore.setRoot({expanded: true});
-            contactstore.load();
+//            contactstore.load();
         }
 
         var segmentstore = Ext.getStore('SegmentTreeStore');
@@ -79,7 +79,7 @@ Ext.define('WebInspect.controller.AssignControl', {
             });
 
             segmentstore.setRoot({expanded: true});
-            segmentstore.load();
+//            segmentstore.load();
         }
 
         me.onAssignStoreLoad();

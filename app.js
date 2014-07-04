@@ -23,7 +23,7 @@ Ext.ClassManager.setAlias('Ext.data.proxy.SkProxy', 'proxy.sk');
 Ext.application({
     name: 'WebInspect',
     mainthis: '',
-    user: {sid:'', name: '', password: '', mobile: '15999999999', tel:'', sms:'', mail:'11111',
+    user: {sid:'', name: '', password: '', mobile: '15999999999', oulevel:'', tel:'', sms:'', mail:'11111',
         sexy:'', ITEM_Id: '', DeptId: '', rtxsession: '',version:'1.0.0.85', taskcount: 0, rtxcount: 0},
 
     requires: [
@@ -85,6 +85,11 @@ Ext.application({
         'mark.Mark',
         'mark.Photo',
         'mark.MarkList',
+
+        'inspect.InspectMain',
+        'inspect.Inspect',
+        'inspect.InspectPhoto',
+        'inspect.InspectTreeList',
 
         'assign.AssignMain',
         'assign.Assignment',
@@ -161,6 +166,7 @@ Ext.application({
         'NoticeStore',
 
         'InspectStore',
+        'InspectPhotoStore',
 
         'ContactSearchStore',
 
@@ -188,6 +194,8 @@ Ext.application({
 
         'SegmentTreeStore',
 
+        'InspectTreeStore',
+
         'ContactTreeStore',
 
         'AssignStore',
@@ -214,7 +222,8 @@ Ext.application({
         'MarkControl',
         'AssignControl',
         'SalaryControl',
-        'DoneControl'
+        'DoneControl',
+        'InspectControl'
     ],
 
     icon: {

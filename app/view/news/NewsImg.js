@@ -81,35 +81,38 @@ Ext.define('WebInspect.view.news.NewsImg',{
         this.down('carousel').setItems(item);
 	},
 
-    onPhotoDataSet: function(id, index){
+    onPhotoDataSet: function(storeid, index){
 
         Ext.ComponentQuery.query('#photodelete')[0].show();
-        var store = Ext.getStore('PhotoStore');
+        var me = this;
+        me.store = Ext.getStore(storeid);
+        me.index = index;
 
         var item =[];
 
         Ext.ComponentQuery.query('#newscarousel')[0].removeAll();
 
-        for(var i=0; i<store.getAllCount() - 1; i++){
-            item.push({xtype: 'image',cls: 'my-carousel-item-img',src: store.getAt(i).data.src});
+        for(var i=0; i<me.store.getAllCount() - 1; i++){
+            item.push({xtype: 'image',cls: 'my-carousel-item-img',src: me.store.getAt(i).data.src});
         }
 
         Ext.ComponentQuery.query('#newscarousel')[0].setItems(item);
     },
 
     onPhotoDelete: function(){
+        var me = this;
         var cars = Ext.ComponentQuery.query('#newscarousel')[0];
         var index = cars.getActiveIndex();
 
         cars.removeAt(index + 1);
 
-        var store = Ext.getStore('PhotoStore');
-        var record = store.getAt(index);
+        var record = me.store.getAt(index);
 
 
-        Ext.getStore('PhotoStore').removeAt(index);
+        me.store.removeAt(index);
 
-        Ext.ComponentQuery.query('#photo')[0].onPhotoDelete(record);
+        me.index.onPhotoDelete(record);
+//        Ext.ComponentQuery.query('#photo')[0].onPhotoDelete(record);
 
         if(cars.getItems().getCount() == 1){
             Ext.ComponentQuery.query('#info')[0].onViewHide();
