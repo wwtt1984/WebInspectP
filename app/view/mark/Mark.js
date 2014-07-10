@@ -20,6 +20,46 @@ Ext.define('WebInspect.view.mark.Mark', {
 
         items: [
             {
+                xtype: 'fieldset',
+                style: 'border-radius: .4em;background-color: #fff; margin: 0 0 0 0;',
+//                itemId: 'textpanel',
+                items: [
+                    {
+
+                        xtype: 'selectfield',
+                        itemId: 'marktype',
+                        label: '标识类别',
+                        doneButton: '确定',
+                        cancelButton: '取消',
+                        options: [
+                            {text: '限高架',  value: '1'},
+                            {text: '广告牌', value:'2'},
+                            {text: '显示屏',  value: '3'},
+                            {text: '路障', value:'4'}
+                        ]
+                    }]
+            },
+            {
+                xtype: 'fieldset',
+                style: 'border-radius: .4em;background-color: #fff; margin: 0 0 0 0;',
+//                itemId: 'textpanel',
+                items: [
+                    {
+
+                        xtype: 'selectfield',
+                        itemId: 'marktype',
+                        label: '标识类别',
+                        doneButton: '确定',
+                        cancelButton: '取消',
+                        options: [
+                            {text: '限高架',  value: '1'},
+                            {text: '广告牌', value:'2'},
+                            {text: '显示屏',  value: '3'},
+                            {text: '路障', value:'4'}
+                        ]
+                    }]
+            },
+            {
                 xtype: 'panel',
                 itemId: 'marktitle',
                 tpl:  Ext.create('Ext.XTemplate',
@@ -48,7 +88,7 @@ Ext.define('WebInspect.view.mark.Mark', {
             },
             {
                 xtype: 'photo',
-                style: 'background:#fff;border-radius: .4em;min-height:80px;'
+                style: 'background:#fff;border-radius: .4em;border:1px #eee solid;min-height:80px;'
             },
             {
                 xtype: 'panel',

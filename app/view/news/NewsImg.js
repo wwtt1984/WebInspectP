@@ -10,11 +10,12 @@ Ext.define('WebInspect.view.news.NewsImg',{
 	
 	config: {
 		itemId: 'newimg',
-        cls: 'fun-carousel',
+
 		items:[
 		{
 			xtype: 'carousel',
             itemId: 'newscarousel',
+            cls: 'fun-carousel',
 			style: 'position: absolute;margin:0; padding:0;width:100%;height:100%;background: #000;',
 		    direction: 'horizontal',
 

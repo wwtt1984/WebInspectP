@@ -844,7 +844,7 @@ Ext.define('WebInspect.controller.MainControl',{
     onUserCheck: function(num,data){
 
         var me = this;
-        Ext.Viewport.setMasked({xtype: 'loadmask',message: '密码验证中...'});
+        Ext.Viewport.setMasked({xtype: 'loadmask',message: '用户验证中...'});
         if(WebInspect.app.user.sid && WebInspect.app.user.password){
             //用户名、密码输入完整
             var store = Ext.getStore('UserStore');
@@ -862,7 +862,6 @@ Ext.define('WebInspect.controller.MainControl',{
                     plugins.Toast.ShowToast("验证失败！请重新输入！",3000);
                 }
                 else{
-
                     WebInspect.app.user.name = records[0].data.name;
                     WebInspect.app.user.mobile = records[0].data.mobile;
                     WebInspect.app.user.oulevel = records[0].data.oulevel;
@@ -885,6 +884,10 @@ Ext.define('WebInspect.controller.MainControl',{
                     }
                     else
                     {
+                        Ext.Viewport.setMasked({
+                            xtype: 'loadmask',
+                            message: '努力加载中...'
+                        });
                         me.onMessagePush(data);/////////////////////推送的消息
                     }
                 }

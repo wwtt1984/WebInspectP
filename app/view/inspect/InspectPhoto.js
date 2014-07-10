@@ -50,6 +50,9 @@ Ext.define('WebInspect.view.inspect.InspectPhoto',{
                             success :function(image){me.onPhotoDataSuccess(image)},
                             failure: function(){me.onFail},
                             quality: 50,
+                            targetWidth: 900,
+                            targetHeight: 1200,
+                            correctOrientation: true,
                             destination:  'file'
                         });
                     }

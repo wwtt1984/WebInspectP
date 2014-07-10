@@ -19,7 +19,7 @@ Ext.define('WebInspect.view.news.NewsDetail',{
 		tpl: Ext.create('Ext.XTemplate',
 		    '<div style="min-height:2.2em;width:100%;font-size:18px;font-weight:bold; line-height:1.6em;text-justify:newspaper;margin-bottm:0.3em;">{stitle}</div>',
 		    '{[this.getImg(values)]}',
-		    '<div style="min-height:20em;width:100%;line-height:1.6em;text-align:justify;text-justify:distribute-all-lines;text-align-last:justify;-moz-text-align-last:justify;-webkit-text-align-last:justify;">{[this.getContent(values)]}</div>',
+		    '<div style="min-height:2em;width:100%;line-height:1.6em;text-align:justify;text-justify:distribute-all-lines;text-align-last:justify;-moz-text-align-last:justify;-webkit-text-align-last:justify;">{[this.getContent(values)]}</div>',
 		    {
 		    	getImg: function(values){
 		    	    var img = [];
