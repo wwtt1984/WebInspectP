@@ -93,6 +93,13 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/com.phonegap.plugins.barcodescanner/www/barcodescanner.js",
+        "id": "com.phonegap.plugins.barcodescanner.barcodescanner",
+        "clobbers": [
+            "plugins.barcodeScanner"
+        ]
+    },
+    {
         "file": "plugins/org.apache.cordova.file/www/DirectoryEntry.js",
         "id": "org.apache.cordova.file.DirectoryEntry",
         "clobbers": [
@@ -233,6 +240,7 @@ module.exports.metadata =
     "com.vpn.vpn.Vpn": "1.5.2",
     "com.install.install.Install": "1.5.2",
     "org.apache.cordova.file-transfer": "0.4.5-dev",
+    "com.phonegap.plugins.barcodescanner": "0.6.0",
     "org.apache.cordova.file": "1.1.0"
 }
 // BOTTOM OF METADATA

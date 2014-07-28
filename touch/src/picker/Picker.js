@@ -360,7 +360,7 @@ Ext.define('Ext.picker.Picker', {
             Ext.applyIf(config, {
                 ui: 'action',
                 align: 'right',
-                text: 'Done'
+                text: '确定'
             });
         }
 
@@ -397,7 +397,7 @@ Ext.define('Ext.picker.Picker', {
 
             Ext.applyIf(config, {
                 align: 'left',
-                text: 'Cancel'
+                text: '取消'
             });
         }
 

@@ -24,7 +24,7 @@ Ext.define('WebInspect.view.news.News', {
         },
 
 	    plugins: [
-        { 
+        {
             xclass: 'Ext.plugin.ListPaging',
             loadMoreText: '加载更多...',
             noMoreRecordsText: '没有更多记录了...',

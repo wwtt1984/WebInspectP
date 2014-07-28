@@ -33,9 +33,8 @@ Ext.define('WebInspect.controller.InspectControl', {
             inspectphoto: '[itemId=inspectphoto]',
 
             inspect_ms: '[itemId=inspect_ms]',
-            inspectconfirm: '[itemId=inspectconfirm]',
+            inspectconfirm: '[itemId=inspectconfirm]'
 
-            inspectprogress: '[itemId=inspectprogress]'
         },
 
         control: {
@@ -228,7 +227,7 @@ Ext.define('WebInspect.controller.InspectControl', {
             plugins.Toast.ShowToast("上传成功!",3000);
             me.getInspectphoto().onPhotoAllDelete();
             me.getInspect_ms().setValue(null);
-            me.getInspectprogress().setHtml(null);
+            me.getApplication().getController('MainControl').getLoad().hide();
             me.upimgindex = 0;
             me.upimgcount = 0; //// 清0
             me.getInspectconfirm().enable();
@@ -238,6 +237,7 @@ Ext.define('WebInspect.controller.InspectControl', {
     onMenuPhotoFailMsg:function(error,me)
     {
         plugins.Toast.ShowToast("上传失败!"+ error,3000);
+        me.getApplication().getController('MainControl').getLoad().hide();
         me.getInspectconfirm().enable();
     },
 
@@ -279,13 +279,15 @@ Ext.define('WebInspect.controller.InspectControl', {
             + "$sz$" + miaos + "$" + location;
 
         var ft = new FileTransfer();
+        me.getApplication().getController('MainControl').onLoadOrUploadViewShow('正在上传中', '正在上传第1张', 0);
         ft.onprogress = function(progressEvent) {
             if (progressEvent.lengthComputable) {
                 var percent = Number((progressEvent.loaded / progressEvent.total) * 100).toFixed(0);
                 var nowindex = me.upimgindex + 1;
-                me.getInspectprogress().setHtml("正在上传第 "+ nowindex +"/"
-                    + me.upimgcount
-                    + " 图片,已完成" + percent + "%,请稍后...");
+//                me.getInspectprogress().setHtml("正在上传第 "+ nowindex +"/"
+//                    + me.upimgcount
+//                    + " 图片,已完成" + percent + "%,请稍后...");
+                me.getApplication().getController('MainControl').getLoad().onDataSet('正在上传中', '正在上传第'+ nowindex + '/' + me.upimgcount + '张,已完成',percent);
             } else {
                 plugins.Toast.ShowToast("error",1000);
             }
@@ -301,7 +303,6 @@ Ext.define('WebInspect.controller.InspectControl', {
     onInspectActiveItemChange: function(carousel, value, oldValue, eOpts){
         var me = this;
         if(value.xtype == 'news'){
-//            debugger;
             var store = Ext.getStore('InspectStore');
             store.getProxy().setExtraParams({
                 t: 'GetInfoList',

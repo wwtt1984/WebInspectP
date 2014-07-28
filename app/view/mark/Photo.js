@@ -132,5 +132,21 @@ Ext.define('WebInspect.view.mark.Photo',{
         Ext.get(id).clearListeners();
         var div = document.getElementById(record.data.imgadd);
         div.parentNode.removeChild(div);   //删除
+    },
+
+    onPhotoAllDelete: function(){
+        var me = this;
+        var store = me.store;
+        var count = store.getAllCount();
+
+        for(var i=count-2; i>=0; i--){
+            var record = store.getAt(i);
+            var id = "imgsrc" + record.data.name;
+            Ext.get(id).clearListeners();
+
+            var div = document.getElementById(record.data.imgadd);
+            div.parentNode.removeChild(div);   //删除
+            store.removeAt(i);
+        }
     }
 })

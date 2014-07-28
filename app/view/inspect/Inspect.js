@@ -96,11 +96,6 @@ Ext.define('WebInspect.view.inspect.Inspect', {
                     }
                 ]
 
-            },
-            {
-                xtype: 'panel',
-                itemId:'inspectprogress',
-                html: ''
             }
         ]
     }

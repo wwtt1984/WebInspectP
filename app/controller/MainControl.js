@@ -47,15 +47,15 @@ Ext.define('WebInspect.controller.MainControl',{
         this.timeoutecount = 3; //默认VPN超时连接请求3次
         this.timeoutscount = 0;// 当前VPN超时连接数
 
-//        window.setTimeout(function(){me.checkJpush(me);},100);
-//        document.addEventListener('deviceready',function(){me.onJpushReady(me);}, false);
+        window.setTimeout(function(){me.checkJpush(me);},100);
+        document.addEventListener('deviceready',function(){me.onJpushReady(me);}, false);
 
         me.onBtnConfirm();
         //android返回键事件监听
         document.addEventListener("backbutton", me.onBackKeyDown, false);
 
-//        document.addEventListener("offline", me.onOfflineListen, false);///////联机状态判断
-//        document.addEventListener("online", me.onOnlineListen, false);///////在线判断
+        document.addEventListener("offline", me.onOfflineListen, false);///////联机状态判断
+        document.addEventListener("online", me.onOnlineListen, false);///////在线判断
 
     },
 
@@ -417,7 +417,8 @@ Ext.define('WebInspect.controller.MainControl',{
                         "新版本("+records[0].data.strThisVersion+")，是否下载更新？",function(btn){
                         if(btn == 'yes'){
 
-                            me.onLoadOrUploadViewShow();
+//                            me.onLoadOrUploadViewShow();
+                            me.onLoadOrUploadViewShow('更新下载中', '正在下载中');
 
                             me.downLoad(records[0].data.strFileName,records[0].data.strGetFileVersionFileURL,me);
                         }
@@ -429,7 +430,7 @@ Ext.define('WebInspect.controller.MainControl',{
 
     },
 
-    onLoadOrUploadViewShow: function(){
+    onLoadOrUploadViewShow: function(header, text){
 
         var me = this;
 
@@ -443,7 +444,7 @@ Ext.define('WebInspect.controller.MainControl',{
             me.load.setMinHeight('30%');
         }
 
-        me.load.onDataSet(0);
+        me.load.onDataSet(header, text, 0);
         if (!me.load.getParent()) {
             Ext.Viewport.add(me.load);
         }
@@ -816,9 +817,9 @@ Ext.define('WebInspect.controller.MainControl',{
         var me = this;
         WebInspect.app.user.sid = Ext.getCmp('name').getValue();
         WebInspect.app.user.password = Ext.getCmp('password').getValue();
-//        me.onVpnLogin(1, ''); /////成功写入开始执行VPN认证
-//        plugins.jPush.setAlias(WebInspect.app.user.sid,function(success){});//////推送标识，以用户名区分
-        me.onUserCheck(1,''); /////////测试的时候有
+        me.onVpnLogin(1, ''); /////成功写入开始执行VPN认证
+        plugins.jPush.setAlias(WebInspect.app.user.sid,function(success){});//////推送标识，以用户名区分
+//        me.onUserCheck(1,''); /////////测试的时候有
     },
 
     onUserWriteJson: function(){
@@ -879,7 +880,7 @@ Ext.define('WebInspect.controller.MainControl',{
                     {
                         Ext.Viewport.setMasked(false);
                         me.getMain().setActiveItem(me.getFunctionmain());
-//                        me.onUserWriteJson(); //将验证成功的用户信息，存在本地
+                        me.onUserWriteJson(); //将验证成功的用户信息，存在本地
                         me.onCheckVesion(me);  /////////////////判断是否有新版本/////////////////////
                     }
                     else
