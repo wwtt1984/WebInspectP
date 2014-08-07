@@ -64,6 +64,22 @@ Ext.define('WebInspect.view.inspect.Inspect', {
             {
                 xtype: 'fieldset',
                 style: 'border-radius: .4em;background-color: #fff; margin: 0 0 0 0;',
+                items: [
+                    {
+                        label: '事件类型',
+                        labelAlign: 'left',
+                        xtype: 'selectfield',
+                        itemId: 'inspecttype',
+                        options: [
+                            {text: '水政类',  value: '水政类'},
+                            {text: '工况类', value: '工况类'},
+                            {text: '防潮设施类',  value: '防潮设施类'}
+                        ]
+                    }]
+            },
+            {
+                xtype: 'fieldset',
+                style: 'border-radius: .4em;background-color: #fff; margin: 15px 0 0 0;',
                 itemId: 'textpanel',
                 items: [
                     {

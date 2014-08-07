@@ -3,7 +3,7 @@ Ext.define('Ext.data.proxy.SkProxy', {
     alias: 'proxy.sk',
 		
     config: {
-//        url: 'http://localhost/WebSerAn/Data.ashx',
+//        url: 'http://webservices.qgj.cn/wt_test/Data.ashx',
 		url: 'http://bpm.qgj.cn/test/Data.ashx',
         callbackKey: 'callback'
     },

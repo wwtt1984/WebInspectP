@@ -62,7 +62,13 @@ Ext.define('WebInspect.controller.InspectControl', {
 
         me.onInspectStoreLoad();
 
-        me.onInspectTreeLoad();
+        if(WebInspect.app.user.oulevel.match('管理处')){
+            me.onInspectTreeLoad();
+        }
+        else{
+            me.getInspectconfirm().disable();
+        }
+
         me.getInfo().push(me.inspectmain);
         me.getInspectlocation().setData({text: '请选择塘段', sid: ''});
 
@@ -130,7 +136,7 @@ Ext.define('WebInspect.controller.InspectControl', {
         if(!segmentstore.getAllCount()){
             segmentstore.getProxy().setExtraParams({
                 t: 'GetXcjhTD',
-                results: 'jsonp'
+                results:  WebInspect.app.user.oulevel +'$jsonp'
             });
             segmentstore.setRoot({expanded: true});
 //            segmentstore.load();
@@ -140,19 +146,23 @@ Ext.define('WebInspect.controller.InspectControl', {
     onInspectListPush: function(){
         var me = this;
 
-        me.inspecttreelist = me.getInspecttreelist();
+        if(Ext.getStore('InspectTreeStore').getAllCount()){
+            me.inspecttreelist = me.getInspecttreelist();
 
-        if(!me.inspecttreelist){
-            me.inspecttreelist = Ext.create('WebInspect.view.inspect.InspectTreeList');
+            if(!me.inspecttreelist){
+                me.inspecttreelist = Ext.create('WebInspect.view.inspect.InspectTreeList');
+            }
+
+            me.getInfofunction().hide();
+            me.getInspectselectconfirm().show();
+            me.getInfo().push(me.inspecttreelist);
+
         }
-
-        me.getInfofunction().hide();
-        me.getInspectselectconfirm().show();
-        me.getInfo().push(me.inspecttreelist);
-
+        else{
+            plugins.Toast.ShowToast("没有上传权限!",3000);
+        }
         me.sid = '';
         me.text = '';
-
     },
 
     onInspectSelectionChange: function(container, list, record, e){
