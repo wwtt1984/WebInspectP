@@ -766,6 +766,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.model.ContactModel": [],
   "WebInspect.model.FlowModel": [],
   "WebInspect.model.FunctionModel": [],
+  "WebInspect.model.InspectUploadModel": [],
   "WebInspect.model.MainModel": [],
   "WebInspect.model.MarkModel": [],
   "WebInspect.model.MessageModel": [],
@@ -802,6 +803,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.store.InspectPhotoStore": [],
   "WebInspect.store.InspectStore": [],
   "WebInspect.store.InspectTreeStore": [],
+  "WebInspect.store.InspectUploadStore": [],
   "WebInspect.store.MainStore": [],
   "WebInspect.store.MarkStore": [],
   "WebInspect.store.MessageStore": [],
@@ -848,6 +850,9 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.view.done.Procedure": [],
   "WebInspect.view.flow.Flow": [],
   "WebInspect.view.inspect.Inspect": [],
+  "WebInspect.view.inspect.InspectFail": [],
+  "WebInspect.view.inspect.InspectFailDetail": [],
+  "WebInspect.view.inspect.InspectFailItem": [],
   "WebInspect.view.inspect.InspectMain": [],
   "WebInspect.view.inspect.InspectPhoto": [],
   "WebInspect.view.inspect.InspectTreeList": [],
@@ -1845,6 +1850,7 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.model.ContactModel": [],
   "WebInspect.model.FlowModel": [],
   "WebInspect.model.FunctionModel": [],
+  "WebInspect.model.InspectUploadModel": [],
   "WebInspect.model.MainModel": [],
   "WebInspect.model.MarkModel": [],
   "WebInspect.model.MessageModel": [],
@@ -1883,6 +1889,7 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.store.InspectTreeStore": [
     "store.InspectTreeStore"
   ],
+  "WebInspect.store.InspectUploadStore": [],
   "WebInspect.store.MainStore": [],
   "WebInspect.store.MarkStore": [],
   "WebInspect.store.MessageStore": [],
@@ -1966,6 +1973,15 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "WebInspect.view.inspect.Inspect": [
     "widget.inspect"
+  ],
+  "WebInspect.view.inspect.InspectFail": [
+    "widget.inspectfail"
+  ],
+  "WebInspect.view.inspect.InspectFailDetail": [
+    "widget.inspectfaildetail"
+  ],
+  "WebInspect.view.inspect.InspectFailItem": [
+    "widget.inspectfailitem"
   ],
   "WebInspect.view.inspect.InspectMain": [
     "widget.inspectmain"

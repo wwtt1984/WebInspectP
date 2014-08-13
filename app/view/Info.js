@@ -42,6 +42,13 @@ Ext.define('WebInspect.view.Info', {
                     text: '确定',
                     align: 'right',
                     hidden: true
+                },
+                {
+                    xtype: 'button',
+                    itemId: 'inspectuploadall',
+                    text: '全部上传',
+                    align: 'right',
+                    hidden: true
                 }
             ]
         },
@@ -86,5 +93,19 @@ Ext.define('WebInspect.view.Info', {
 
     onPhotoDelete: function(){
         this.view.onPhotoDelete();
+    },
+
+    onFailImageShow: function(values){
+        this.view = this.down('newsimg');
+        if(!this.view){
+            this.view = Ext.create('WebInspect.view.news.NewsImg');
+        }
+
+        this.view.onFailImgDataSet(values);
+
+        if (!this.view.getParent()) {
+            Ext.Viewport.add(this.view);
+        }
+        this.view.show();
     }
 });

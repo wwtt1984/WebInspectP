@@ -25,6 +25,11 @@ Ext.define('WebInspect.view.inspect.InspectMain', {
                 xtype: 'news',
                 store: 'InspectStore',
                 mytitle: '巡查列表'
+            },
+            {
+                xtype: 'inspectfail',
+                store: 'InspectUploadStore',
+                mytitle: '失败列表'
             }
         ]
     }

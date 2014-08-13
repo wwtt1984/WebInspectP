@@ -47,15 +47,15 @@ Ext.define('WebInspect.controller.MainControl',{
         this.timeoutecount = 3; //默认VPN超时连接请求3次
         this.timeoutscount = 0;// 当前VPN超时连接数
 
-//        window.setTimeout(function(){me.checkJpush(me);},100);
-//        document.addEventListener('deviceready',function(){me.onJpushReady(me);}, false);
+        window.setTimeout(function(){me.checkJpush(me);},100);
+        document.addEventListener('deviceready',function(){me.onJpushReady(me);}, false);
 
         me.onBtnConfirm();
         //android返回键事件监听
         document.addEventListener("backbutton", me.onBackKeyDown, false);
 
-//        document.addEventListener("offline", me.onOfflineListen, false);///////联机状态判断
-//        document.addEventListener("online", me.onOnlineListen, false);///////在线判断
+        document.addEventListener("offline", me.onOfflineListen, false);///////联机状态判断
+        document.addEventListener("online", me.onOnlineListen, false);///////在线判断
    },
 
     onOfflineListen:function(){ ////////////网络离线的时候监听
@@ -454,7 +454,7 @@ Ext.define('WebInspect.controller.MainControl',{
     /////////////////////////////////写文件/////////////////////////////////////////////////
 
     onwtgotFS:function(fileSystem,me,json) {
-        fileSystem.root.getFile("login.json", {create: true, exclusive: false},
+        fileSystem.root.getFile(WebInspect.app.local.loginfile, {create: true, exclusive: false},
             function(fileEntry){me.onwtgotFileEntry(fileEntry,me,json);},
             function(error){me.onwtfail(error,me);}
         );
@@ -478,7 +478,7 @@ Ext.define('WebInspect.controller.MainControl',{
 
     ///////////////////////////////读取文件///////////////////////////////////////////////////
     onwtreadFS:function(fileSystem,me,num,data) {
-        fileSystem.root.getFile("login.json", null,
+        fileSystem.root.getFile(WebInspect.app.local.loginfile, null,
             function(fileEntry){me.onwtreadFileEntry(fileEntry,me,num,data);},
             function(error){me.onwtfail(error,me);}
         );
@@ -694,8 +694,20 @@ Ext.define('WebInspect.controller.MainControl',{
 
             case 'inspecttreelist':
                 me.getInfofunction().show();
-                me.getApplication().getController('AssignControl').getSelectconfirm().hide();
+                me.getApplication().getController('InspectControl').getInspectselectconfirm().hide();
                 me.getInfo().pop();
+                break;
+
+            case 'inspectfaildetail':
+
+                if((me.getInfo().view) && (me.getInfo().view.getHidden() == false)){
+                    me.getInfo().onViewHide();
+                }
+                else{
+                    me.getInfofunction().show();
+                    me.getApplication().getController('InspectControl').getInspectuploadall().show();
+                    me.getInfo().pop();
+                }
                 break;
 
             ////////////////海塘标识//////////////
@@ -817,6 +829,12 @@ Ext.define('WebInspect.controller.MainControl',{
                     break;
                 case 'inspectmain':
                     me.getApplication().getController('InspectControl').getInspectselectconfirm().hide();
+                    if(view.getActiveItem().getActiveItem().xtype == 'inspectfail'){
+                        me.getApplication().getController('InspectControl').getInspectuploadall().show();
+                    }
+                    else{
+                        me.getApplication().getController('InspectControl').getInspectuploadall().hide();
+                    }
                     break;
             }
         }
@@ -827,9 +845,9 @@ Ext.define('WebInspect.controller.MainControl',{
         var me = this;
         WebInspect.app.user.sid = Ext.getCmp('name').getValue();
         WebInspect.app.user.password = Ext.getCmp('password').getValue();
-//        me.onVpnLogin(1, ''); /////成功写入开始执行VPN认证
-//        plugins.jPush.setAlias(WebInspect.app.user.sid,function(success){});//////推送标识，以用户名区分
-        me.onUserCheck(1,''); /////////测试的时候有
+        me.onVpnLogin(1, ''); /////成功写入开始执行VPN认证
+        plugins.jPush.setAlias(WebInspect.app.user.sid,function(success){});//////推送标识，以用户名区分
+//        me.onUserCheck(1,''); /////////测试的时候有
     },
 
     onUserWriteJson: function(){
@@ -890,7 +908,7 @@ Ext.define('WebInspect.controller.MainControl',{
                     {
                         Ext.Viewport.setMasked(false);
                         me.getMain().setActiveItem(me.getFunctionmain());
-//                        me.onUserWriteJson(); //将验证成功的用户信息，存在本地
+                        me.onUserWriteJson(); //将验证成功的用户信息，存在本地
                         me.onCheckVesion(me);  /////////////////判断是否有新版本/////////////////////
                     }
                     else

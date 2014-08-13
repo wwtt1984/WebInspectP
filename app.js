@@ -26,7 +26,14 @@ Ext.application({
     user: {sid:'', name: '', password: '', mobile: '15999999999', oulevel:'', tel:'', sms:'', mail:'11111',
         sexy:'', ITEM_Id: '', DeptId: '', rtxsession: '',version:'1.0.0.90', taskcount: 0, rtxcount: 0},
 
+    imginfo:{imgjson:[],imgindex:0,imgpos:'',simgid:''},//图片值 图片id，位置
+
+    local: {loginfile: 'qinspectlogin.json', failfile: 'qinspectfail.json'},
+
+    gpstime:30000,//30秒
+
     requires: [
+        'Ext.device.FileSystem',
         'Ext.MessageBox',
         'Ext.data.proxy.SkProxy',
         'Ext.data.proxy.SkJsonp',
@@ -91,6 +98,10 @@ Ext.application({
         'inspect.InspectPhoto',
         'inspect.InspectTreeList',
 
+        'inspect.InspectFail',
+        'inspect.InspectFailItem',
+        'inspect.InspectFailDetail',
+
         'assign.AssignMain',
         'assign.Assignment',
         'assign.AssignList',
@@ -147,7 +158,9 @@ Ext.application({
 
         'SalaryModel',
 
-        'ProcedureModel'
+        'ProcedureModel',
+
+        'InspectUploadModel'
     ],
 
     stores: [
@@ -167,6 +180,7 @@ Ext.application({
 
         'InspectStore',
         'InspectPhotoStore',
+        'InspectUploadStore',
 
         'ContactSearchStore',
 
