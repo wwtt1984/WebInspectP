@@ -8,7 +8,7 @@ Ext.define('WebInspect.model.TaskModel',{
             'ProcessName',
             'NodeName',
             'OwnerAccount',
-            
+
             'ReceiveAt',
             'Comments',
             'TimeoutDeadline',
@@ -17,7 +17,13 @@ Ext.define('WebInspect.model.TaskModel',{
             
             'State',
             'SerialNum',
-            'AgentAccount'
+            'AgentAccount',
+            'Sdatetime',
+            'Htmc',
+            'Xctd',
+            'Yid',
+            'Tdid',
+            'Simgurl'
         ]
     }
         

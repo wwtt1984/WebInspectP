@@ -49,13 +49,11 @@ Ext.define('WebInspect.controller.MainControl',{
 
         window.setTimeout(function(){me.checkJpush(me);},100);
         document.addEventListener('deviceready',function(){me.onJpushReady(me);}, false);
-
-        me.onBtnConfirm();
-        //android返回键事件监听
         document.addEventListener("backbutton", me.onBackKeyDown, false);
-
         document.addEventListener("offline", me.onOfflineListen, false);///////联机状态判断
         document.addEventListener("online", me.onOnlineListen, false);///////在线判断
+        me.onBtnConfirm();
+        //android返回键事件监听
    },
 
     onOfflineListen:function(){ ////////////网络离线的时候监听

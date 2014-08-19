@@ -27,7 +27,7 @@ Ext.define('WebInspect.view.list.TaskDetail',{
                 style: 'padding: 10px 10px 0 10px;',
                 itemId: 'taskImage',
                 tpl: Ext.create('Ext.XTemplate',
-                    '<div style="min-height:2.2em;width:100%;font-size:18px;font-weight:bold; line-height:1.6em;text-justify:newspaper;margin-bottm:0.3em;">{NodeName}</div>',
+                    '<div style="min-height:1em;width:100%;font-size:18px;font-weight:bold; line-height:1.6em;text-justify:newspaper;margin-bottm:0.3em;">{NodeName}</div>',
                     '{[this.getImg(values)]}',
                     {
                         getImg: function(values){
@@ -38,7 +38,7 @@ Ext.define('WebInspect.view.list.TaskDetail',{
 
                             if(img.length > 0){
                                 if(img[0].toLowerCase().indexOf(".jpg") > 0){
-                                    string += '<img src="' + img[0] + '" style="width:100%; height: auto; padding:3px; border:1px #f7f7f7 solid;background:white;" id="' + this.getLinkId(values) + '"/>';
+                                    string += '<img src="http://bpm.qgj.cn/test/' + img[0] + '" style="width:100%; height: auto; padding:3px; border:1px #f7f7f7 solid;background:white;" id="' + this.getLinkId(values) + '"/>';
 
                                     string += '<div style="min-height: 1.8em; width: 100%; font-size:12px; font-weight: normal; text-align: right; color: #666;padding:0 8px 5px 8px;"><div style="float: right;padding: 0.2em 0 0 0.3em;">张图片</div><div style="font-size: 16px;color: #000; font-weight: bold;float: right;">' + img.length + '</div><div style="float: right;padding: 0.2em 0.3em 0 0;">共计</div></div>';
                                 }
@@ -68,6 +68,7 @@ Ext.define('WebInspect.view.list.TaskDetail',{
             {
                 xtype: 'fieldset',
                 title: '事件详细信息',
+                itemId:'taskmain',
                 defaults: {
                     labelAlign: 'left',
                     labelWidth: '40%'
@@ -114,13 +115,54 @@ Ext.define('WebInspect.view.list.TaskDetail',{
                         },
                         options: [
                             {
-                                text: '同意',  value: 'agree'
+                                text: '复核',  value: '复核'
                             },
                             {
-                                text: '忽略',  value: 'ignore'
+                                text: '上报领导',  value: '上报领导'
                             },
                             {
-                                text: '上报',  value: 'report'
+                                text: '即时',  value: '即时'
+                            },
+                            {
+                                text: '海塘工况',  value: '海塘工况'
+                            },
+                            {
+                                text: '养护',  value: '养护'
+                            },
+                            {
+                                text: '项目监管',  value: '项目监管'
+                            },
+                            {
+                                text: '关闭流程',  value: '关闭流程'
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                xtype: 'fieldset',
+                style: 'border-radius: .4em;background-color: #fff;',
+//                itemId: 'zhuanfa',
+                defaults: {
+                    labelAlign: 'left',
+                    labelWidth: '40%'
+                },
+                items: [
+                    {
+                        xtype: 'selectfield',
+                        label: '转发给',
+                        name: 'zhuanfaren',
+                        itemId: 'zhuanfaren',
+                        defaultPhonePickerConfig: {
+                            doneButton: '确定',
+                            cancelButton: '取消'
+                        },
+                        options: [
+                            {
+                                text: '陶金平',  value: 'tjp'
+                            },
+                            {
+                                text: '徐建龙',  value: 'xujl'
                             }
                         ]
                     }
@@ -130,7 +172,7 @@ Ext.define('WebInspect.view.list.TaskDetail',{
                 xtype: 'fieldset',
                 style: 'border-radius: .4em;background-color: #fff;',
                 itemId: 'opinion_panel',
-                hidden: true,
+//                hidden: true,
                 items: [
                     {
                         label: '请输入原因',
@@ -169,7 +211,7 @@ Ext.define('WebInspect.view.list.TaskDetail',{
 
         var me = this;
 
-        var img = "http://bpm.qgj.cn/test/upload/news/big/2014021117004181278.jpg$http://bpm.qgj.cn/test/upload/news/big/2014021117004189090.jpg";
+        var img = record.data.Simgurl;
 
         Ext.ComponentQuery.query('#taskImage')[0].setData({simg: img, NodeName: record.data.NodeName});
 

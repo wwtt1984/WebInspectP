@@ -23,7 +23,11 @@ Ext.define('WebInspect.controller.NoticeControl', {
 
             opinion: '[itemId=opinion]',
             opinionpanel: '[itemId=opinion_panel]',
-            opinionms: '[itemId=opinion_ms]'
+            opinionms: '[itemId=opinion_ms]',
+            taskconfirm: '[itemId=taskconfirm]',
+            taskmain: '[itemId=taskmain]',
+
+            zhuanfaren: '[itemId=zhuanfaren]'
         },
 
         control: {
@@ -36,8 +40,11 @@ Ext.define('WebInspect.controller.NoticeControl', {
             messageDataView: {
                 itemswipe: 'onMessageItemSwipe'
             },
-            opinion: {
-                change: 'onOpinionChange'
+//            opinion: {
+//                change: 'onOpinionChange'
+//            },
+            taskconfirm:{
+                tap: 'onTaskConfirmTap'
             }
         }
     },
@@ -180,6 +187,68 @@ Ext.define('WebInspect.controller.NoticeControl', {
                 me.getOpinionms().setValue('');
                 break;
         }
-    }
+    },
 
+    onTaskConfirmTap:function()
+    {
+        var me = this;
+        var record =  me.getTaskdetail().getRecord();
+        var yij= me.getOpinion().getValue();
+        var shij = record.data.ReceiveAt;
+        var reny = record.data.OwnerAccount;
+        var renw = record.data.NodeName;
+        var htmc = record.data.Htmc;
+        var xctd = record.data.Xctd;
+        var yid = record.data.Yid;
+        var tdid = record.data.Tdid;
+
+        var stepId =me.getTaskdetail().getRecord().data.StepID;
+        var sid = WebInspect.app.user.sid;
+        var password = WebInspect.app.user.password;
+        var name = WebInspect.app.user.name;
+
+        var zhuanfa = me.getZhuanfaren().getValue();
+        var zhuanfaren = me.getZhuanfaren()._value.data.text;
+
+        var xcfx = '巡查发现';
+        var miaos = me.getOpinionms().getValue();
+
+        var date = Ext.Date.format(new Date(), 'Y-m-d H:m:s').toString();
+
+        var results = stepId + '$' + sid + '$' + password + '$' + yij
+                      + '$' + shij + '$' + htmc + '$' + name + '$' + name + '$' + xctd + '$' + xcfx + '$' + miaos  + '$' + yid + '$' + zhuanfa
+                      + '$' + tdid + '$' + zhuanfaren + '$' + date
+
+        Ext.data.proxy.SkJsonp.validate('SetTasks',results,{
+            success: function(response) {
+                me.onTaskStoreRefresh();
+                plugins.Toast.ShowToast("操作成功！",3000);
+            },
+            failure: function() {
+                plugins.Toast.ShowToast("操作失败！",3000);
+            }
+        });
+
+    },
+
+    onTaskStoreRefresh: function(){
+        var me = this;
+
+        var store = Ext.getStore('TaskStore');
+        store.removeAll();
+        store.getProxy().setExtraParams({
+            t: 'GetTaskListUser',
+            results: WebInspect.app.user.sid
+        });
+
+        store.load(function(records, operation, success){
+            if(!success)
+            {
+                plugins.Toast.ShowToast("网络不给力，无法读取数据!",3000);
+            }
+        }, this);
+
+        me.getInfofunction().show();
+        me.getInfo().pop();
+    }
 })

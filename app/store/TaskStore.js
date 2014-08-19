@@ -6,6 +6,11 @@ Ext.define('WebInspect.store.TaskStore', {
 
         proxy: {
             type: 'sk'
+        },
+
+        sorters: {
+            property: 'ReceiveAt',
+            direction: 'DESC'
         }
     }
 });

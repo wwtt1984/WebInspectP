@@ -3,7 +3,8 @@ Ext.define('WebInspect.model.TreeModel',{
     config: {
         fields: [
             'text',
-            'sid'
+            'sid',
+            'tdid'
         ]
     }
 

@@ -83,7 +83,7 @@ Ext.define('WebInspect.controller.InspectControl', {
 //        }
 
         me.getInfo().push(me.inspectmain);
-        me.getInspectlocation().setData({text: '请选择塘段', sid: ''});
+        me.getInspectlocation().setData({text: '请选择塘段', tdid: ''});
 
         me.load = 0;
 
@@ -161,7 +161,7 @@ Ext.define('WebInspect.controller.InspectControl', {
         if(!segmentstore.getAllCount()){
             segmentstore.getProxy().setExtraParams({
                 t: 'GetXcjhTD',
-                results:  WebInspect.app.user.oulevel +'$jsonp'
+                results:  WebInspect.app.user.oulevel + '$' + WebInspect.app.user.sid + '$jsonp'
             });
             segmentstore.setRoot({expanded: true});
 //            segmentstore.load();
@@ -187,7 +187,7 @@ Ext.define('WebInspect.controller.InspectControl', {
         else{
             plugins.Toast.ShowToast("没有上传权限!",3000);
         }
-        me.sid = '';
+        me.tdid = '';
         me.text = '';
     },
 
@@ -198,19 +198,19 @@ Ext.define('WebInspect.controller.InspectControl', {
         var arr = list.getSelection();
 
         var text = '';
-        var sid = '';
+        var tdid = '';
 
         if(arr.length){
 //            for(var i=0; i<arr.length; i++){
                 text += arr[0].data.text;
-                sid += arr[0].data.sid;
+                tdid += arr[0].data.tdid;
 //            }
 
             me.getInspectselection().setData({select: text});
             me.getInspectselection().show();
 
             me.text = text;
-            me.sid = sid;
+            me.tdid = tdid;
         }
     },
 
@@ -220,9 +220,9 @@ Ext.define('WebInspect.controller.InspectControl', {
 
         if(!me.text){
             me.text = '请选择塘段';
-            me.sid = '';
+            me.tdid = '';
         }
-        me.getInspectlocation().setData({text: me.text, sid: me.sid});
+        me.getInspectlocation().setData({text: me.text, tdid: me.tdid});
 
         me.getInfofunction().show();
         me.getInspectselectconfirm().hide();
@@ -317,7 +317,7 @@ Ext.define('WebInspect.controller.InspectControl', {
     onUploadImg:function(position,lat,lng,me){
 
 //        var location = me.getLocation().getValue();
-        var location = me.sid;
+        var location = me.tdid;
 
         //增加“状态描述”
         //var location = me.getStatus().getValue();
@@ -415,7 +415,7 @@ Ext.define('WebInspect.controller.InspectControl', {
 
         var type = me.getInspecttype().getValue();
 
-        var location = me.sid;
+        var location = me.tdid;
         var oulevel = WebInspect.app.user.oulevel;
         var event = 'sz';
 
@@ -686,7 +686,7 @@ Ext.define('WebInspect.controller.InspectControl', {
         options.mimeType = "image/jpeg";
 
         var results = sid +"$" + name + "$" + lng + "$" + lat + "$" + sdt
-            + "$sz$" + miaos + "$" + location + "$" + oulevel + "$" + type + "$" + simgid + "$" + imgindex;
+            + "$sz$" + miaos + "$" + 't044' + "$" + oulevel + "$" + type + "$" + simgid + "$" + imgindex;
 
         var ft = new FileTransfer();
         me.getApplication().getController('MainControl').onLoadOrUploadViewShow('正在上传中', '正在上传第1张', 0);
