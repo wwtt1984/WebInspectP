@@ -2,14 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97eeba59-43ed-481c-b450-8b573637ea50" name="Default" comment="Initial commit&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/InspectControl.js" afterPath="$PROJECT_DIR$/app/controller/InspectControl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/MainControl.js" afterPath="$PROJECT_DIR$/app/controller/MainControl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/NoticeControl.js" afterPath="$PROJECT_DIR$/app/controller/NoticeControl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/list/Task.js" afterPath="$PROJECT_DIR$/app/view/list/Task.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/list/TaskDetail.js" afterPath="$PROJECT_DIR$/app/view/list/TaskDetail.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/TaskModel.js" afterPath="$PROJECT_DIR$/app/model/TaskModel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/store/TaskStore.js" afterPath="$PROJECT_DIR$/app/store/TaskStore.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/TreeModel.js" afterPath="$PROJECT_DIR$/app/model/TreeModel.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WebInspect.iws" />
@@ -45,7 +37,7 @@
       <file leaf-file-name="TaskModel.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/model/TaskModel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="22" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="665">
+            <state line="5" column="22" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0" vertical-offset="95" max-vertical-offset="665">
               <folding />
             </state>
           </provider>
@@ -54,7 +46,7 @@
       <file leaf-file-name="MainControl.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controller/MainControl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="28" selection-start="1367" selection-end="1367" vertical-scroll-proportion="0.58126193" vertical-offset="627" max-vertical-offset="20026">
+            <state line="63" column="5" selection-start="1945" selection-end="1945" vertical-scroll-proportion="2.28" vertical-offset="0" max-vertical-offset="20026">
               <folding />
             </state>
           </provider>
@@ -64,11 +56,7 @@
         <entry file="file://$PROJECT_DIR$/app/view/list/Task.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="41" column="85" selection-start="1069" selection-end="1069" vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="950">
-              <folding>
-                <marker date="1408438705080" expanded="false" signature="832:886" placeholder="..." />
-                <marker date="1408438705080" expanded="false" signature="929:964" placeholder="..." />
-                <marker date="1408438705080" expanded="false" signature="1009:1044" placeholder="..." />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -76,7 +64,7 @@
       <file leaf-file-name="TaskStore.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/store/TaskStore.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="399">
+            <state line="9" column="0" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="399">
               <folding />
             </state>
           </provider>
@@ -86,13 +74,7 @@
         <entry file="file://$PROJECT_DIR$/app/view/list/TaskDetail.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="36" column="19" selection-start="992" selection-end="992" vertical-scroll-proportion="0.0" vertical-offset="446" max-vertical-offset="4275">
-              <folding>
-                <marker date="1408438764560" expanded="true" signature="626:745" placeholder="..." />
-                <marker date="1408438764560" expanded="false" signature="1444:1566" placeholder="..." />
-                <marker date="1408438764560" expanded="false" signature="1580:1618" placeholder="..." />
-                <marker date="1408438764560" expanded="false" signature="1641:1701" placeholder="..." />
-                <marker date="1408438764560" expanded="false" signature="1739:1777" placeholder="..." />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -109,7 +91,7 @@
       <file leaf-file-name="NewsImg.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/view/news/NewsImg.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="69" selection-start="1718" selection-end="1718" vertical-scroll-proportion="-5.66" vertical-offset="1009" max-vertical-offset="2736">
+            <state line="68" column="69" selection-start="1718" selection-end="1718" vertical-scroll-proportion="0.0" vertical-offset="1009" max-vertical-offset="2736">
               <folding />
             </state>
           </provider>
@@ -118,12 +100,8 @@
       <file leaf-file-name="News.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/view/news/News.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="95" selection-start="1290" selection-end="1290" vertical-scroll-proportion="-4.7" vertical-offset="734" max-vertical-offset="1634">
-              <folding>
-                <marker date="1406536021311" expanded="true" signature="1252:1265" placeholder="..." />
-                <marker date="1406536021311" expanded="false" signature="1844:1930" placeholder="..." />
-                <marker date="1406536021311" expanded="false" signature="1975:1997" placeholder="..." />
-              </folding>
+            <state line="51" column="95" selection-start="1290" selection-end="1290" vertical-scroll-proportion="0.0" vertical-offset="734" max-vertical-offset="1634">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -131,7 +109,7 @@
       <file leaf-file-name="InspectControl.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controller/InspectControl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="285" column="0" selection-start="8013" selection-end="8013" vertical-scroll-proportion="-0.86" vertical-offset="5372" max-vertical-offset="15884">
+            <state line="285" column="0" selection-start="8013" selection-end="8013" vertical-scroll-proportion="0.0" vertical-offset="5372" max-vertical-offset="15884">
               <folding />
             </state>
           </provider>
@@ -220,223 +198,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WebInspect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebInspect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebInspect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebInspect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebInspect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phonegap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebInspect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebInspect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phonegap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebInspect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebInspect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebInspect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebInspect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebInspect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebInspect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="news" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebInspect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebInspect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="list" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebInspect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebInspect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="inspect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebInspect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebInspect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="store" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebInspect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebInspect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebInspect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebInspect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebInspect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebInspect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
+              <option name="myItemId" value="WebInspectP" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -791,14 +553,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24342105" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32820514" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24944155" sideWeight="0.6700855" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20699926" sideWeight="0.8700855" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20669144" sideWeight="0.8700855" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15497553" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -806,8 +567,9 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45513865" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12991454" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12991454" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24342105" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -834,51 +596,23 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/model/InspectUploadModel.js">
+    <entry file="file://$PROJECT_DIR$/app/controller/NoticeControl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="23" selection-start="374" selection-end="374" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="608">
+        <state line="226" column="33" selection-start="6553" selection-end="6587" vertical-scroll-proportion="0.0" vertical-offset="4062" max-vertical-offset="4940">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controller/NewsControl.js">
+    <entry file="file://$PROJECT_DIR$/app/model/TaskModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="58" selection-start="1409" selection-end="1409" vertical-scroll-proportion="0.0" vertical-offset="1045" max-vertical-offset="2793">
+        <state line="5" column="22" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0" vertical-offset="95" max-vertical-offset="665">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/app/controller/MainControl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="7" selection-start="313" selection-end="313" vertical-scroll-proportion="-4.75" vertical-offset="0" max-vertical-offset="342">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/store/NewsStore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="536">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/NewsModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="23" selection-start="242" selection-end="242" vertical-scroll-proportion="0.31902984" vertical-offset="0" max-vertical-offset="536">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/Info.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="30" selection-start="1713" selection-end="1725" vertical-scroll-proportion="-3.24" vertical-offset="1092" max-vertical-offset="2223">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/news/NewsImg.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="69" selection-start="1718" selection-end="1718" vertical-scroll-proportion="-5.66" vertical-offset="1009" max-vertical-offset="2736">
+        <state line="63" column="5" selection-start="1945" selection-end="1945" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="20026">
           <folding />
         </state>
       </provider>
@@ -886,28 +620,176 @@
     <entry file="file://$PROJECT_DIR$/app/view/list/Task.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="85" selection-start="1069" selection-end="1069" vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="950">
-          <folding>
-            <marker date="1408438705080" expanded="false" signature="832:886" placeholder="..." />
-            <marker date="1408438705080" expanded="false" signature="929:964" placeholder="..." />
-            <marker date="1408438705080" expanded="false" signature="1009:1044" placeholder="..." />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/store/TaskStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="399">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/list/TaskDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="19" selection-start="992" selection-end="992" vertical-scroll-proportion="0.0" vertical-offset="446" max-vertical-offset="4275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/inspect/InspectPhoto.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="0" selection-start="1270" selection-end="1270" vertical-scroll-proportion="0.0" vertical-offset="627" max-vertical-offset="3002">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/news/NewsImg.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="69" selection-start="1718" selection-end="1718" vertical-scroll-proportion="0.0" vertical-offset="1009" max-vertical-offset="2736">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/news/News.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="95" selection-start="1290" selection-end="1290" vertical-scroll-proportion="-4.7" vertical-offset="734" max-vertical-offset="1634">
-          <folding>
-            <marker date="1406536021311" expanded="true" signature="1252:1265" placeholder="..." />
-            <marker date="1406536021311" expanded="false" signature="1844:1930" placeholder="..." />
-            <marker date="1406536021311" expanded="false" signature="1975:1997" placeholder="..." />
-          </folding>
+        <state line="51" column="95" selection-start="1290" selection-end="1290" vertical-scroll-proportion="0.0" vertical-offset="734" max-vertical-offset="1634">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controller/InspectControl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="285" column="0" selection-start="8013" selection-end="8013" vertical-scroll-proportion="-0.86" vertical-offset="5372" max-vertical-offset="15884">
+        <state line="285" column="0" selection-start="8013" selection-end="8013" vertical-scroll-proportion="0.0" vertical-offset="5372" max-vertical-offset="15884">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controller/NoticeControl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="226" column="33" selection-start="6553" selection-end="6587" vertical-scroll-proportion="0.0" vertical-offset="4062" max-vertical-offset="4940">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/TaskModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="22" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0" vertical-offset="95" max-vertical-offset="665">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controller/MainControl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="28" selection-start="1367" selection-end="1367" vertical-scroll-proportion="0.0" vertical-offset="931" max-vertical-offset="20026">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/list/Task.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="85" selection-start="1069" selection-end="1069" vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="950">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/store/TaskStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="399">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/list/TaskDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="19" selection-start="992" selection-end="992" vertical-scroll-proportion="0.0" vertical-offset="446" max-vertical-offset="4275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/inspect/InspectPhoto.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="0" selection-start="1270" selection-end="1270" vertical-scroll-proportion="0.0" vertical-offset="627" max-vertical-offset="3002">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/news/NewsImg.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="69" selection-start="1718" selection-end="1718" vertical-scroll-proportion="0.0" vertical-offset="1009" max-vertical-offset="2736">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/news/News.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="95" selection-start="1290" selection-end="1290" vertical-scroll-proportion="0.0" vertical-offset="734" max-vertical-offset="1634">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controller/InspectControl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="285" column="0" selection-start="8013" selection-end="8013" vertical-scroll-proportion="0.0" vertical-offset="5372" max-vertical-offset="15884">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/InspectUploadModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="23" selection-start="374" selection-end="374" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="608" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controller/NewsControl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="58" selection-start="1409" selection-end="1409" vertical-scroll-proportion="0.0" vertical-offset="1045" max-vertical-offset="2793" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="7" selection-start="313" selection-end="313" vertical-scroll-proportion="-4.75" vertical-offset="0" max-vertical-offset="342" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/store/NewsStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="536" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/NewsModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="23" selection-start="242" selection-end="242" vertical-scroll-proportion="0.31902984" vertical-offset="0" max-vertical-offset="536" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/Info.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="30" selection-start="1713" selection-end="1725" vertical-scroll-proportion="-3.24" vertical-offset="1092" max-vertical-offset="2223" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/news/NewsImg.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="69" selection-start="1718" selection-end="1718" vertical-scroll-proportion="0.0" vertical-offset="1009" max-vertical-offset="2736">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/list/Task.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="85" selection-start="1069" selection-end="1069" vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="950">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/news/News.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="95" selection-start="1290" selection-end="1290" vertical-scroll-proportion="0.0" vertical-offset="734" max-vertical-offset="1634">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controller/InspectControl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="285" column="0" selection-start="8013" selection-end="8013" vertical-scroll-proportion="0.0" vertical-offset="5372" max-vertical-offset="15884">
           <folding />
         </state>
       </provider>
@@ -922,13 +804,7 @@
     <entry file="file://$PROJECT_DIR$/app/view/list/TaskDetail.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="19" selection-start="992" selection-end="992" vertical-scroll-proportion="0.0" vertical-offset="446" max-vertical-offset="4275">
-          <folding>
-            <marker date="1408438764560" expanded="true" signature="626:745" placeholder="..." />
-            <marker date="1408438764560" expanded="false" signature="1444:1566" placeholder="..." />
-            <marker date="1408438764560" expanded="false" signature="1580:1618" placeholder="..." />
-            <marker date="1408438764560" expanded="false" signature="1641:1701" placeholder="..." />
-            <marker date="1408438764560" expanded="false" signature="1739:1777" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -955,7 +831,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controller/MainControl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="28" selection-start="1367" selection-end="1367" vertical-scroll-proportion="0.58126193" vertical-offset="627" max-vertical-offset="20026">
+        <state line="63" column="5" selection-start="1945" selection-end="1945" vertical-scroll-proportion="2.28" vertical-offset="0" max-vertical-offset="20026">
           <folding />
         </state>
       </provider>
