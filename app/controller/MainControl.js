@@ -63,7 +63,7 @@ Ext.define('WebInspect.controller.MainControl',{
     onOnlineListen:function() ///////////////////有网络在线的时候监听
     {
         var me = WebInspect.app.mainthis;
-        if(me.onNetWorkIsON("val") != "WiFi" && me.qgjwifi == "true")
+        if(me.onNetWorkIsON("val") != "WiFi" && this.onNetWorkIsON() && me.qgjwifi == "true")
         {
             plugins.Toast.ShowToast("VPN连接中,请稍后...",3000);
             ////重连VPN
@@ -295,7 +295,7 @@ Ext.define('WebInspect.controller.MainControl',{
 
     },
 
-    onNetWorkIsON:function()  /////////////判断是否有网络
+    onNetWorkIsON:function(val)  /////////////判断是否有网络
     {
         var res = false;
         var networkState = navigator.connection.type;
@@ -313,6 +313,12 @@ Ext.define('WebInspect.controller.MainControl',{
         {
             res = true;
         }
+
+        if(val)
+        {
+            res = states[networkState];
+        }
+
         return res;
     },
 

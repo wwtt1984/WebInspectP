@@ -18,7 +18,6 @@
  */
 
 package com.mycompany.webInspect;
-
 import android.os.Bundle;
 import org.apache.cordova.*;
 
@@ -36,29 +35,27 @@ import android.view.View;
 import android.widget.Toast;
 
 import cn.jpush.android.api.JPushInterface;
+import com.vpn.vpn.VpnPlugin;
 
-public class webInspect extends CordovaActivity implements IVpnDelegate
+public class webInspect extends CordovaActivity  implements IVpnDelegate
 {
     public static IVpnDelegate ivg;
-    public static String vpnresult;//vpn结果
-
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         super.init();
-		ivg = this;
+        ivg = this;
         // Set by <content src="index.html" /> in config.xml
         super.loadUrl(Config.getStartUrl());
         //super.loadUrl("file:///android_asset/www/index.html")
     }
 
-	@Override
-	public void onDestroy() {
-		SangforNbAuth.getInstance().vpnQuit();
-		vpnresult = null;////清空结果
-		super.onDestroy();
-	}
+    @Override
+    public void onDestroy() {
+        SangforNbAuth.getInstance().vpnQuit();
+        super.onDestroy();
+    }
 
     @Override
     protected void onResume() {
@@ -71,36 +68,37 @@ public class webInspect extends CordovaActivity implements IVpnDelegate
         super.onPause();
         JPushInterface.onPause(this);
     }
-    
+
     public void vpnRndCodeCallback(byte[] data) {
         Log.d(TAG, "RndCode callback, the data is bitmap of rndCode.");
     }
 
-	public void vpnCallback(int vpnResult, int authType) {
+    public void vpnCallback(int vpnResult, int authType) {
 
-		SangforNbAuth sfAuth = SangforNbAuth.getInstance();
-		switch (vpnResult) {
-		case IVpnDelegate.RESULT_VPN_INIT_FAIL:
-            vpnresult="initfalse";
-			break;
-		case IVpnDelegate.RESULT_VPN_INIT_SUCCESS:
-			break;
-		case IVpnDelegate.RESULT_VPN_AUTH_FAIL:
-            vpnresult="paramerror";
-			break;
-		case IVpnDelegate.RESULT_VPN_AUTH_SUCCESS:
-			if (authType == IVpnDelegate.AUTH_TYPE_NONE) {
-			    vpnresult="true"; /////////成功了
-			}
-			break;
-		case IVpnDelegate.RESULT_VPN_AUTH_LOGOUT:
-			vpnresult="logout";
-			break;
-		default:
-			vpnresult="error";
-			break;
-		}
-	}
-
+        VpnPlugin vpnpl = new VpnPlugin();
+        SangforNbAuth sfAuth = SangforNbAuth.getInstance();
+        switch (vpnResult) {
+        case IVpnDelegate.RESULT_VPN_INIT_FAIL:
+            vpnpl.VpnLogin("initfalse");
+            sfAuth.vpnQuit();
+            break;
+        case IVpnDelegate.RESULT_VPN_INIT_SUCCESS:
+            break;
+        case IVpnDelegate.RESULT_VPN_AUTH_FAIL:
+            vpnpl.VpnLogin("paramerror");
+            break;
+        case IVpnDelegate.RESULT_VPN_AUTH_SUCCESS:
+            if (authType == IVpnDelegate.AUTH_TYPE_NONE) {
+                vpnpl.VpnLogin("true");
+            }
+            break;
+        case IVpnDelegate.RESULT_VPN_AUTH_LOGOUT:
+            vpnpl.VpnLogin("logout");
+            break;
+        default:
+            vpnpl.VpnLogin("error");
+            break;
+        }
+    }
 }
 

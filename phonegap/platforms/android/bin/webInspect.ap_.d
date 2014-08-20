@@ -1,403 +1,269 @@
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\webInspect.ap_ \
- : E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\drawable\icon.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\drawable\launcher_icon.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\drawable\share_via_barcode.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\drawable\shopper_icon.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\drawable-hdpi\icon.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\drawable-hdpi\launcher_icon.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\drawable-hdpi\shopper_icon.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\drawable-ldpi\icon.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\drawable-mdpi\icon.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\drawable-xhdpi\icon.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\drawable-xhdpi\launcher_icon.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\drawable-xxhdpi\launcher_icon.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\layout\bookmark_picker_list_item.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\layout\capture.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\layout\encode.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\layout\help.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\layout\history_list_item.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\layout\search_book_contents.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\layout\search_book_contents_header.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\layout\search_book_contents_list_item.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\layout\share.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\layout-land\encode.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\layout-land\share.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\layout-ldpi\capture.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\menu\capture.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\menu\encode.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\menu\history.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\raw\beep.ogg \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values\arrays.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values\colors.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values\dimens.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values\ids.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-ar\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-bg\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-ca\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-cs\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-da\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-de\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-el\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-es\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-eu\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-fi\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-fr\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-he\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-hi\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-hu\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-id\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-it\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-iw\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-ja\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-ko\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-nl\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-pl\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-pt\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-ru\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-sk\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-sl\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-sv\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-tr\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-zh-rCN\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-zh-rTW\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\xml\config.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\xml\preferences.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\res\drawable\icon.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\res\drawable\launcher_icon.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\res\drawable\share_via_barcode.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\res\drawable\shopper_icon.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\res\drawable-hdpi\icon.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\res\drawable-hdpi\launcher_icon.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\res\drawable-hdpi\shopper_icon.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\res\drawable-ldpi\icon.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\res\drawable-mdpi\icon.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\res\drawable-xhdpi\icon.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\res\drawable-xhdpi\launcher_icon.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\res\drawable-xxhdpi\launcher_icon.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\app \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\app.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\app.json \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\config.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\cordova.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\cordova_plugins.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\css \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\icon.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\img \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\index.html \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\phonegap.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\spec \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\spec.html \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\touch \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\app\lib \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\app\lib\pdf.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\app\lib\pdf.js\compatibility.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\app\lib\pdf.js\pdf.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\css\index.css \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\img\logo.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\js\index.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\com.install.install.Install \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\com.jpush.jpush.JPush \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\com.phone.phone.Phone \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\com.phonegap.plugins.barcodescanner \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\com.toast.toast.Toast \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\com.vpn.vpn.Vpn \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.camera \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file-transfer \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.network-information \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\com.install.install.Install\www \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\com.install.install.Install\www\install.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\com.jpush.jpush.JPush\www \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\com.jpush.jpush.JPush\www\jPush.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\com.phone.phone.Phone\www \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\com.phone.phone.Phone\www\phone.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\com.phonegap.plugins.barcodescanner\www \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\com.phonegap.plugins.barcodescanner\www\barcodescanner.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\com.toast.toast.Toast\www \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\com.toast.toast.Toast\www\toast.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\com.vpn.vpn.Vpn\www \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\com.vpn.vpn.Vpn\www\vpn.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.camera\www \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.camera\www\Camera.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.camera\www\CameraConstants.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.camera\www\CameraPopoverHandle.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.camera\www\CameraPopoverOptions.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file\www \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file\www\android \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file\www\DirectoryEntry.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file\www\DirectoryReader.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file\www\Entry.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file\www\File.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file\www\FileEntry.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file\www\FileError.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file\www\FileReader.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file\www\FileSystem.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file\www\FileUploadOptions.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file\www\FileUploadResult.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file\www\FileWriter.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file\www\Flags.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file\www\LocalFileSystem.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file\www\Metadata.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file\www\ProgressEvent.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file\www\requestFileSystem.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file\www\resolveLocalFileSystemURI.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file\www\android\FileSystem.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file-transfer\www \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file-transfer\www\FileTransfer.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.file-transfer\www\FileTransferError.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.network-information\www \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.network-information\www\Connection.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\plugins\org.apache.cordova.network-information\www\network.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\icon \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\screen \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\icon\android \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\icon\bada \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\icon\bada-wac \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\icon\blackberry \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\icon\ios \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\icon\tizen \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\icon\webos \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\icon\windows-phone \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\icon\android\icon-36-ldpi.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\icon\android\icon-48-mdpi.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\icon\android\icon-72-hdpi.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\icon\android\icon-96-xhdpi.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\icon\bada\icon-128.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\icon\bada-wac\icon-48-type5.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\icon\bada-wac\icon-50-type3.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\icon\bada-wac\icon-80-type4.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\icon\blackberry\icon-80.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\icon\ios\icon-57-2x.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\icon\ios\icon-57.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\icon\ios\icon-72-2x.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\icon\ios\icon-72.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\icon\tizen\icon-128.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\icon\webos\icon-64.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\icon\windows-phone\icon-173-tile.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\icon\windows-phone\icon-48.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\icon\windows-phone\icon-62-tile.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\screen\android \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\screen\bada \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\screen\bada-wac \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\screen\blackberry \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\screen\ios \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\screen\tizen \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\screen\webos \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\screen\windows-phone \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\screen\android\screen-hdpi-landscape.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\screen\android\screen-hdpi-portrait.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\screen\android\screen-ldpi-landscape.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\screen\android\screen-ldpi-portrait.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\screen\android\screen-mdpi-landscape.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\screen\android\screen-mdpi-portrait.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\screen\android\screen-xhdpi-landscape.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\screen\android\screen-xhdpi-portrait.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\screen\bada\screen-portrait.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\screen\bada-wac\screen-type3.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\screen\bada-wac\screen-type4.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\screen\bada-wac\screen-type5.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\screen\blackberry\screen-225.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\screen\ios\screen-ipad-landscape-2x.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\screen\ios\screen-ipad-landscape.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\screen\ios\screen-ipad-portrait-2x.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\screen\ios\screen-ipad-portrait.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\screen\ios\screen-iphone-landscape-2x.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\screen\ios\screen-iphone-landscape.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\screen\ios\screen-iphone-portrait-2x.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\screen\ios\screen-iphone-portrait-568h-2x.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\screen\ios\screen-iphone-portrait.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\screen\tizen\README.md \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\screen\webos\screen-64.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\res\screen\windows-phone\screen-portrait.jpg \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\css \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\icons \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\startup \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\css\app.css \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\css\app1.css \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\css\my.css \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\css\TouchTreeGrid.css \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\icons\icon-spot~ipad.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\icons\Icon.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\icons\Icon@2x.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\icons\Icon~ipad.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\icons\Icon~ipad@2x.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\icons\iTunesArtwork.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\001.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\add.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\background.jpg \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\bg1.jpg \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\code3.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\contact.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\function \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\green3.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\larr.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\loading.jpg \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\man.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\nopic.jpg \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\notice \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\pdf.jpg \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\prebg.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\prefirst.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\prepoint.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\qrcode.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rarr.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\scanner.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\status \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\vpn.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\weather \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\woman.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\function\assignment.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\function\contacts.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\function\done.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\function\flow.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\function\header.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\function\header2.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\function\info.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\function\inspect.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\function\mark.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\function\news.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\function\notice.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\function\project.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\function\rain.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\function\salary.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\function\setting.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\function\tide.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\function\user.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\function\water.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\notice\news.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\notice\notice.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\notice\rtx.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\notice\task.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\notice\today.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\aiq.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\am.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\baiy.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\bb.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\bei.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\bj.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\bz.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\cy.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\dao.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\db.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\dd.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\dg.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\dh.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\dk.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\dp.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\ds.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\duoy.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\dx.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\dy.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\fad.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\fan.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\fd.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\feid.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\fendou.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\fn.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\fw.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\gg.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\hanx.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\hl.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\hx.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\hy.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\jie.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\jk.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\jy.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\ka.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\kf.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\kl.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\kuk.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\kun.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\lh.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\ll.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\lw.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\maom.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\maomao.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\mg.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\mm.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\mn.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\nan.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\ng.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\nv.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\oh.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\pz.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\qianc.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\qiang.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\qiao.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\qsh.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\qz.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\ruo.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\se.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\shan.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\shd.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\shl.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\shuai.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\shui.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\sj.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\tiao.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\tp.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\tu.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\tx.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\ty.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\wen.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\ws.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\wx.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\xg.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\xig.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\xin.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\xixing.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\xr.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\xs.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\xu.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\xy.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\yb.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\yiw.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\yj.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\yl.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\yun.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\yw.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\yy.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\zhao.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\zhd.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\zhem.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\zhm.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\zj.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\zk.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\zq.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\rtx\zt.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\status\blue.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\status\red.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\status\yellow.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\weather\1.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\weather\2.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\weather\3.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\weather\4.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\weather\5.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\images\weather\6.gif \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\startup\1496x2048.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\startup\1536x2008.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\startup\320x460.jpg \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\startup\640x920.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\startup\748x1024.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\resources\startup\768x1004.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\spec\helper.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\spec\index.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\spec\lib \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\spec\lib\jasmine-1.2.0 \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\spec\lib\jasmine-1.2.0\jasmine-html.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\spec\lib\jasmine-1.2.0\jasmine.css \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\spec\lib\jasmine-1.2.0\jasmine.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\spec\lib\jasmine-1.2.0\MIT.LICENSE \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\touch\src \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\touch\src\ux \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\touch\src\ux\panel \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\assets\www\touch\src\ux\panel\PDF.js \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\AndroidManifest.xml \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\bin\webInspect.ap_ \
+ : D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\res\drawable\icon.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\res\drawable-hdpi\icon.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\res\drawable-ldpi\icon.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\res\drawable-mdpi\icon.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\res\drawable-xhdpi\icon.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\res\values\strings.xml \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\res\xml\config.xml \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\bin\res\drawable\icon.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\bin\res\drawable-hdpi\icon.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\bin\res\drawable-ldpi\icon.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\bin\res\drawable-mdpi\icon.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\bin\res\drawable-xhdpi\icon.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\app.js \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\app.json \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\config.xml \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\cordova.js \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\cordova_plugins.js \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\css \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\icon.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\img \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\index.html \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\js \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\phonegap.js \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\spec \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\spec.html \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\css\index.css \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\img\logo.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\js\index.js \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\icon \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\screen \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\icon\android \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\icon\bada \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\icon\bada-wac \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\icon\blackberry \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\icon\ios \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\icon\tizen \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\icon\webos \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\icon\windows-phone \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\icon\android\icon-36-ldpi.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\icon\android\icon-48-mdpi.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\icon\android\icon-72-hdpi.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\icon\android\icon-96-xhdpi.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\icon\bada\icon-128.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\icon\bada-wac\icon-48-type5.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\icon\bada-wac\icon-50-type3.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\icon\bada-wac\icon-80-type4.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\icon\blackberry\icon-80.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\icon\ios\icon-57-2x.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\icon\ios\icon-57.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\icon\ios\icon-72-2x.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\icon\ios\icon-72.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\icon\tizen\icon-128.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\icon\webos\icon-64.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\icon\windows-phone\icon-173-tile.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\icon\windows-phone\icon-48.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\icon\windows-phone\icon-62-tile.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\screen\android \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\screen\bada \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\screen\bada-wac \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\screen\blackberry \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\screen\ios \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\screen\tizen \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\screen\webos \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\screen\windows-phone \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\screen\android\screen-hdpi-landscape.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\screen\android\screen-hdpi-portrait.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\screen\android\screen-ldpi-landscape.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\screen\android\screen-ldpi-portrait.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\screen\android\screen-mdpi-landscape.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\screen\android\screen-mdpi-portrait.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\screen\android\screen-xhdpi-landscape.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\screen\android\screen-xhdpi-portrait.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\screen\bada\screen-portrait.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\screen\bada-wac\screen-type3.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\screen\bada-wac\screen-type4.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\screen\bada-wac\screen-type5.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\screen\blackberry\screen-225.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\screen\ios\screen-ipad-landscape-2x.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\screen\ios\screen-ipad-landscape.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\screen\ios\screen-ipad-portrait-2x.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\screen\ios\screen-ipad-portrait.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\screen\ios\screen-iphone-landscape-2x.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\screen\ios\screen-iphone-landscape.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\screen\ios\screen-iphone-portrait-2x.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\screen\ios\screen-iphone-portrait-568h-2x.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\screen\ios\screen-iphone-portrait.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\screen\tizen\README.md \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\screen\webos\screen-64.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\res\screen\windows-phone\screen-portrait.jpg \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\css \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\icons \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\startup \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\css\app1.css \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\css\my.css \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\css\TouchTreeGrid.css \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\icons\icon-spot~ipad.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\icons\Icon.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\icons\Icon@2x.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\icons\Icon~ipad.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\icons\Icon~ipad@2x.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\icons\iTunesArtwork.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\001.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\add.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\code3.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\contact.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\function \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\green3.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\larr.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\loading.jpg \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\man.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\nopic.jpg \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\notice \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\pdf.jpg \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\prebg.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\prefirst.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\prepoint.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\qrcode.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rarr.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\status \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\vpn.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\weather \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\woman.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\function\assignment.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\function\contacts.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\function\done.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\function\flow.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\function\header.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\function\header2.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\function\info.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\function\inspect.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\function\mark.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\function\news.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\function\notice.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\function\project.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\function\rain.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\function\salary.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\function\setting.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\function\tide.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\function\user.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\function\water.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\notice\rtx.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\notice\task.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\notice\today.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\aiq.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\am.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\baiy.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\bb.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\bei.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\bj.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\bz.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\cy.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\dao.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\db.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\dd.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\dg.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\dh.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\dk.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\dp.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\ds.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\duoy.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\dx.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\dy.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\fad.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\fan.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\fd.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\feid.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\fendou.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\fn.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\fw.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\gg.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\hanx.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\hl.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\hx.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\hy.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\jie.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\jk.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\jy.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\ka.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\kf.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\kl.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\kuk.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\kun.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\lh.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\ll.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\lw.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\maom.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\maomao.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\mg.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\mm.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\mn.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\nan.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\ng.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\nv.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\oh.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\pz.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\qianc.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\qiang.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\qiao.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\qsh.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\qz.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\ruo.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\se.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\shan.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\shd.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\shl.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\shuai.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\shui.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\sj.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\tiao.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\tp.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\tu.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\tx.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\ty.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\wen.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\ws.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\wx.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\xg.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\xig.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\xin.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\xixing.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\xr.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\xs.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\xu.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\xy.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\yb.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\yiw.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\yj.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\yl.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\yun.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\yw.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\yy.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\zhao.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\zhd.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\zhem.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\zhm.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\zj.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\zk.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\zq.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\rtx\zt.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\status\blue.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\status\red.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\status\yellow.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\weather\1.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\weather\2.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\weather\3.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\weather\4.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\weather\5.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\images\weather\6.gif \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\startup\1496x2048.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\startup\1536x2008.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\startup\320x460.jpg \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\startup\640x920.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\startup\748x1024.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\resources\startup\768x1004.png \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\spec\helper.js \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\spec\index.js \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\spec\lib \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\spec\lib\jasmine-1.2.0 \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\spec\lib\jasmine-1.2.0\jasmine-html.js \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\spec\lib\jasmine-1.2.0\jasmine.css \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\spec\lib\jasmine-1.2.0\jasmine.js \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\assets\www\spec\lib\jasmine-1.2.0\MIT.LICENSE \
+D:\work\touch\webinnew\WebInspectWt\WebInspectP\phonegap\platforms\android\bin\AndroidManifest.xml \

@@ -1,17 +1,10 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
-        "file": "plugins/com.toast.toast.Toast/www/toast.js",
-        "id": "com.toast.toast.Toast.toast",
+        "file": "plugins/com.install.install.Install/www/install.js",
+        "id": "com.install.install.Install.install",
         "clobbers": [
-            "window.plugins.Toast"
-        ]
-    },
-    {
-        "file": "plugins/com.phone.phone.Phone/www/phone.js",
-        "id": "com.phone.phone.Phone.phone",
-        "clobbers": [
-            "window.plugins.Phone"
+            "window.plugins.Install"
         ]
     },
     {
@@ -22,18 +15,24 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/org.apache.cordova.network-information/www/network.js",
-        "id": "org.apache.cordova.network-information.network",
+        "file": "plugins/com.phone.phone.Phone/www/phone.js",
+        "id": "com.phone.phone.Phone.phone",
         "clobbers": [
-            "navigator.connection",
-            "navigator.network.connection"
+            "window.plugins.Phone"
         ]
     },
     {
-        "file": "plugins/org.apache.cordova.network-information/www/Connection.js",
-        "id": "org.apache.cordova.network-information.Connection",
+        "file": "plugins/com.vpn.vpn.Vpn/www/vpn.js",
+        "id": "com.vpn.vpn.Vpn.vpn",
         "clobbers": [
-            "Connection"
+            "window.plugins.Vpn"
+        ]
+    },
+    {
+        "file": "plugins/com.toast.toast.Toast/www/toast.js",
+        "id": "com.toast.toast.Toast.toast",
+        "clobbers": [
+            "window.plugins.Toast"
         ]
     },
     {
@@ -65,20 +64,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/com.vpn.vpn.Vpn/www/vpn.js",
-        "id": "com.vpn.vpn.Vpn.vpn",
-        "clobbers": [
-            "window.plugins.Vpn"
-        ]
-    },
-    {
-        "file": "plugins/com.install.install.Install/www/install.js",
-        "id": "com.install.install.Install.install",
-        "clobbers": [
-            "window.plugins.Install"
-        ]
-    },
-    {
         "file": "plugins/org.apache.cordova.file-transfer/www/FileTransferError.js",
         "id": "org.apache.cordova.file-transfer.FileTransferError",
         "clobbers": [
@@ -93,10 +78,18 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/com.phonegap.plugins.barcodescanner/www/barcodescanner.js",
-        "id": "com.phonegap.plugins.barcodescanner.barcodescanner",
+        "file": "plugins/org.apache.cordova.network-information/www/network.js",
+        "id": "org.apache.cordova.network-information.network",
         "clobbers": [
-            "plugins.barcodeScanner"
+            "navigator.connection",
+            "navigator.network.connection"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.network-information/www/Connection.js",
+        "id": "org.apache.cordova.network-information.Connection",
+        "clobbers": [
+            "Connection"
         ]
     },
     {
@@ -208,6 +201,10 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/org.apache.cordova.file/www/fileSystems.js",
+        "id": "org.apache.cordova.file.fileSystems"
+    },
+    {
         "file": "plugins/org.apache.cordova.file/www/requestFileSystem.js",
         "id": "org.apache.cordova.file.requestFileSystem",
         "clobbers": [
@@ -225,23 +222,35 @@ module.exports = [
         "file": "plugins/org.apache.cordova.file/www/android/FileSystem.js",
         "id": "org.apache.cordova.file.androidFileSystem",
         "merges": [
-            "window.FileSystem"
+            "FileSystem"
         ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.file/www/fileSystems-roots.js",
+        "id": "org.apache.cordova.file.fileSystems-roots",
+        "runs": true
+    },
+    {
+        "file": "plugins/org.apache.cordova.file/www/fileSystemPaths.js",
+        "id": "org.apache.cordova.file.fileSystemPaths",
+        "merges": [
+            "cordova"
+        ],
+        "runs": true
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "com.toast.toast.Toast": "1.5.2",
-    "com.phone.phone.Phone": "1.5.2",
-    "com.jpush.jpush.JPush": "1.6.0",
-    "org.apache.cordova.network-information": "0.2.7",
-    "org.apache.cordova.camera": "0.2.8",
-    "com.vpn.vpn.Vpn": "1.5.2",
     "com.install.install.Install": "1.5.2",
-    "org.apache.cordova.file-transfer": "0.4.5-dev",
-    "com.phonegap.plugins.barcodescanner": "0.6.0",
-    "org.apache.cordova.file": "1.1.0"
+    "com.jpush.jpush.JPush": "1.6.0",
+    "com.phone.phone.Phone": "1.5.2",
+    "com.vpn.vpn.Vpn": "1.5.2",
+    "com.toast.toast.Toast": "1.5.2",
+    "org.apache.cordova.camera": "0.3.1",
+    "org.apache.cordova.file-transfer": "0.4.5",
+    "org.apache.cordova.network-information": "0.2.11",
+    "org.apache.cordova.file": "1.3.0"
 }
 // BOTTOM OF METADATA
 });
