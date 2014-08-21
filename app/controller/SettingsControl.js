@@ -12,6 +12,7 @@ Ext.define('WebInspect.controller.SettingsControl', {
     config: {
 
         refs: {
+            main: 'main',
             info: 'info',
             infofunction: '[itemId=infofunction]',
             setting: 'info setting',
@@ -25,7 +26,8 @@ Ext.define('WebInspect.controller.SettingsControl', {
             noticecheck: 'checkboxfield[itemId=noticecheck]',
             sysquit: '[itemId=sysquit]',
             moduleconfirm: '[itemId=moduleconfirm]',
-            pushconfirm: '[itemId=pushconfirm]'
+            pushconfirm: '[itemId=pushconfirm]',
+            changeuser: '[itemId=changeuser]'
         },
 
         control: {
@@ -49,6 +51,9 @@ Ext.define('WebInspect.controller.SettingsControl', {
             },
             moduleconfirm: {
                 tap: 'onModuleConfirmTap'
+            },
+            changeuser: {
+                tap: 'onChangeUserTap'
             }
         }
     },
@@ -163,6 +168,12 @@ Ext.define('WebInspect.controller.SettingsControl', {
     onQuitSystemTap: function(){
         var me = this;
         me.getApplication().getController('MainControl').onQuitSystemTap();
+    },
+
+    onChangeUserTap: function(){
+        var me = this;
+        var src = me.getMain();
+        src.setActiveItem(me.getApplication().getController('MainControl').getLogin());
     }
 
 })
