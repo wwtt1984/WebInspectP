@@ -1,2 +1,2 @@
 // @tag full-page
-// @require D:\work\touch\webinnew\WebInspectWt\WebInspectP\app.js
+// @require E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\app.js

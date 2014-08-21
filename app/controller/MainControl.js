@@ -811,6 +811,11 @@ Ext.define('WebInspect.controller.MainControl',{
                 me.getInfofunction().show();
                 break;
 
+            case 'update':
+                me.getInfo().pop();
+                me.getInfofunction().show();
+                break;
+
         }
 
         document.addEventListener("backbutton", me.onBackKeyDown, false); // 返回键
