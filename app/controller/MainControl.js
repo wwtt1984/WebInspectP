@@ -694,7 +694,13 @@ Ext.define('WebInspect.controller.MainControl',{
 
             ////////////////巡查上报//////////////
             case 'inspectmain':
-                me.onInfoFunctionBackTap();
+//                me.onInfoFunctionBackTap();
+                if((me.getInfo().view) && (me.getInfo().view.getHidden() == false)){
+                    me.getInfo().onViewHide();
+                }
+                else{
+                    me.onInfoFunctionBackTap();
+                }
                 break;
 
             case 'inspecttreelist':
@@ -906,6 +912,7 @@ Ext.define('WebInspect.controller.MainControl',{
                     WebInspect.app.user.oulevel = records[0].data.oulevel;
                     WebInspect.app.user.taskcount = records[0].data.taskcount;
                     WebInspect.app.user.rtxcount = records[0].data.rtxcount;
+                    WebInspect.app.user.zub = records[0].data.zub;
 
                     Ext.getCmp('maintitle').onDataSet(records[0].data, WebInspect.app.user.name, WebInspect.app.user.mobile, WebInspect.app.user.oulevel);
 

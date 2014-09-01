@@ -342,7 +342,7 @@ Ext.define('WebInspect.controller.InspectControl', {
         var results = WebInspect.app.user.sid +"$"
             + WebInspect.app.user.name + "$" + lng + "$" + lat + "$" + sdt
             + "$sz$" + miaos + "$" + location + "$" + WebInspect.app.user.oulevel
-            + "$" + type + "$" + me.simgid + "$" + me.upimgindex;
+            + "$" + type + "$" + me.simgid + "$" + me.upimgindex + '$' + WebInspect.app.user.zub;
 
         var ft = new FileTransfer();
         me.getApplication().getController('MainControl').onLoadOrUploadViewShow('正在上传中', '正在上传第1张', 0);
@@ -418,12 +418,13 @@ Ext.define('WebInspect.controller.InspectControl', {
         var location = me.tdid;
         var oulevel = WebInspect.app.user.oulevel;
         var event = 'sz';
+        var zub = WebInspect.app.user.zub;
 
         var store = Ext.getStore('InspectUploadStore');
 
         store.add({sid: sid, name: name, simgid: simgid, latitude: latitude, longitude: longitude,
             sdt: sdt, miaos: miaos, imgjson: imgjson, imgindex: me.upimgindex, location: location, event: event,
-            type: type, oulevel: oulevel, text: me.text});
+            type: type, oulevel: oulevel, text: me.text, zub: zub});
 
 
         store.sync();
@@ -678,6 +679,8 @@ Ext.define('WebInspect.controller.InspectControl', {
 
         var location = record.data.location;
 
+        var zub = record.data.zub;
+
         var imageURI = imgjson[imgindex];
 
         var options = new FileUploadOptions();
@@ -686,7 +689,7 @@ Ext.define('WebInspect.controller.InspectControl', {
         options.mimeType = "image/jpeg";
 
         var results = sid +"$" + name + "$" + lng + "$" + lat + "$" + sdt
-            + "$sz$" + miaos + "$" + 't044' + "$" + oulevel + "$" + type + "$" + simgid + "$" + imgindex;
+            + "$sz$" + miaos + "$" + 't044' + "$" + oulevel + "$" + type + "$" + simgid + "$" + imgindex + '$' + zub;
 
         var ft = new FileTransfer();
         me.getApplication().getController('MainControl').onLoadOrUploadViewShow('正在上传中', '正在上传第1张', 0);

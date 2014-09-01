@@ -21,7 +21,8 @@ Ext.define('WebInspect.model.InspectUploadModel',{
             'type',
             'event',
             'oulevel',
-            'text'
+            'text',
+            'zub'
         ]
     }
 });

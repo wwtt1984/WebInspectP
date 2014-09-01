@@ -72,8 +72,7 @@ Ext.define('WebInspect.view.inspect.Inspect', {
                         itemId: 'inspecttype',
                         options: [
                             {text: '水政类',  value: '水政类'},
-                            {text: '工况类', value: '工况类'},
-                            {text: '防潮设施类',  value: '防潮设施类'}
+                            {text: '工况类', value: '工况类'}
                         ]
                     }]
             },
