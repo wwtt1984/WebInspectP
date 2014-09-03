@@ -28,7 +28,7 @@ Ext.application({
 
     imginfo:{imgjson:[],imgindex:0,imgpos:'',simgid:''},//图片值 图片id，位置
 
-    local: {loginfile: 'qinspectlogin.json', failfile: 'qinspectfail.json'},
+    local: {loginfile: 'qinspectlogin.json', failfile: 'qinspectfail.json', markfail: 'qmarkfail.json'},
 
     gpstime:30000,//30秒
 
@@ -92,6 +92,8 @@ Ext.application({
         'mark.Mark',
         'mark.Photo',
         'mark.MarkList',
+        'mark.MarkFail',
+        'mark.MarkFailItem',
 
         'inspect.InspectMain',
         'inspect.Inspect',
@@ -151,6 +153,7 @@ Ext.application({
 
         'PhotoModel',
         'MarkModel',
+        'MarkUploadModel',
 
         'TreeModel',
 
@@ -205,6 +208,7 @@ Ext.application({
 
         'PhotoStore',
         'MarkStore',
+        'MarkUploadStore',
 
         'SegmentTreeStore',
 

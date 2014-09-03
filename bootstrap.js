@@ -769,6 +769,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.model.InspectUploadModel": [],
   "WebInspect.model.MainModel": [],
   "WebInspect.model.MarkModel": [],
+  "WebInspect.model.MarkUploadModel": [],
   "WebInspect.model.MessageModel": [],
   "WebInspect.model.NewsDetailModel": [],
   "WebInspect.model.NewsModel": [],
@@ -806,6 +807,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.store.InspectUploadStore": [],
   "WebInspect.store.MainStore": [],
   "WebInspect.store.MarkStore": [],
+  "WebInspect.store.MarkUploadStore": [],
   "WebInspect.store.MessageStore": [],
   "WebInspect.store.NewsDetailStore": [],
   "WebInspect.store.NewsStore": [],
@@ -862,6 +864,8 @@ Ext.ClassManager.addNameAlternateMappings({
   "WebInspect.view.list.Task": [],
   "WebInspect.view.list.TaskDetail": [],
   "WebInspect.view.mark.Mark": [],
+  "WebInspect.view.mark.MarkFail": [],
+  "WebInspect.view.mark.MarkFailItem": [],
   "WebInspect.view.mark.MarkList": [],
   "WebInspect.view.mark.MarkMain": [],
   "WebInspect.view.mark.Photo": [],
@@ -1853,6 +1857,7 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.model.InspectUploadModel": [],
   "WebInspect.model.MainModel": [],
   "WebInspect.model.MarkModel": [],
+  "WebInspect.model.MarkUploadModel": [],
   "WebInspect.model.MessageModel": [],
   "WebInspect.model.NewsDetailModel": [],
   "WebInspect.model.NewsModel": [],
@@ -1892,6 +1897,7 @@ Ext.ClassManager.addNameAliasMappings({
   "WebInspect.store.InspectUploadStore": [],
   "WebInspect.store.MainStore": [],
   "WebInspect.store.MarkStore": [],
+  "WebInspect.store.MarkUploadStore": [],
   "WebInspect.store.MessageStore": [],
   "WebInspect.store.NewsDetailStore": [],
   "WebInspect.store.NewsStore": [],
@@ -2009,6 +2015,12 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "WebInspect.view.mark.Mark": [
     "widget.mark"
+  ],
+  "WebInspect.view.mark.MarkFail": [
+    "widget.markfail"
+  ],
+  "WebInspect.view.mark.MarkFailItem": [
+    "widget.markfailitem"
   ],
   "WebInspect.view.mark.MarkList": [
     "widget.marklist"

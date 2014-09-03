@@ -58,10 +58,10 @@ Ext.define('WebInspect.controller.InspectControl', {
             inspectfail: {
                 itemswipe: 'onInspectFailItemSwipe',
                 itemtap: 'onInspectFailItemTap'
-            },
-            inspectuploadall: {
-                tap: 'onInspectUploadAllTap'
             }
+//            inspectuploadall: {
+//                tap: 'onInspectUploadAllTap'
+//            }
         }
     },
 
@@ -244,13 +244,19 @@ Ext.define('WebInspect.controller.InspectControl', {
         }
         else
         {
-            me.getInspectconfirm().disable();
-            Ext.Viewport.setMasked({xtype:'loadmask',message:'位置获取中,请稍后...'});
-            navigator.geolocation.getCurrentPosition(
-                function(position){me.onGeolocationSuccess(position,me);},
-                function(error){me.onGeolocationFail(error,me);},
-                { maximumAge: 3000, timeout: 30000, enableHighAccuracy: true }
-            );
+            if(me.tdid){
+                me.getInspectconfirm().disable();
+                Ext.Viewport.setMasked({xtype:'loadmask',message:'位置获取中,请稍后...'});
+                navigator.geolocation.getCurrentPosition(
+                    function(position){me.onGeolocationSuccess(position,me);},
+                    function(error){me.onGeolocationFail(error,me);},
+                    { maximumAge: 3000, timeout: 30000, enableHighAccuracy: true }
+                );
+            }
+            else{
+                plugins.Toast.ShowToast("请选择塘段!",3000);
+            }
+
         }
     },
 

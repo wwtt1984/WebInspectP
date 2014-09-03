@@ -173,6 +173,8 @@ Ext.define('WebInspect.controller.SettingsControl', {
     onChangeUserTap: function(){
         var me = this;
         var src = me.getMain();
+
+        me.getInfo().destroy();
         src.setActiveItem(me.getApplication().getController('MainControl').getLogin());
     }
 

@@ -23,6 +23,10 @@ Ext.define('WebInspect.view.mark.MarkMain', {
             {
                 xtype: 'marklist',
                 mytitle: '标牌列表'
+            },
+            {
+                xtype: 'markfail',
+                mytitle: '失败记录'
             }
         ]
     }

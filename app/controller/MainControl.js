@@ -16,7 +16,8 @@ Ext.define('WebInspect.controller.MainControl',{
             newspdf: 'info newspdf',
             newsdetail: 'info newsdetail',
             maincarousel: '[itemId=maincarousel]',
-            load: '[itemId=load]'
+            load: '[itemId=load]',
+            inspectuploadall: '[itemId=inspectuploadall]'
         },
         control: {
             main: {
@@ -34,6 +35,9 @@ Ext.define('WebInspect.controller.MainControl',{
             },
             'infofunction': {
                 tap: 'onInfoFunctionBackTap'
+            },
+            inspectuploadall: {
+                tap: 'onInspectUploadAllTap'
             }
 
         }
@@ -1057,12 +1061,28 @@ Ext.define('WebInspect.controller.MainControl',{
     onInfoFunctionBackTap: function(){
         var me = this;
         me.getMain().setActiveItem(me.getFunctionmain());
-        if(me.getInfo().getActiveItem().xtype == 'markmain'){
-            Ext.ComponentQuery.query('#photo')[0].clearImgListeners();
+
+        switch(me.getInfo().getActiveItem().xtype){
+            case 'markmain':
+                Ext.ComponentQuery.query('#photo')[0].clearImgListeners();
+                break;
+            case 'salary':
+                me.getApplication().getController('SalaryControl').getSalarycarousel().removeAll();
+                break;
+            case 'inspectmain':
+                Ext.ComponentQuery.query('#inspectphoto')[0].clearImgListeners();
         }
-        else if(me.getInfo().getActiveItem().xtype == 'salary'){
-            me.getApplication().getController('SalaryControl').getSalarycarousel().removeAll();
-        }
+
         me.getInfo().destroy();
+    },
+
+    onInspectUploadAllTap: function(){
+        var me = this;
+        if(me.getInfo().getActiveItem().xtype == 'markmain'){
+            me.getApplication().getController('MarkControl').onMarkUploadAllTap();
+        }
+        else{
+            me.getApplication().getController('InspectControl').onInspectUploadAllTap();
+        }
     }
 });

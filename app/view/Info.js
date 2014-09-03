@@ -49,6 +49,13 @@ Ext.define('WebInspect.view.Info', {
                     text: '全部上传',
                     align: 'right',
                     hidden: true
+                },
+                {
+                    xtype: 'button',
+                    itemId: 'markuploadall',
+                    text: '全部上传',
+                    align: 'right',
+                    hidden: true
                 }
             ]
         },

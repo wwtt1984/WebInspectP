@@ -31,10 +31,10 @@ Ext.define('WebInspect.view.mark.Mark', {
                         doneButton: '确定',
                         cancelButton: '取消',
                         options: [
-                            {text: '限高架',  value: '1'},
-                            {text: '广告牌', value:'2'},
-                            {text: '显示屏',  value: '3'},
-                            {text: '路障', value:'4'}
+                            {text: '限高架',  value: '限高架'},
+                            {text: '广告牌', value:'广告牌'},
+                            {text: '显示屏',  value: '显示屏'},
+                            {text: '路障', value:'路障'}
                         ]
                     }]
             },
@@ -67,7 +67,6 @@ Ext.define('WebInspect.view.mark.Mark', {
                                 addCode: function(){
                                     var me = this;
                                     window.plugins.barcodeScanner.scan(me.getSuccess, me.getFail);
-
                                 },
                                 getSuccess: function(result){
 //                                    alert("We got a barcode\n" +
@@ -88,23 +87,23 @@ Ext.define('WebInspect.view.mark.Mark', {
                         )
                     }]
             },
-            {
-                xtype: 'panel',
-//                style: 'border-radius: .4em;background-color: #fff; margin: 0 0 15px 0;',
-                itemId: 'marktitle',
-                cls: 'local-form',
-                tpl:  Ext.create('Ext.XTemplate',
-                    '<div class="local-form-div" style="margin: 0 0 0 0">',
-                    '<div class="label">',
-                    '<span>位置坐标</span>',
-                    '</div>',
-                    '<div class="choose" style="font-weight:normal;">E120°09′ N30°14′ </div>',
-                    '</div>'
-//                    '<div style="font-size:18px; font-weight;bold; height: 2em;line-height: 2em;">坐标位置:</div>',
-//                    '<div style="font-size:16px; font-weight;normal; width: 100%; height: 2em;line-height: 2em;background: #fff;border-radius: .4em;padding-left: 5px;border: 1px #ddd solid;">E120°09′ N30°14′ </div>'
-//                    '<div style="font-size: 18px;font-weight; margin-top:10px;bold;height: 2em;line-height: 2em;">请输入位置描述:</div>'
-                )
-            },
+//            {
+//                xtype: 'panel',
+////                style: 'border-radius: .4em;background-color: #fff; margin: 0 0 15px 0;',
+//                itemId: 'marktitle',
+//                cls: 'local-form',
+//                tpl:  Ext.create('Ext.XTemplate',
+//                    '<div class="local-form-div" style="margin: 0 0 0 0">',
+//                    '<div class="label">',
+//                    '<span>位置坐标</span>',
+//                    '</div>',
+//                    '<div class="choose" style="font-weight:normal;">E120°09′ N30°14′ </div>',
+//                    '</div>'
+////                    '<div style="font-size:18px; font-weight;bold; height: 2em;line-height: 2em;">坐标位置:</div>',
+////                    '<div style="font-size:16px; font-weight;normal; width: 100%; height: 2em;line-height: 2em;background: #fff;border-radius: .4em;padding-left: 5px;border: 1px #ddd solid;">E120°09′ N30°14′ </div>'
+////                    '<div style="font-size: 18px;font-weight; margin-top:10px;bold;height: 2em;line-height: 2em;">请输入位置描述:</div>'
+//                )
+//            },
             {
                 xtype: 'fieldset',
                 style: 'border-radius: .4em;background-color: #fff; margin: 0 0 15px 0;',
@@ -148,7 +147,7 @@ Ext.define('WebInspect.view.mark.Mark', {
     },
 
     onMarkTitleSet: function(){
-        Ext.ComponentQuery.query('#marktitle')[0].setData({});
+//        Ext.ComponentQuery.query('#marktitle')[0].setData({});
         Ext.ComponentQuery.query('#markcode')[0].setData({});
     }
 })

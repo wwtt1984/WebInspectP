@@ -63,7 +63,7 @@ Ext.define('WebInspect.view.mark.Photo',{
                 },
                 onPhotoDataSuccess: function(imageData) {
 
-//                        WebQgjApp.app.imginfo.imgjson.push(imageData);
+                    WebInspect.app.imginfo.imgjson.push(imageData);
                     Ext.ComponentQuery.query('#photo')[0].onDataSet(imageData);
 
                 },
