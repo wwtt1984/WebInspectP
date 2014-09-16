@@ -1,66 +1,9 @@
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\gen\com\mycompany\webInspect\R.java \
- : E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\drawable\icon.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\drawable\launcher_icon.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\drawable\share_via_barcode.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\drawable\shopper_icon.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\drawable-hdpi\icon.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\drawable-hdpi\launcher_icon.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\drawable-hdpi\shopper_icon.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\drawable-ldpi\icon.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\drawable-mdpi\icon.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\drawable-xhdpi\icon.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\drawable-xhdpi\launcher_icon.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\drawable-xxhdpi\launcher_icon.png \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\layout\bookmark_picker_list_item.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\layout\capture.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\layout\encode.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\layout\help.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\layout\history_list_item.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\layout\search_book_contents.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\layout\search_book_contents_header.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\layout\search_book_contents_list_item.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\layout\share.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\layout-land\encode.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\layout-land\share.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\layout-ldpi\capture.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\menu\capture.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\menu\encode.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\menu\history.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\raw\beep.ogg \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values\arrays.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values\colors.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values\dimens.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values\ids.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-ar\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-bg\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-ca\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-cs\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-da\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-de\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-el\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-es\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-eu\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-fi\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-fr\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-he\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-hi\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-hu\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-id\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-it\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-iw\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-ja\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-ko\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-nl\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-pl\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-pt\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-ru\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-sk\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-sl\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-sv\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-tr\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-zh-rCN\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\values-zh-rTW\strings.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\xml\config.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\res\xml\preferences.xml \
-E:\project\Sencha Touch\sencha touch 2.3 project\WebInspect\phonegap\platforms\android\bin\AndroidManifest.xml \
+D:\work\touch\webinnew\WebInspectPnew\phonegap\platforms\android\gen\com\mycompany\webInspect\R.java \
+ : D:\work\touch\webinnew\WebInspectPnew\phonegap\platforms\android\res\drawable\icon.png \
+D:\work\touch\webinnew\WebInspectPnew\phonegap\platforms\android\res\drawable-hdpi\icon.png \
+D:\work\touch\webinnew\WebInspectPnew\phonegap\platforms\android\res\drawable-ldpi\icon.png \
+D:\work\touch\webinnew\WebInspectPnew\phonegap\platforms\android\res\drawable-mdpi\icon.png \
+D:\work\touch\webinnew\WebInspectPnew\phonegap\platforms\android\res\drawable-xhdpi\icon.png \
+D:\work\touch\webinnew\WebInspectPnew\phonegap\platforms\android\res\values\strings.xml \
+D:\work\touch\webinnew\WebInspectPnew\phonegap\platforms\android\res\xml\config.xml \
+D:\work\touch\webinnew\WebInspectPnew\phonegap\platforms\android\bin\AndroidManifest.xml \

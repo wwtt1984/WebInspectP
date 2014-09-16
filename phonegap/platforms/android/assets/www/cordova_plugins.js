@@ -57,6 +57,20 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/org.apache.cordova.file-transfer/www/FileTransferError.js",
+        "id": "org.apache.cordova.file-transfer.FileTransferError",
+        "clobbers": [
+            "window.FileTransferError"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.file-transfer/www/FileTransfer.js",
+        "id": "org.apache.cordova.file-transfer.FileTransfer",
+        "clobbers": [
+            "window.FileTransfer"
+        ]
+    },
+    {
         "file": "plugins/org.apache.cordova.network-information/www/network.js",
         "id": "org.apache.cordova.network-information.network",
         "clobbers": [
@@ -69,20 +83,6 @@ module.exports = [
         "id": "org.apache.cordova.network-information.Connection",
         "clobbers": [
             "Connection"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.file-transfer/www/FileTransferError.js",
-        "id": "org.apache.cordova.file-transfer.FileTransferError",
-        "clobbers": [
-            "window.FileTransferError"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.file-transfer/www/FileTransfer.js",
-        "id": "org.apache.cordova.file-transfer.FileTransfer",
-        "clobbers": [
-            "window.FileTransfer"
         ]
     },
     {
@@ -253,9 +253,9 @@ module.exports.metadata =
     "com.jpush.jpush.JPush": "1.6.0",
     "com.phone.phone.Phone": "1.5.2",
     "com.toast.toast.Toast": "1.5.2",
-    "org.apache.cordova.camera": "0.2.8",
-    "org.apache.cordova.network-information": "0.2.7",
+    "org.apache.cordova.camera": "0.3.1",
     "org.apache.cordova.file-transfer": "0.4.6-dev",
+    "org.apache.cordova.network-information": "0.2.11",
     "com.vpn.vpn.Vpn": "1.5.2",
     "com.phonegap.plugins.barcodescanner": "0.6.0",
     "org.apache.cordova.file": "1.3.0"

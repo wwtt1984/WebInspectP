@@ -49,9 +49,6 @@ Ext.define('WebInspect.controller.MainControl',{
         this.bpindex = 0;///默认请求
         this.beindex = 2;///默认请求总数
 
-        this.timeoutecount = 3; //默认VPN超时连接请求3次
-        this.timeoutscount = 0;// 当前VPN超时连接数
-
         window.setTimeout(function(){me.checkJpush(me);},100);
         document.addEventListener('deviceready',function(){me.onJpushReady(me);}, false);
         document.addEventListener("backbutton", me.onBackKeyDown, false);
@@ -67,54 +64,30 @@ Ext.define('WebInspect.controller.MainControl',{
     },
     onOnlineListen:function() ///////////////////有网络在线的时候监听
     {
+        //////////////监测网络状态
+        plugins.Toast.ShowToast("网络自检中...",3000);
         var me = WebInspect.app.mainthis;
-        if(me.onNetWorkIsON("val") != "WiFi" && this.onNetWorkIsON() && me.qgjwifi == "true")
+        if(me.onNetWorkIsON("val") != "WiFi")
         {
-            plugins.Toast.ShowToast("VPN连接中,请稍后...",3000);
-            ////重连VPN
+            me.qgjwifi = "false";
             plugins.Vpn.VpnLogin(WebInspect.app.user.sid,WebInspect.app.user.password,function(success) {
-
                 if(success == "true")
                 {
                     plugins.Toast.ShowToast("VPN连接成功!",3000);
-                    me.qgjwifi = "false";
-                }
-                else if(success == "false")
-                {
-                    if(me.timeoutscount < me.timeoutecount)
-                    {
-                        plugins.Toast.ShowToast("VPN连接超时,请重试!",3000);
-                        me.timeoutscount++;
-                        me.onOnlineListen();
-                    }
-                    else
-                    {
-                        plugins.Toast.ShowToast("VPN连接失败,请重新打开应用程序!",3000);
-                        me.timeoutscount = 0;
-                        me.onQuitSystemTap();
-                    }
-                }
-                else if(success == "initfalse")
-                {
-                    plugins.Toast.ShowToast("VPN初始化失败,请重试!",3000);
-                }
-                else if(success == "error")
-                {
-                    plugins.Toast.ShowToast("用户名或者密码输入有误!",3000);
                 }
             });
 
         }
         else if(me.onNetWorkIsON("val") == "WiFi")
         {
-            var gate = ['10.33.21.254','10.33.22.254','10.33.23.254','10.33.24.254','10.33.25.254','10.33.26.254','10.33.27.254','10.33.28.254'
+            var gate = ['10.33.21.254','10.33.22.254','10.33.23.254','10.33.24.254','10.33.25.254',
+                '10.33.26.254','10.33.27.254','10.33.28.254'
                 ,'10.33.12.254','10.33.13.254','10.33.14.254'
                 ,'10.33.90.254'
                 ,'10.33.31.254','10.33.32.254','10.33.33.254','10.33.34.254','10.33.35.254'];
             var vpn = "true";
             ////////////获取网关值///////////////////////////
             plugins.Vpn.VpnOnWifi("",function(success) {   ///////////////得到网关值
-
                 for(var i = 0;i < gate.length;i++)
                 {
                     if(success == gate[i])
@@ -125,10 +98,20 @@ Ext.define('WebInspect.controller.MainControl',{
                     }
                 }
 
-                if(vpn == "false")
+                if(vpn == "false") //从其他网络切换到钱管局WIFI
                 {
-                    plugins.Toast.ShowToast("VPN连接关闭!",3000);
+                    plugins.Toast.ShowToast("切换钱管局WIFI!",3000);
                     plugins.Vpn.VpnOFF();//关闭VPN
+                }
+                else               ////从其他网络切换到非钱管局WIFI
+                {
+                    plugins.Vpn.VpnLogin(WebInspect.app.user.sid,WebInspect.app.user.password,function(success) {
+                        if(success == "true")
+                        {
+                            plugins.Toast.ShowToast("VPN连接成功!",3000);
+                        }
+                    });
+
                 }
 
             });
@@ -352,6 +335,7 @@ Ext.define('WebInspect.controller.MainControl',{
 
                 if(vpn == "true")
                 {
+                    me.qgjwifi = "false";
                     Ext.Viewport.setMasked({xtype:'loadmask',message:'VPN连接中,请稍后...'});
                     plugins.Vpn.VpnLogin(WebInspect.app.user.sid,WebInspect.app.user.password,function(success) {
                         Ext.Viewport.setMasked(false);
@@ -360,9 +344,9 @@ Ext.define('WebInspect.controller.MainControl',{
                             plugins.Toast.ShowToast("VPN连接成功!",3000);
                             me.onUserCheck(num,data);
                         }
-                        else if(success == "false")
+                        else if(success == "paramerror")
                         {
-                            plugins.Toast.ShowToast("VPN连接超时,请重试!",3000);
+                            plugins.Toast.ShowToast("用户名或者密码输入有误!",3000);
                         }
                         else if(success == "initfalse")
                         {
@@ -377,6 +361,7 @@ Ext.define('WebInspect.controller.MainControl',{
                 }
                 else
                 {
+                    me.qgjwifi = "true";//////////钱管局wifi/////////
                     me.onUserCheck(num,data);
                 }
 
@@ -391,13 +376,14 @@ Ext.define('WebInspect.controller.MainControl',{
     onVpnCheckOnline:function(data){
 
         var me = this;
-        Ext.Viewport.setMasked({
-            xtype: 'loadmask',
-            message: '努力加载中...'
-        });
         plugins.Vpn.VpnCheckOnLine(WebInspect.app.user.sid,WebInspect.app.user.password,function(success) {
 
             if(success == 'true'){
+
+                Ext.Viewport.setMasked({
+                    xtype: 'loadmask',
+                    message: '努力加载中...'
+                });
                 me.onMessagePush(data);
             }
             else{
@@ -966,10 +952,10 @@ Ext.define('WebInspect.controller.MainControl',{
             t: 'GetFunctionZt',
             results: WebInspect.app.user.sid + '$jsonp'
         });
-//        store.load();
-        store.load(function(records, operation, success) {
-            store.add({id: 15, sid: WebInspect.app.user.sid, title: '已办事项', name: 'done', url: 'resources/images/function/done.png'});
-        });
+       store.load();
+//        store.load(function(records, operation, success) {
+//            store.add({id: 15, sid: WebInspect.app.user.sid, title: '已办事项', name: 'done', url: 'resources/images/function/done.png'});
+//        });
     },
 
 //    //加载“天气预报”信息，当num=0时，表示是“推送信息”， 当num=1时，表示是：应用程序正常启动

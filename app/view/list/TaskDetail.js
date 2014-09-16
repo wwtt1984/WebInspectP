@@ -76,14 +76,14 @@ Ext.define('WebInspect.view.list.TaskDetail',{
                 items: [
                     {
                         xtype: 'textfield',
-                        name: 'NodeName',
-                        label: '任务',
+                        name: 'CreateAt',
+                        label: '上报时间',
                         readOnly: true
                     },
                     {
                         xtype: 'textfield',
-                        name: 'OwnerAccount',
-                        label: '人员',
+                        name: 'Htmc',
+                        label: '所在塘段',
                         readOnly: true
                     },
 

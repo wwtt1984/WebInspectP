@@ -33,6 +33,7 @@ import android.app.Activity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
+import android.content.Context;
 
 import cn.jpush.android.api.JPushInterface;
 import com.vpn.vpn.VpnPlugin;
