@@ -322,11 +322,7 @@ Ext.define('WebInspect.controller.InspectControl', {
     //定位成功后，上传图片
     onUploadImg:function(position,lat,lng,me){
 
-//        var location = me.getLocation().getValue();
-        var location = me.tdid;
-
-        //增加“状态描述”
-        //var location = me.getStatus().getValue();
+        var tdid = me.tdid;
 
         var miaos = me.getInspect_ms().getValue();
         var type = me.getInspecttype().getValue();
@@ -347,7 +343,7 @@ Ext.define('WebInspect.controller.InspectControl', {
 
         var results = WebInspect.app.user.sid +"$"
             + WebInspect.app.user.name + "$" + lng + "$" + lat + "$" + sdt
-            + "$sz$" + miaos + "$" + location + "$" + WebInspect.app.user.oulevel
+            + "$sz$" + miaos + "$" + tdid + "$" + WebInspect.app.user.oulevel
             + "$" + type + "$" + me.simgid + "$" + me.upimgindex + '$' + WebInspect.app.user.zub;
 
         var ft = new FileTransfer();
@@ -403,7 +399,7 @@ Ext.define('WebInspect.controller.InspectControl', {
 
         var type = me.getInspecttype().getValue();
 
-        var location = me.tdid;
+        var tdid = me.tdid;
         var oulevel = WebInspect.app.user.oulevel;
         var event = 'sz';
         var zub = WebInspect.app.user.zub;
@@ -411,7 +407,7 @@ Ext.define('WebInspect.controller.InspectControl', {
         var store = Ext.getStore('InspectUploadStore');
 
         store.add({sid: sid, name: name, simgid: simgid, latitude: latitude, longitude: longitude,
-            sdt: sdt, miaos: miaos, imgjson: imgjson, imgindex: me.upimgindex, location: location, event: event,
+            sdt: sdt, miaos: miaos, imgjson: imgjson, imgindex: me.upimgindex, tdid: tdid, event: event,
             type: type, oulevel: oulevel, text: me.text, zub: zub});
 
 
@@ -463,7 +459,6 @@ Ext.define('WebInspect.controller.InspectControl', {
                             plugins.Toast.ShowToast("失败记录文件获取失败！",3000);
                         }
                     });
-
 
 
 
@@ -663,7 +658,7 @@ Ext.define('WebInspect.controller.InspectControl', {
         var oulevel = record.data.oulevel;
         var type = record.data.type;
 
-        var location = record.data.location;
+        var tdid = record.data.tdid;
 
         var zub = record.data.zub;
 
@@ -675,7 +670,7 @@ Ext.define('WebInspect.controller.InspectControl', {
         options.mimeType = "image/jpeg";
 
         var results = sid +"$" + name + "$" + lng + "$" + lat + "$" + sdt
-            + "$sz$" + miaos + "$" +  record.data.tdid + "$" + oulevel + "$" + type + "$" + simgid + "$" + imgindex + '$' + zub;
+            + "$sz$" + miaos + "$" +  tdid + "$" + oulevel + "$" + type + "$" + simgid + "$" + imgindex + '$' + zub;
 
         var ft = new FileTransfer();
         me.getApplication().getController('MainControl').onLoadOrUploadViewShow('正在上传中', '正在上传第1张', 0);

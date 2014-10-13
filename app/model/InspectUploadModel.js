@@ -16,7 +16,7 @@ Ext.define('WebInspect.model.InspectUploadModel',{
             'miaos',
             'imgjson',
             'imgindex',
-            'location',
+            'tdid',
 
             'type',
             'event',

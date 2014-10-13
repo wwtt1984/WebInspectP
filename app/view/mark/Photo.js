@@ -43,17 +43,18 @@ Ext.define('WebInspect.view.mark.Photo',{
                     var store = Ext.getStore('PhotoStore');
                     if(store.getCount() <= 5)
                     {
-//                        var camera = Ext.create("Ext.device.Camera");
 
-                        Ext.device.Camera.capture({
-                            success :function(image){me.onPhotoDataSuccess(image)},
-                            failure: function(){me.onFail},
-                            quality: 50,
-                            targetWidth: 900,
-                            targetHeight: 1200,
-                            correctOrientation: true,
-                            destination:  'file'
-                        });
+                        navigator.camera.getPicture(
+                            function(image){me.onPhotoDataSuccess(image)},
+                            function(){me.onFail},
+                            {
+                                quality: 50,
+                                targetWidth: 900,
+                                targetHeight: 1200,
+                                correctOrientation: true,
+                                destinationType: Camera.DestinationType.FILE_URI,
+                                sourceType: Camera.PictureSourceType.CAMERA
+                            });
                     }
                     else
                     {
