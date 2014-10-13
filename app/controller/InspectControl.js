@@ -339,6 +339,7 @@ Ext.define('WebInspect.controller.InspectControl', {
         if(me.upimgindex == 0)
         {
             me.simgid = this.unix_to_datetimestr();
+            me.getApplication().getController('MainControl').onLoadOrUploadViewShow('正在上传中', '正在上传第1张', 0);
         }
 
         var results = WebInspect.app.user.sid +"$"
@@ -347,7 +348,7 @@ Ext.define('WebInspect.controller.InspectControl', {
             + "$" + type + "$" + me.simgid + "$" + me.upimgindex + '$' + WebInspect.app.user.zub;
 
         var ft = new FileTransfer();
-        me.getApplication().getController('MainControl').onLoadOrUploadViewShow('正在上传中', '正在上传第1张', 0);
+//        me.getApplication().getController('MainControl').onLoadOrUploadViewShow('正在上传中', '正在上传第1张', 0);
         ft.onprogress = function(progressEvent) {
             if (progressEvent.lengthComputable) {
                 var percent = Number((progressEvent.loaded / progressEvent.total) * 100).toFixed(0);
