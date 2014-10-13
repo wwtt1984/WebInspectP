@@ -56,21 +56,15 @@ Ext.define('WebInspect.controller.ContactControl', {
 
     onContactInitialize: function(){
         var me = this;
-
         var contactstore = Ext.getStore('ContactTreeStore');
+        Ext.Viewport.setMasked({xtype: 'loadmask',message: '努力加载中...'});
+
         if(!contactstore.getAllCount()){
             contactstore.getProxy().setExtraParams({
                 t: 'GetZpPerson',
                 results: 'jsonp'
             });
-
-            Ext.Viewport.setMasked({xtype: 'loadmask',message: '列表加载中...'});
-
             contactstore.setRoot({expanded: true});
-//            contactstore.load(function(records, operation, success){
-//                Ext.Viewport.setMasked(false);
-//            });
-            contactstore.load();
         }
 
         me.contactlist = me.getContactlist();
@@ -98,12 +92,14 @@ Ext.define('WebInspect.controller.ContactControl', {
                     plugins.Toast.ShowToast("网络不给力，无法读取数据!",3000);
                 }
 
-                Ext.Viewport.setMasked(false);
+
             });
         }
         else{
             me.getContactsearch().show();
         }
+
+        Ext.Viewport.setMasked(false);
     },
 
     //点击通讯录中“人员”
@@ -132,24 +128,17 @@ Ext.define('WebInspect.controller.ContactControl', {
 
     onFullNumTap: function(){
         var num = Ext.ComponentQuery.query('#fullnum')[0].getText();
-
-        plugins.Phone.Call(num, function(obj) {
-//            alert(obj.number);
-        },function(error){
-//            alert(error);
-        });
+        plugins.Phone.Call(num, function(obj) {},function(error){});
     },
 
     onShortNumTap: function(){
         var num = Ext.ComponentQuery.query('#shortnum')[0].getText();
-
         plugins.Phone.Call(num, function(obj) {},function(error){});
     },
 
     onOfficeNumTap: function(){
 
         var num = Ext.ComponentQuery.query('#officenum')[0].getText();
-
         plugins.Phone.Call(num, function(obj) {},function(error){});
     },
 

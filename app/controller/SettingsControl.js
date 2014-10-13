@@ -27,7 +27,9 @@ Ext.define('WebInspect.controller.SettingsControl', {
             sysquit: '[itemId=sysquit]',
             moduleconfirm: '[itemId=moduleconfirm]',
             pushconfirm: '[itemId=pushconfirm]',
-            changeuser: '[itemId=changeuser]'
+            changeuser: '[itemId=changeuser]',
+
+            modulefield: '[itemId=modulefield]'
         },
 
         control: {
@@ -69,7 +71,7 @@ Ext.define('WebInspect.controller.SettingsControl', {
     onSettingListTap: function(list, index, target, record, e, eOpts ){
 
         var me = this;
-        var titlestr = ['pushsetting', 'module', 'version', 'update'];
+        var titlestr = ['pushsetting', 'module', 'version', 'update','qrcode'];
 
         switch(record.data.name){
             case titlestr[0]:
@@ -83,6 +85,9 @@ Ext.define('WebInspect.controller.SettingsControl', {
                 break;
             case titlestr[3]:
                 me.onUpdateSet();
+                break;
+            case titlestr[4]:
+                me.onQrCodeSet();
                 break;
         }
     },
@@ -112,8 +117,37 @@ Ext.define('WebInspect.controller.SettingsControl', {
             me.module = Ext.create('WebInspect.view.settings.Module');
         }
         me.getInfofunction().hide();
+        me.getModulefield().setItems(me.getApplication().getController('MainControl').moduledata);
         me.module.onDataSet();
         me.getInfo().push(me.module);
+    },
+
+    onQrCodeSet: function(){
+        var me = this;
+        plugins.barcodeScanner.scan(function(result){me.getQrSuccess(result,me);}, me.getQrFail);
+    },
+
+    getQrSuccess:function(result,me)
+    {
+
+        var name = this.getQrLastName(result.text);
+
+        alert(name);
+        if(name == ".apk" || name =='.APK')
+        {
+             me.getApplication().getController('MainControl').downLoad('qgjapp.apk', result.text, WebInspect.app.mainthis);
+        }
+    },
+
+    getQrLastName:function(name)
+    {
+        var result =/\.[^\.]+/.exec(name);
+        return result;
+    },
+
+    getQrFail:function()
+    {
+        plugins.Toast.ShowToast("扫码失败，请重试！",2000);
     },
 
     onModuleConfirmTap: function(){

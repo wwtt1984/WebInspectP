@@ -26,9 +26,23 @@ Ext.define('WebInspect.view.list.TaskDetail',{
                 xtype: 'panel',
                 style: 'padding: 10px 10px 0 10px;',
                 itemId: 'taskImage',
+                cls: 'local-form',
                 tpl: Ext.create('Ext.XTemplate',
                     '<div style="min-height:1em;width:100%;font-size:18px;font-weight:bold; line-height:1.6em;text-justify:newspaper;margin-bottm:0.3em;">{NodeName}</div>',
                     '{[this.getImg(values)]}',
+                    '<div class="x-form-fieldset-title">事件详情</div>',
+                    '<div class="detail">',
+                    '<tpl for="detail">',
+                        '<div class="local-form-text">',
+                        '<div class="label">',
+                            '<span>{text}</span>',
+                        '</div>',
+                        '<div class="value">',
+                            '<span>{value}</sapn>',
+                        '</div>',
+                        '</div>',
+                    '</tpl>',
+                    '</div>',
                     {
                         getImg: function(values){
 
@@ -67,37 +81,30 @@ Ext.define('WebInspect.view.list.TaskDetail',{
             },
             {
                 xtype: 'fieldset',
-                title: '事件详细信息',
-                itemId:'taskmain',
+                title: '处理方式（请选择）',
+                itemId: 'dispose_panel',
                 defaults: {
+                    required: true,
                     labelAlign: 'left',
                     labelWidth: '40%'
                 },
                 items: [
                     {
-                        xtype: 'textfield',
-                        name: 'CreateAt',
-                        label: '上报时间',
-                        readOnly: true
-                    },
-                    {
-                        xtype: 'textfield',
-                        name: 'Htmc',
-                        label: '所在塘段',
-                        readOnly: true
-                    },
-
-                    {
-                        xtype: 'textfield',
-                        name: 'ReceiveAt',
-                        label: '接收时间',
-                        readOnly: true
+                        xtype: 'selectfield',
+                        label: '处理方式',
+                        name: 'dispose',
+                        itemId: 'dispose',
+                        defaultPhonePickerConfig: {
+                            doneButton: '确定',
+                            cancelButton: '取消'
+                        }
                     }
                 ]
             },
             {
                 xtype: 'fieldset',
                 title: '批复意见（请选择）',
+                itemId: 'opinion_panel',
                 defaults: {
                     required: true,
                     labelAlign: 'left',
@@ -114,27 +121,6 @@ Ext.define('WebInspect.view.list.TaskDetail',{
                             cancelButton: '取消'
                         },
                         options: [
-                            {
-                                text: '复核',  value: '复核'
-                            },
-                            {
-                                text: '上报领导',  value: '上报领导'
-                            },
-                            {
-                                text: '即时',  value: '即时'
-                            },
-                            {
-                                text: '海塘工况',  value: '海塘工况'
-                            },
-                            {
-                                text: '养护',  value: '养护'
-                            },
-                            {
-                                text: '项目监管',  value: '项目监管'
-                            },
-                            {
-                                text: '关闭流程',  value: '关闭流程'
-                            }
                         ]
                     }
                 ]
@@ -151,19 +137,14 @@ Ext.define('WebInspect.view.list.TaskDetail',{
                     {
                         xtype: 'selectfield',
                         label: '转发给',
-                        name: 'zhuanfaren',
-                        itemId: 'zhuanfaren',
+                        name: 'forward',
+                        itemId: 'forward',
                         defaultPhonePickerConfig: {
                             doneButton: '确定',
                             cancelButton: '取消'
                         },
                         options: [
-                            {
-                                text: '陶金平',  value: 'tjp'
-                            },
-                            {
-                                text: '徐建龙',  value: 'xujl'
-                            }
+
                         ]
                     }
                 ]
@@ -171,7 +152,7 @@ Ext.define('WebInspect.view.list.TaskDetail',{
             {
                 xtype: 'fieldset',
                 style: 'border-radius: .4em;background-color: #fff;',
-                itemId: 'opinion_panel',
+                itemId: 'opinionms_panel',
 //                hidden: true,
                 items: [
                     {
@@ -211,10 +192,12 @@ Ext.define('WebInspect.view.list.TaskDetail',{
 
         var me = this;
 
+        var store = Ext.getStore('TaskDetailStore');
+        var dispose = store.getAt(0).data.disposes;
+        var reply = store.getAt(0).data.replys;
         var img = record.data.Simgurl;
 
         Ext.ComponentQuery.query('#taskImage')[0].setData({simg: img, NodeName: record.data.NodeName});
-
-        me.setRecord(record);
+        Ext.ComponentQuery.query('#opinion')[0].setOptions(reply);
     }
 })

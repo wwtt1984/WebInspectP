@@ -93,7 +93,7 @@ Ext.define('WebInspect.controller.InspectControl', {
         me.simgid = '';
 
         me.closeApp = false;///////关闭APP为false ， 用来防止 定位没定到 就关闭程序了。
-        me.gpsreset = 30; ///////////////////////如果20次都没定位成功,则不重新定位了
+        me.gpsreset = 2; ///////////////////////如果2次都没定位成功,则不重新定位了
         me.nowgpscount = 0; /////////////////////当前重启GPS次数
         me.onOpenGPS(me);
     },
@@ -365,7 +365,7 @@ Ext.define('WebInspect.controller.InspectControl', {
             }
         };
 
-        ft.upload(imageURI, encodeURI("http://bpm.qgj.cn/test/Data.ashx?t=IntPhotoImg&results=" + results),
+        ft.upload(imageURI, encodeURI(WebInspect.app.user.serurl+"?t=IntPhotoImg&results=" + results),
             function(r){me.onMenuPhotoSucMsg(position,r,me);},
             function(r){me.onMenuPhotoFailMsg(position,r,me);},
             options);
@@ -374,26 +374,8 @@ Ext.define('WebInspect.controller.InspectControl', {
 
     //生成simgid
     unix_to_datetimestr:function(){
-
-        var date = new Date();
-        var sdate = '';
-
-        var month = date.getMonth()+1;
-        if(month < 10) month='0'+ parseInt(date.getMonth()+1).toString();
-
-        var day = date.getDate();
-        if(day < 10) day='0'+ parseInt(date.getDate()).toString();
-
-        sdate += date.getFullYear().toString()
-            +  month.toString() //月份
-            +  day.toString() //日
-            +  date.getHours().toString() //小时
-            +  date.getMinutes().toString() //分
-            +  date.getSeconds().toString() //秒
-            +  date.getMilliseconds().toString(); //毫秒
-
+        var sdate = Ext.Date.format(new Date(), 'YmdHmsz').toString();
         return sdate;
-
     },
 
     //点击“上传”按钮，上传失败后，将事件加入UploadStore中，同时存入本地文件fail.json中
@@ -665,9 +647,7 @@ Ext.define('WebInspect.controller.InspectControl', {
     onRecordUpLoadImg: function(record){
 
         var me = this;
-
         var imgjson = record.data.imgjson.split(',');
-
         var imgcount = imgjson.length;
 
         var lat = record.data.latitude;
@@ -695,7 +675,7 @@ Ext.define('WebInspect.controller.InspectControl', {
         options.mimeType = "image/jpeg";
 
         var results = sid +"$" + name + "$" + lng + "$" + lat + "$" + sdt
-            + "$sz$" + miaos + "$" + 't044' + "$" + oulevel + "$" + type + "$" + simgid + "$" + imgindex + '$' + zub;
+            + "$sz$" + miaos + "$" +  record.data.tdid + "$" + oulevel + "$" + type + "$" + simgid + "$" + imgindex + '$' + zub;
 
         var ft = new FileTransfer();
         me.getApplication().getController('MainControl').onLoadOrUploadViewShow('正在上传中', '正在上传第1张', 0);
@@ -709,7 +689,7 @@ Ext.define('WebInspect.controller.InspectControl', {
             }
         };
 
-        ft.upload(imageURI, encodeURI("http://bpm.qgj.cn/test/Data.ashx?t=IntPhotoImg&results=" + results),
+        ft.upload(imageURI, encodeURI(WebInspect.app.user.serurl + "?t=IntPhotoImg&results=" + results),
             function(r){
                 record.data.imgindex++;
                 me.onRecordUpload(record, 1);
@@ -816,10 +796,10 @@ Ext.define('WebInspect.controller.InspectControl', {
     },
 
     onGpsError:function(error,me){
-        plugins.Toast.ShowToast("GPS连接不上,请检查GPS是否开启或者到室外定位!",3000);
 
         if(!me.closeApp)//////////////////////////程序不关闭的受才可以。
         {
+            plugins.Toast.ShowToast("GPS连接不上,请检查GPS是否开启或者到室外定位!",3000);
             ///////////////////////如果30次都没定位成功,则不重新定位了
             if(me.nowgpscount < me.gpsreset)
             {
@@ -834,7 +814,15 @@ Ext.define('WebInspect.controller.InspectControl', {
             {
                 plugins.Toast.ShowToast("GPS连接失败,如需再次定位请点击GPS图标手动开启!",3000);
             }
+
         }
 
+    },
+
+    onGpsOFF:function()
+    {
+        alert("333");
+        this.closeApp = true;
+        alert(this.closeApp);
     }
 })

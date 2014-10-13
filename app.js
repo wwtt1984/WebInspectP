@@ -24,14 +24,13 @@ Ext.application({
     name: 'WebInspect',
     mainthis: '',
     user: {sid:'', name: '', password: '', mobile: '15999999999', oulevel:'', tel:'', sms:'', mail:'11111',
-        sexy:'', ITEM_Id: '', DeptId: '', rtxsession: '',version:'1.0.0.90', taskcount: 0, rtxcount: 0, zub: ''},
+            sexy:'', ITEM_Id: '', DeptId: '', rtxsession: '',version:'1.0.0.95', taskcount: 0, rtxcount: 0, zub: '',
+            serurl:'http://10.33.13.118/WebSerAn/Data.ashx'
+       },
 
     imginfo:{imgjson:[],imgindex:0,imgpos:'',simgid:''},//图片值 图片id，位置
-
     local: {loginfile: 'qinspectlogin.json', failfile: 'qinspectfail.json', markfail: 'qmarkfail.json'},
-
     gpstime:30000,//30秒
-
     requires: [
         'Ext.device.FileSystem',
         'Ext.MessageBox',
@@ -123,8 +122,11 @@ Ext.application({
 //        'WeatherModel',
         'PushModel',
         'FunctionModel',
+        'FunctionAllModel',
 
         'TaskModel',
+        'TaskValueModel',
+        'TaskDetailModel',
         'MessageModel',
 
         'NewsModel',
@@ -172,8 +174,10 @@ Ext.application({
 //        'WeatherStore',
         'PushStore',
         'FunctionStore',
+        'FunctionAllStore',
 
         'TaskStore',
+        'TaskDetailStore',
         'MessageStore',
 
         'NewsStore',

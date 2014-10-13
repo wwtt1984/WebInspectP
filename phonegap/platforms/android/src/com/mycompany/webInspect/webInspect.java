@@ -20,20 +20,22 @@
 package com.mycompany.webInspect;
 import android.os.Bundle;
 import org.apache.cordova.*;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.InetAddress;
-import java.net.UnknownHostException;
-import com.sangfor.vpn.IVpnDelegate;
-import com.sangfor.vpn.SFException;
-import com.sangfor.vpn.auth.SangforNbAuth;
-import com.sangfor.vpn.common.VpnCommon;
 import android.app.Activity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 import android.content.Context;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
+import com.sangfor.ssl.IVpnDelegate;
+import com.sangfor.ssl.SFException;
+import com.sangfor.ssl.SangforAuth;
+import com.sangfor.ssl.common.VpnCommon;
+import com.sangfor.ssl.easyapp.SangforNbAuth;
 
 import cn.jpush.android.api.JPushInterface;
 import com.vpn.vpn.VpnPlugin;
@@ -53,12 +55,6 @@ public class webInspect extends CordovaActivity  implements IVpnDelegate
     }
 
     @Override
-    public void onDestroy() {
-        SangforNbAuth.getInstance().vpnQuit();
-        super.onDestroy();
-    }
-
-    @Override
     protected void onResume() {
         super.onResume();
         JPushInterface.onResume(this);
@@ -70,36 +66,39 @@ public class webInspect extends CordovaActivity  implements IVpnDelegate
         JPushInterface.onPause(this);
     }
 
-    public void vpnRndCodeCallback(byte[] data) {
-        Log.d(TAG, "RndCode callback, the data is bitmap of rndCode.");
-    }
-
+    @Override
     public void vpnCallback(int vpnResult, int authType) {
 
         VpnPlugin vpnpl = new VpnPlugin();
         SangforNbAuth sfAuth = SangforNbAuth.getInstance();
         switch (vpnResult) {
         case IVpnDelegate.RESULT_VPN_INIT_FAIL:
-            vpnpl.VpnLogin("initfalse");
-            sfAuth.vpnQuit();
             break;
         case IVpnDelegate.RESULT_VPN_INIT_SUCCESS:
             break;
         case IVpnDelegate.RESULT_VPN_AUTH_FAIL:
-            vpnpl.VpnLogin("paramerror");
             break;
         case IVpnDelegate.RESULT_VPN_AUTH_SUCCESS:
             if (authType == IVpnDelegate.AUTH_TYPE_NONE) {
                 vpnpl.VpnLogin("true");
             }
+            else
+            {
+                vpnpl.doVpnLogin(authType);
+            }
             break;
         case IVpnDelegate.RESULT_VPN_AUTH_LOGOUT:
-            vpnpl.VpnLogin("logout");
             break;
         default:
-            vpnpl.VpnLogin("error");
             break;
         }
     }
+
+    @Override
+    public void vpnRndCodeCallback(byte[] data) {}
+
+    @Override
+	public void reloginCallback(int status, int result) {}
+
 }
 

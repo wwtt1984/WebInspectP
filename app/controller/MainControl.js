@@ -64,19 +64,18 @@ Ext.define('WebInspect.controller.MainControl',{
     },
     onOnlineListen:function() ///////////////////有网络在线的时候监听
     {
+        if(WebInspect.app.user.sid == "") return;
         //////////////监测网络状态
         plugins.Toast.ShowToast("网络自检中...",3000);
         var me = WebInspect.app.mainthis;
         if(me.onNetWorkIsON("val") != "WiFi")
         {
-            me.qgjwifi = "false";
             plugins.Vpn.VpnLogin(WebInspect.app.user.sid,WebInspect.app.user.password,function(success) {
                 if(success == "true")
                 {
                     plugins.Toast.ShowToast("VPN连接成功!",3000);
                 }
             });
-
         }
         else if(me.onNetWorkIsON("val") == "WiFi")
         {
@@ -93,7 +92,6 @@ Ext.define('WebInspect.controller.MainControl',{
                     if(success == gate[i])
                     {
                         vpn = "false";
-                        me.qgjwifi = "true";
                         break;
                     }
                 }
@@ -335,7 +333,6 @@ Ext.define('WebInspect.controller.MainControl',{
 
                 if(vpn == "true")
                 {
-                    me.qgjwifi = "false";
                     Ext.Viewport.setMasked({xtype:'loadmask',message:'VPN连接中,请稍后...'});
                     plugins.Vpn.VpnLogin(WebInspect.app.user.sid,WebInspect.app.user.password,function(success) {
                         Ext.Viewport.setMasked(false);
@@ -356,12 +353,15 @@ Ext.define('WebInspect.controller.MainControl',{
                         {
                             plugins.Toast.ShowToast("用户名或者密码输入有误!",3000);
                         }
+                        else if(success == "false")
+                        {
+                            plugins.Toast.ShowToast("VPN连接失败!",3000);
+                        }
                     });
 
                 }
                 else
                 {
-                    me.qgjwifi = "true";//////////钱管局wifi/////////
                     me.onUserCheck(num,data);
                 }
 
@@ -410,10 +410,6 @@ Ext.define('WebInspect.controller.MainControl',{
                     Ext.Msg.confirm("当前版本 " + WebInspect.app.user.version,
                         "新版本("+records[0].data.strThisVersion+")，是否下载更新？",function(btn){
                         if(btn == 'yes'){
-
-//                            me.onLoadOrUploadViewShow();
-                            me.onLoadOrUploadViewShow('更新下载中', '正在下载中');
-
                             me.downLoad(records[0].data.strFileName,records[0].data.strGetFileVersionFileURL,me);
                         }
                     });
@@ -511,24 +507,24 @@ Ext.define('WebInspect.controller.MainControl',{
     {
         //plugins.Toast.ShowToast(error,3000);
         if(error.code == 1) //////////表示文件不存在
-
         {
+            plugins.Toast.ShowToast("配置文件读取失败，请重新输入!",3000);
             //////////////////不管它///////////////////////////
         }
-
     },
 
     ////////////////////////////////////////////////////////////////////////////////////////
 
     downLoad:function(name,url,me)
     {
+        me.onLoadOrUploadViewShow('更新下载中', '正在下载中');
         var uri = encodeURI(url);
         var fileTransfer = new FileTransfer();
 
         fileTransfer.onprogress = function(progressEvent) {
             if (progressEvent.lengthComputable) {
                 var percent = Number((progressEvent.loaded / progressEvent.total) * 100).toFixed(0);
-                me.getLoad().onDataSet(percent);
+                me.getLoad().onDataSet('更新下载中','正在下载中',percent);
             } else {
                 plugins.Toast.ShowToast("error",1000);
                 me.getLoad().hide();
@@ -539,7 +535,7 @@ Ext.define('WebInspect.controller.MainControl',{
             uri,
             "cdvfile://localhost/persistent/Download/" + name,
             function(entry) {
-                plugins.Toast.ShowToast("下载完成"+entry.fullPath,3000);
+                plugins.Toast.ShowToast("下载完成",3000);
                 me.getLoad().hide();
                 plugins.Install.InstallApk("mnt/sdcard"+entry.fullPath);
             },
@@ -595,16 +591,14 @@ Ext.define('WebInspect.controller.MainControl',{
         }
     },
 
-    onBackDo: function(){
-
-    },
-
     //当前页面是其他的页面时，返回上一级页面
     onBackKeyTap: function(){
+
         var me  = WebInspect.app.mainthis;
         var screen = me.getMain();
         var info = screen.getActiveItem();
         var active = info.getActiveItem();
+        Ext.Viewport.setMasked(false);/////防止有些数据读不到取消不了。
 
         switch(active.xtype){
 
@@ -685,6 +679,7 @@ Ext.define('WebInspect.controller.MainControl',{
             ////////////////巡查上报//////////////
             case 'inspectmain':
 //                me.onInfoFunctionBackTap();
+//                me.getApplication().getController('InspectControl').onGpsOFF();
                 if((me.getInfo().view) && (me.getInfo().view.getHidden() == false)){
                     me.getInfo().onViewHide();
                 }
@@ -892,22 +887,25 @@ Ext.define('WebInspect.controller.MainControl',{
             });
 
             store.load(function(records, operation, success) {
+
                 if(records.length == 0){
                     Ext.Viewport.setMasked(false);
-                    plugins.Toast.ShowToast("验证失败！请重新输入！",3000);
+                    plugins.Toast.ShowToast("读取数据失败,请重新登录！",3000);
                 }
                 else{
-                    WebInspect.app.user.name = records[0].data.name;
-                    WebInspect.app.user.mobile = records[0].data.mobile;
-                    WebInspect.app.user.oulevel = records[0].data.oulevel;
-                    WebInspect.app.user.taskcount = records[0].data.taskcount;
-                    WebInspect.app.user.rtxcount = records[0].data.rtxcount;
-                    WebInspect.app.user.zub = records[0].data.zub;
 
-                    Ext.getCmp('maintitle').onDataSet(records[0].data, WebInspect.app.user.name, WebInspect.app.user.mobile, WebInspect.app.user.oulevel);
+                    var backdata =  records[0].data;
+                    WebInspect.app.user.name = backdata.name;
+                    WebInspect.app.user.mobile = backdata.mobile;
+                    WebInspect.app.user.oulevel = backdata.oulevel;
+                    WebInspect.app.user.taskcount = backdata.taskcount;
+                    WebInspect.app.user.rtxcount = backdata.rtxcount;
+                    WebInspect.app.user.zub = backdata.zub;
+
+                    Ext.getCmp('maintitle').onDataSet(backdata, WebInspect.app.user.name, WebInspect.app.user.mobile, WebInspect.app.user.oulevel);
+                    me.onFunctionAllSet(backdata.functionmodule);
 
                     me.onFunctionLoad(); //加载模块页面
-//                    me.onWeatherStoreLoad();  //加载“天气预报”信息
                     me.onPushStoreSet(); //加载“待办事项”和“离线消息”数量
 
                     me.getApplication().getController('SalaryControl').onAllStoreLoad();
@@ -953,25 +951,23 @@ Ext.define('WebInspect.controller.MainControl',{
             results: WebInspect.app.user.sid + '$jsonp'
         });
        store.load();
-//        store.load(function(records, operation, success) {
-//            store.add({id: 15, sid: WebInspect.app.user.sid, title: '已办事项', name: 'done', url: 'resources/images/function/done.png'});
-//        });
     },
 
-//    //加载“天气预报”信息，当num=0时，表示是“推送信息”， 当num=1时，表示是：应用程序正常启动
-//    onWeatherStoreLoad: function(){
-//        var me = this;
-//        var store = Ext.getStore('WeatherStore');
-//        store.removeAll();
-//        store.getProxy().setExtraParams({
-//            t: 'GetWeather',
-//            results: 'jsonp'
-//        });
-//        store.load(function(records, operation, success) {
-//
-//            Ext.getCmp('maintitle').onDataSet(store.getAt(0), WebInspect.app.user.name, WebInspect.app.user.mobile);
-//        });
-//    },
+    onFunctionAllSet: function(record){
+
+        var me = this;
+
+        me.moduledata = [];
+
+        var str = record.split('$');
+
+        var string = [];
+
+        for(var i=0; i<str.length; i++){
+            string = str[i].split(',');
+            me.moduledata.push({xtype: 'checkboxfield',name: string[1], label: string[0]});
+        }
+    },
 
     //“主功能”页面的事件，判断进入选择的模块
     onFunctionListTap: function(list, index, target, record, e, eOpts ){

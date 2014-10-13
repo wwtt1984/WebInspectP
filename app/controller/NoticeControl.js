@@ -21,13 +21,18 @@ Ext.define('WebInspect.controller.NoticeControl', {
             messageDataView: 'dataview[itemId=messageDataView]',
             maininfo: 'info maininfo',
 
-            opinion: '[itemId=opinion]',
             opinionpanel: '[itemId=opinion_panel]',
+            opinion: '[itemId=opinion]',
+
+            opinionmspanel: '[itemId=opinionms_panel]',
             opinionms: '[itemId=opinion_ms]',
+
             taskconfirm: '[itemId=taskconfirm]',
             taskmain: '[itemId=taskmain]',
 
-            zhuanfaren: '[itemId=zhuanfaren]'
+            forward: '[itemId=forward]',
+            disposepanel: '[itemId=dispose_panel]',
+            dispose: '[itemId=dispose]'
         },
 
         control: {
@@ -113,14 +118,46 @@ Ext.define('WebInspect.controller.NoticeControl', {
 
     onTaskItemTap: function(list, index, target, record, e, eOpts ){
 
-        this.taskdetail = this.getTaskdetail();
-        if(!this.taskdetail){
-            this.taskdetail = Ext.create('WebInspect.view.list.TaskDetail');
-        }
-        this.taskdetail.onDataSet(record);
+        var me = this;
 
-        this.getInfo().push(this.taskdetail);
-        this.getInfofunction().hide();
+        me.taskdetail = me.getTaskdetail();
+        if(!me.taskdetail){
+            me.taskdetail = Ext.create('WebInspect.view.list.TaskDetail');
+        }
+        me.onTaskDataSet(record);
+
+        me.getInfo().push(me.taskdetail);
+        me.getInfofunction().hide();
+
+    },
+
+    onTaskDataSet: function(record){
+
+        var me = this;
+
+        var store = Ext.getStore('TaskDetailStore');
+
+        var img = store.getAt(0).data.imgjson;
+        var detail = store.getAt(0).data.taskdetails;
+        var dispose = store.getAt(0).data.disposes;
+        var reply = store.getAt(0).data.replys;
+        var forward  = store.getAt(0).data.forwards;
+
+        Ext.ComponentQuery.query('#taskImage')[0].setData({simg: img, NodeName: record.data.NodeName, detail: detail});
+        me.getForward().setOptions(forward);
+
+        if(dispose.length){
+            me.getOpinionpanel().hide();
+            me.getDisposepanel().show();
+            me.getDispose().setOptions(dispose);
+            me.type = dispose;
+        }
+        else{
+            me.getOpinionpanel().show();
+            me.getDisposepanel().hide();
+            me.type = reply;
+            me.getOpinion().setOptions(reply);
+        }
 
     },
 
@@ -176,14 +213,14 @@ Ext.define('WebInspect.controller.NoticeControl', {
 
         switch(newValue){
             case 'agree':
-                me.getOpinionpanel().hide();
+                me.getOpinionmspanel().hide();
                 break;
             case 'ignore':
-                me.getOpinionpanel().show();
+                me.getOpinionmspanel().show();
                 me.getOpinionms().setValue('');
                 break;
             case 'report':
-                me.getOpinionpanel().show();
+                me.getOpinionmspanel().show();
                 me.getOpinionms().setValue('');
                 break;
         }
@@ -207,8 +244,8 @@ Ext.define('WebInspect.controller.NoticeControl', {
         var password = WebInspect.app.user.password;
         var name = WebInspect.app.user.name;
 
-        var zhuanfa = me.getZhuanfaren().getValue();
-        var zhuanfaren = me.getZhuanfaren()._value.data.text;
+        var zhuanfa = me.getForward().getValue();
+        var forward = me.getForward()._value.data.text;
 
         var xcfx = '巡查发现';
         var miaos = me.getOpinionms().getValue();
@@ -217,7 +254,7 @@ Ext.define('WebInspect.controller.NoticeControl', {
 
         var results = stepId + '$' + sid + '$' + password + '$' + yij
                       + '$' + shij + '$' + htmc + '$' + name + '$' + name + '$' + xctd + '$' + xcfx + '$' + miaos  + '$' + yid + '$' + zhuanfa
-                      + '$' + tdid + '$' + zhuanfaren + '$' + date
+                      + '$' + tdid + '$' + forward + '$' + date
 
         Ext.data.proxy.SkJsonp.validate('SetTasks',results,{
             success: function(response) {

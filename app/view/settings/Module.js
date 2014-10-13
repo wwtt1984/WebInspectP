@@ -26,60 +26,7 @@ Ext.define('WebInspect.view.settings.Module', {
                     labelWidth: '40%'
                 },
 
-                items:[
-                    {
-                        xtype: 'checkboxfield',
-                        name: 'news',
-                        label: '内网新闻'
-                    },
-                    {
-                        xtype: 'checkboxfield',
-                        name: 'info',
-                        label: '综合信息'
-                    },
-                    {
-                        xtype: 'checkboxfield',
-                        name: 'notice',
-                        label: '通知公告'
-                    },
-                    {
-                        xtype: 'checkboxfield',
-                        name: 'contacts',
-                        label: '通讯录'
-                    },
-
-                    {
-                        xtype: 'checkboxfield',
-                        name: 'tide',
-                        label: '潮位信息'
-                    },
-                    {
-                        xtype: 'checkboxfield',
-                        name: 'water',
-                        label: '水情信息'
-                    },
-                    {
-                        xtype: 'checkboxfield',
-                        name: 'rain',
-                        label: '雨量信息'
-                    },
-                    {
-                        xtype: 'checkboxfield',
-                        name: 'flow',
-                        label: '流量信息'
-                    },
-                    {
-                        xtype: 'checkboxfield',
-                        name: 'inspect',
-                        label: '海塘巡查'
-                    },
-
-                    {
-                        xtype: 'checkboxfield',
-                        name: 'project',
-                        label: '工情信息'
-                    }
-                ]
+                itemId: 'modulefield'
             },
             {
                 xtype: 'panel',
@@ -134,7 +81,7 @@ Ext.define('WebInspect.view.settings.Module', {
         var field = me.getItems().items[0];
         var results = '';
 
-        for(var i=0; i<field.getItems().getCount()-1; i++){
+        for(var i=1; i<field.getItems().getCount(); i++){
 
             if(field.getItems().items[i].getChecked()){
 
