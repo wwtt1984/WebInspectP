@@ -137,28 +137,41 @@ Ext.define('WebInspect.controller.NoticeControl', {
 
         var store = Ext.getStore('TaskDetailStore');
 
-        var img = store.getAt(0).data.imgjson;
-        var detail = store.getAt(0).data.taskdetails;
-        var dispose = store.getAt(0).data.disposes;
-        var reply = store.getAt(0).data.replys;
-        var forward  = store.getAt(0).data.forwards;
+        store.removeAll();
+        store.getProxy().setExtraParams({
+            t: 'ManageTasks',
+            results: record.data.StepID + '$' + record.data.TaskID + '$' + record.data.ProcessName + '$' + record.data.NodeName  + '$jsonp'
+        });
 
-        Ext.ComponentQuery.query('#taskImage')[0].setData({simg: img, NodeName: record.data.NodeName, detail: detail});
-        me.getForward().setOptions(forward);
+        store.load(function(records, operation, success){
+            if(!success)
+            {
+                plugins.Toast.ShowToast("网络不给力，无法读取数据!",3000);
+            }
+            else{
+                var img = store.getAt(0).data.imgjson;
+                var detail = store.getAt(0).data.taskdetails;
+                var dispose = store.getAt(0).data.disposes;
+                var reply = store.getAt(0).data.replys;
+                var forward  = store.getAt(0).data.forwards;
 
-        if(dispose.length){
-            me.getOpinionpanel().hide();
-            me.getDisposepanel().show();
-            me.getDispose().setOptions(dispose);
-            me.type = dispose;
-        }
-        else{
-            me.getOpinionpanel().show();
-            me.getDisposepanel().hide();
-            me.type = reply;
-            me.getOpinion().setOptions(reply);
-        }
+                Ext.ComponentQuery.query('#taskImage')[0].setData({simg: img, NodeName: record.data.NodeName, detail: detail});
+                me.getForward().setOptions(forward);
 
+                if(dispose.length){
+                    me.getOpinionpanel().hide();
+                    me.getDisposepanel().show();
+                    me.getDispose().setOptions(dispose);
+                    me.type = dispose;
+                }
+                else{
+                    me.getOpinionpanel().show();
+                    me.getDisposepanel().hide();
+                    me.type = reply;
+                    me.getOpinion().setOptions(reply);
+                }
+            }
+        }, this);
     },
 
     onMessageLoad: function(){
