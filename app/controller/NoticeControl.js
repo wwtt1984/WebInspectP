@@ -149,6 +149,7 @@ Ext.define('WebInspect.controller.NoticeControl', {
                 plugins.Toast.ShowToast("网络不给力，无法读取数据!",3000);
             }
             else{
+
                 var img = store.getAt(0).data.imgjson;
                 var detail = store.getAt(0).data.taskdetails;
                 var dispose = store.getAt(0).data.disposes;
@@ -242,34 +243,30 @@ Ext.define('WebInspect.controller.NoticeControl', {
     onTaskConfirmTap:function()
     {
         var me = this;
-        var record =  me.getTaskdetail().getRecord();
-        var yij= me.getOpinion().getValue();
-        var shij = record.data.ReceiveAt;
-        var reny = record.data.OwnerAccount;
-        var renw = record.data.NodeName;
-        var htmc = record.data.Htmc;
-        var xctd = record.data.Xctd;
-        var yid = record.data.Yid;
-        var tdid = record.data.Tdid;
 
-        var stepId =me.getTaskdetail().getRecord().data.StepID;
+        var fzr_zf = me.getForward().getValue(); //转发编号
+        var fzr_name = me.getForward()._value.data.text;//转发人
+
         var sid = WebInspect.app.user.sid;
         var password = WebInspect.app.user.password;
         var name = WebInspect.app.user.name;
 
-        var zhuanfa = me.getForward().getValue();
-        var forward = me.getForward()._value.data.text;
+        debugger;
 
-        var xcfx = '巡查发现';
+        var record = Ext.getStore('TaskStore').getAt(0);
+        var processname = record.get('NodeName');
+        var taskid = record.get('TaskID');
+        var stepid = record.get('StepID');
+        var bcl = me.getDispose().getValue();
         var miaos = me.getOpinionms().getValue();
-
         var date = Ext.Date.format(new Date(), 'Y-m-d H:m:s').toString();
 
-        var results = stepId + '$' + sid + '$' + password + '$' + yij
-                      + '$' + shij + '$' + htmc + '$' + name + '$' + name + '$' + xctd + '$' + xcfx + '$' + miaos  + '$' + yid + '$' + zhuanfa
-                      + '$' + tdid + '$' + forward + '$' + date
+        var results = stepid + '$' + sid + '$' + password + '$' + processname
+                      + '$' + taskid + '$' + fzr_zf + '$' + fzr_name + '$' + bcl + '$';
 
-        Ext.data.proxy.SkJsonp.validate('SetTasks',results,{
+
+
+        Ext.data.proxy.SkJsonp.validate('SetManageTasks',results,{
             success: function(response) {
                 me.onTaskStoreRefresh();
                 plugins.Toast.ShowToast("操作成功！",3000);

@@ -54,7 +54,7 @@ Ext.define('WebInspect.controller.MainControl',{
 //        document.addEventListener("backbutton", me.onBackKeyDown, false);
 //        document.addEventListener("offline", me.onOfflineListen, false);///////联机状态判断
 //        document.addEventListener("online", me.onOnlineListen, false);///////在线判断
-        me.onBtnConfirm();
+//        me.onBtnConfirm();
         //android返回键事件监听
    },
 

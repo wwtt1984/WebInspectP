@@ -153,7 +153,7 @@ Ext.define('WebInspect.view.list.TaskDetail',{
                 xtype: 'fieldset',
                 style: 'border-radius: .4em;background-color: #fff;',
                 itemId: 'opinionms_panel',
-//                hidden: true,
+                hidden: true,
                 items: [
                     {
                         label: '请输入原因',
