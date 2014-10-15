@@ -741,3 +741,37 @@
     margin: 3px 0 0 0;
     padding: 0;
 }
+
+/******************table仿form样式**********************************/
+.tableform{
+    width:100%;
+    background:#fff;
+    border-radius: 0.4em;
+    overflow: hidden;
+}
+.table-form{
+    min-height: 2.5em;
+    line-height:2.2em;
+    border-bottom: 1px #ddd solid;
+}
+/*.table-form:first-child{*/
+     /*min-height: 2.5em;*/
+    /*border-radius: 0.4em;*/
+    /*border: 1px #ddd solid;*/
+ /*}*/
+.table-form .label{
+    width: 40%;
+    height: 100%;
+    font-size: 0.8em;
+    font-weight: bold;
+    background-color: #f7f7f7;
+    text-shadow:rgba(255,255,255,0.25) 0 0.08em 0;
+    padding:0 0 0 0.6em;
+}
+.table-form .value{
+    width: 60%;
+    height: 100%;
+    padding:0 0 0 0.6em;
+    background-color: #fff;
+    line-height:1.6em;
+}

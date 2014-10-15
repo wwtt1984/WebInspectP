@@ -45,9 +45,9 @@ Ext.define('WebInspect.controller.NoticeControl', {
             messageDataView: {
                 itemswipe: 'onMessageItemSwipe'
             },
-//            opinion: {
-//                change: 'onOpinionChange'
-//            },
+            opinion: {
+                change: 'onOpinionChange'
+            },
             taskconfirm:{
                 tap: 'onTaskConfirmTap'
             }
@@ -156,6 +156,9 @@ Ext.define('WebInspect.controller.NoticeControl', {
                 var reply = store.getAt(0).data.replys;
                 var forward  = store.getAt(0).data.forwards;
 
+                store.getAt(0).data.NodeName = record.data.NodeName;
+                store.getAt(0).data.ProcessName = record.data.ProcessName;
+
                 Ext.ComponentQuery.query('#taskImage')[0].setData({simg: img, NodeName: record.data.NodeName, detail: detail});
                 me.getForward().setOptions(forward);
 
@@ -226,14 +229,10 @@ Ext.define('WebInspect.controller.NoticeControl', {
         var me = this;
 
         switch(newValue){
-            case 'agree':
+            case '同意':
                 me.getOpinionmspanel().hide();
                 break;
-            case 'ignore':
-                me.getOpinionmspanel().show();
-                me.getOpinionms().setValue('');
-                break;
-            case 'report':
+            case '不同意':
                 me.getOpinionmspanel().show();
                 me.getOpinionms().setValue('');
                 break;
@@ -253,7 +252,7 @@ Ext.define('WebInspect.controller.NoticeControl', {
 
         debugger;
 
-        var record = Ext.getStore('TaskStore').getAt(0);
+        var record = Ext.getStore('TaskDetailStore').getAt(0);
         var processname = record.get('NodeName');
         var taskid = record.get('TaskID');
         var stepid = record.get('StepID');

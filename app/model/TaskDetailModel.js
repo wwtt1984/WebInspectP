@@ -6,6 +6,8 @@ Ext.define('WebInspect.model.TaskDetailModel',{
     extend: 'Ext.data.Model',
     config: {
         fields: [
+            'NodeName',
+            'ProcessName',
             'TaskID',
             'StepID',
             'imgjson',
