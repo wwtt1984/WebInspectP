@@ -27,7 +27,7 @@ Ext.define('WebInspect.controller.InspectControl', {
             inspectlocation: '[itemId=inspectlocation]',
 
             inspectselectconfirm: '[itemId=inspectselectconfirm]',
-            inspectselection: '[itemId=inspectselection]',
+//            inspectselection: '[itemId=inspectselection]',
             inspecttreeselect: '[itemId=inspecttreeselect]',
 
             inspectphoto: '[itemId=inspectphoto]',
@@ -38,7 +38,9 @@ Ext.define('WebInspect.controller.InspectControl', {
             inspecttype: '[itemId=inspecttype]',
 
             inspectfaildetail: 'info inspectfaildetail',
-            inspectuploadall: '[itemId=inspectuploadall]'
+            inspectuploadall: '[itemId=inspectuploadall]',
+
+            inspectSegmentedButton: '[itemId=inspectSegmentedButton]'
 
         },
 
@@ -58,6 +60,9 @@ Ext.define('WebInspect.controller.InspectControl', {
             inspectfail: {
                 itemswipe: 'onInspectFailItemSwipe',
                 itemtap: 'onInspectFailItemTap'
+            },
+            inspectSegmentedButton: {
+                toggle: 'onInspectSegmentedTap'
             }
 //            inspectuploadall: {
 //                tap: 'onInspectUploadAllTap'
@@ -76,7 +81,7 @@ Ext.define('WebInspect.controller.InspectControl', {
         me.onInspectStoreLoad();
 
 //        if(WebInspect.app.user.oulevel.match('管理处')){
-            me.onInspectTreeLoad();
+            me.onInspectTreeLoad('me', 0);
 //        }
 //        else{
 //            me.getInspectconfirm().disable();
@@ -95,7 +100,7 @@ Ext.define('WebInspect.controller.InspectControl', {
         me.closeApp = false;///////关闭APP为false ， 用来防止 定位没定到 就关闭程序了。
         me.gpsreset = 2; ///////////////////////如果2次都没定位成功,则不重新定位了
         me.nowgpscount = 0; /////////////////////当前重启GPS次数
-        me.onOpenGPS(me);
+//        me.onOpenGPS(me);
     },
 
     //根据推送信息，加载页面
@@ -156,15 +161,22 @@ Ext.define('WebInspect.controller.InspectControl', {
     },
 
     //塘段树状结构store加载
-    onInspectTreeLoad: function(){
+    onInspectTreeLoad: function(type, init){
         var segmentstore = Ext.getStore('InspectTreeStore');
-        if(!segmentstore.getAllCount()){
-            segmentstore.getProxy().setExtraParams({
-                t: 'GetXcjhTD',
-                results:  WebInspect.app.user.oulevel + '$' + WebInspect.app.user.sid + '$jsonp'
-            });
+
+        segmentstore.removeAll();
+
+        segmentstore.getProxy().setExtraParams({
+            t: 'GetXcjhTD',
+            results:  WebInspect.app.user.oulevel + '$' + WebInspect.app.user.sid + '$jsonp' + '$' + type
+        });
+
+        if(init == 0){
             segmentstore.setRoot({expanded: true});
-//            segmentstore.load();
+        }
+        else{
+            segmentstore.removeAll();
+            segmentstore.load();
         }
     },
 
@@ -172,23 +184,53 @@ Ext.define('WebInspect.controller.InspectControl', {
     onInspectListPush: function(){
         var me = this;
 
-        if(Ext.getStore('InspectTreeStore').getAllCount()){
-            me.inspecttreelist = me.getInspecttreelist();
+        me.onInspectTreeLoad('me', 1);
 
-            if(!me.inspecttreelist){
-                me.inspecttreelist = Ext.create('WebInspect.view.inspect.InspectTreeList');
-            }
+        me.inspecttreelist = me.getInspecttreelist();
 
-            me.getInfofunction().hide();
-            me.getInspectselectconfirm().show();
-            me.getInfo().push(me.inspecttreelist);
-
+        if(!me.inspecttreelist){
+            me.inspecttreelist = Ext.create('WebInspect.view.inspect.InspectTreeList');
         }
-        else{
-            plugins.Toast.ShowToast("没有上传权限!",3000);
-        }
+
+        me.getInfofunction().hide();
+        me.getInspectselectconfirm().show();
+        me.getInfo().push(me.inspecttreelist);
+
+
+//        if(Ext.getStore('InspectTreeStore').getAllCount()){
+//
+//            me.inspecttreelist = me.getInspecttreelist();
+//
+//            if(!me.inspecttreelist){
+//                me.inspecttreelist = Ext.create('WebInspect.view.inspect.InspectTreeList');
+//            }
+//
+//            me.getInfofunction().hide();
+//            me.getInspectselectconfirm().show();
+//            me.getInfo().push(me.inspecttreelist);
+//
+//        }
+//        else{
+//            plugins.Toast.ShowToast("没有上传权限!",3000);
+//        }
         me.tdid = '';
         me.text = '';
+    },
+
+    onInspectSegmentedTap: function(me, button, isPressed, eOpts){
+        var me = this;
+        if(isPressed){
+
+            var text = button._text;
+            switch(text){
+                case '常用':
+                    me.onInspectTreeLoad('me', 1);
+                    break;
+                case '全部':
+                    me.onInspectTreeLoad('all', 1);
+                    break;
+            }
+        }
     },
 
     //塘段列表 选择 更改
@@ -206,8 +248,8 @@ Ext.define('WebInspect.controller.InspectControl', {
                 tdid += arr[0].data.tdid;
 //            }
 
-            me.getInspectselection().setData({select: text});
-            me.getInspectselection().show();
+//            me.getInspectselection().setData({select: text});
+//            me.getInspectselection().show();
 
             me.text = text;
             me.tdid = tdid;

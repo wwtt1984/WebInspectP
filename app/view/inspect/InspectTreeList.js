@@ -51,16 +51,44 @@ Ext.define('WebInspect.view.inspect.InspectTreeList', {
                 itemId: 'inspecttreeselect'
             },
             {
-                xtype: 'panel',
-                itemId: 'inspectselection',
-                hidden: true,
                 docked: 'bottom',
-                style: 'min-height:1.6em;font-size:16px;line-height:1.6em;background:#f7f7f7;',
-                tpl: Ext.create('Ext.XTemplate',
-                    '<div style="position:absolute;;width:100%;height:100%;background:#fff;filter:alpha(opacity=50); -moz-opacity:0.5;-khtml-opacity: 0.5;opacity: 0.5;"></div>',
-                    '<div style="width:100%;height:100%;position:relative;">{select}</div>'
-                )
+                ui: 'gray',
+                xtype: 'toolbar',
+                style: 'border-top: 1px #ccc solid;',
+                items:[
+                    {
+                        width: '100%',
+                        padding: '0 5 0 0',
+                        defaults: {
+                            flex: 1
+                        },
+                        xtype: 'segmentedbutton',
+                        itemId: 'inspectSegmentedButton',
+                        allowDepress: false,
+                        allowMultiple: false,
+                        items: [
+                            {
+                                text: '常用',
+                                pressed: true
+                            },
+                            {
+                                text: '全部'
+                            }]
+                    }
+                ]
+
             }
+//            {
+//                xtype: 'panel',
+//                itemId: 'inspectselection',
+//                hidden: true,
+//                docked: 'bottom',
+//                style: 'min-height:1.6em;font-size:16px;line-height:1.6em;background:#f7f7f7;',
+//                tpl: Ext.create('Ext.XTemplate',
+//                    '<div style="position:absolute;;width:100%;height:100%;background:#fff;filter:alpha(opacity=50); -moz-opacity:0.5;-khtml-opacity: 0.5;opacity: 0.5;"></div>',
+//                    '<div style="width:100%;height:100%;position:relative;">{select}</div>'
+//                )
+//            }
         ]
     }
 });

@@ -294,7 +294,8 @@ Ext.define('Ext.dataview.DataView', {
          * @cfg {String} emptyText
          * The text to display in the view when there is no data to display
          */
-        emptyText: null,
+//        emptyText: null,
+        emptyText: '对不起，没有数据...',
 
         /**
          * @cfg {Boolean} deferEmptyText `true` to defer `emptyText` being applied until the store's first load.
@@ -383,7 +384,7 @@ Ext.define('Ext.dataview.DataView', {
          * displayed in a loading div and the view's contents will be cleared while loading, otherwise the view's
          * contents will continue to display normally until the new data is loaded and the contents are replaced.
          */
-        loadingText: 'Loading...',
+        loadingText: '正在加载中...',
 
         /**
          * @cfg {Boolean} useComponents
