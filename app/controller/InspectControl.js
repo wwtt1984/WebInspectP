@@ -139,7 +139,7 @@ Ext.define('WebInspect.controller.InspectControl', {
         store.removeAll();
         store.getProxy().setExtraParams({
             t: 'GetInfoList',
-            results: 'inspect$jsonp'
+            results: 'inspect$jsonp$' + WebInspect.app.user.sid
         });
         store.loadPage(1,{
             callback: function(records, operation, success) {
@@ -245,13 +245,33 @@ Ext.define('WebInspect.controller.InspectControl', {
         else
         {
             if(me.tdid){
-                me.getInspectconfirm().disable();
-                Ext.Viewport.setMasked({xtype:'loadmask',message:'位置获取中,请稍后...'});
-                navigator.geolocation.getCurrentPosition(
-                    function(position){me.onGeolocationSuccess(position,me);},
-                    function(error){me.onGeolocationFail(error,me);},
-                    { maximumAge: 3000, timeout: 30000, enableHighAccuracy: true }
-                );
+
+                plugins.Vpn.VpnGPSON(function(success){
+
+                    if(success == "false")
+                    {
+                        Ext.Msg.confirm("开启定位功能","请开启GPS功能来获取位置，将跳转到设置界面？",function(result){
+
+                            if(result == "yes")
+                            {
+                                plugins.Vpn.VpnGPSSet();//跳转到GPS设置界面
+                            }
+                        })
+
+                    }
+                    else
+                    {
+                        me.getInspectconfirm().disable();
+                        Ext.Viewport.setMasked({xtype:'loadmask',message:'位置获取中,请稍后...'});
+                        navigator.geolocation.getCurrentPosition(
+                            function(position){me.onGeolocationSuccess(position,me);},
+                            function(error){me.onGeolocationFail(error,me);},
+                            { maximumAge: 3000, timeout: 30000, enableHighAccuracy: true }
+                        );
+                    }
+
+                });
+
             }
             else{
                 plugins.Toast.ShowToast("请选择塘段!",3000);
@@ -766,10 +786,95 @@ Ext.define('WebInspect.controller.InspectControl', {
     },
 
     onOpenGPS:function(me){      ///////////////////////////////////////打开GPS//////////////////////////////////////
-        navigator.geolocation.getCurrentPosition(
-            function(position){me.onGpsSuccess(position,me);},
-            function(error){me.onGpsError(error,me);},
-            { maximumAge: 3000, timeout: 30000, enableHighAccuracy: true });
+//        navigator.geolocation.getCurrentPosition(
+//            function(position){me.onGpsSuccess(position,me);},
+//            function(error){me.onGpsError(error,me);},
+//            { maximumAge: 3000, timeout: 30000, enableHighAccuracy: true });
+        plugins.Wakelock.acquireWakeLock();///开启防止休眠功能
+
+        plugins.Vpn.VpnGPSON(function(success){
+
+            if(success == "false")
+            {
+                Ext.Msg.confirm("提高定位精度","请开启GPS功能来获取位置，将跳转到设置界面？",function(result){
+
+                    if(result == "yes")
+                    {
+                        plugins.Vpn.VpnGPSSet();//跳转到GPS设置界面
+                    }
+                })
+
+            }
+
+        });
+
+        me.lng = 0;
+        me.lat = 0;
+        me.EARTH_RADIUS = 6378137.0;    //单位M
+        me.PI = Math.PI;
+        me.nowdistance = 0;
+        me.distance = 50;
+
+        me.watchID = navigator.geolocation.watchPosition(
+            function(position){me.watchonSuccess(position,me);},
+            function(error){me.watchonError(error,me);}, { maximumAge: 3000, timeout: 30000, enableHighAccuracy: true });
+
+    },
+
+
+    watchonSuccess:function(position,me)
+    {
+        var lat = position.coords.latitude;
+        var lng = position.coords.longitude;
+
+        if(me.lng !=0 && me.lat !=0)
+        {
+            var distance = me.getGreatCircleDistance(me,me.lat,me.lng,lat,lng);
+            me.nowdistance += distance;
+
+            if(me.nowdistance>= me.distance)
+            {
+                var sdt = Ext.Date.format(new Date(), 'Y-m-d H:m:s').toString();
+                var results = WebInspect.app.user.sid + "$" + WebInspect.app.user.name
+                    + "$" + lng + '$' + lat + '$' + sdt + '$$$$$$$';
+                Ext.data.proxy.SkJsonp.validate('IntXcsj',results,{
+                    success: function(response) {
+                        /////////////程序不关闭的时候才可以继续循环。
+                        me.nowdistance = 0;
+                    },
+                    failure: function() {
+
+                    }
+                });
+            }
+
+        }
+
+        me.lng = lng;
+        me.lat = lat;
+    },
+
+    watchonError:function(error)
+    {
+        plugins.Toast.ShowToast("GPS连接不上,请检查GPS是否开启或者到室外定位!",3000);
+    },
+
+    getGreatCircleDistance:function(me,lat1, lng1, lat2, lng2){
+
+        var radLat1 = me.getRad(me,lat1);
+        var radLat2 = me.getRad(me,lat2);
+
+        var a = radLat1 - radLat2;
+        var b = me.getRad(me,lng1) - me.getRad(me,lng2);
+
+        var s = 2*Math.asin(Math.sqrt(Math.pow(Math.sin(a/2),2) + Math.cos(radLat1)*Math.cos(radLat2)*Math.pow(Math.sin(b/2),2)));
+        s = s*me.EARTH_RADIUS;
+        s = Math.round(s*10000)/10000.0;
+
+        return s;
+    },
+    getRad:function(me,d){
+        return d*me.PI/180.0;
     },
 
     onGpsSuccess:function(position,me){
@@ -817,8 +922,6 @@ Ext.define('WebInspect.controller.InspectControl', {
 
     onGpsOFF:function()
     {
-        alert("333");
-        this.closeApp = true;
-        alert(this.closeApp);
+        navigator.geolocation.clearWatch(this.watchID);
     }
 })

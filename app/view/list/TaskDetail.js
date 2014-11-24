@@ -139,7 +139,7 @@ Ext.define('WebInspect.view.list.TaskDetail',{
             {
                 xtype: 'fieldset',
                 style: 'border-radius: .4em;background-color: #fff;',
-//                itemId: 'zhuanfa',
+                itemId: 'forward_panel',
                 defaults: {
                     labelAlign: 'left',
                     labelWidth: '40%'
@@ -178,6 +178,7 @@ Ext.define('WebInspect.view.list.TaskDetail',{
             },
             {
                 xtype: 'panel',
+                itemId: 'button_panel',
                 defaults: {
                     xtype : 'button',
                     style: 'min-height: 2.2em;',

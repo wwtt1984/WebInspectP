@@ -49,12 +49,12 @@ Ext.define('WebInspect.controller.MainControl',{
         this.bpindex = 0;///默认请求
         this.beindex = 2;///默认请求总数
 
-//        window.setTimeout(function(){me.checkJpush(me);},100);
-//        document.addEventListener('deviceready',function(){me.onJpushReady(me);}, false);
-//        document.addEventListener("backbutton", me.onBackKeyDown, false);
-//        document.addEventListener("offline", me.onOfflineListen, false);///////联机状态判断
-//        document.addEventListener("online", me.onOnlineListen, false);///////在线判断
-//        me.onBtnConfirm();
+        window.setTimeout(function(){me.checkJpush(me);},100);
+        document.addEventListener('deviceready',function(){me.onJpushReady(me);}, false);
+        document.addEventListener("backbutton", me.onBackKeyDown, false);
+        document.addEventListener("offline", me.onOfflineListen, false);///////联机状态判断
+        document.addEventListener("online", me.onOnlineListen, false);///////在线判断
+        me.onBtnConfirm();
         //android返回键事件监听
    },
 
@@ -161,7 +161,7 @@ Ext.define('WebInspect.controller.MainControl',{
 
         me.getMain().add(me.info);
 
-        var titlestr = ['news', 'info', 'notice', 'inspect', 'assignment'];
+        var titlestr = ['news', 'info', 'notice', 'inspect', 'schedule'];
 
         switch(data.type){
             case titlestr[0]:
@@ -295,7 +295,7 @@ Ext.define('WebInspect.controller.MainControl',{
         states[Connection.CELL]     = 'Cell';
         states[Connection.NONE]     = 'No';
 
-        if( states[networkState] != "No" && states[networkState] != "Unknown")
+        if(states[networkState] != "No")
         {
             res = true;
         }
@@ -508,7 +508,7 @@ Ext.define('WebInspect.controller.MainControl',{
         //plugins.Toast.ShowToast(error,3000);
         if(error.code == 1) //////////表示文件不存在
         {
-            plugins.Toast.ShowToast("配置文件读取失败，请重新输入!",3000);
+            plugins.Toast.ShowToast("请输入你的用户名和密码!",3000);
             //////////////////不管它///////////////////////////
         }
     },
@@ -679,7 +679,7 @@ Ext.define('WebInspect.controller.MainControl',{
             ////////////////巡查上报//////////////
             case 'inspectmain':
 //                me.onInfoFunctionBackTap();
-//                me.getApplication().getController('InspectControl').onGpsOFF();
+                me.getApplication().getController('InspectControl').onGpsOFF();
                 if((me.getInfo().view) && (me.getInfo().view.getHidden() == false)){
                     me.getInfo().onViewHide();
                 }
@@ -813,6 +813,8 @@ Ext.define('WebInspect.controller.MainControl',{
     },
 
     onQuitSystemTap: function(){
+
+        plugins.Wakelock.releaseWakeLock();///关闭防止休眠功能
         navigator.app.exitApp(); //////////////////退出系统
     },
 
@@ -846,9 +848,9 @@ Ext.define('WebInspect.controller.MainControl',{
         var me = this;
         WebInspect.app.user.sid = Ext.getCmp('name').getValue();
         WebInspect.app.user.password = Ext.getCmp('password').getValue();
-//        me.onVpnLogin(1, ''); /////成功写入开始执行VPN认证
-//        plugins.jPush.setAlias(WebInspect.app.user.sid,function(success){});//////推送标识，以用户名区分
-        me.onUserCheck(1,''); /////////测试的时候有
+        me.onVpnLogin(1, ''); /////成功写入开始执行VPN认证
+        plugins.jPush.setAlias(WebInspect.app.user.sid,function(success){});//////推送标识，以用户名区分
+//        me.onUserCheck(1,''); /////////测试的时候有
     },
 
     onUserWriteJson: function(){
@@ -913,7 +915,7 @@ Ext.define('WebInspect.controller.MainControl',{
                     {
                         Ext.Viewport.setMasked(false);
                         me.getMain().setActiveItem(me.getFunctionmain());
-//                        me.onUserWriteJson(); //将验证成功的用户信息，存在本地
+                        me.onUserWriteJson(); //将验证成功的用户信息，存在本地
                         me.onCheckVesion(me);  /////////////////判断是否有新版本/////////////////////
                     }
                     else
@@ -1042,20 +1044,29 @@ Ext.define('WebInspect.controller.MainControl',{
     //监听info页面的“主页面”按钮，点击后，返回“主功能”页面
     onInfoFunctionBackTap: function(){
         var me = this;
-        me.getMain().setActiveItem(me.getFunctionmain());
+        plugins.Vpn.VpnInputON(function(success){
 
-        switch(me.getInfo().getActiveItem().xtype){
-            case 'markmain':
-                Ext.ComponentQuery.query('#photo')[0].clearImgListeners();
-                break;
-            case 'salary':
-                me.getApplication().getController('SalaryControl').getSalarycarousel().removeAll();
-                break;
-            case 'inspectmain':
-                Ext.ComponentQuery.query('#inspectphoto')[0].clearImgListeners();
-        }
+             if(success == "false")
+             {
+                 me.getMain().setActiveItem(me.getFunctionmain());
 
-        me.getInfo().destroy();
+                 switch(me.getInfo().getActiveItem().xtype){
+                     case 'markmain':
+                         Ext.ComponentQuery.query('#photo')[0].clearImgListeners();
+                         break;
+                     case 'salary':
+                         me.getApplication().getController('SalaryControl').getSalarycarousel().removeAll();
+                         break;
+                     case 'inspectmain':
+                         Ext.ComponentQuery.query('#inspectphoto')[0].clearImgListeners();
+                 }
+
+                 me.getInfo().destroy();
+             }
+
+        });
+
+
     },
 
     onInspectUploadAllTap: function(){

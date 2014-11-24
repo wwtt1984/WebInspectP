@@ -8,8 +8,8 @@ Ext.define('WebInspect.store.SettingStore', {
             {id: '02', name: 'module', title: '功能模块'},
 //            {id: '02', name: '系统设置'},
             {id: '03', name: 'version', title: '软件版本'},
-            {id: '04', name: 'update', title: '更新日志'},
-            {id: '05', name: 'qrcode', title: '扫码安装'}
+            {id: '04', name: 'update', title: '更新日志'}
+//            {id: '05', name: 'qrcode', title: '扫码安装'}
         ],
 
         autoLoad: true

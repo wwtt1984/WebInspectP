@@ -6,6 +6,7 @@ Ext.define('Ext.data.proxy.SkJsonp', {
 //		url: 'http://webservices.qgj.cn/wt_test/Data.ashx',
 //   		url: 'http://bpm.qgj.cn/test/Data.ashx',
         url: 'http://10.33.13.118/WebSerAn/Data.ashx',
+//        url: 'http://localhost:4570/Data.ashx',
 		callbackKey: 'callback'
     },
 	

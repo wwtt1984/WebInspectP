@@ -66,7 +66,7 @@ Ext.define('WebInspect.view.mark.Mark', {
                                 },
                                 addCode: function(){
                                     var me = this;
-                                    window.plugins.barcodeScanner.scan(me.getSuccess, me.getFail);
+                                    //window.plugins.barcodeScanner.scan(me.getSuccess, me.getFail);
                                 },
                                 getSuccess: function(result){
 //                                    alert("We got a barcode\n" +

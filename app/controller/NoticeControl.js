@@ -31,8 +31,12 @@ Ext.define('WebInspect.controller.NoticeControl', {
             taskmain: '[itemId=taskmain]',
 
             forward: '[itemId=forward]',
+            forwardpanel: '[itemId=forward_panel]',
+
             disposepanel: '[itemId=dispose_panel]',
-            dispose: '[itemId=dispose]'
+            dispose: '[itemId=dispose]',
+
+            buttonpanel: '[itemId=button_panel]'
         },
 
         control: {
@@ -47,6 +51,9 @@ Ext.define('WebInspect.controller.NoticeControl', {
             },
             opinion: {
                 change: 'onOpinionChange'
+            },
+            dispose: {
+                change: 'onDisposeChange'
             },
             taskconfirm:{
                 tap: 'onTaskConfirmTap'
@@ -96,7 +103,6 @@ Ext.define('WebInspect.controller.NoticeControl', {
         if(!me.task){
             me.task = Ext.create('WebInspect.view.list.Task');
         }
-
         me.getInfo().push(me.task);
 
         var store = Ext.getStore('TaskStore');
@@ -114,6 +120,7 @@ Ext.define('WebInspect.controller.NoticeControl', {
         }, this);
 
         me.getMain().setActiveItem(me.getInfo());
+        Ext.Viewport.setMasked(false);
     },
 
     onTaskItemTap: function(list, index, target, record, e, eOpts ){
@@ -144,6 +151,7 @@ Ext.define('WebInspect.controller.NoticeControl', {
         });
 
         store.load(function(records, operation, success){
+
             if(!success)
             {
                 plugins.Toast.ShowToast("网络不给力，无法读取数据!",3000);
@@ -168,11 +176,18 @@ Ext.define('WebInspect.controller.NoticeControl', {
                     me.getDispose().setOptions(dispose);
                     me.type = dispose;
                 }
-                else{
+                else if(reply.length){
                     me.getOpinionpanel().show();
                     me.getDisposepanel().hide();
                     me.type = reply;
                     me.getOpinion().setOptions(reply);
+                }
+                else{                         ////都没有
+                    me.getOpinionpanel().hide();
+                    me.getDisposepanel().hide();
+                    me.getForwardpanel().hide();
+                    me.getButtonpanel().hide();
+                    Ext.ComponentQuery.query('#taskImage')[0].setData({simg: img, NodeName: '还在完善中...', detail: detail});
                 }
             }
         }, this);
@@ -227,10 +242,29 @@ Ext.define('WebInspect.controller.NoticeControl', {
 
     onOpinionChange: function(field, newValue, oldValue, eOpts){
         var me = this;
-
         switch(newValue){
             case '同意':
                 me.getOpinionmspanel().hide();
+                break;
+            case '不同意':
+                me.getOpinionmspanel().show();
+                me.getOpinionms().setValue('');
+                break;
+            case '不同意':
+                me.getOpinionmspanel().show();
+                me.getOpinionms().setValue('');
+                break;
+        }
+    },
+
+   onDisposeChange: function(field, newValue, oldValue, eOpts){
+        var me = this;
+        switch(newValue){
+            case '结束流程':
+                me.getForwardpanel().hide();
+                break;
+            case '海塘工况':
+                me.getForwardpanel().show();
                 break;
             case '不同意':
                 me.getOpinionmspanel().show();
@@ -250,8 +284,6 @@ Ext.define('WebInspect.controller.NoticeControl', {
         var password = WebInspect.app.user.password;
         var name = WebInspect.app.user.name;
 
-        debugger;
-
         var record = Ext.getStore('TaskDetailStore').getAt(0);
         var processname = record.get('NodeName');
         var taskid = record.get('TaskID');
@@ -261,7 +293,7 @@ Ext.define('WebInspect.controller.NoticeControl', {
         var date = Ext.Date.format(new Date(), 'Y-m-d H:m:s').toString();
 
         var results = stepid + '$' + sid + '$' + password + '$' + processname
-                      + '$' + taskid + '$' + fzr_zf + '$' + fzr_name + '$' + bcl + '$';
+                      + '$' + taskid + '$' + fzr_zf + '$' + fzr_name + '$' + bcl + '$' + miaos + '$jsonp';
 
 
 
