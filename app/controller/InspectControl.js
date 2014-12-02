@@ -546,7 +546,7 @@ Ext.define('WebInspect.controller.InspectControl', {
                 var store = Ext.getStore('InspectStore');
                 store.getProxy().setExtraParams({
                     t: 'GetInfoList',
-                    results: 'inspect$jsonp'
+                    results: 'inspect$jsonp$'+ WebInspect.app.user.sid
                 });
                 store.loadPage(1,{
                     callback: function(records, operation, success) {
