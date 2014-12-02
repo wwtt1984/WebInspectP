@@ -24,7 +24,7 @@ Ext.application({
     name: 'WebInspect',
     mainthis: '',
     user: {sid:'', name: '', password: '', mobile: '15999999999', oulevel:'', tel:'', sms:'', mail:'11111',
-            sexy:'', ITEM_Id: '', DeptId: '', rtxsession: '',version:'1.0.0.96', taskcount: 0, rtxcount: 0, zub: '',
+            sexy:'', ITEM_Id: '', DeptId: '', rtxsession: '',version:'1.0.0.95', taskcount: 0, rtxcount: 0, zub: '',
             serurl:'http://10.33.13.118/WebSerAn/Data.ashx', sfyh:''
        },
 
