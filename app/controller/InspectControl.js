@@ -36,6 +36,7 @@ Ext.define('WebInspect.controller.InspectControl', {
             inspectconfirm: '[itemId=inspectconfirm]',
 
             inspecttype: '[itemId=inspecttype]',
+            inspecttypepanel: '[itemId=inspecttypepanel]',
 
             inspectfaildetail: 'info inspectfaildetail',
             inspectuploadall: '[itemId=inspectuploadall]',
@@ -76,6 +77,10 @@ Ext.define('WebInspect.controller.InspectControl', {
         me.inspectmain = me.getInspectmain();
         if(!me.inspectmain){
             me.inspectmain = Ext.create('WebInspect.view.inspect.InspectMain');
+        }
+
+        if(WebInspect.app.user.sfyh == 'True'){
+            me.getInspecttypepanel().hide();
         }
 
         me.onInspectStoreLoad();
@@ -407,7 +412,8 @@ Ext.define('WebInspect.controller.InspectControl', {
         var results = WebInspect.app.user.sid +"$"
             + WebInspect.app.user.name + "$" + lng + "$" + lat + "$" + sdt
             + "$sz$" + miaos + "$" + tdid + "$" + WebInspect.app.user.oulevel
-            + "$" + type + "$" + me.simgid + "$" + me.upimgindex + '$' + WebInspect.app.user.zub;
+            + "$" + type + "$" + me.simgid + "$" + me.upimgindex + '$' + WebInspect.app.user.zub
+            + '$' + WebInspect.app.user.sfyh;
 
         var ft = new FileTransfer();
 //        me.getApplication().getController('MainControl').onLoadOrUploadViewShow('正在上传中', '正在上传第1张', 0);

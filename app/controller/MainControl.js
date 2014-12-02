@@ -904,6 +904,8 @@ Ext.define('WebInspect.controller.MainControl',{
                     WebInspect.app.user.rtxcount = backdata.rtxcount;
                     WebInspect.app.user.zub = backdata.zub;
 
+                    WebInspect.app.user.sfyh = backdata.sfyh;
+
                     Ext.getCmp('maintitle').onDataSet(backdata, WebInspect.app.user.name, WebInspect.app.user.mobile, WebInspect.app.user.oulevel);
                     me.onFunctionAllSet(backdata.functionmodule);
 

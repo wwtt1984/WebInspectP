@@ -64,6 +64,7 @@ Ext.define('WebInspect.view.inspect.Inspect', {
             {
                 xtype: 'fieldset',
                 style: 'border-radius: .4em;background-color: #fff; margin: 0 0 0 0;',
+                itemId: 'inspecttypepanel',
                 items: [
                     {
                         label: '事件类型',

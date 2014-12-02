@@ -25,7 +25,8 @@ Ext.define('WebInspect.model.UserModel',{
             'mymodule',
             'stemperature',
 
-            'zub'
+            'zub',
+            'sfyh'
             
         ]
     }
