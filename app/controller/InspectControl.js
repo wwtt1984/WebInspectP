@@ -93,6 +93,9 @@ Ext.define('WebInspect.controller.InspectControl', {
 //        }
 
         me.getInfo().push(me.inspectmain);
+
+        me.text = '';
+        me.tdid = '';
         me.getInspectlocation().setData({text: '请选择塘段', tdid: ''});
 
         me.load = 0;
@@ -218,8 +221,6 @@ Ext.define('WebInspect.controller.InspectControl', {
 //        else{
 //            plugins.Toast.ShowToast("没有上传权限!",3000);
 //        }
-        me.tdid = '';
-        me.text = '';
     },
 
     onInspectSegmentedTap: function(me, button, isPressed, eOpts){
@@ -244,30 +245,37 @@ Ext.define('WebInspect.controller.InspectControl', {
         var me = this;
         var arr = list.getSelection();
 
-        var text = '';
-        var tdid = '';
-
-        if(arr.length){
+//        var text = '';
+//        var tdid = '';
+//
+//        if(arr.length){
 //            for(var i=0; i<arr.length; i++){
-                text += arr[0].data.text;
-                tdid += arr[0].data.tdid;
+//                text += arr[0].data.text;
+//                tdid += arr[0].data.tdid;
 //            }
-
+//
 //            me.getInspectselection().setData({select: text});
 //            me.getInspectselection().show();
+//
+//            me.text = text;
+//            me.tdid = tdid;
+//        }
 
-            me.text = text;
-            me.tdid = tdid;
-        }
+        me.selectiontext = arr[0].data.text;
+        me.selectiontdid = arr[0].data.tdid;
     },
 
     //塘段选择确定
     onInspectSelectConfirmTap: function(){
         var me =  this;
 
-        if(!me.text){
+        if(!me.selectiontext){
             me.text = '请选择塘段';
             me.tdid = '';
+        }
+        else{
+            me.text = me.selectiontext;
+            me.tdid = me.selectiontdid;
         }
         me.getInspectlocation().setData({text: me.text, tdid: me.tdid});
 
@@ -278,6 +286,7 @@ Ext.define('WebInspect.controller.InspectControl', {
 
     //点击上传按钮，开始定位、上传等操作
     onInspectConfirmTap: function(){
+        alert('开始准备上传');
         var me = this;
         me.upimgindex = 0;
         var store = Ext.getStore("InspectPhotoStore");////上传图片
@@ -364,6 +373,7 @@ Ext.define('WebInspect.controller.InspectControl', {
     onMenuPhotoFailMsg:function(position,error,me)
     {
         plugins.Toast.ShowToast("上传失败!"+ error,3000);
+        alert(error.code);
         me.onFailDataAdd(position);
         me.getApplication().getController('MainControl').getLoad().hide();
         me.getInspectconfirm().enable();
@@ -414,6 +424,8 @@ Ext.define('WebInspect.controller.InspectControl', {
             + "$sz$" + miaos + "$" + tdid + "$" + WebInspect.app.user.oulevel
             + "$" + type + "$" + me.simgid + "$" + me.upimgindex + '$' + WebInspect.app.user.zub
             + '$' + WebInspect.app.user.sfyh;
+
+        alert(results);
 
         var ft = new FileTransfer();
 //        me.getApplication().getController('MainControl').onLoadOrUploadViewShow('正在上传中', '正在上传第1张', 0);
