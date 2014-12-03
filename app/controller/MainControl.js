@@ -612,8 +612,14 @@ Ext.define('WebInspect.controller.MainControl',{
                 break;
 
             case 'taskdetail':
-                me.getInfo().pop();
-                me.getInfofunction().show();
+                if((me.getInfo().view) && (me.getInfo().view.getHidden() == false)){
+                    alert(me.getInfo().view.getHidden());
+                    me.getInfo().onViewHide();
+                }
+                else{
+                    me.getInfo().pop();
+                    me.getInfofunction().show();
+                }
                 break;
 
             case 'message':
