@@ -424,8 +424,6 @@ Ext.define('WebInspect.controller.InspectControl', {
             + "$" + type + "$" + me.simgid + "$" + me.upimgindex + '$' + WebInspect.app.user.zub
             + '$' + WebInspect.app.user.sfyh;
 
-        alert(results);
-
         var ft = new FileTransfer();
 //        me.getApplication().getController('MainControl').onLoadOrUploadViewShow('正在上传中', '正在上传第1张', 0);
         ft.onprogress = function(progressEvent) {
