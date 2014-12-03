@@ -286,7 +286,7 @@ Ext.define('WebInspect.controller.InspectControl', {
 
     //点击上传按钮，开始定位、上传等操作
     onInspectConfirmTap: function(){
-        alert('开始准备上传');
+
         var me = this;
         me.upimgindex = 0;
         var store = Ext.getStore("InspectPhotoStore");////上传图片
@@ -373,7 +373,6 @@ Ext.define('WebInspect.controller.InspectControl', {
     onMenuPhotoFailMsg:function(position,error,me)
     {
         plugins.Toast.ShowToast("上传失败!"+ error,3000);
-        alert(error.code);
         me.onFailDataAdd(position);
         me.getApplication().getController('MainControl').getLoad().hide();
         me.getInspectconfirm().enable();
