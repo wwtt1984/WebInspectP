@@ -165,7 +165,9 @@ Ext.application({
 
         'ProcedureModel',
 
-        'InspectUploadModel'
+        'InspectUploadModel',
+
+        'DoneModel'
     ],
 
     stores: [

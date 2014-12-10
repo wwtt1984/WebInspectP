@@ -6,7 +6,7 @@ Ext.define('WebInspect.store.DoneStore', {
     extend: 'Ext.data.Store',
 
     config: {
-        model: 'WebInspect.model.TaskModel',
+        model: 'WebInspect.model.DoneModel',
 
         proxy: {
             type: 'sk'

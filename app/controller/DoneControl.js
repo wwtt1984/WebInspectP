@@ -46,8 +46,8 @@ Ext.define('WebInspect.controller.DoneControl', {
         var store = Ext.getStore('DoneStore');
         store.removeAll();
         store.getProxy().setExtraParams({
-            t: 'GetTaskListUser',
-            results: WebInspect.app.user.sid
+            t: 'GetTaskHisListMy',
+            results: WebInspect.app.user.oulevel + '$' + WebInspect.app.user.sid + '$jsonp'
         });
 
         store.load(function(records, operation, success){
@@ -67,7 +67,24 @@ Ext.define('WebInspect.controller.DoneControl', {
         if(!me.procedure){
             me.procedure = Ext.create('WebInspect.view.done.Procedure');
         }
-        me.procedure.onDataSet();
+
+        var store = Ext.getStore('ProcedureStore');
+        store.removeAll();
+        store.getProxy().setExtraParams({
+            t: 'GetTaskHisListUser',
+            results: record.data.TaskID + '$jsonp'
+        });
+
+        store.load(function(records, operation, success){
+            if(!success)
+            {
+                plugins.Toast.ShowToast("网络不给力，无法读取数据!",3000);
+            }
+            else{
+                me.procedure.onDataSet(records);
+            }
+        }, this);
+
         me.procedure.setTitle(record.data.NodeName);
 
         me.getInfofunction().hide();

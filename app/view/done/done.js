@@ -42,8 +42,8 @@ Ext.define('WebInspect.view.done.Done', {
 
         itemTpl: Ext.create('Ext.XTemplate',
             '<div style="font-size:18px; font-weight: bold; line-height: 1.6em;">{NodeName}</div>',
-            '<div style="font-size:15px; line-height: 1.6em;">拥有人:{OwnerAccount}</div>',
-            '<div style="font-size:15px; line-height: 1.6em;">接收时间：{ReceiveAt}</div>'
+            '<div style="font-size:15px; line-height: 1.6em;">流程编号:{SerialNum}</div>',
+            '<div style="font-size:15px; line-height: 1.6em;">接收时间：{Column1}</div>'
         )
     }
 });

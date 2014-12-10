@@ -7,9 +7,15 @@ Ext.define('WebInspect.model.ProcedureModel',{
     extend: 'Ext.data.Model',
     config: {
         fields: [
+            'StepID',
+            'TaskID',
+            'ProcessName',
+            'NodeName',
             'sid',
-            'scontent',
-            'sdate'
+            'ReceiveAt',
+            'FinishAt',
+            'displayname',
+            'oulevel'
         ]
     }
 
